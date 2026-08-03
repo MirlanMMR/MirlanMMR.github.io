@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mirlanmamytov.ticker247",
+      "sha256_cert_fingerprints": [
+        "96:94:EF:B4:C8:AC:A4:1A:A0:32:E6:EE:22:92:3C:76:51:AF:4E:59:0C:D1:E7:16:96:6B:68:C5:D3:C5:C5:A1"
+      ]
+    }
+  }
+]
