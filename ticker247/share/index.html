@@ -188,7 +188,7 @@
   <img id="coverImg" class="cover" style="display:none" alt="cover">
 
   <div class="content">
-    <div class="category-chip" id="category">НОВОСТИ</div>
+    <div class="category-chip" id="category"></div>
     <h1 class="title" id="title">Загружаем статью...</h1>
     <div class="meta">
       <span class="source" id="source"></span>
@@ -198,14 +198,14 @@
     <div class="divider"></div>
     <div class="body" id="body"></div>
     <a href="#" id="srcLink" class="source-link" style="display:none" target="_blank">
-      🔗 Открыть оригинал
+      <span id="srcLinkText">🔗 Открыть оригинал</span>
     </a>
   </div>
 </div>
 
 <!-- CTA -->
 <div class="cta-bar">
-  <div class="cta-text"><strong>Ticker 24/7</strong> — все новости в одном месте</div>
+  <div class="cta-text" id="ctaText"><strong>Ticker 24/7</strong> — все новости в одном месте</div>
   <a class="gplay-btn"
      id="playBtn"
      href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247"
@@ -213,18 +213,54 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
       <path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l16 8.5-16 8.5C3.5 21.33 3 21.33 3 20.5z"/>
     </svg>
-    Скачать в Google Play
+    <span id="playBtnText">Скачать в Google Play</span>
   </a>
 </div>
 
 <script>
+  // Служебные слова страницы на языках наших пулов. Язык приходит
+  // параметром lang от приложения (язык пула, из которого поделились).
+  // 23.08.2026 читатель поделился французской новостью и получил страницу,
+  // где всё вокруг статьи было по-русски: «НОВОСТИ», «Открыть оригинал»,
+  // «Скачать в Google Play». Ссылка уходит друзьям — это витрина, а не
+  // внутренний экран.
+  const I18N = {
+    ru: { cat: 'НОВОСТИ', open: '🔗 Открыть оригинал',
+          cta: '— все новости в одном месте', get: 'Скачать в Google Play',
+          none: 'Живые новости, курсы валют и крипта в одном месте. Скачайте приложение и читайте первыми.' },
+    en: { cat: 'NEWS', open: '🔗 Open the original',
+          cta: '— all the news in one place', get: 'Get it on Google Play',
+          none: 'Live news, exchange rates and crypto in one place. Get the app and read it first.' },
+    es: { cat: 'NOTICIAS', open: '🔗 Abrir el original',
+          cta: '— todas las noticias en un solo lugar', get: 'Descargar en Google Play',
+          none: 'Noticias en vivo, tipos de cambio y cripto en un solo lugar. Descarga la app y léelo primero.' },
+    pt: { cat: 'NOTÍCIAS', open: '🔗 Abrir o original',
+          cta: '— todas as notícias num só lugar', get: 'Baixar no Google Play',
+          none: 'Notícias ao vivo, câmbio e cripto num só lugar. Baixe o app e leia primeiro.' },
+    fr: { cat: 'ACTUALITÉS', open: '🔗 Ouvrir l\u2019original',
+          cta: '— toute l\u2019actualité en un seul endroit', get: 'Disponible sur Google Play',
+          none: 'Actualités en direct, taux de change et crypto au même endroit. Installez l\u2019application et lisez en premier.' }
+  };
+
   const p = new URLSearchParams(location.search);
+  // Язык от приложения; если ссылка старая и языка нет — по языку браузера
+  // получателя; в последнюю очередь русский
+  const lang = (I18N[p.get('lang')] ? p.get('lang')
+              : I18N[(navigator.language || 'ru').slice(0, 2)] ? (navigator.language).slice(0, 2)
+              : 'ru');
+  const T = I18N[lang];
+  document.documentElement.lang = lang;
+  document.getElementById('srcLinkText').textContent = T.open;
+  document.getElementById('playBtnText').textContent = T.get;
+  document.getElementById('ctaText').innerHTML =
+      '<strong>Ticker 24/7</strong> ' + T.cta;
+  document.title = 'Ticker 24/7';
   const title    = p.get('title')  || '';
   const body     = p.get('body')   || '';
   const source   = p.get('source') || '';
   const url      = p.get('url')    || '';
   const image    = p.get('img')    || '';
-  const category = p.get('cat')    || 'НОВОСТИ';
+  const category = p.get('cat')    || T.cat;
 
   if (title) {
     document.title = title + ' — Ticker 24/7';
@@ -262,7 +298,7 @@
       <div class="no-article">
         <div class="icon">⚡</div>
         <h2>Ticker 24/7</h2>
-        <p>Живые новости, курсы валют и крипта в одном месте. Скачай приложение и читай первым.</p>
+        <p>` + T.none + `</p>
       </div>`;
   }
 
