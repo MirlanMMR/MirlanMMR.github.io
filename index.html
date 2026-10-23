@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMR Lab — Android apps</title>
+<meta name="description" content="MMR Lab: small, careful Android apps. Slowread, Ticker 24/7, 2+2 Math for Kids.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{border:0;background:transparent;color:var(--muted);font:600 13px Inter,sans-serif;padding:6px 12px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+  .hero{padding:40px 0 28px}
+  .hero h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 14px;max-width:20ch}
+  .hero p{color:var(--muted);font-size:18px;max-width:52ch;margin:0}
+
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:28px;letter-spacing:-.01em;margin:48px 0 18px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+  .app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+  .app-top{display:flex;gap:14px;align-items:center}
+  .app img.icon{width:56px;height:56px;border-radius:14px;flex:none;background:var(--soft)}
+  .app h3{margin:0;font-size:17px;font-weight:600;line-height:1.3}
+  .app .tag{color:var(--muted);font-size:13px}
+  .app p{margin:0;color:var(--muted);font-size:15px;flex:1}
+  .app-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:14px;padding:9px 14px;border-radius:10px}
+  .small{font-size:13px;color:var(--muted)}
+  .small a{color:var(--muted)}
+
+  /* reserved slots */
+  .soon{position:relative;overflow:hidden}
+  .soon .inner{filter:blur(6px);opacity:.45;pointer-events:none;user-select:none;display:flex;flex-direction:column;gap:12px}
+  .soon .badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .soon .badge span{background:var(--ink);color:var(--bg);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+
+  .support{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:center}
+  .support p{margin:0 0 12px;color:var(--muted)}
+  .support p.lead{color:var(--ink);font-size:17px}
+  .qr{background:#fff;border-radius:16px;padding:12px}
+  .qr img{width:100%;height:auto;display:block}
+  .qr-cap{text-align:center;font-size:13px;color:var(--muted);margin-top:8px}
+  @media (max-width:640px){ .support{grid-template-columns:1fr} .qr-box{max-width:240px;margin:0 auto} }
+
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+
+  [data-ru]{display:none}
+  html[lang="ru"] [data-en]{display:none}
+  html[lang="ru"] [data-ru]{display:revert}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">MMR Lab</a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en">EN</button>
+    <button type="button" data-set="ru">RU</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>
+    <span data-en>Small apps, made with care.</span>
+    <span data-ru>Небольшие приложения, сделанные с заботой.</span>
+  </h1>
+  <p>
+    <span data-en>I'm Mirlan, an independent Android developer from Kyrgyzstan. Here are my apps on Google Play.</span>
+    <span data-ru>Я Мирлан, независимый Android-разработчик из Кыргызстана. Здесь собраны мои приложения в Google Play.</span>
+  </p>
+</section>
+
+<h2><span data-en>Apps</span><span data-ru>Приложения</span></h2>
+<div class="grid">
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" alt="">
+      <div><h3>Slowread</h3><div class="tag"><span data-en>Books &amp; Reference</span><span data-ru>Книги и справочники</span></div></div>
+    </div>
+    <p>
+      <span data-en>An unhurried reader: world classics already on the shelf, EPUB, FB2, MOBI, PDF and DjVu, gestures instead of menus.</span>
+      <span data-ru>Читалка без спешки: классика мировой литературы уже на полке, EPUB, FB2, MOBI, PDF и DjVu, жесты вместо меню.</span>
+    </p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play</a>
+      <a class="small" href="slowread-legal/"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" alt="">
+      <div><h3>Ticker 24/7</h3><div class="tag"><span data-en>News &amp; Magazines</span><span data-ru>Новости и журналы</span></div></div>
+    </div>
+    <p>
+      <span data-en>Local, regional and world news in five languages, plus live news TV and radio and a weather card.</span>
+      <span data-ru>Местные, региональные и мировые новости на пяти языках, новостные ТВ и радио в прямом эфире, погода.</span>
+    </p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play</a>
+      <a class="small" href="ticker247/privacy-policy.html"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" alt="">
+      <div><h3>2+2 | Math for Kids</h3><div class="tag"><span data-en>Education · ages 4–7</span><span data-ru>Обучение · 4–7 лет</span></div></div>
+    </div>
+    <p>
+      <span data-en>A cheerful train on a number line shows how addition and subtraction really work. Good school preparation.</span>
+      <span data-ru>Весёлый паровозик на числовой прямой показывает, как работают сложение и вычитание. Подготовка к школе.</span>
+    </p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play</a>
+      <a class="small" href="https://docs.google.com/document/d/e/2PACX-1vTb9GZA5nJED4U7VePfUi3FtOqwEcr4iASj-STjcAqUL7iDYphzKNc83x6_xP4tLFGKPNL24bMU2o7x/pub"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
+    </div>
+  </article>
+
+  <article class="app soon" aria-label="Coming soon on Google Play">
+    <div class="inner" aria-hidden="true">
+      <div class="app-top">
+        <img class="icon" src="img/happypouch.png" alt="">
+        <div><h3>Happy Pouch</h3><div class="tag">Finance</div></div>
+      </div>
+      <p>A private offline budget tracker with clear statistics.</p>
+      <div class="app-links"><span class="btn">Google Play</span></div>
+    </div>
+    <div class="badge"><span><span data-en>Coming soon on Google Play</span><span data-ru>Скоро в Google Play</span></span></div>
+  </article>
+
+  <article class="app soon" aria-label="Coming soon on Google Play">
+    <div class="inner" aria-hidden="true">
+      <div class="app-top">
+        <img class="icon" src="img/calculator.png" alt="">
+        <div><h3>Calculator</h3><div class="tag">Tools</div></div>
+      </div>
+      <p>A calculator you arrange yourself, with themes and history.</p>
+      <div class="app-links"><span class="btn">Google Play</span></div>
+    </div>
+    <div class="badge"><span><span data-en>Coming soon on Google Play</span><span data-ru>Скоро в Google Play</span></span></div>
+  </article>
+
+</div>
+
+<h2 id="support"><span data-en>Support the developer</span><span data-ru>Поддержать разработчика</span></h2>
+<section class="support">
+  <div>
+    <p class="lead">
+      <span data-en>All my apps are free. If they're useful to you and you'd like to buy me a coffee, I'll be grateful.</span>
+      <span data-ru>Все мои приложения бесплатны. Если они вам пригодились и хочется угостить меня кофе, буду благодарен.</span>
+    </p>
+    <p>
+      <span data-en>In Kyrgyzstan, scan the QR code with your banking app (ELQR).</span>
+      <span data-ru>В Кыргызстане отсканируйте QR-код в приложении своего банка (ELQR).</span>
+    </p>
+    <p>
+      <span data-en>From abroad, write to <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a> and we'll find a convenient way.</span>
+      <span data-ru>Из-за рубежа напишите на <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a>, и мы найдём удобный способ.</span>
+    </p>
+    <p class="small">
+      <span data-en>A gift doesn't unlock anything in the apps; they work the same for everyone.</span>
+      <span data-ru>Подарок ничего не открывает в приложениях: они одинаковы для всех.</span>
+    </p>
+  </div>
+  <div class="qr-box">
+    <div class="qr"><img src="img/qr.jpg" alt="QR code for a transfer"></div>
+    <div class="qr-cap">ELQR</div>
+  </div>
+</section>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="slowread-legal/">Slowread — <span data-en>privacy</span><span data-ru>конфиденциальность</span></a></li>
+    <li><a href="ticker247/privacy-policy.html">Ticker 24/7 — <span data-en>privacy</span><span data-ru>конфиденциальность</span></a></li>
+    <li><a href="https://docs.google.com/document/d/e/2PACX-1vTb9GZA5nJED4U7VePfUi3FtOqwEcr4iASj-STjcAqUL7iDYphzKNc83x6_xP4tLFGKPNL24bMU2o7x/pub">2+2 — <span data-en>privacy</span><span data-ru>конфиденциальность</span></a></li>
+  </ul>
+</footer>
+
+</div>
+<script>
+(function(){
+  var root=document.documentElement, KEY='mmr-lang';
+  function set(l){
+    root.lang=l;
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.set===l)});
+    try{localStorage.setItem(KEY,l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+  var nav=(navigator.language||'en').toLowerCase();
+  set(saved || (/^(ru|ky|kk|be|uk|uz|tg)/.test(nav) ? 'ru' : 'en'));
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+})();
+</script>
+</body>
+</html>
