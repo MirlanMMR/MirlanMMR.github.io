@@ -57,11 +57,16 @@
   .support{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:center}
   .support p{margin:0 0 12px;color:var(--muted)}
   .support p.lead{color:var(--ink);font-size:17px}
-  .support.single{grid-template-columns:1fr}
-  .card-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--soft);border-radius:14px;padding:14px 16px}
-  .card-num{font:600 20px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
-  .card-meta{font-size:13px;color:var(--muted);margin:8px 0 0}
-  .copy{border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 13px Inter,sans-serif;padding:7px 12px;border-radius:10px;cursor:pointer}
+  .support.single{grid-template-columns:104px 1fr;gap:24px}
+  .cup{width:104px;height:104px;display:block}
+  .cup .steam path{animation:steam 3s ease-in-out infinite}
+  .cup .steam path:nth-child(2){animation-delay:.5s}
+  .cup .steam path:nth-child(3){animation-delay:1s}
+  @keyframes steam{0%,100%{opacity:.25;transform:translateY(2px)}50%{opacity:.8;transform:translateY(-2px)}}
+  @media (prefers-reduced-motion:reduce){.cup .steam path{animation:none;opacity:.6}}
+  @media (max-width:640px){.support.single{grid-template-columns:1fr;justify-items:start}}
+  .card-meta{font-size:13px;color:var(--muted);margin:10px 0 0}
+  .copy-btn{border:0;font-family:inherit;cursor:pointer;padding:11px 18px;font-size:15px}
   .qr{background:#fff;border-radius:16px;padding:12px}
   .qr img{width:100%;height:auto;display:block}
   .qr-cap{text-align:center;font-size:13px;color:var(--muted);margin-top:8px}
@@ -180,18 +185,30 @@
 
 <h2><span data-en>Support the developer</span><span data-ru>Поддержать разработчика</span></h2>
 <section class="support single">
+  <svg class="cup" viewBox="0 0 96 96" aria-hidden="true">
+    <g class="steam" fill="none" stroke="var(--muted)" stroke-width="3" stroke-linecap="round">
+      <path d="M40 16c-5-5 5-9 0-13"/>
+      <path d="M52 16c-5-5 5-9 0-13"/>
+    </g>
+    <path d="M26 32h44l-5 54q0 2-2 2H33q-2 0-2-2z" fill="#fff" stroke="var(--line)" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M27 43h42l-2.4 30H29.4z" fill="var(--accent)"/>
+    <g id="hh-fallback" fill="#f7c948" stroke="#d99a2b" stroke-width=".7" transform="translate(48 58) scale(1.35) translate(-48 -58)">
+      <ellipse cx="43.6" cy="57.5" rx="3.6" ry="7.6" transform="rotate(-32 43.6 57.5)"/>
+      <ellipse cx="52.4" cy="57.5" rx="3.6" ry="7.6" transform="rotate(32 52.4 57.5)"/>
+    </g>
+    <text id="hh" x="48" y="65.5" text-anchor="middle" font-size="22" visibility="hidden">🫶</text>
+    <path d="M29 28q0-7 8-7h22q8 0 8 7z" fill="#4a433b"/>
+    <rect x="24" y="27" width="48" height="6" rx="3" fill="#3a342d"/>
+  </svg>
   <div>
     <p class="lead">
-      <span data-en>My apps are free to use and made by one person. If you like them, you can support further development with a small transfer. Thank you!</span>
-      <span data-ru>Мои приложения бесплатны, их делает один человек. Если они вам нравятся, можно поддержать дальнейшую разработку небольшим переводом. Спасибо!</span>
+      <span data-en>Like the apps? You can support the developer and motivate him to build more useful and, above all, free apps.</span>
+      <span data-ru>Понравились приложения? Вы можете поддержать разработчика и мотивировать его на разработку новых полезных, а главное бесплатных приложений.</span>
     </p>
-    <div class="card-row">
-      <span class="card-num" id="card-num">4714 7000 3895 9700</span>
-      <button type="button" class="copy" id="copy-card"><span data-en>Copy</span><span data-ru>Копировать</span></button>
-    </div>
-    <p class="card-meta">
-      Visa (USD) · MIRLAN MAMYTOV
-    </p>
+    <button type="button" class="btn copy-btn" id="copy-card">
+      <span data-en>Copy Visa card number</span><span data-ru>Скопировать номер карты Visa</span>
+    </button>
+    <p class="card-meta">Visa (USD) · MIRLAN MAMYTOV</p>
   </div>
 </section>
 
@@ -222,11 +239,30 @@
   var nav=(navigator.language||'en').toLowerCase();
   set(saved || (/^(ru|ky|kk|be|uk|uz|tg)/.test(nav) ? 'ru' : 'en'));
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+  (function(){
+    try{
+      var c=document.createElement('canvas');c.width=c.height=16;
+      var x=c.getContext('2d');x.textBaseline='top';x.font='14px sans-serif';x.fillText('\ud83e\udef6',0,0);
+      var d=x.getImageData(0,0,16,16).data,ok=false;
+      for(var i=0;i<d.length;i+=4){if(d[i+3]>0&&d[i]!==d[i+2]){ok=true;break}}
+      if(ok){document.getElementById('hh').setAttribute('visibility','visible');document.getElementById('hh-fallback').setAttribute('display','none')}
+    }catch(e){}
+  })();
   var cp=document.getElementById('copy-card');
   if(cp){cp.addEventListener('click',function(){
-    var t=document.getElementById('card-num').textContent.replace(/\s/g,'');
-    var done=function(){var o=cp.innerHTML;cp.textContent='✓';setTimeout(function(){cp.innerHTML=o},1500)};
-    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}
+    var t=['4714','7000','3895','9700'].join('');
+    var done=function(){
+      var o=cp.innerHTML, ru=root.lang==='ru';
+      cp.textContent=ru?'Скопировано ✓':'Copied ✓';
+      setTimeout(function(){cp.innerHTML=o},1800);
+    };
+    var fallback=function(){
+      var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+      document.body.appendChild(a);a.select();
+      try{document.execCommand('copy');done()}catch(e){}
+      document.body.removeChild(a);
+    };
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
   })}
 })();
 </script>
