@@ -32,6 +32,15 @@
 
   .hero{padding:40px 0 28px}
   .hero h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 14px;max-width:20ch}
+  .hero h1{max-width:24ch}
+  .why{list-style:none;margin:22px 0 0;padding:0;max-width:60ch}
+  .why li{padding:16px 0;border-top:1px solid var(--line)}
+  .why li:last-child{border-bottom:1px solid var(--line)}
+  .why .q{display:block;font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.3;letter-spacing:-.01em}
+  .why b{display:block;color:var(--accent);font-weight:600;margin-top:4px}
+  .why .final{margin-top:16px}
+  .why .gem{display:block;font-size:17px;line-height:1.45;margin-top:8px}
+  .why .more{display:block;color:var(--muted);font-size:15px;margin-top:4px}
   .hero p{color:var(--muted);font-size:18px;max-width:52ch;margin:0}
 
   h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:28px;letter-spacing:-.01em;margin:48px 0 18px}
@@ -88,13 +97,35 @@
 
 <section class="hero">
   <h1>
-    <span data-en>Small apps, made with care.</span>
-    <span data-ru>Небольшие приложения, сделанные с заботой.</span>
+    <span data-en>Looking for something special? You're in the right place!</span>
+    <span data-ru>Ищете что-то особенное? Вы в нужном месте!</span>
   </h1>
   <p>
-    <span data-en>I'm Mirlan, an independent Android developer from Kyrgyzstan. Here are my apps on Google Play.</span>
-    <span data-ru>Я Мирлан, независимый Android-разработчик из Кыргызстана. Здесь собраны мои приложения в Google Play.</span>
+    <span data-en>At first glance, ordinary apps. But they do what others couldn't even imagine.</span>
+    <span data-ru>На первый взгляд — самые обычные приложения. Но они умеют то, о чём другие и представить не могли.</span>
   </p>
+  <ul class="why">
+    <li>
+      <span class="q"><span data-en>How about a calculator with five screens?</span><span data-ru>Как вам калькулятор с пятью экранами?</span></span>
+      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
+      <span class="more"><span data-en>And that's not all! Layout, background, color, font, effects — for every taste! Coming soon to Google Play.</span><span data-ru>И это ещё не всё! Раскладка, фон, цвет, шрифт, эффекты — на любой вкус! Скоро в Google Play.</span></span>
+    </li>
+    <li>
+      <span class="q"><span data-en>How about a reader that opens PDF like a regular book: the text fits your screen instead of staying a fixed A4 page?</span><span data-ru>А ридер, который читает PDF как обычную книгу: текст подстраивается под экран, а не остаётся листом А4?</span></span>
+      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
+      <span class="more"><span data-en>Gestures right on the screen, instead of digging through settings! The world classics already on the shelf. And that's not all!</span><span data-ru>Жесты прямо на экране, вместо копания в настройках! Классика мировой литературы уже на полке. И это ещё не всё!</span></span>
+      <span class="gem"><span data-en>The real gem is a gallery of the world's masterpieces, constantly updated with new paintings!</span><span data-ru>Настоящая изюминка — галерея с мировыми шедеврами, которая постоянно пополняется новыми картинами!</span></span>
+    </li>
+    <li>
+      <span class="q"><span data-en>And how about personal finance with data import from other apps?</span><span data-ru>А как вам личные финансы с переносом данных из других приложений?</span></span>
+      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
+      <span class="more"><span data-en>A beautiful interface, works offline, statistics and comparative analysis.</span><span data-ru>Красивый интерфейс, работает без интернета, статистика и сравнительный анализ.</span></span>
+      <div class="final">
+        <span class="q"><span data-en>And all of it free?</span><span data-ru>И всё бесплатно?</span></span>
+        <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <h2><span data-en>Apps</span><span data-ru>Приложения</span></h2>
@@ -189,7 +220,7 @@
     <button type="button" class="btn copy-btn" id="copy-card">
       <span data-en>Copy Visa card number</span><span data-ru>Скопировать номер карты Visa</span>
     </button>
-    <p class="card-meta">Visa (USD) · MIRLAN MAMYTOV</p>
+    <p class="card-meta">Visa (USD)</p>
   </div>
 </section>
 
