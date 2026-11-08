@@ -57,6 +57,11 @@
   .support{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:center}
   .support p{margin:0 0 12px;color:var(--muted)}
   .support p.lead{color:var(--ink);font-size:17px}
+  .support.single{grid-template-columns:1fr}
+  .card-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:var(--soft);border-radius:14px;padding:14px 16px}
+  .card-num{font:600 20px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
+  .card-meta{font-size:13px;color:var(--muted);margin:8px 0 0}
+  .copy{border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 13px Inter,sans-serif;padding:7px 12px;border-radius:10px;cursor:pointer}
   .qr{background:#fff;border-radius:16px;padding:12px}
   .qr img{width:100%;height:auto;display:block}
   .qr-cap{text-align:center;font-size:13px;color:var(--muted);margin-top:8px}
@@ -173,6 +178,23 @@
 
 </div>
 
+<h2><span data-en>Support the developer</span><span data-ru>Поддержать разработчика</span></h2>
+<section class="support single">
+  <div>
+    <p class="lead">
+      <span data-en>My apps are free to use and made by one person. If you like them, you can support further development with a small transfer. Thank you!</span>
+      <span data-ru>Мои приложения бесплатны, их делает один человек. Если они вам нравятся, можно поддержать дальнейшую разработку небольшим переводом. Спасибо!</span>
+    </p>
+    <div class="card-row">
+      <span class="card-num" id="card-num">4714 7000 3895 9700</span>
+      <button type="button" class="copy" id="copy-card"><span data-en>Copy</span><span data-ru>Копировать</span></button>
+    </div>
+    <p class="card-meta">
+      Visa (USD) · MIRLAN MAMYTOV
+    </p>
+  </div>
+</section>
+
 <footer>
   <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
   <ul>
@@ -200,6 +222,12 @@
   var nav=(navigator.language||'en').toLowerCase();
   set(saved || (/^(ru|ky|kk|be|uk|uz|tg)/.test(nav) ? 'ru' : 'en'));
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+  var cp=document.getElementById('copy-card');
+  if(cp){cp.addEventListener('click',function(){
+    var t=document.getElementById('card-num').textContent.replace(/\s/g,'');
+    var done=function(){var o=cp.innerHTML;cp.textContent='✓';setTimeout(function(){cp.innerHTML=o},1500)};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}
+  })}
 })();
 </script>
 </body>
