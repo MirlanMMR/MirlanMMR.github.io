@@ -1,0 +1,15 @@
+body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+h1 { font-size: 28px; margin-bottom: 8px; }
+h2 { font-size: 19px; margin-top: 36px; }
+p, li { font-size: 16px; color: #333; }
+a { color: #1a73e8; }
+.crumbs { font-size: 14px; color: #888; margin-bottom: 24px; }
+.lead { font-size: 17px; color: #444; }
+.note { background: #f4f7fb; border-left: 3px solid #1a73e8; padding: 10px 16px; border-radius: 4px; }
+.topics { list-style: none; padding: 0; }
+.topics li { padding: 12px 0; border-bottom: 1px solid #eee; }
+.topics span { display: block; font-size: 14px; color: #777; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
+th, td { border-bottom: 1px solid #e5e5e5; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { color: #666; font-weight: 600; }
+footer { margin-top: 56px; font-size: 13px; color: #888; }
