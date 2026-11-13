@@ -22,7 +22,7 @@
 <p>More about backups in <a href="backups.html">“Backups and a new phone”</a>.</p>
 
 <h2>Backup encryption</h2>
-<p>When you sign in to Google (optional, “Settings” → “Auto-backup to Google Drive”), the app creates a random key and puts it on your Google Drive, in the backups folder, as a file “happy-pouch-key-…”. Every backup is encrypted with that key (AES-256): on the phone, on Drive and with “Save somewhere else…”.</p>
+<p>When you sign in to Google (optional, “Settings” → “Auto-backup to Google Drive”), the app creates a random key and puts it on your Google Drive, in a hidden folder of the app. Drive's interface does not show it and other apps cannot read it. For this Google asks for the permission “See, create and delete its own configuration data in your Google Drive” when you sign in. Every backup is encrypted with that key (AES-256): on the phone, on Drive and with “Save somewhere else…”.</p>
 <ul>
   <li>A backup file that ends up in the wrong hands, through a messenger, a cloud or another app, cannot be opened without your Google account.</li>
   <li>On a new phone sign in to the same Google account: the app fetches the key itself and opens the backups. There is no separate password, and a forgotten Google password is recovered through Google.</li>
@@ -30,7 +30,7 @@
   <li>Without signing in to Google there is no encryption: backups are plain, as before.</li>
   <li>Backups made before encryption was on stay plain until newer ones push them out.</li>
 </ul>
-<p class="note">Do not delete the “happy-pouch-key-…” file from Google Drive, and do not give up the Google account for good: without the key encrypted backups cannot be opened. A copy of the key is also kept on the phone, but it is lost on a reinstall or a new phone.</p>
+<p class="note">Do not delete the app's data in Google Drive's settings (“Manage apps” → Happy Pouch → “Delete hidden app data”), and do not give up the Google account for good: without the key encrypted backups cannot be opened. A copy of the key is also kept on the phone, but it is lost on a reinstall or a new phone.</p>
 
 <h2>Login protection</h2>
 <p>“Settings” → “Login protection”. The app then unlocks the same way as your phone: PIN, pattern, fingerprint or face.</p>
