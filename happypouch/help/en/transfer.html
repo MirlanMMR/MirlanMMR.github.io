@@ -28,15 +28,17 @@
 <p>“Settings” → “Data transfer” → “Choose file”. In an empty app the same button is on “Home”: “Transfer data / import statement”.</p>
 
 <h2>Step 3. Check the columns</h2>
-<p>The “Import transactions” screen opens. The app matches the file's columns to its own fields: “Date”, “Amount”, “Category”, “Subcategory”, “Currency”, “Note”. Next to each field is a button with the name of the column that goes into it.</p>
+<p>The “Import transactions” screen opens. At the top it says what the file looks like and how many rows it has. Below is the list of the app's fields: “Date”, “Amount”, “Category”, “Subcategory”, “Currency”, “Note”. The app has already matched a column of your file to each field by its header.</p>
+<p><b>How to see which column is chosen.</b> To the right of each field is an oval button with an outline. It shows the name of the column from your file, for example “Date” or “Transaction date”. If it shows a dash “—”, no column is chosen for that field.</p>
+<p><b>How to choose another column.</b> Tap that oval button to the right of the field. A list opens: the first line is “— don't use”, then all the columns of your file. Tap the one you need. For example, the “Date” field shows “Created date” and you need “Transaction date”: tap the button and pick “Transaction date”.</p>
+<p><b>How to check the result.</b> Under the list of fields it says: “First row of the file: date …, amount …”. That is what the app read from the first row of your file with the chosen columns. If the date or amount there looks wrong, change the column of the matching field.</p>
 <ul>
-  <li>Wrong column: tap the button and pick the right one.</li>
-  <li>The first row of the file is shown under the list, so you can see whether everything is in place.</li>
-  <li>If expenses and income sit in two different columns, switch “One amount column” to “Income and expense separately”.</li>
-  <li>If there is no column with the type, negative amounts count as expenses and positive ones as income.</li>
+  <li>If expenses and income sit in two different columns in the file, switch “One amount column” to “Income and expense separately”. Then two fields appear in place of the single “Amount”: “Expense column” and “Income column”.</li>
+  <li>If the file has no column with the type, negative amounts count as expenses and positive ones as income.</li>
+  <li>If a field is not needed (for example “Subcategory”), pick “— don't use” in its list.</li>
 </ul>
-<p>For dates like 05/10/2026 you can set the order: “Day/month” or “Month/day”. “Auto” is usually enough.</p>
-<p>If the file has no currency column, pick one currency for all records.</p>
+<p>For dates like 05/10/2026 there is a date order below: “Auto”, “Day/month”, “Month/day”. “Auto” is usually enough.</p>
+<p>If the file has no currency column, pick one currency for all records below: buttons with the codes of your currencies.</p>
 
 <h2>Step 4. Look at the summary and load</h2>
 <p>Before loading, the app shows what will happen: how many records will be added and for which period, how many are skipped and why, which categories and currencies will appear. Below are three records as a sample. If everything is right, tap “Import”.</p>
