@@ -16,10 +16,21 @@
 <h2>Where the data is</h2>
 <ul>
   <li><b>In the app on the phone.</b> It is sent nowhere.</li>
-  <li><b>In the backups on the phone</b>: the “Documents/HappyPouch” folder. Backup files are not encrypted: anyone with access to the phone's files can read them.</li>
+  <li><b>In the backups on the phone</b>: the “Documents/HappyPouch” folder. If you signed in to Google they are encrypted (see below); without signing in they are plain.</li>
   <li><b>On your Google Drive</b>, only if you turned on auto-backup yourself.</li>
 </ul>
 <p>More about backups in <a href="backups.html">“Backups and a new phone”</a>.</p>
+
+<h2>Backup encryption</h2>
+<p>When you sign in to Google (optional, “Settings” → “Auto-backup to Google Drive”), the app creates a random key and puts it on your Google Drive, in the backups folder, as a file “happy-pouch-key-…”. Every backup is encrypted with that key (AES-256): on the phone, on Drive and with “Save somewhere else…”.</p>
+<ul>
+  <li>A backup file that ends up in the wrong hands, through a messenger, a cloud or another app, cannot be opened without your Google account.</li>
+  <li>On a new phone sign in to the same Google account: the app fetches the key itself and opens the backups. There is no separate password, and a forgotten Google password is recovered through Google.</li>
+  <li>The first time on a new phone the internet is needed to fetch the key.</li>
+  <li>Without signing in to Google there is no encryption: backups are plain, as before.</li>
+  <li>Backups made before encryption was on stay plain until newer ones push them out.</li>
+</ul>
+<p class="note">Do not delete the “happy-pouch-key-…” file from Google Drive, and do not give up the Google account for good: without the key encrypted backups cannot be opened. A copy of the key is also kept on the phone, but it is lost on a reinstall or a new phone.</p>
 
 <h2>Login protection</h2>
 <p>“Settings” → “Login protection”. The app then unlocks the same way as your phone: PIN, pattern, fingerprint or face.</p>
@@ -28,7 +39,7 @@
   <li>“Ask again if the app was closed” sets how long after leaving the app the check is needed again: immediately, 30 seconds, 1 minute, 5 minutes.</li>
   <li>If you cancel the check, the app stays locked; the “Open” button asks again.</li>
 </ul>
-<p class="note">Login protection locks the app's screen. It does not lock the backup files in the “Documents/HappyPouch” folder.</p>
+<p class="note">Login protection locks the app's screen. The backup files are locked by encryption, which works if you signed in to Google.</p>
 
 <h2>Icons only</h2>
 <p>“Settings” → “Icons only”. On “Home” and in “Records” icons stay in place of category names. Someone glancing at the screen sees amounts, but not what they are for.</p>
@@ -37,7 +48,7 @@
 <p>Auto-backup to Google Drive is optional. If you turn it on:</p>
 <ul>
   <li>on Drive the app sees only the files it created itself; other files are closed to it;</li>
-  <li>backups sit on your Drive, and the developer has no access to them;</li>
+  <li>backups and the key sit on your Drive, and the developer has no access to them; backups are encrypted with that key;</li>
   <li>“Sign out” stops automatic backups; saved backups stay on Drive, and you can delete them in Google Drive itself.</li>
 </ul>
 
@@ -51,7 +62,7 @@
 </ul>
 
 <h2>Sending a file through another service</h2>
-<p>A file with your records sent to a messenger, a cloud or an AI assistant is seen by that service. The app no longer has any say over it.</p>
+<p>A backup file sent to a messenger, a cloud or an AI assistant is encrypted if you signed in to Google: it cannot be read without your account. Without signing in the file is plain, and that service sees it. A table exported to CSV is not protected by the encryption.</p>
 
 <p><a href="../../privacy-policy.html">Privacy policy</a></p>
 
