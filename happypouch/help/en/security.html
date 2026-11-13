@@ -11,7 +11,7 @@
 <body>
 <div class="crumbs"><a href="index.html">Happy Pouch Help</a> · Security</div>
 <h1>Security and privacy</h1>
-<p class="lead">Records are stored only on your phone. The app has no account, no server and no sign-up; tracking needs no internet.</p>
+<p class="lead">Records are stored only on your phone. The app has no account, no server and no sign-up, and tracking works without the internet.</p>
 
 <h2>Where the data is</h2>
 <ul>
@@ -25,12 +25,12 @@
 <p>When you sign in to Google (optional, “Settings” → “Auto-backup to Google Drive”), the app creates a random key and puts it on your Google Drive, in a hidden folder of the app. Drive's interface does not show it and other apps cannot read it. For this Google asks for the permission “See, create and delete its own configuration data in your Google Drive” when you sign in. Every backup is encrypted with that key (AES-256): on the phone, on Drive and with “Save somewhere else…”.</p>
 <ul>
   <li>A backup file that ends up in the wrong hands, through a messenger, a cloud or another app, cannot be opened without your Google account.</li>
-  <li>On a new phone sign in to the same Google account: the app fetches the key itself and opens the backups. There is no separate password, and a forgotten Google password is recovered through Google.</li>
-  <li>The first time on a new phone the internet is needed to fetch the key.</li>
+  <li>On a new phone, sign in to the same Google account: the app fetches the key itself and opens the backups. There is no separate password, and a forgotten Google password can be recovered through Google.</li>
+  <li>The first time on a new phone you need an internet connection to fetch the key.</li>
   <li>Without signing in to Google there is no encryption: backups are plain, as before.</li>
   <li>Backups made before encryption was on stay plain until newer ones push them out.</li>
 </ul>
-<p class="note">Do not delete the app's data in Google Drive's settings (“Manage apps” → Happy Pouch → “Delete hidden app data”), and do not give up the Google account for good: without the key encrypted backups cannot be opened. A copy of the key is also kept on the phone, but it is lost on a reinstall or a new phone.</p>
+<p class="note">Do not delete the app's data in Google Drive's settings (“Manage apps” → Happy Pouch → “Delete hidden app data”), and do not lose access to the Google account: without the key encrypted backups cannot be opened. A copy of the key is also kept on the phone, but it is lost on a reinstall or a new phone.</p>
 
 <h2>Login protection</h2>
 <p>“Settings” → “Login protection”. The app then unlocks the same way as your phone: PIN, pattern, fingerprint or face.</p>
@@ -42,12 +42,12 @@
 <p class="note">Login protection locks the app's screen. The backup files are locked by encryption, which works if you signed in to Google.</p>
 
 <h2>Icons only</h2>
-<p>“Settings” → “Icons only”. On “Home” and in “Records” icons stay in place of category names. Someone glancing at the screen sees amounts, but not what they are for.</p>
+<p>“Settings” → “Icons only”. On “Home” and in “Records”, icons replace category names. Someone glancing at the screen sees amounts, but not what they are for.</p>
 
 <h2>What Google can reach</h2>
 <p>Auto-backup to Google Drive is optional. If you turn it on:</p>
 <ul>
-  <li>on Drive the app sees only the files it created itself; other files are closed to it;</li>
+  <li>on Drive the app sees only the files it created itself; it cannot access other files;</li>
   <li>backups and the key sit on your Drive, and the developer has no access to them; backups are encrypted with that key;</li>
   <li>“Sign out” stops automatic backups; saved backups stay on Drive, and you can delete them in Google Drive itself.</li>
 </ul>

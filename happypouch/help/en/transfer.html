@@ -11,37 +11,37 @@
 <body>
 <div class="crumbs"><a href="index.html">Happy Pouch Help</a> · Moving from another app</div>
 <h1>Moving from another app</h1>
-<p class="lead">Records from another budget app come over as one file. Categories and currencies are created for you; there is no need to start from zero.</p>
+<p class="lead">Records from another budget app move over as a single file. Categories and currencies are created for you, so there is no need to start from zero.</p>
 
-<h2>What comes over</h2>
+<h2>What gets transferred</h2>
 <ul>
   <li>Expense and income records: date, amount, category, subcategory, currency, note.</li>
-  <li>Categories and currencies you do not have yet: the app creates them and shows the list before loading.</li>
+  <li>Categories and currencies you do not have yet. The app creates them and shows you the list before importing.</li>
 </ul>
-<p>Transfers between wallets do not come over: they are skipped, and the app says how many there were. Records that are already in Happy Pouch are not added a second time.</p>
+<p>Transfers between wallets are not imported: they are skipped, and the app tells you how many there were. Records that are already in Happy Pouch are not added a second time.</p>
 
-<h2>Step 1. Save a file in the old app</h2>
-<p>Find “Export” in it, usually in the settings or in the data section. Excel (XLSX) and CSV work best. Save the file to the phone.</p>
-<p class="note">It has to be an export to a table, not a “backup”. Happy Pouch cannot read another app's backup.</p>
+<h2>Step 1. Export a file from your old app</h2>
+<p>Look for “Export” in the old app, usually in Settings or in a data section. Excel (XLSX) and CSV work best. Save the file to your phone.</p>
+<p class="note">You need an export to a table (a spreadsheet), not a “backup”. Happy Pouch cannot read another app's backup.</p>
 
 <h2>Step 2. Open the file in Happy Pouch</h2>
 <p>“Settings” → “Data transfer” → “Choose file”. In an empty app the same button is on “Home”: “Transfer data / import statement”.</p>
 
 <h2>Step 3. Check the columns</h2>
-<p>The “Import transactions” screen opens. At the top it says what the file looks like and how many rows it has. Below is the list of the app's fields: “Date”, “Amount”, “Category”, “Subcategory”, “Currency”, “Note”. The app has already matched a column of your file to each field by its header.</p>
-<p><b>How to see which column is chosen.</b> To the right of each field is an oval button with an outline. It shows the name of the column from your file, for example “Date” or “Transaction date”. If it shows a dash “—”, no column is chosen for that field.</p>
-<p><b>How to choose another column.</b> Tap that oval button to the right of the field. A list opens: the first line is “— don't use”, then all the columns of your file. Tap the one you need. For example, the “Date” field shows “Created date” and you need “Transaction date”: tap the button and pick “Transaction date”.</p>
+<p>The “Import transactions” screen opens. At the top it says what kind of file it looks like and how many rows it has. Below is the list of the app's fields: “Date”, “Amount”, “Category”, “Subcategory”, “Currency”, “Note”. The app has already matched a column of your file to each field by its header.</p>
+<p><b>How to see which column is chosen.</b> To the right of each field is a rounded button with an outline. It shows the name of the column from your file, for example “Date” or “Transaction date”. If it shows a dash “—”, no column is chosen for that field.</p>
+<p><b>How to choose another column.</b> Tap that button to the right of the field. A list opens: the first line is “— don't use”, then all the columns of your file. Tap the one you need. For example, the “Date” field shows “Created date” and you need “Transaction date”: tap the button and pick “Transaction date”.</p>
 <p><b>How to check the result.</b> Under the list of fields it says: “First row of the file: date …, amount …”. That is what the app read from the first row of your file with the chosen columns. If the date or amount there looks wrong, change the column of the matching field.</p>
 <ul>
   <li>If expenses and income sit in two different columns in the file, switch “One amount column” to “Income and expense separately”. Then two fields appear in place of the single “Amount”: “Expense column” and “Income column”.</li>
   <li>If the file has no column with the type, negative amounts count as expenses and positive ones as income.</li>
   <li>If a field is not needed (for example “Subcategory”), pick “— don't use” in its list.</li>
 </ul>
-<p>For dates like 05/10/2026 there is a date order below: “Auto”, “Day/month”, “Month/day”. “Auto” is usually enough.</p>
-<p>If the file has no currency column, pick one currency for all records below: buttons with the codes of your currencies.</p>
+<p>For dates like 05/10/2026, set the date order below the list: “Auto”, “Day/month” or “Month/day”. “Auto” is usually enough.</p>
+<p>If the file has no currency column, choose one currency for all records below by tapping the button with its code.</p>
 
-<h2>Step 4. Look at the summary and load</h2>
-<p>Before loading, the app shows what will happen: how many records will be added and for which period, how many are skipped and why, which categories and currencies will appear. Below are three records as a sample. If everything is right, tap “Import”.</p>
+<h2>Step 4. Review the summary and import</h2>
+<p>Before importing, the app shows what will happen: how many records will be added and for which period, how many will be skipped and why, and which categories and currencies will be created. Below that are three sample records. If everything looks right, tap “Import”.</p>
 
 <h2>Which files work</h2>
 <table>
@@ -52,16 +52,16 @@
   <tr><td>QIF</td><td>older finance programs</td></tr>
   <tr><td>SQLite</td><td>GnuCash and Money Manager databases</td></tr>
 </table>
-<p>The file must be no larger than 30 MB.</p>
+<p>The file can be up to 30 MB.</p>
 
 <h2>If it does not work</h2>
 <ul>
-  <li><b>“This isn't a table but a proprietary file”.</b> You picked another app's backup. Go back to that app and find the export to CSV or Excel.</li>
-  <li><b>“This is a JSON file”.</b> It is a backup of Happy Pouch itself. It is loaded elsewhere, in “Settings”: “Backups on this phone” → “Restore”.</li>
-  <li><b>Dates or amounts are not recognised.</b> The app shows examples of such rows. Check that the right column is picked for the date and the amount, and the day and month order.</li>
-  <li><b>Columns are mixed up or there are too many.</b> Open the file in Excel or Google Sheets and keep the columns “Date”, “Amount”, “Category”, “Note”.</li>
+  <li><b>“This isn't a table but a proprietary file”.</b> You picked another app's backup. Go back to that app and look for an export to CSV or Excel.</li>
+  <li><b>“This is a JSON file”.</b> It is a backup of Happy Pouch itself. Restore it from “Settings” instead: “Backups on this phone” → “Restore”.</li>
+  <li><b>Dates or amounts are not recognized.</b> The app shows examples of such rows. Check that the right columns are picked for the date and the amount, and that the day/month order is right.</li>
+  <li><b>Columns are mixed up, or there are too many.</b> Open the file in Excel or Google Sheets and keep only the columns “Date”, “Amount”, “Category” and “Note”.</li>
 </ul>
-<p>If the file looks like nothing familiar, you can give it to any AI assistant and ask it to turn the file into a CSV table with the columns “Date”, “Amount”, “Category”, “Note”. Keep in mind that the service you send it to will see the file with your spending.</p>
+<p>If the file's format is unfamiliar or messy, you can give it to an AI assistant and ask it to turn it into a CSV table with the columns “Date”, “Amount”, “Category” and “Note”. Keep in mind that the service you send it to will see your spending.</p>
 
 <footer><a href="index.html">← All topics</a></footer>
 </body>
