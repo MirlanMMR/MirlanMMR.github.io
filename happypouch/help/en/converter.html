@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency converter in Happy Pouch — how to use it</title>
+<meta name="description" content="How the Happy Pouch currency converter works: home currency, buy and sell rates, converting an amount, comparing two currencies, offline.">
+<link rel="alternate" hreflang="ru" href="../ru/converter.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Happy Pouch Help</a> · Currency converter</div>
+<h1>Currency converter</h1>
+<p class="lead">The converter works like the board at an exchange office: each currency has a buy price and a sell price. You enter the rates yourself; the app does not download them and works without the internet.</p>
+
+<h2>Where it is</h2>
+<p>Open the side menu: the button with three bars at the top left on “Home”, in “Records” or in “Statistics”. The converter sits under the period choice.</p>
+
+<h2>Home currency</h2>
+<p>All rates are written against the home currency, the one you are keeping track in right now. It is shown as a button with a flag above the amount field. To change it, go to “Settings”, section “Currencies”, and mark the one you need as “Home”.</p>
+
+<h2>How to add a currency</h2>
+<p>Tap “+ Currency” under the board and enter a name or a code: “USD”, “euro”, “yen”. The currency appears in the list; the home currency does not change.</p>
+
+<h2>How to enter a rate</h2>
+<p>Each currency on the board has two fields:</p>
+<table>
+  <tr><th>Field</th><th>What to write in it</th></tr>
+  <tr><td>Buy</td><td>How much home currency the exchange office <b>gives you</b> for one unit of this currency.</td></tr>
+  <tr><td>Sell</td><td>How much home currency the exchange office <b>takes from you</b> for one unit of this currency.</td></tr>
+</table>
+<p>Example: the home currency is the euro, and the office's board shows the dollar at 0.91 / 0.93. Write 0.91 in “Buy” and 0.93 in “Sell”.</p>
+<p>One field is enough: that price is then used in both directions. An empty field or a zero means there is no rate. A rate is saved at once; there is no “Save” button.</p>
+
+<h2>How to convert an amount</h2>
+<ol>
+  <li>Enter the amount in the field above the board. You can calculate right there: 100+50.</li>
+  <li>The result in the other currency appears on the right.</li>
+  <li>The arrow between them swaps the direction: the result becomes the new amount and the calculation runs back.</li>
+</ol>
+<p>Under the result it says which price was used, for example “$ – Buy”.</p>
+
+<h2>Why there and back give different results</h2>
+<p>Because that is how an exchange office works. When you change dollars into euros, the office <b>buys</b> from you, so the buy price is used. When you change euros into dollars, it <b>sells</b> to you, so the sell price is used. The app picks the price by the direction of the arrow.</p>
+<p>Need the other price: tap its field on the board. It lights up and the calculation uses it.</p>
+
+<h2>How to compare two currencies with each other</h2>
+<p>Tap the price of one currency, then the price of another, for example the dollar and the pound. The calculation keeps those two, without the home currency. To bring the home currency back, tap its button with the flag above the amount field.</p>
+<p>There is no need to enter a direct rate between them: the app goes through the home currency. If a new currency has no rate to the home currency yet, but has one to another currency that does, the calculation goes through that one.</p>
+
+<h2>What happens to the rates</h2>
+<ul>
+  <li>They are stored only on the phone and go into the backup together with the records.</li>
+  <li>They do not update by themselves: if a rate has changed, correct the number on the board.</li>
+  <li>When you change the home currency, there is no need to enter the rates again: the app recalculates them the other way round.</li>
+  <li>If you delete a currency, its rates are deleted with it.</li>
+</ul>
+
+<p class="note">The converter writes nothing into expenses or income. It is a calculator: it works out how much you get in an exchange, but does not record the exchange itself.</p>
+
+<footer><a href="index.html">← All topics</a></footer>
+</body>
+</html>

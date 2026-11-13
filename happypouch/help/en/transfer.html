@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving your data into Happy Pouch from another app</title>
+<meta name="description" content="How to bring records from another budget app or a bank statement into Happy Pouch: export, column matching, supported formats, common errors.">
+<link rel="alternate" hreflang="ru" href="../ru/transfer.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Happy Pouch Help</a> · Moving from another app</div>
+<h1>Moving from another app</h1>
+<p class="lead">Records from another budget app come over as one file. Categories and currencies are created for you; there is no need to start from zero.</p>
+
+<h2>What comes over</h2>
+<ul>
+  <li>Expense and income records: date, amount, category, subcategory, currency, note.</li>
+  <li>Categories and currencies you do not have yet: the app creates them and shows the list before loading.</li>
+</ul>
+<p>Transfers between wallets do not come over: they are skipped, and the app says how many there were. Records that are already in Happy Pouch are not added a second time.</p>
+
+<h2>Step 1. Save a file in the old app</h2>
+<p>Find “Export” in it, usually in the settings or in the data section. Excel (XLSX) and CSV work best. Save the file to the phone.</p>
+<p class="note">It has to be an export to a table, not a “backup”. Happy Pouch cannot read another app's backup.</p>
+
+<h2>Step 2. Open the file in Happy Pouch</h2>
+<p>“Settings” → “Data transfer” → “Choose file”. In an empty app the same button is on “Home”: “Transfer data / import statement”.</p>
+
+<h2>Step 3. Check the columns</h2>
+<p>The “Import transactions” screen opens. The app matches the file's columns to its own fields: “Date”, “Amount”, “Category”, “Subcategory”, “Currency”, “Note”. Next to each field is a button with the name of the column that goes into it.</p>
+<ul>
+  <li>Wrong column: tap the button and pick the right one.</li>
+  <li>The first row of the file is shown under the list, so you can see whether everything is in place.</li>
+  <li>If expenses and income sit in two different columns, switch “One amount column” to “Income and expense separately”.</li>
+  <li>If there is no column with the type, negative amounts count as expenses and positive ones as income.</li>
+</ul>
+<p>For dates like 05/10/2026 you can set the order: “Day/month” or “Month/day”. “Auto” is usually enough.</p>
+<p>If the file has no currency column, pick one currency for all records.</p>
+
+<h2>Step 4. Look at the summary and load</h2>
+<p>Before loading, the app shows what will happen: how many records will be added and for which period, how many are skipped and why, which categories and currencies will appear. Below are three records as a sample. If everything is right, tap “Import”.</p>
+
+<h2>Which files work</h2>
+<table>
+  <tr><th>Format</th><th>Where it usually comes from</th></tr>
+  <tr><td>Excel XLSX and XLS</td><td>export from most budget apps; the most reliable option</td></tr>
+  <tr><td>CSV</td><td>app exports, statements; separator and encoding are detected automatically</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>bank statements</td></tr>
+  <tr><td>QIF</td><td>older finance programs</td></tr>
+  <tr><td>SQLite</td><td>GnuCash and Money Manager databases</td></tr>
+</table>
+<p>The file must be no larger than 30 MB.</p>
+
+<h2>If it does not work</h2>
+<ul>
+  <li><b>“This isn't a table but a proprietary file”.</b> You picked another app's backup. Go back to that app and find the export to CSV or Excel.</li>
+  <li><b>“This is a JSON file”.</b> It is a backup of Happy Pouch itself. It is loaded elsewhere, in “Settings”: “Backups on this phone” → “Restore”.</li>
+  <li><b>Dates or amounts are not recognised.</b> The app shows examples of such rows. Check that the right column is picked for the date and the amount, and the day and month order.</li>
+  <li><b>Columns are mixed up or there are too many.</b> Open the file in Excel or Google Sheets and keep the columns “Date”, “Amount”, “Category”, “Note”.</li>
+</ul>
+<p>If the file looks like nothing familiar, you can give it to any AI assistant and ask it to turn the file into a CSV table with the columns “Date”, “Amount”, “Category”, “Note”. Keep in mind that the service you send it to will see the file with your spending.</p>
+
+<footer><a href="index.html">← All topics</a></footer>
+</body>
+</html>
