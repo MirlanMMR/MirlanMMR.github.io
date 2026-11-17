@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Учёт расходов и доходов для Android без подписки — Happy Pouch</title>
+<meta name="description" content="Happy Pouch: приложение для учёта личных финансов на Android. Статистика, бюджеты по категориям, конвертер валют, перенос данных из другого приложения. Все функции бесплатны, подписок нет, работает без интернета.">
+<link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/happypouch/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/happypouch/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/happypouch/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/happypouch/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .langsw{font-size:14px;color:var(--muted)}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Expense Tracker: Happy Pouch",
+  "alternateName":["Happy Pouch","Учёт расходов с Happy Pouch"],
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"Android 8.0+",
+  "inLanguage":["ru","en"],
+  "description":"Приложение для учёта личных финансов на Android: доходы и расходы, бюджеты по категориям, статистика, конвертер валют, перенос данных из другого приложения. Все функции бесплатны.",
+  "url":"https://mirlanmmr.github.io/ru/apps/happypouch/",
+  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "installUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "image":"https://mirlanmmr.github.io/img/happypouch.png",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/apps/happypouch/" hreflang="en" lang="en">English</a></header>
+
+<main>
+  <div class="head">
+    <img src="/img/happypouch.png" width="64" height="64" alt="Иконка приложения Happy Pouch">
+    <span>Happy Pouch · Android · бесплатно</span>
+  </div>
+
+  <h1>Учёт денег, за который не надо платить отдельно</h1>
+
+  <h2>С чего всё началось</h2>
+  <p>Я сам несколько лет пользовался приложением для учёта расходов. Какое именно, называть не буду и плохо о нём отзываться тоже не стану. Но у него был минус, и не единственный, а самый заметный: оно было дорогим. Не знаю, о чём думают разработчики таких приложений, но у меня сложилось ощущение, что оно сделано для тех, у кого есть деньги. То есть у кого их много.</p>
+  <p>Раз я так могу, то решил сделать приложение для себя. И, без ложной скромности, я не был бы собой, если бы не придумал пару способов сделать его ещё лучше. Лучше оно не только потому, что бесплатное.</p>
+  <p>Кроме красивого интерфейса в нём много полезного: встроенный конвертер валют, статистика и сравнительный анализ, напоминания о платежах и многое другое. Во многих похожих приложениях такие функции доступны только по подписке или после разовой покупки. Здесь они доступны всем.</p>
+
+  <div class="short">
+    <p><b>Коротко.</b> Это приложение для Android, в котором вы записываете свои доходы и расходы. Есть категории и бюджеты, несколько валют и кошельков, конвертер, статистика и напоминания о платежах. Работает без интернета и без регистрации. Данные хранятся на телефоне. Резервные копии по желанию сохраняются на ваш Google Drive в зашифрованном виде. Данные из другого приложения можно перенести файлом. Все функции бесплатны, подписок и покупок нет. Внизу показывается один небольшой рекламный баннер.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Скачать в Google Play</a></p>
+  </div>
+
+  <h2>Что в нём есть</h2>
+  <ul class="feat">
+    <li><b>Запись за пару секунд.</b> Категория выбирается одним касанием. Для регулярных трат приложение запоминает вашу обычную сумму. В поле суммы есть калькулятор: можно ввести 120+45 или 15%, не выходя из карточки.</li>
+    <li><b>Колесо категорий.</b> Показывает долю каждой категории за день, неделю, месяц, квартал или год. Периоды листаются свайпом, по иконке категории видно её сумму и долю.</li>
+    <li><b>Валюты и кошельки.</b> Несколько валют и кошельков, переводы между ними. Конвертер считает сумму в любой валюте: вы вводите курсы покупки и продажи сами.</li>
+    <li><b>Статистика о вас.</b> Куда уходят деньги: необходимое, хобби и спорт, маленькие радости, непредвиденное. Темп трат: этот месяц на фоне прошлого. Что ещё впереди до конца месяца, с прогнозом. Нижний порог остатка, о приближении к которому приложение предупредит.</li>
+    <li><b>Сравнение и бюджеты.</b> По каждой категории видно, что выросло и что снизилось по сравнению с прошлым периодом. Можно задать месячный бюджет на категорию: приложение предупредит на 80% и на 100% лимита.</li>
+    <li><b>Платежи.</b> Кредиты, рассрочки, аренда, коммуналка: что оплачено, что осталось и когда следующий платёж. Регулярные доходы, например зарплата или аванс, тоже учитываются.</li>
+    <li><b>Свои категории.</b> Любые цвета, любой эмодзи в качестве иконки, подкатегории и напоминания. Удалённая запись или подкатегория 90 дней лежит в корзине, и её можно вернуть.</li>
+    <li><b>Приватность.</b> Режим «только иконки» включается одним переключателем, и никто не прочитает ваши траты из-за плеча. Вход по PIN-коду, отпечатку пальца или лицу.</li>
+    <li><b>Переезд из другого приложения.</b> В старом приложении найдите «Экспорт», сохраните файл и откройте его в Happy Pouch («Перенос данных / импорт выписки»). Подходят CSV, Excel (XLS и XLSX), QIF, OFX, QFX, QBO и SQLite. Перед импортом вы видите, какой столбец куда пойдёт, и можете проверить.</li>
+  </ul>
+
+  <h2>Где хранятся данные</h2>
+  <p>Записи и суммы лежат на вашем телефоне и никуда не уходят, пока вы сами не включите резервные копии. Копии сохраняются в папку Documents/HappyPouch на самом телефоне и остаются там, даже если удалить приложение. По желанию можно включить автокопирование на ваш Google Drive: приложение видит только те файлы, которые создало само. Если вы вошли через Google, копии шифруются ключом вашего аккаунта и без него не откроются. Так же данные переезжают на новый телефон: файл копии открывается из файлового менеджера или с Google Drive.</p>
+
+  <h2>Чего в нём нет</h2>
+  <ul class="feat">
+    <li>Оно не подключается к банкам. Операции вы вносите сами или загружаете файлом выписки.</li>
+    <li>Есть один небольшой рекламный баннер (Google AdMob). Подписок, платных функций и покупок внутри нет.</li>
+    <li>Интерфейс на русском и английском.</li>
+    <li>Нужен Android 8.0 или новее.</li>
+  </ul>
+  <p>Если что-то непонятно, загляните в <a href="/happypouch/help/ru/">справку</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Скачать в Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">Все приложения</a></li>
+    <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/ru/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/happypouch/help/ru/">Справка</a></li>
+    <li><a href="/happypouch/privacy-policy.html">Конфиденциальность</a></li>
+    <li><a href="/happypouch/terms-of-use.html">Условия</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebook reader for Android: gestures instead of settings — Slowread</title>
+<meta name="description" content="Slowread: an Android reader you adjust right on the page of the book, no menus. EPUB, FB2, MOBI, PDF, DjVu. Free classics on the shelves and a gallery of masterpieces of painting with stories.">
+<link rel="canonical" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "An Android ebook reader where font, size and color change with gestures right on the page. Opens EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Free public-domain books and a gallery of masterpieces of painting with stories.",
+  "url": "https://mirlanmmr.github.io/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/ru/apps/slowread/" hreflang="ru" lang="ru">Русский</a></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Slowread app icon">
+    <span>Slowread · ebook reader · Android · free</span>
+  </div>
+
+  <h1>A reader you adjust right on the page of the book</h1>
+
+  <h2>How it all started</h2>
+  <p>I love reading, though I don't always find the time. And I have never been against reading gadgets. I used to put ebooks together on my computer, load them into a reader and run them on a button-key Nokia. When modern smartphones arrived, I downloaded and bought subscriptions to a couple of reading apps at once.</p>
+  <p>What I didn't like about them? There were a lot of settings, and I didn't understand many of them. I dug into the settings, changed something, left to see what came out, and went back in again. Now that I can make any app I like, I have finally got around to this.</p>
+  <p>The first thing I focused on was making the reader as simple to adjust as possible. To change something, you shouldn't have to go into settings. You change it right on the screen of the open book and see the result at once. Need another font? Swipe sideways across the screen and the font changes before your eyes. Need bigger text? Spread two fingers apart to enlarge it, and a pinch the other way makes it smaller. A tap on the top zone switches your favorite themes, that is, background color and text color.</p>
+  <p>But that was only the beginning. I got into it, and made sure that the first time you open the reader, there are already books on your shelf, and free ones, rather than an empty reader or one with a bookstore. A welcome greets you, with quotes from great writers and masterpieces of world literature, prose and poetry from the public domain.</p>
+  <p>I did say I read from a button-key phone and from a computer. I couldn't always find the book I wanted online. Some rare books exist only as PDF, and often they are scans. I always wanted to read a PDF like an ordinary ebook, not struggle with an A4 sheet on a small screen. I managed it, as I did many other things. I won't write about everything.</p>
+  <p>I'll add just one more thing. As kids we collected postage stamps and Soviet postcards, and we loved looking at them. I, for one, studied every stamp, postcard or photograph in detail. Even the patterns of the carpet on the wall. It's something built into us, and that is why we never let go of our smartphones. I don't blame the younger generation for that: it's a marvel of technology. Anyway, I got the idea of repeating something like a stamp album, where there were often miniatures of famous paintings. That is why Slowread has a library and a gallery, with public-domain masterpieces collected by schools of art.</p>
+  <p><b>Why Slowread, and why "Read unhurried"?</b> Because fiction is to be enjoyed, not swallowed on the run. We are not the kind of people who keep rushing the user: the app has no reading-speed counters and no pressure. Read at your own pace.</p>
+
+  <div class="short">
+    <p><b>In short.</b> Slowread is an ebook reader for Android. Font, size and color change with gestures right on the page of the book, with no need to go into settings. It opens EPUB, FB2, MOBI, DOCX, PDF, DjVu and TXT. The shelves already hold free public-domain books, and there is search across Project Gutenberg, a quote of the day and a gallery of masterpieces of painting with stories about the paintings. The app is free, with ads at the bottom. No sign-up is needed.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Get it on Google Play</a></p>
+  </div>
+
+  <h2>What's in it</h2>
+  <p><b>Comfortable to read.</b></p>
+  <ul class="feat">
+    <li>Swipe sideways to change the font. Pinch or spread your fingers to change the text size. A tap on the top zone switches your favorite themes, that is, background and text color. Touch the middle and drag to get your own color, not just ready-made presets.</li>
+    <li>The padlock at the top locks the look, so a stray touch can't change anything.</li>
+    <li>Tap at the edge of a paragraph to add a bookmark. Bookmarks and notes on a paragraph are collected in one panel.</li>
+    <li>You can use your own font: pick one on Google Fonts, download it, open the file in Slowread, and your book is set in it.</li>
+    <li>A typo in the book? Long-press by a paragraph and correct the text. Your edit stays on top of the book and the original file is untouched. You can save a corrected copy as EPUB or FB2.</li>
+  </ul>
+  <p><b>Books.</b></p>
+  <ul class="feat">
+    <li>The shelves already hold acknowledged masterpieces of world literature from the public domain, prose and poetry. The English shelf includes The Odyssey, Treasure Island, The Time Machine, The War of the Worlds, Shakespeare's Sonnets and Leaves of Grass. Tap a book and it's in your library.</li>
+    <li>Below the shelves you can search all of Project Gutenberg in English, over 33,000 works. A card tells you about the book before you download it.</li>
+    <li>You add your own books yourself: the app opens EPUB, FB2, MOBI, DOCX, PDF, DjVu (scans with a text layer), TXT, MD and ZIP archives of them. A book from your downloads, a messenger or a browser lands right in your library.</li>
+    <li>The library shows real titles, authors and covers taken from the file, not a list of filenames. The table of contents comes from the book's own structure.</li>
+    <li>Which format to download: EPUB (recommended) or FB2. They hold live text that adapts to your font, size and color, and contents, cover, images and footnotes work as intended.</li>
+    <li>A quote of the day: a new thought from a great writer every day, word for word from the edition, with the author and the translator named.</li>
+  </ul>
+  <p><b>A gallery of masterpieces.</b> From ancient Egyptian painting and Song landscapes through the Renaissance and the Dutch Golden Age to Rembrandt, Hokusai, Van Gogh and Roerich. The works are collected by era and school of art. Each one has a story: where to look, the world it came from and why it matters. You can open a painting fullscreen and zoom into a brushstroke, a gesture or a barely visible sign. Gallery images load from the internet.</p>
+
+  <h2>What it doesn't have</h2>
+  <ul class="feat">
+    <li>It is a reader, not a store. You add new releases and bestsellers yourself, and the app sells no books. The free shelves consist of public-domain books.</li>
+    <li>It is not a tracker for books you have read and not a reading-speed counter. Another app has the same name, so search Google Play for "Slowread" and check the icon and description.</li>
+    <li>PDFs and scans don't read as smoothly as EPUB and FB2. With scanned books a lot depends on the quality of text recognition, and it can contain errors.</li>
+    <li>There are ads from Google AdMob. There are no paid features or in-app purchases.</li>
+    <li>It needs Android 7.0 or newer.</li>
+  </ul>
+
+  <h2>What about your data</h2>
+  <p>Your books stay on your phone and are never sent anywhere. Your reading position and bookmarks can be saved to a hidden app folder on your own Google Drive, but only if you turn that on yourself. Details are in the <a href="/slowread-legal/">privacy policy</a>. After you add your books, reading works offline.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Get it on Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">All apps</a></li>
+    <li><a href="/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/slowread-legal/">Privacy</a></li>
+    <li><a href="/slowread/terms-of-use.html">Terms</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

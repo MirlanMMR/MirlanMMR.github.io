@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор для Android с пятью экранами и своей раскладкой — Calculator: Themes &amp; Widget</title>
+<meta name="description" content="Калькулятор для Android, который собираешь сам: 5 экранов, 22 темы, свои кнопки, виджет, кредитный калькулятор с реальной ставкой. Бесплатно, работает без интернета.">
+<link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/calculator/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .langsw{font-size:14px;color:var(--muted)}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Calculator: Themes & Widget",
+  "alternateName":"Калькулятор: темы и виджет",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Android 8.0+",
+  "inLanguage":["ru","en"],
+  "description":"Калькулятор для Android, который собираешь сам: 5 экранов, 22 темы, свои кнопки, виджет, кредитный калькулятор с реальной ставкой.",
+  "url":"https://mirlanmmr.github.io/ru/apps/calculator/",
+  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "installUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "image":"https://mirlanmmr.github.io/img/calculator.png",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/apps/calculator/" hreflang="en" lang="en">English</a></header>
+
+<main>
+  <div class="head">
+    <img src="/img/calculator.png" width="64" height="64" alt="Иконка приложения Calculator: Themes &amp; Widget">
+    <span>Calculator: Themes &amp; Widget · Android · бесплатно</span>
+  </div>
+
+  <h1>Калькулятор с пятью экранами, который собираешь под себя</h1>
+
+  <h2>С чего всё началось</h2>
+  <p>Я хотел скачать калькулятор с удобной раскладкой. Просто удобной. Искал долго, скачал пару десятков, и ни один не подошёл. Сначала было удивление, потом усталость, потом искреннее разочарование. В какой-то момент я махнул рукой и стал пользоваться тем, что стоит на телефоне по умолчанию.</p>
+  <p>Но не всё вечно под луной. Наступил век ИИ. Я решился не сразу: пару лет, как и многие, смотрел рилсы про нейросети и генеративные ролики. А потом в один день попробовал сделать приложение с помощью ИИ.</p>
+  <p>Первым делом я сделал не калькулятор, а <a href="/ru/apps/easycounting/">считалку для детей</a>: линейка с ползунком. Ставишь ползунок на 2, чтобы прибавить ещё 2, делаешь вместе с ребёнком два шага, и он встаёт на 4. Мне кажется, что это настоящий скачок для ребёнка: он перестаёт считать на пальцах и сразу видит, как получается результат. Я в этом убеждён, хотя это моё мнение, а не научное исследование. О том, как она получилась, расскажу отдельно. С неё начались мои шаги в вайбкодинге.</p>
+  <p>Так вот, возвращаемся к калькулятору. Я не хотел делать ещё один такой же. Мне нужен был калькулятор, который можно настроить под себя по максимуму. Но и это не главное. Главное, что экранов у него не один и не два, а целых пять. А почему нет? У компьютера бывает и три монитора. Можно было бы и больше, но я решил, что пяти достаточно.</p>
+  <p>Для чего столько экранов? Чтобы не держать в уме результат. Смахнул экран в сторону, считаешь на новом, а если нужно что-то посмотреть, свайпом возвращаешь первый. Другими словами, это переосмысление истории и памяти в удобном формате.</p>
+
+  <div class="short">
+    <p><b>Коротко.</b> Это калькулятор для Android. Кнопки можно двигать, убирать и добавлять, а тему, цвет, шрифт и звук выбрать под себя. Главное отличие в том, что экранов у него пять: решаешь на одном, листаешь в сторону и продолжаешь на другом. Есть кредитный калькулятор, проценты, геометрия, конвертер и виджет на главный экран. Работает без интернета. Бесплатный, внизу баннерная реклама. Язык интерфейса: русский и английский.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Скачать в Google Play</a></p>
+  </div>
+
+  <h2>Что в нём есть</h2>
+  <p><b>Собери под себя.</b></p>
+  <ul class="feat">
+    <li>22 темы: светлые, тёмные и «электронные» со светящимися семисегментными цифрами, как на старых калькуляторах (красный и зелёный LED, красный и зелёный LCD).</li>
+    <li>Акцентный цвет, 5 форм кнопок, 7 шрифтов.</li>
+    <li>Свою раскладку: кнопки можно переставлять, убирать и добавлять. Знаки + − × ÷ можно поставить справа или слева, это удобно левшам.</li>
+    <li>Эффекты при нажатии (рябь, кольца, блик, искры), звуки клавиш и вибрация. Всё это по желанию.</li>
+  </ul>
+  <p><b>Считать.</b></p>
+  <ul class="feat">
+    <li>5 экранов: решаешь на одном, листаешь в сторону и продолжаешь на другом. До 10 любимых калькуляторов, переключаешься на лету.</li>
+    <li>Инженерное меню на кнопке fx: корни, степени, тригонометрия, логарифмы, π и e.</li>
+    <li>История вычислений, редактирование курсором, копирование и вставка.</li>
+  </ul>
+  <p><b>Формулы под рукой.</b></p>
+  <ul class="feat">
+    <li>Проценты: сколько процентов составляет число, прибавить или вычесть процент, изменение в процентах, налог, сложный рост.</li>
+    <li>Геометрия: круг, прямоугольник, треугольник, параллелепипед, цилиндр, шар, конус. Вводишь значения и получаешь ответ.</li>
+    <li>Конвертер: длина, масса, температура, площадь, объём, скорость, данные.</li>
+  </ul>
+  <p><b>Кредит.</b> Аннуитетные и дифференцированные платежи, график платежей, комиссии и реальная годовая ставка. Можно проверить предложение с «плоской» ставкой и увидеть, во что оно обойдётся на самом деле.</p>
+  <p><b>Виджет.</b> Мини-калькулятор на главном экране, который растягивается на весь экран. Прозрачность и тему можно менять. Примеры, решённые в виджете, попадают в историю.</p>
+
+  <h2>Чего в нём нет</h2>
+  <ul class="feat">
+    <li>Интерфейс пока только на русском и английском. Язык выбирается по языку телефона, а на Android 13 и выше его можно задать для приложения отдельно.</li>
+    <li>Внизу показывается баннерная реклама Google AdMob. Платных функций и подписок нет.</li>
+    <li>Кредитный и процентный калькуляторы дают оценку, а не финансовый совет. Точные условия смотрите в договоре.</li>
+    <li>Нужен Android 8.0 или новее.</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Скачать в Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">Все приложения</a></li>
+    <li><a href="/calculator/privacy-policy.html">Конфиденциальность</a></li>
+    <li><a href="/calculator/terms.html">Условия</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

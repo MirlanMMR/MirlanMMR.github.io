@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculator for Android with five screens and your own layout — Calculator: Themes &amp; Widget</title>
+<meta name="description" content="A calculator for Android that you build yourself: 5 screens, 22 themes, custom buttons, a widget and a loan calculator with the real rate. Free, works offline.">
+<link rel="canonical" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calculator: Themes & Widget",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "A calculator for Android that you build yourself: 5 screens, 22 themes, custom buttons, a widget and a loan calculator with the real rate.",
+  "url": "https://mirlanmmr.github.io/apps/calculator/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "image": "https://mirlanmmr.github.io/img/calculator.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/"
+  },
+  "inLanguage": [
+    "ru",
+    "en"
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/ru/apps/calculator/" hreflang="ru" lang="ru">Русский</a></header>
+
+<main>
+  <div class="head">
+    <img src="/img/calculator.png" width="64" height="64" alt="Calculator: Themes &amp; Widget app icon">
+    <span>Calculator: Themes &amp; Widget · Android · free</span>
+  </div>
+
+  <h1>A calculator with five screens that you build yourself</h1>
+
+  <h2>How it all started</h2>
+  <p>I wanted to download a calculator with a comfortable layout. That's all. I searched for a long time, downloaded a couple of dozen, and none of them worked for me. First came surprise, then fatigue, then genuine disappointment. At some point I waved it off and used the one that came preinstalled.</p>
+  <p>But nothing lasts forever under the moon. The age of AI arrived. I didn't jump in right away: like many of you, I spent a couple of years watching reels about neural networks and generated videos. Then one day I tried making an app with AI.</p>
+  <p>The first thing I made wasn't a calculator but <a href="/apps/easycounting/">a counting app for kids</a>: a ruler with a slider. You put the slider on 2, and to add 2 more you take two steps together with the child, and it lands on 4. I think it's a real leap for a child: they stop counting on their fingers and see right away how the result comes about. I'm convinced of that, though it's my opinion, not a scientific study. I'll tell that story separately. That's where my first steps in vibe coding began.</p>
+  <p>So, back to the calculator. I didn't want to make one more just like the rest. I needed a calculator you can customize as far as possible. But that's not the main thing. The main thing is that it has not one or two screens but five. Why not? A PC can have three monitors. I could have gone higher, but I decided five was enough.</p>
+  <p>Why so many screens? So you don't have to keep the result in your head. Swipe the screen aside, calculate on a new one, and if you need to look something up, swipe back to the first. In other words, it's a rethink of history and memory in a convenient format.</p>
+
+  <div class="short">
+    <p><b>In short.</b> A calculator for Android. You can move, remove and add buttons, and pick the theme, color, font and sounds. The main difference is that it has five screens: calculate on one, swipe aside and carry on with another. There is a loan calculator, percentages, geometry, a converter and a home-screen widget. It works offline. It is free, with a banner ad at the bottom. The interface is in Russian and English.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Get it on Google Play</a></p>
+  </div>
+
+  <h2>What's in it</h2>
+  <p><b>Build it your way.</b></p>
+  <ul class="feat">
+    <li>22 themes: light, dark and "electronic" ones with glowing seven-segment digits like old calculators (red and green LED, red and green LCD).</li>
+    <li>Your accent color, 5 button shapes, 7 fonts.</li>
+    <li>Your own layout: move, remove and add buttons. Put + − × ÷ on the right or the left, which is handy for left-handed users.</li>
+    <li>Tap effects (ripple, rings, shine, sparks), key sounds and vibration. All optional.</li>
+  </ul>
+  <p><b>Calculate.</b></p>
+  <ul class="feat">
+    <li>5 screens: calculate on one, swipe aside and carry on with another. Up to 10 favorite calculators, switch between them on the fly.</li>
+    <li>An engineering menu on the fx button: roots, powers, trigonometry, logarithms, π and e.</li>
+    <li>Calculation history, cursor editing, copy and paste.</li>
+  </ul>
+  <p><b>Formulas at hand.</b></p>
+  <ul class="feat">
+    <li>Percent: what percent a number is, add or subtract a percent, percent change, tax, compound growth.</li>
+    <li>Geometry: circle, rectangle, triangle, box, cylinder, sphere, cone. Enter the values and get the answer.</li>
+    <li>Converter: length, mass, temperature, area, volume, speed, data.</li>
+  </ul>
+  <p><b>Loans.</b> Annuity and differentiated payments, a payment schedule, fees and the real annual rate. You can check a flat-rate offer and see what it really costs.</p>
+  <p><b>Widget.</b> A mini calculator on your home screen that stretches to full screen. Opacity and theme are adjustable. Examples solved in the widget go to the history.</p>
+
+  <h2>What it doesn't have</h2>
+  <ul class="feat">
+    <li>For now the interface is only in Russian and English. It follows your phone language, and on Android 13 and up you can set the language for the app separately.</li>
+    <li>A banner ad from Google AdMob is shown at the bottom. There are no paid features or subscriptions.</li>
+    <li>The loan and percent tools give estimates, not financial advice. Check your contract for exact terms.</li>
+    <li>It needs Android 8.0 or newer.</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Get it on Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">All apps</a></li>
+    <li><a href="/apps/slowread/">Slowread</a></li>
+    <li><a href="/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/calculator/privacy-policy.html">Privacy</a></li>
+    <li><a href="/calculator/terms.html">Terms</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

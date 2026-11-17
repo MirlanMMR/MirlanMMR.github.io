@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Срочные новости в шторке и виджете для Android — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7: агрегатор новостей для Android. Срочные и жизненно важные новости приходят в шторку уведомлений и в виджет одной строкой. Местные, на вашем языке и мировые новости, прямые эфиры, радио, обзор прессы. Без регистрации.">
+<link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .langsw{font-size:14px;color:var(--muted)}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Ticker 24/7",
+  "applicationCategory":"NewsApplication",
+  "operatingSystem":"Android 7.0+",
+  "inLanguage":["ru","en","es","pt","fr"],
+  "description":"Агрегатор новостей для Android: срочные и жизненно важные новости в шторке уведомлений и в виджете одной строкой, местные, на вашем языке и мировые новости, прямые эфиры, радио, обзор прессы.",
+  "url":"https://mirlanmmr.github.io/ru/apps/ticker247/",
+  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image":"https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/apps/ticker247/" hreflang="en" lang="en">English</a></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Иконка приложения Ticker 24/7">
+    <span>Ticker 24/7 · Android · бесплатно</span>
+  </div>
+
+  <h1>Срочные новости между делом: в шторке, в виджете и в ленте</h1>
+
+  <p class="lead">Один взгляд на всплывающее уведомление, когда ты за рулём, и ты уже в курсе.</p>
+
+  <h2>С чего всё началось</h2>
+  <p>Раньше я работал на телевидении, в редакции новостей. Но дело не только в этом. Мне хотелось приложение, которое сообщало бы срочное и жизненно важное между делом. Я представлял себе бегущую строку прямо на экране смартфона.</p>
+  <p>Оказалось, так делать нельзя. Android и правила Google Play очень неохотно разрешают приложению рисовать что-то поверх других приложений, и на то есть причины: такая строка отвлекала бы, мешала бы остальному и разряжала батарею.</p>
+  <p>Но, начав делать уведомления в шторке, я уже не мог остановиться. Над приложением я работал почти полгода. Это второе моё приложение после считалки для детей, и получился полноценный агрегатор новостей, по формату в одном ряду с Bloomberg и Google Новостями.</p>
+  <p>В нём есть уведомления в шторке, виджет «Новости одной строкой» и само приложение: срочные и важные новости идут каруселью, а дальше эфиры и радиостанции, обзоры прессы на актуальные темы, жизненно важные новости (отключение света, аварии и тому подобное), интересные новости и погода. А самое главное: мы охватываем весь мир.</p>
+
+  <div class="short">
+    <p><b>Коротко.</b> Ticker 24/7 — агрегатор новостей для Android. Срочные и жизненно важные новости приходят в шторку уведомлений и в виджет «Новости одной строкой». В самом приложении новости разложены на три уровня: местные, на вашем языке и мировые. Внутри новостные ТВ-каналы, радио, обзор прессы, погода и курсы валют. Регистрация не нужна. Приложение бесплатное, есть реклама. Языки: русский, английский, испанский, португальский и французский.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Скачать в Google Play</a></p>
+  </div>
+
+  <h2>Что в нём есть</h2>
+  <ul class="feat">
+    <li><b>Бегущая строка в шторке.</b> Срочное и жизненно важное приходит уведомлением, и открывать приложение для этого не нужно.</li>
+    <li><b>Виджет «Новости одной строкой».</b> Одна новость, одно предложение на главном экране, новости сменяют друг друга. Нажали, и открылась полная карточка.</li>
+    <li><b>Три уровня новостей.</b> Местные: что происходит в вашей стране. На вашем языке: новости стран, где говорят на нём же. Мировые: то, что важно всем. Разделы не смешиваются, вы сами решаете, что читать сейчас.</li>
+    <li><b>Срочное и важное каруселью.</b> Самые главные новости собраны вверху, остальное ниже. Лента обновляется каждый час, круглые сутки.</li>
+    <li><b>Жизненно важные новости.</b> Отключение света, аварии и всё, что касается вашей повседневной жизни.</li>
+    <li><b>Прямые эфиры и радио.</b> Новостные телеканалы играют прямо в приложении, без перехода в YouTube: включили и листаете новости дальше, не закрывая канал. Для каждого языка свои каналы. Есть и новостные радиостанции вашей страны и вашего языка.</li>
+    <li><b>Обзор прессы.</b> Одно событие глазами нескольких изданий: кто сообщил первым, кто добавил подробность, в чём версии расходятся. Каждый абзац подписан названием издания, и от себя мы не добавляем ни слова.</li>
+    <li><b>Интересное и погода.</b> Интересные новости отдельно от срочных, а погода для выбранного города.</li>
+    <li><b>Полный текст в приложении.</b> Читаете новость целиком, не переходя на сайт издания.</li>
+    <li><b>Закладки, курсы валют и криптовалют, тёмная тема.</b> Сохраняете новость, чтобы вернуться к ней позже.</li>
+  </ul>
+
+  <h2>Без шума</h2>
+  <p>Новости отбираются по одному правилу: есть ли за ними событие. Пересказов чужих мнений, рекламы под видом статьи и гороскопов в ленте нет. Мы читаем каждое замечание. Нашли неточность? Напишите, и мы поправим.</p>
+
+  <h2>Чего в нём нет</h2>
+  <ul class="feat">
+    <li>Приложение работает только с интернетом: без него новости не обновятся.</li>
+    <li>Есть реклама Google AdMob. Платных функций и подписок нет.</li>
+    <li>Мы показываем новости, а не официальные сообщения служб спасения и МЧС. Если вам угрожает опасность, ориентируйтесь на них, а не на наше уведомление.</li>
+    <li>Интерфейс на пяти языках: русском, английском, испанском, португальском и французском.</li>
+    <li>Нужен Android 7.0 или новее.</li>
+  </ul>
+  <p>Подробнее о том, что приложение хранит и куда отправляет, написано в <a href="/ticker247/privacy-policy.html">политике конфиденциальности</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Скачать в Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">Все приложения</a></li>
+    <li><a href="/ru/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/ru/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/ticker247/privacy-policy.html">Конфиденциальность</a></li>
+    <li><a href="/ticker247/terms-of-use.html">Условия</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

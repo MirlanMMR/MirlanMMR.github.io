@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Читалка книг для Android: жесты вместо настроек — Slowread</title>
+<meta name="description" content="Slowread: читалка для Android, которую настраиваешь прямо на экране книги, без меню. EPUB, FB2, MOBI, PDF, DjVu. Бесплатная классика на полках и галерея шедевров живописи с историями.">
+<link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .langsw{font-size:14px;color:var(--muted)}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Slowread",
+  "alternateName":"Slowread: читалка книг",
+  "applicationCategory":"ReferenceApplication",
+  "operatingSystem":"Android 7.0+",
+  "description":"Читалка для Android: шрифт, размер и цвет меняются жестами прямо на экране книги. Открывает EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Бесплатные книги из общественного достояния и галерея шедевров живописи с историями.",
+  "url":"https://mirlanmmr.github.io/ru/apps/slowread/",
+  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image":"https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/apps/slowread/" hreflang="en" lang="en">English</a></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Иконка приложения Slowread">
+    <span>Slowread · читалка книг · Android · бесплатно</span>
+  </div>
+
+  <h1>Читалка, которая настраивается прямо на странице книги</h1>
+
+  <h2>С чего всё началось</h2>
+  <p>Я люблю читать, хотя времени на чтение не всегда хватает. И к гаджетам для чтения у меня никогда не было предубеждения. Электронные книги я собирал на компьютере, перекидывал в читалку и ставил на кнопочную Nokia. Когда появились современные смартфоны, я скачал и купил подписку сразу на пару читалок.</p>
+  <p>Что мне в них не нравилось? Настроек было очень много, и многие я не понимал. Я копался в настройках, что-то менял, выходил из них, чтобы посмотреть, что получилось, и заходил снова. Теперь, когда я могу сделать себе любое приложение, у меня наконец дошли до этого руки.</p>
+  <p>Первое, на чём я сосредоточился: читалка должна настраиваться как можно проще. Чтобы что-то изменить, не нужно заходить в настройки. Меняешь прямо на экране открытой книги и сразу видишь результат. Надо сменить шрифт? Свайпаешь по экрану в стороны, и шрифт меняется на глазах. Надо увеличить текст? Раздвигаешь его двумя пальцами, а щипок в обратную сторону уменьшает. Тап по верхней зоне переключает избранные темы, то есть цвет фона и цвет текста.</p>
+  <p>Но это было только начало. Я вошёл во вкус и сделал так, чтобы при первом запуске на полке уже стояли книги, причём бесплатные, а не пустая читалка и не читалка с магазином. Тебя встречает приветствие, цитаты великих писателей и шедевры мировой литературы, проза и поэзия из общественного достояния.</p>
+  <p>Я ведь говорил, что читал и с кнопочного телефона, и с компьютера. Не всегда удавалось найти нужную книгу в интернете. Есть редкие книги, которые встречаются только в PDF, и часто это сканы. Мне всегда хотелось читать PDF как обычную электронную книгу, а не мучиться с листом А4 на маленьком экране. У меня это получилось, как и многое другое. Обо всём подряд писать не буду.</p>
+  <p>Добавлю только одно. В детстве мы собирали почтовые марки и советские открытки и любили их разглядывать. Я, например, детально изучал любую марку, открытку или фотографию. Даже узоры ковра на стене. Это в нас заложено, поэтому мы и не выпускаем из рук смартфоны. И я не виню в этом молодое поколение: это чудо техники. Так вот, мне пришла идея повторить что-то вроде альбома с марками, где часто были миниатюры известных картин. Поэтому в Slowread есть библиотека и галерея, где собраны по школам изобразительного искусства шедевры из общественного достояния.</p>
+  <p><b>Почему Slowread и «Читай не спеша»?</b> Потому что художественной литературой нужно наслаждаться, а не проглатывать её на ходу. Мы не из тех, кто вечно подгоняет пользователя: в приложении нет счётчиков скорости чтения и нет никакого давления. Читайте в своём темпе.</p>
+
+  <div class="short">
+    <p><b>Коротко.</b> Slowread — читалка книг для Android. Шрифт, размер и цвет меняются жестами прямо на экране книги, заходить в настройки не нужно. Открывает EPUB, FB2, MOBI, DOCX, PDF, DjVu и TXT. На полках уже стоят бесплатные книги из общественного достояния, а ещё есть поиск по Project Gutenberg и Викитеке, цитата дня и галерея шедевров живописи с историями о картинах. Приложение бесплатное, внизу показывается реклама. Регистрация не нужна.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Скачать в Google Play</a></p>
+  </div>
+
+  <h2>Что в ней есть</h2>
+  <p><b>Читать удобно.</b></p>
+  <ul class="feat">
+    <li>Свайп в стороны меняет шрифт. Щипок и раздвигание пальцев меняют размер текста. Тап по верхней зоне переключает избранные темы, то есть цвет фона и текста. Тап по центру и перетаскивание дают свой цвет, а не только готовые варианты.</li>
+    <li>Замочек вверху фиксирует вид, и случайное касание ничего не изменит.</li>
+    <li>Закладка ставится тапом у края абзаца. Закладки и заметки к абзацу собраны в одной панели.</li>
+    <li>Можно подключить свой шрифт: выбираете его на Google Fonts, скачиваете, открываете в Slowread, и книга набирается им.</li>
+    <li>Опечатка в книге? Задержите палец у абзаца и поправьте текст. Правка ложится поверх книги, исходный файл не меняется. Исправленную копию можно сохранить в EPUB или FB2.</li>
+  </ul>
+  <p><b>Книги.</b></p>
+  <ul class="feat">
+    <li>На полках уже стоят признанные шедевры мировой литературы из общественного достояния: проза и поэзия. Нажали на книгу, и она у вас в библиотеке.</li>
+    <li>Под полками поиск по Викитеке (на русском более 17 тысяч произведений) и по Project Gutenberg на английском. Перед скачиванием показывается карточка с кратким описанием.</li>
+    <li>Свои книги вы добавляете сами: приложение открывает EPUB, FB2, MOBI, DOCX, PDF, DjVu (сканы с текстовым слоем), TXT, MD и ZIP-архивы с ними. Книга из загрузок, мессенджера или браузера сразу попадает в библиотеку.</li>
+    <li>В библиотеке настоящие названия, авторы и обложки прямо из файла, а не список непонятных имён. Оглавление берётся из структуры самой книги.</li>
+    <li>Какой формат лучше скачивать: EPUB (рекомендуем) и FB2. В них живой текст, он подстраивается под шрифт, размер и цвет, а оглавление, обложка, картинки и сноски работают как задумано.</li>
+    <li>Цитата дня: каждый день новая мысль великого писателя, слово в слово по изданию, с именем автора и переводчика.</li>
+  </ul>
+  <p><b>Галерея шедевров.</b> От древнеегипетских росписей и китайских пейзажей Сун через Возрождение и голландский золотой век к Рембрандту, Хокусаю, Ван Гогу и Рериху. Работы собраны по эпохам и школам изобразительного искусства. К каждой написана история: куда посмотреть, в каком мире она возникла и почему важна. Картину можно открыть на весь экран и приблизить мазок, жест или едва заметный знак. Изображения загружаются из интернета.</p>
+
+  <h2>Чего в ней нет</h2>
+  <ul class="feat">
+    <li>Это читалка, а не магазин. Новинки и бестселлеры вы добавляете сами, приложение книг не продаёт. Бесплатные полки состоят из книг общественного достояния.</li>
+    <li>Это не трекер прочитанных книг и не счётчик скорости чтения. Есть другое приложение с таким же названием, поэтому ищите в Google Play «Slowread» и смотрите на значок и описание.</li>
+    <li>PDF и сканы читаются не так гладко, как EPUB и FB2. С отсканированными книгами многое зависит от качества распознавания текста, и в нём могут быть ошибки.</li>
+    <li>Есть реклама Google AdMob. Платных функций и покупок внутри приложения нет.</li>
+    <li>Нужен Android 7.0 или новее.</li>
+  </ul>
+
+  <h2>Что с вашими данными</h2>
+  <p>Ваши книги остаются на телефоне и никуда не отправляются. Позиция чтения и закладки могут сохраняться в скрытую папку приложения на вашем Google Диске, но только если вы сами это включите. Подробности в <a href="/slowread-legal/">политике конфиденциальности</a>. После загрузки книг чтение работает без интернета.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Скачать в Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/">Все приложения</a></li>
+    <li><a href="/ru/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ru/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/ru/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/slowread-legal/">Конфиденциальность</a></li>
+    <li><a href="/slowread/terms-of-use.html">Условия</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>
