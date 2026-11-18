@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lector de libros para Android: gestos en lugar de ajustes — Slowread</title>
+<meta name="description" content="Slowread: un lector para Android que ajustas directamente sobre la página del libro, sin menús. EPUB, FB2, MOBI, PDF, DjVu. Clásicos gratuitos en los estantes y una galería de obras maestras de la pintura con su historia.">
+<link rel="canonical" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "inLanguage": [
+    "es"
+  ],
+  "description": "Un lector de libros para Android: la fuente, el tamaño y el color se cambian con gestos sobre la propia página. Abre EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Libros gratuitos de dominio público y una galería de obras maestras de la pintura con su historia.",
+  "url": "https://mirlanmmr.github.io/es/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><span class="langsw"><a href="/apps/slowread/" hreflang="en" lang="en">English</a> · <a href="/ru/apps/slowread/" hreflang="ru" lang="ru">Русский</a> · <a href="/pt/apps/slowread/" hreflang="pt" lang="pt">Português</a></span></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Icono de la aplicación Slowread">
+    <span>Slowread · lector de libros · Android · gratis</span>
+  </div>
+
+  <h1>Un lector que se ajusta directamente sobre la página del libro</h1>
+
+  <h2>Cómo empezó todo</h2>
+  <p>Me encanta leer, aunque no siempre encuentro tiempo. Y nunca he estado en contra de los aparatos para leer. Armaba libros electrónicos en el ordenador, los pasaba a un lector y los ponía en un Nokia de teclas. Cuando llegaron los smartphones modernos, descargué y compré suscripciones de un par de lectores a la vez.</p>
+  <p>¿Qué no me gustaba de ellos? Tenían muchísimos ajustes y muchos no los entendía. Me metía en los ajustes, cambiaba algo, salía para ver qué había salido y volvía a entrar. Ahora que puedo hacerme cualquier aplicación, por fin me ha llegado el momento de ocuparme de esto.</p>
+  <p>Lo primero en lo que me concentré fue en que el lector se ajustara lo más fácil posible. Para cambiar algo no debería hacer falta entrar en los ajustes. Lo cambias directamente en la pantalla del libro abierto y ves el resultado al instante. ¿Quieres otra fuente? Desliza el dedo hacia los lados y la fuente cambia ante tus ojos. ¿Quieres el texto más grande? Separa dos dedos y crece, y un pellizco hacia el otro lado lo reduce. Un toque en la zona superior cambia entre tus temas favoritos, es decir, el color del fondo y el del texto.</p>
+  <p>Pero eso solo fue el principio. Le tomé el gusto y logré que, la primera vez que abres el lector, ya haya libros en tu estante, y gratuitos, en lugar de un lector vacío o con una tienda de libros. Te recibe una bienvenida, con citas de grandes escritores y obras maestras de la literatura universal, prosa y poesía de dominio público.</p>
+  <p>Ya dije que leía desde un móvil de teclas y desde el ordenador. No siempre conseguía encontrar el libro que quería en internet. Hay libros raros que solo existen en PDF, y a menudo son escaneos. Siempre quise leer un PDF como un libro electrónico normal, y no sufrir con una hoja A4 en una pantalla pequeña. Lo conseguí, igual que muchas otras cosas. No voy a escribir sobre todo.</p>
+  <p>Solo añadiré una cosa más. De niños coleccionábamos sellos de correos y postales soviéticas, y nos encantaba mirarlos. Yo, por ejemplo, estudiaba al detalle cualquier sello, postal o fotografía. Hasta los dibujos de la alfombra de la pared. Es algo que llevamos dentro, y por eso no soltamos el móvil. No culpo de ello a la generación joven: es una maravilla de la técnica. En fin, se me ocurrió repetir algo así como un álbum de sellos, donde a menudo había miniaturas de cuadros famosos. Por eso Slowread tiene una biblioteca y una galería, con obras maestras de dominio público reunidas por escuelas de arte.</p>
+  <p><b>¿Por qué Slowread y «Lee sin prisa»?</b> Porque la literatura se disfruta, no se engulle a la carrera. No somos de los que empujan siempre al usuario: en la aplicación no hay contadores de velocidad de lectura ni presión alguna. Lee a tu ritmo.</p>
+
+  <div class="short">
+    <p><b>En breve.</b> Slowread es un lector de libros para Android. La fuente, el tamaño y el color cambian con gestos directamente sobre la página del libro, sin entrar en los ajustes. Abre EPUB, FB2, MOBI, DOCX, PDF, DjVu y TXT. En los estantes ya hay libros gratuitos de dominio público, y hay búsqueda en Project Gutenberg y Wikisource, una cita del día y una galería de obras maestras de la pintura con historias sobre los cuadros. La aplicación es gratuita, con anuncios abajo. No hace falta registrarse.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Descargar en Google Play</a></p>
+  </div>
+
+  <h2>Qué incluye</h2>
+  <p><b>Leer con comodidad.</b></p>
+  <ul class="feat">
+    <li>Deslizar hacia los lados cambia la fuente. Pellizcar o separar los dedos cambia el tamaño del texto. Un toque en la zona superior cambia entre tus temas favoritos, es decir, el color del fondo y del texto. Toca el centro y arrastra para elegir tu propio color, no solo los ya hechos.</li>
+    <li>El candado de arriba fija el aspecto, así que un toque accidental no cambia nada.</li>
+    <li>Pon un marcador con un toque en el borde de un párrafo. Los marcadores y las notas de un párrafo están reunidos en un solo panel.</li>
+    <li>Puedes usar tu propia fuente: la eliges en Google Fonts, la descargas, abres el archivo en Slowread y tu libro se compone con ella.</li>
+    <li>¿Una errata en el libro? Mantén pulsado junto a un párrafo y corrige el texto. Tu corrección queda encima del libro y el archivo original no se toca. Puedes guardar una copia corregida en EPUB o FB2.</li>
+  </ul>
+  <p><b>Libros.</b></p>
+  <ul class="feat">
+    <li>En los estantes ya hay obras maestras reconocidas de la literatura universal de dominio público, prosa y poesía. En el estante en español te esperan Don Quijote de la Mancha, Tradiciones peruanas, Amalia, María, Doña Perfecta, Niebla, El Gaucho Martín Fierro, Azul y Versos sencillos. Tócalo y pasa a tu biblioteca.</li>
+    <li>Bajo los estantes puedes buscar en más de 3000 obras de Project Gutenberg y Wikisource. Antes de descargar, una ficha te cuenta de qué trata el libro.</li>
+    <li>Tus propios libros los añades tú: la aplicación abre EPUB, FB2, MOBI, DOCX, PDF, DjVu (escaneos con capa de texto), TXT, MD y archivos ZIP que los contengan. Un libro de tus descargas, de un mensajero o del navegador llega directo a tu biblioteca.</li>
+    <li>La biblioteca muestra títulos, autores y portadas reales tomados del propio archivo, no una lista de nombres de archivo. El índice sale de la estructura del libro.</li>
+    <li>Qué formato descargar: EPUB (recomendado) o FB2. Son texto vivo que se adapta a tu fuente, tamaño y color, y el índice, la portada, las imágenes y las notas al pie funcionan como deben.</li>
+    <li>Cita del día: cada día un pensamiento nuevo de un gran escritor (Martí, Darío, Nervo, Sor Juana, Machado), palabra por palabra de la edición, con el nombre del autor y del traductor.</li>
+  </ul>
+  <p><b>Una galería de obras maestras.</b> Desde la pintura del antiguo Egipto y los paisajes de la dinastía Song, pasando por el Renacimiento y la Edad de Oro neerlandesa, hasta Rembrandt, Hokusai, Van Gogh y Roerich. Las obras están reunidas por épocas y escuelas de arte. Cada una tiene su historia: dónde mirar, el mundo del que salió y por qué importa. Puedes abrir un cuadro a pantalla completa y acercarte a una pincelada, a un gesto o a un signo apenas visible. Las imágenes de la galería se cargan desde internet.</p>
+
+  <h2>Lo que no tiene</h2>
+  <ul class="feat">
+    <li>Es un lector, no una tienda. Las novedades y los superventas los añades tú, y la aplicación no vende libros. Los estantes gratuitos están formados por libros de dominio público.</li>
+    <li>No es un registro de libros leídos ni un contador de velocidad de lectura. Hay otra aplicación con el mismo nombre, así que busca «Slowread» en Google Play y fíjate en el icono y la descripción.</li>
+    <li>Los PDF y los escaneos no se leen tan bien como EPUB y FB2. En los libros escaneados mucho depende de la calidad del reconocimiento del texto, y puede haber errores.</li>
+    <li>Tiene anuncios de Google AdMob. No hay funciones de pago ni compras dentro de la aplicación.</li>
+    <li>Necesita Android 7.0 o superior.</li>
+  </ul>
+
+  <h2>Qué pasa con tus datos</h2>
+  <p>Tus libros se quedan en tu móvil y no se envían a ninguna parte. Tu posición de lectura y tus marcadores pueden guardarse en una carpeta oculta de la aplicación en tu propio Google Drive, pero solo si tú mismo lo activas. Los detalles están en la <a href="/slowread-legal/">política de privacidad</a>. Una vez añadidos tus libros, la lectura funciona sin conexión.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Descargar en Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/apps/">Todas las apps</a></li>
+    <li><a href="/slowread-legal/">Privacidad</a></li>
+    <li><a href="/slowread/terms-of-use.html">Condiciones</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

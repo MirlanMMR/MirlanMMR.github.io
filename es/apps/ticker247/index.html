@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noticias de última hora en la barra de notificaciones y en un widget para Android — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7: un agregador de noticias para Android. Las noticias urgentes y vitales llegan a tu barra de notificaciones y a un widget de una sola línea. Noticias locales, en tu idioma y del mundo, TV en directo, radio y revista de prensa. Sin registro.">
+<link rel="canonical" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ticker 24/7",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Android 7.0+",
+  "inLanguage": [
+    "ru",
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "description": "Un agregador de noticias para Android: noticias urgentes y vitales en la barra de notificaciones y en un widget de una línea, noticias locales, en tu idioma y del mundo, TV en directo, radio y revista de prensa.",
+  "url": "https://mirlanmmr.github.io/es/apps/ticker247/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image": "https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/">MMR Lab</a><span class="langsw"><a href="/apps/ticker247/" hreflang="en" lang="en">English</a> · <a href="/ru/apps/ticker247/" hreflang="ru" lang="ru">Русский</a> · <a href="/pt/apps/ticker247/" hreflang="pt" lang="pt">Português</a></span></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Icono de la aplicación Ticker 24/7">
+    <span>Ticker 24/7 · Android · gratis</span>
+  </div>
+
+  <h1>Noticias urgentes sobre la marcha: en la barra, en un widget y en la portada</h1>
+
+  <p class="lead">Un vistazo a la notificación emergente mientras conduces, y ya estás al tanto.</p>
+
+  <h2>Cómo empezó todo</h2>
+  <p>Antes trabajaba en televisión, en la redacción de noticias. Pero no es solo eso. Quería una aplicación que te diera las noticias urgentes y vitales sobre la marcha. Me imaginaba una cinta de noticias corriendo por la pantalla del móvil.</p>
+  <p>Resultó que eso no se puede. Android y las reglas de Google Play son muy reacios a que una aplicación dibuje algo encima de otras aplicaciones, y hay razones: una cinta así distraería, estorbaría a todo lo demás y gastaría batería.</p>
+  <p>Pero cuando empecé con las notificaciones en la barra, ya no pude parar. Trabajé en la aplicación casi medio año. Es mi segunda aplicación, después de la de contar para niños, y se convirtió en un agregador de noticias completo, del mismo formato que Bloomberg o Google Noticias.</p>
+  <p>Tiene notificaciones en la barra, un widget «Noticias en una línea» y la aplicación en sí: las noticias urgentes e importantes en un carrusel, y luego emisiones en directo y emisoras de radio, revistas de prensa sobre temas de actualidad, noticias vitales (un corte de luz, un accidente y cosas así), historias interesantes y el tiempo. Y lo más importante: cubrimos el mundo entero.</p>
+
+  <div class="short">
+    <p><b>En breve.</b> Ticker 24/7 es un agregador de noticias para Android. Las noticias urgentes y vitales llegan a tu barra de notificaciones y al widget «Noticias en una línea». Dentro de la aplicación las noticias se dividen en tres niveles: locales, en tu idioma y del mundo. Además tiene canales de noticias en directo, radio, revista de prensa, el tiempo y cotizaciones. No hace falta registrarse. La aplicación es gratuita, con anuncios. Idiomas: ruso, inglés, español, portugués y francés.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Descargar en Google Play</a></p>
+  </div>
+
+  <h2>Qué incluye</h2>
+  <ul class="feat">
+    <li><b>Una cinta de noticias en la barra.</b> Las noticias urgentes y vitales llegan como notificación, sin tener que abrir la aplicación.</li>
+    <li><b>El widget «Noticias en una línea».</b> Una noticia, una frase en tu pantalla de inicio, y las historias se van relevando. Tócala y se abre la ficha completa.</li>
+    <li><b>Tres niveles de noticias.</b> Locales: lo que ocurre en tu país. En tu idioma: noticias de los países que también lo hablan. Mundo: lo que importa en todas partes. Las secciones no se mezclan: tú decides qué leer ahora.</li>
+    <li><b>Lo urgente y lo importante, en un carrusel.</b> Las noticias más grandes arriba, el resto debajo. La portada se actualiza cada hora, día y noche.</li>
+    <li><b>Noticias vitales.</b> Cortes de luz, accidentes y todo lo que toca tu vida diaria.</li>
+    <li><b>TV en directo y radio.</b> Canales de noticias dentro de la propia aplicación, sin salir a YouTube: los enciendes y sigues leyendo sin cerrarlos. Cada idioma tiene sus propios canales. También hay emisoras de radio informativas de tu país y de tu idioma.</li>
+    <li><b>Revista de prensa.</b> Un mismo hecho visto por varios medios: quién lo contó primero, quién añade un detalle, en qué difieren las versiones. Cada párrafo lleva el nombre de su medio y no ponemos ni una palabra nuestra.</li>
+    <li><b>Historias interesantes y el tiempo.</b> Las historias interesantes van aparte de las urgentes, y hay pronóstico para la ciudad que elijas.</li>
+    <li><b>El texto completo dentro de la app.</b> Lee la noticia entera sin saltar a la web del medio.</li>
+    <li><b>Marcadores, cotizaciones de divisas y criptomonedas, tema oscuro.</b> Guarda una noticia y vuelve a ella más tarde.</li>
+  </ul>
+
+  <h2>Sin ruido</h2>
+  <p>Las noticias se eligen con una sola regla: ¿hay un hecho detrás? Las opiniones sobre opiniones ajenas, la publicidad disfrazada de noticia y los horóscopos se quedan fuera de la portada. Leemos cada aviso. ¿Encontraste un error? Escríbenos y lo corregimos.</p>
+
+  <h2>Lo que no tiene</h2>
+  <ul class="feat">
+    <li>La aplicación necesita conexión a internet: sin ella las noticias no se actualizan.</li>
+    <li>Tiene anuncios de Google AdMob. No hay funciones de pago ni suscripciones.</li>
+    <li>Mostramos noticias, no mensajes oficiales de los servicios de emergencia. Si estás en peligro, sigue a estos últimos y no nuestra notificación.</li>
+    <li>La interfaz está en cinco idiomas: ruso, inglés, español, portugués y francés.</li>
+    <li>Necesita Android 7.0 o superior.</li>
+  </ul>
+  <p>Qué guarda la aplicación y adónde envía datos se explica en la <a href="/ticker247/privacy-policy.html">política de privacidad</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Descargar en Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/apps/">Todas las apps</a></li>
+    <li><a href="/ticker247/privacy-policy.html">Privacidad</a></li>
+    <li><a href="/ticker247/terms-of-use.html">Condiciones</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>
