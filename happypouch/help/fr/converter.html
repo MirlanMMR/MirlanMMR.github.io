@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convertisseur de devises dans Happy Pouch — comment l'utiliser</title>
+<meta name="description" content="Comment fonctionne le convertisseur de devises de Happy Pouch : devise locale, taux d'achat et de vente, convertir un montant, comparer deux devises, hors connexion.">
+<link rel="alternate" hreflang="en" href="../en/converter.html">
+<link rel="alternate" hreflang="ru" href="../ru/converter.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Aide de Happy Pouch</a> · Convertisseur de devises</div>
+<h1>Convertisseur de devises</h1>
+<p class="lead">Le convertisseur fonctionne comme le panneau d'un bureau de change : chaque devise a un prix d'achat et un prix de vente. Vous saisissez vous-même les taux ; l'application ne les télécharge pas et fonctionne sans internet.</p>
+
+<h2>Où il se trouve</h2>
+<p>Ouvrez le menu latéral : le bouton à trois barres en haut à gauche sur « Accueil », dans « Enregistrements » ou dans « Statistiques ». Le convertisseur se trouve sous le choix de la période.</p>
+
+<h2>Devise locale</h2>
+<p>Tous les taux sont exprimés par rapport à la devise locale, celle dans laquelle vous tenez vos comptes en ce moment. Elle s'affiche sous forme de bouton avec un drapeau au-dessus du champ du montant. Pour la changer, allez dans « Réglages », section « Devises », et marquez celle qu'il vous faut comme « Locale ».</p>
+
+<h2>Comment ajouter une devise</h2>
+<p>Touchez « + Devise » sous le panneau et saisissez un nom ou un code : « USD », « euro », « yen ». La devise apparaît dans la liste ; la devise locale ne change pas.</p>
+
+<h2>Comment saisir un taux</h2>
+<p>Chaque devise du panneau a deux champs :</p>
+<table>
+  <tr><th>Champ</th><th>Quoi y écrire</th></tr>
+  <tr><td>Achat</td><td>Combien de devise locale le bureau de change <b>vous donne</b> pour une unité de cette devise.</td></tr>
+  <tr><td>Vente</td><td>Combien de devise locale le bureau de change <b>vous prend</b> pour une unité de cette devise.</td></tr>
+</table>
+<p>Exemple : la devise locale est l'euro, et le panneau du bureau de change affiche le dollar à 0,91 / 0,93. Écrivez 0,91 dans « Achat » et 0,93 dans « Vente ».</p>
+<p>Un seul champ suffit : ce prix est alors utilisé dans les deux sens. Un champ vide ou un zéro signifie qu'il n'y a pas de taux. Un taux est enregistré aussitôt ; il n'y a pas de bouton « Enregistrer ».</p>
+
+<h2>Comment convertir un montant</h2>
+<ol>
+  <li>Saisissez le montant dans le champ au-dessus du panneau. Vous pouvez calculer sur place : 100+50.</li>
+  <li>Le résultat dans l'autre devise apparaît à droite.</li>
+  <li>La flèche entre les deux inverse le sens : le résultat devient le nouveau montant et le calcul se fait en sens inverse.</li>
+</ol>
+<p>Sous le résultat, il est dit quel prix a été utilisé, par exemple « $ – Achat ».</p>
+
+<h2>Pourquoi reconvertir donne un autre résultat</h2>
+<p>Parce qu'un bureau de change fonctionne ainsi : il achète moins cher qu'il ne vend. Quand vous changez des dollars en euros, le bureau <b>achète</b> chez vous, donc le prix d'achat est utilisé. Quand vous changez des euros en dollars, il <b>vend</b> chez vous, donc le prix de vente est utilisé. L'application choisit le prix selon le sens de la flèche.</p>
+<p>Pour utiliser l'autre prix, touchez son champ sur le panneau. Il s'allume et le calcul l'utilise.</p>
+
+<h2>Comparer deux devises entre elles</h2>
+<p>Touchez le prix d'une devise, puis celui d'une autre, par exemple le dollar et la livre. Le calcul garde ces deux-là, sans la devise locale. Pour ramener la devise locale, touchez son bouton avec le drapeau au-dessus du champ du montant.</p>
+<p>Inutile de saisir un taux direct entre elles : l'application passe par la devise locale. Si une nouvelle devise n'a pas encore de taux avec la devise locale, mais en a un avec une autre devise qui en a un, le calcul passe par celle-ci.</p>
+
+<h2>Ce qui arrive aux taux</h2>
+<ul>
+  <li>Ils sont stockés uniquement sur le téléphone et entrent dans la sauvegarde avec les enregistrements.</li>
+  <li>Ils ne se mettent pas à jour tout seuls : si un taux a changé, corrigez le chiffre sur le panneau.</li>
+  <li>Quand vous changez la devise locale, inutile de ressaisir les taux : l'application les recalcule en sens inverse.</li>
+  <li>Si vous supprimez une devise, ses taux sont supprimés avec elle.</li>
+</ul>
+
+<p class="note">Le convertisseur n'écrit rien dans les dépenses ni les revenus. C'est une calculatrice : elle calcule combien vous obtenez lors d'un change, mais n'enregistre pas le change lui-même.</p>
+
+<footer><a href="index.html">← Tous les sujets</a></footer>
+</body>
+</html>

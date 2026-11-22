@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sauvegardes et passage de Happy Pouch à un nouveau téléphone</title>
+<meta name="description" content="Comment Happy Pouch sauvegarde vos enregistrements : sauvegardes sur le téléphone, sauvegarde automatique sur Google Drive, restaurer, passer à un nouveau téléphone.">
+<link rel="alternate" hreflang="en" href="../en/backups.html">
+<link rel="alternate" hreflang="ru" href="../ru/backups.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Aide de Happy Pouch</a> · Sauvegardes et nouveau téléphone</div>
+<h1>Sauvegardes et nouveau téléphone</h1>
+<p class="lead">Tous les enregistrements sont stockés uniquement sur votre téléphone. Pour qu'un téléphone cassé, une réinstallation ou un nouveau téléphone ne les fasse pas perdre, l'application fait des sauvegardes à deux endroits, indépendants l'un de l'autre.</p>
+
+<h2>Sauvegardes sur ce téléphone</h2>
+<p>Toujours actives ; rien à configurer. L'application enregistre d'elle-même une sauvegarde dans le dossier « Documents/HappyPouch ».</p>
+<ul>
+  <li>Elles ne dépendent ni de Google ni d'internet.</li>
+  <li>Vous pouvez les voir dans l'application « Fichiers ».</li>
+  <li>Elles restent sur le téléphone même si Happy Pouch est désinstallé.</li>
+</ul>
+<p>Dans « Réglages », section « Sauvegardes sur ce téléphone », il y a trois boutons :</p>
+<table>
+  <tr><th>Bouton</th><th>Ce qu'il fait</th></tr>
+  <tr><td>Sauvegarder maintenant</td><td>Enregistre une sauvegarde aussitôt, sans attendre la suivante.</td></tr>
+  <tr><td>Restaurer</td><td>Affiche la liste des sauvegardes ; celle que vous choisissez remplace toutes les données actuelles. « Choisir un fichier… » y est aussi, pour une sauvegarde conservée ailleurs.</td></tr>
+  <tr><td>Enregistrer ailleurs…</td><td>Enregistre une sauvegarde où vous voulez : une clé USB, une messagerie, un autre cloud.</td></tr>
+</table>
+
+<h2>Sauvegarde automatique sur Google Drive</h2>
+<p>Facultative. Activez-la dans « Réglages », section « Sauvegarde automatique sur Google Drive » : l'interrupteur « Sauvegarder automatiquement » vous demande de vous connecter à Google.</p>
+<ul>
+  <li>Une sauvegarde est enregistrée quand vous fermez l'application, et une fois par jour s'il y a du nouveau.</li>
+  <li>Elle se trouve sur <b>votre</b> Google Drive, dans un dossier nommé comme « happy-pouch-backup-… ». La clé avec laquelle chaque sauvegarde est chiffrée est conservée à part, dans le dossier caché de l'application sur votre Drive ; plus de détails dans <a href="security.html">« Sécurité et confidentialité »</a>.</li>
+  <li>Sur Drive, l'application ne voit que les fichiers qu'elle a créés elle-même. Elle ne peut accéder à rien d'autre.</li>
+  <li>« Sauvegarder maintenant » fait une sauvegarde aussitôt ; « Restaurer » affiche la liste des sauvegardes sur Drive.</li>
+  <li>« Se déconnecter » arrête les sauvegardes automatiques. Les sauvegardes déjà enregistrées restent sur Drive, et les données du téléphone ne changent pas.</li>
+</ul>
+<p class="note">Si l'application dit « La sauvegarde n'est plus à jour », vos derniers enregistrements n'y figurent pas. Touchez « Sauvegarder maintenant », surtout avant une réinitialisation ou un changement de téléphone.</p>
+
+<h2>Passer à un nouveau téléphone</h2>
+<p><b>Via Google Drive.</b> Sur l'ancien téléphone, touchez « Sauvegarder maintenant ». Sur le nouveau, installez Happy Pouch, activez la sauvegarde automatique avec le même compte Google et touchez « Restaurer ». L'application récupère la clé d'elle-même.</p>
+<p><b>Avec un fichier.</b> Sur l'ancien téléphone, touchez « Enregistrer ailleurs… » et envoyez-vous le fichier comme vous voulez. Sur le nouveau, ouvrez « Sauvegardes sur ce téléphone » → « Restaurer » → « Choisir un fichier… ». Si les sauvegardes étaient chiffrées, activez d'abord la sauvegarde automatique avec le même compte Google ; sinon l'application dit que la sauvegarde est chiffrée. Un fichier de sauvegarde peut aussi être ouvert directement depuis l'application « Fichiers » ou une messagerie : Happy Pouch propose de le charger.</p>
+
+<h2>Ce que contient une sauvegarde</h2>
+<p>Enregistrements, catégories et leurs types, portefeuilles, virements, devises et taux du convertisseur, paiements récurrents, plafonds, la corbeille, les chiffres de « Ma région ».</p>
+<p>La restauration <b>remplace</b> tout ce qui est dans l'application en ce moment ; elle n'ajoute rien. L'application vous demande confirmation.</p>
+
+<h2>Supprimer toutes les données</h2>
+<p>« Réglages » → « Données » → « Supprimer toutes les données » efface les enregistrements, catégories, devises et paiements du téléphone. Les sauvegardes sur Drive et dans le dossier « Documents/HappyPouch » restent.</p>
+
+<footer><a href="index.html">← Tous les sujets</a></footer>
+</body>
+</html>

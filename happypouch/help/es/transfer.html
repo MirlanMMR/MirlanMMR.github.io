@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasar tus datos a Happy Pouch desde otra app</title>
+<meta name="description" content="Cómo traer registros de otra app de presupuesto o de un extracto bancario a Happy Pouch: exportación, asignación de columnas, formatos compatibles, errores frecuentes.">
+<link rel="alternate" hreflang="en" href="../en/transfer.html">
+<link rel="alternate" hreflang="ru" href="../ru/transfer.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Ayuda de Happy Pouch</a> · Pasar desde otra app</div>
+<h1>Pasar desde otra app</h1>
+<p class="lead">Los registros de otra app de presupuesto pasan en un solo archivo. Las categorías y las monedas se crean por ti, así que no hace falta empezar de cero.</p>
+
+<h2>Qué se traspasa</h2>
+<ul>
+  <li>Registros de gastos e ingresos: fecha, importe, categoría, subcategoría, moneda, nota.</li>
+  <li>Las categorías y monedas que aún no tienes. La app las crea y te muestra la lista antes de importar.</li>
+</ul>
+<p>Las transferencias entre carteras no se importan: se omiten, y la app te dice cuántas había. Los registros que ya están en Happy Pouch no se añaden por segunda vez.</p>
+
+<h2>Paso 1. Exporta un archivo desde tu app anterior</h2>
+<p>Busca «Exportar» en la app anterior, normalmente en Ajustes o en una sección de datos. Excel (XLSX) y CSV funcionan mejor. Guarda el archivo en tu teléfono.</p>
+<p class="note">Necesitas una exportación a una tabla (una hoja de cálculo), no una «copia de seguridad». Happy Pouch no puede leer la copia de seguridad de otra app.</p>
+
+<h2>Paso 2. Abre el archivo en Happy Pouch</h2>
+<p>«Ajustes» → «Traspaso de datos» → «Elegir archivo». En una app vacía el mismo botón está en «Inicio»: «Traspasar datos / importar extracto».</p>
+<p class="note"><b>¿No ves el archivo en la lista?</b> El selector de archivos se abre donde estuviste la última vez, a menudo en «Fotos». Toca ☰ arriba a la izquierda y abre «Recientes»: un archivo recién recibido está ahí. Si lo recibiste por WhatsApp o Telegram, busca también en «Descargas» o «Documentos». Si no está en «Recientes», abre el archivo en el mensajero, guárdalo en el teléfono e inténtalo de nuevo.</p>
+
+<h2>Paso 3. Comprueba las columnas</h2>
+<p>Se abre la pantalla «Importar movimientos». Arriba dice a qué tipo de archivo se parece y cuántas filas tiene. Debajo está la lista de campos de la app: «Fecha», «Importe», «Categoría», «Subcategoría», «Moneda», «Nota». La app ya ha asociado a cada campo una columna de tu archivo según su encabezado.</p>
+<p><b>Cómo ver qué columna está elegida.</b> A la derecha de cada campo hay un botón redondeado con borde. Muestra el nombre de la columna de tu archivo, por ejemplo «Fecha» o «Fecha de la operación». Si muestra un guion «—», no hay columna elegida para ese campo.</p>
+<p><b>Cómo elegir otra columna.</b> Toca ese botón a la derecha del campo. Se abre una lista: la primera línea es «— no usar», y luego todas las columnas de tu archivo. Toca la que necesites. Por ejemplo, el campo «Fecha» muestra «Fecha de creación» y necesitas «Fecha de la operación»: toca el botón y elige «Fecha de la operación».</p>
+<p><b>Cómo comprobar el resultado.</b> Debajo de la lista de campos dice: «Primera fila del archivo: fecha …, importe …». Eso es lo que la app leyó de la primera fila de tu archivo con las columnas elegidas. Si la fecha o el importe se ven mal, cambia la columna del campo correspondiente.</p>
+<ul>
+  <li>Si en el archivo los gastos y los ingresos están en dos columnas distintas, cambia «Una columna de importe» a «Ingresos y gastos por separado». Entonces aparecen dos campos en lugar del único «Importe»: «Columna de gastos» y «Columna de ingresos».</li>
+  <li>Si el archivo no tiene columna con el tipo, los importes negativos cuentan como gastos y los positivos como ingresos.</li>
+  <li>Si un campo no hace falta (por ejemplo «Subcategoría»), elige «— no usar» en su lista.</li>
+</ul>
+<p>Para fechas como 05/10/2026, indica el orden de la fecha debajo de la lista: «Automático», «Día/mes» o «Mes/día». Normalmente basta con «Automático».</p>
+<p>Si el archivo no tiene columna de moneda, elige abajo una moneda para todos los registros tocando el botón con su código.</p>
+
+<h2>Paso 4. Revisa el resumen e importa</h2>
+<p>Antes de importar, la app muestra qué va a pasar: cuántos registros se añadirán y de qué periodo, cuántos se omitirán y por qué, y qué categorías y monedas se crearán. Debajo hay tres registros de ejemplo. Si todo parece correcto, toca «Importar».</p>
+
+<h2>Qué archivos sirven</h2>
+<table>
+  <tr><th>Formato</th><th>De dónde suele venir</th></tr>
+  <tr><td>Excel XLSX y XLS</td><td>exportación de la mayoría de apps de presupuesto; la opción más fiable</td></tr>
+  <tr><td>CSV</td><td>exportaciones de apps, extractos; el separador y la codificación se detectan solos</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>extractos bancarios</td></tr>
+  <tr><td>QIF</td><td>programas de finanzas más antiguos</td></tr>
+  <tr><td>SQLite</td><td>bases de datos de GnuCash y Money Manager</td></tr>
+</table>
+<p>El archivo puede pesar hasta 30 MB.</p>
+
+<h2>Si no funciona</h2>
+<ul>
+  <li><b>«Esto no es una tabla, sino un archivo propietario».</b> Has elegido la copia de seguridad de otra app. Vuelve a esa app y busca una exportación a CSV o Excel.</li>
+  <li><b>«Es un archivo JSON».</b> Es una copia de seguridad de Happy Pouch. Restáurala desde «Ajustes»: «Copias en este teléfono» → «Restaurar».</li>
+  <li><b>No se reconocen las fechas o los importes.</b> La app muestra ejemplos de esas filas. Comprueba que están elegidas las columnas correctas para la fecha y el importe, y que el orden día/mes es correcto.</li>
+  <li><b>Las columnas están mezcladas o hay demasiadas.</b> Abre el archivo en Excel o Google Sheets y deja solo las columnas «Fecha», «Importe», «Categoría» y «Nota».</li>
+</ul>
+<p>Si el formato del archivo es desconocido o desordenado, puedes dárselo a un asistente de IA y pedirle que lo convierta en una tabla CSV con las columnas «Fecha», «Importe», «Categoría» y «Nota». Ten en cuenta que el servicio al que lo envíes verá tus gastos.</p>
+
+<footer><a href="index.html">← Todos los temas</a></footer>
+</body>
+</html>

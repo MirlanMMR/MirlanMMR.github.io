@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sécurité et confidentialité dans Happy Pouch</title>
+<meta name="description" content="Où Happy Pouch garde vos données, comment verrouiller l'application, masquer les noms de catégories, et ce que Google Drive peut voir.">
+<link rel="alternate" hreflang="en" href="../en/security.html">
+<link rel="alternate" hreflang="ru" href="../ru/security.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Aide de Happy Pouch</a> · Sécurité</div>
+<h1>Sécurité et confidentialité</h1>
+<p class="lead">Les enregistrements sont stockés uniquement sur votre téléphone. L'application n'a ni compte, ni serveur, ni inscription, et le suivi fonctionne sans internet.</p>
+
+<h2>Où sont les données</h2>
+<ul>
+  <li><b>Dans l'application sur le téléphone.</b> Elles ne sont envoyées nulle part.</li>
+  <li><b>Dans les sauvegardes sur le téléphone</b> : le dossier « Documents/HappyPouch ». Si vous vous êtes connecté à Google, elles sont chiffrées (voir ci-dessous) ; sans connexion, elles ne le sont pas.</li>
+  <li><b>Sur votre Google Drive</b>, seulement si vous avez activé vous-même la sauvegarde automatique.</li>
+</ul>
+<p>Plus sur les sauvegardes dans <a href="backups.html">« Sauvegardes et nouveau téléphone »</a>.</p>
+
+<h2>Chiffrement des sauvegardes</h2>
+<p>Quand vous vous connectez à Google (facultatif, « Réglages » → « Sauvegarde automatique sur Google Drive »), l'application crée une clé aléatoire et la place sur votre Google Drive, dans un dossier caché de l'application. L'interface de Drive ne la montre pas et les autres applications ne peuvent pas la lire. Pour cela, Google demande l'autorisation « Voir, créer et supprimer ses propres données de configuration dans votre Google Drive » à la connexion. Chaque sauvegarde est chiffrée avec cette clé (AES-256) : sur le téléphone, sur Drive et avec « Enregistrer ailleurs… ».</p>
+<ul>
+  <li>Un fichier de sauvegarde qui tombe en de mauvaises mains, via une messagerie, un cloud ou une autre application, ne peut pas être ouvert sans votre compte Google.</li>
+  <li>Sur un nouveau téléphone, connectez-vous au même compte Google : l'application récupère la clé d'elle-même et ouvre les sauvegardes. Il n'y a pas de mot de passe séparé, et un mot de passe Google oublié peut être récupéré via Google.</li>
+  <li>La première fois sur un nouveau téléphone, il faut une connexion internet pour récupérer la clé.</li>
+  <li>Sans connexion à Google, il n'y a pas de chiffrement : les sauvegardes sont en clair, comme avant.</li>
+  <li>Les sauvegardes faites avant l'activation du chiffrement restent en clair jusqu'à ce que de plus récentes les remplacent.</li>
+</ul>
+<p class="note">Ne supprimez pas les données de l'application dans les réglages de Google Drive (« Gérer les applications » → Happy Pouch → « Supprimer les données cachées de l'application ») et ne perdez pas l'accès au compte Google : sans la clé, les sauvegardes chiffrées ne peuvent pas être ouvertes. Une copie de la clé est aussi conservée sur le téléphone, mais elle est perdue en cas de réinstallation ou de nouveau téléphone.</p>
+
+<h2>Protection de l'accès</h2>
+<p>« Réglages » → « Protection de l'accès ». L'application se déverrouille alors comme votre téléphone : code PIN, schéma, empreinte ou visage.</p>
+<ul>
+  <li>L'application n'a pas de mot de passe propre : elle utilise le verrouillage du téléphone. S'il est désactivé, l'application vous demande d'abord d'activer le verrouillage de l'écran dans les réglages du téléphone.</li>
+  <li>« Redemander si l'application a été fermée » indique au bout de combien de temps après avoir quitté l'application la vérification est de nouveau nécessaire : immédiatement, 30 secondes, 1 minute, 5 minutes.</li>
+  <li>Si vous annulez la vérification, l'application reste verrouillée ; le bouton « Ouvrir » la redemande.</li>
+</ul>
+<p class="note">La protection de l'accès verrouille l'écran de l'application. Les fichiers de sauvegarde sont verrouillés par le chiffrement, qui fonctionne si vous vous êtes connecté à Google.</p>
+
+<h2>Icônes seulement</h2>
+<p>« Réglages » → « Icônes seulement ». Sur « Accueil » et dans « Enregistrements », des icônes remplacent les noms des catégories. Quelqu'un qui jette un œil à l'écran voit des montants, mais pas à quoi ils correspondent.</p>
+
+<h2>Ce à quoi Google peut accéder</h2>
+<p>La sauvegarde automatique sur Google Drive est facultative. Si vous l'activez :</p>
+<ul>
+  <li>sur Drive, l'application ne voit que les fichiers qu'elle a créés elle-même ; elle ne peut pas accéder aux autres fichiers ;</li>
+  <li>les sauvegardes et la clé se trouvent sur votre Drive, et le développeur n'y a pas accès ; les sauvegardes sont chiffrées avec cette clé ;</li>
+  <li>« Se déconnecter » arrête les sauvegardes automatiques ; les sauvegardes enregistrées restent sur Drive, et vous pouvez les supprimer dans Google Drive lui-même.</li>
+</ul>
+
+<h2>Rappels</h2>
+<p>La notification d'un paiement récurrent est visible sur l'écran de verrouillage du téléphone. Si ce n'est pas souhaité, choisissez « Dans l'application uniquement » ou le point sur l'icône dans « Réglages », section « Rappels ».</p>
+
+<h2>Suppression</h2>
+<ul>
+  <li>Les enregistrements et catégories supprimés restent 90 jours dans la corbeille : « Réglages » → « Corbeille ». « Vider » les efface définitivement.</li>
+  <li>« Réglages » → « Données » → « Supprimer toutes les données » efface tout sur le téléphone. Les sauvegardes sur Drive et dans le dossier « Documents/HappyPouch » restent ; supprimez-les séparément si besoin.</li>
+</ul>
+
+<h2>Envoyer un fichier via un autre service</h2>
+<p>Un fichier de sauvegarde envoyé à une messagerie, un cloud ou un assistant IA est chiffré si vous vous êtes connecté à Google : il ne peut pas être lu sans votre compte. Sans connexion, le fichier est en clair, et ce service le voit.</p>
+
+<p><a href="../../privacy-policy.html#fr">Politique de confidentialité</a></p>
+
+<footer><a href="index.html">← Tous les sujets</a></footer>
+</body>
+</html>

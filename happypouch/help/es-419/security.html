@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguridad y privacidad en Happy Pouch</title>
+<meta name="description" content="Dónde guarda Happy Pouch tus datos, cómo bloquear la app, ocultar los nombres de las categorías y qué puede ver Google Drive.">
+<link rel="alternate" hreflang="en" href="../en/security.html">
+<link rel="alternate" hreflang="ru" href="../ru/security.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Ayuda de Happy Pouch</a> · Seguridad</div>
+<h1>Seguridad y privacidad</h1>
+<p class="lead">Los registros se guardan solo en tu teléfono. La app no tiene cuenta, ni servidor, ni registro, y el seguimiento funciona sin internet.</p>
+
+<h2>Dónde están los datos</h2>
+<ul>
+  <li><b>En la app del teléfono.</b> No se envían a ninguna parte.</li>
+  <li><b>En las copias del teléfono</b>: la carpeta «Documents/HappyPouch». Si iniciaste sesión en Google están cifradas (ver abajo); sin iniciar sesión están sin cifrar.</li>
+  <li><b>En tu Google Drive</b>, solo si activaste tú mismo la copia automática.</li>
+</ul>
+<p>Más sobre las copias en <a href="backups.html">«Copias de seguridad y un teléfono nuevo»</a>.</p>
+
+<h2>Cifrado de las copias</h2>
+<p>Cuando inicias sesión en Google (opcional, «Configuración» → «Copia automática en Google Drive»), la app crea una clave aleatoria y la guarda en tu Google Drive, en una carpeta oculta de la app. La interfaz de Drive no la muestra y otras apps no pueden leerla. Para ello Google pide el permiso «Ver, crear y eliminar sus propios datos de configuración en tu Google Drive» al iniciar sesión. Cada copia se cifra con esa clave (AES-256): en el teléfono, en Drive y con «Guardar en otro lugar…».</p>
+<ul>
+  <li>Un archivo de copia que acabe en manos ajenas, por un mensajero, una nube u otra app, no se puede abrir sin tu cuenta de Google.</li>
+  <li>En un teléfono nuevo, inicia sesión en la misma cuenta de Google: la app obtiene la clave sola y abre las copias. No hay una contraseña aparte, y una contraseña de Google olvidada se puede recuperar a través de Google.</li>
+  <li>La primera vez en un teléfono nuevo necesitas conexión a internet para obtener la clave.</li>
+  <li>Sin iniciar sesión en Google no hay cifrado: las copias están sin cifrar, como antes.</li>
+  <li>Las copias hechas antes de activar el cifrado siguen sin cifrar hasta que las más nuevas las desplacen.</li>
+</ul>
+<p class="note">No borres los datos de la app en la configuración de Google Drive («Administrar aplicaciones» → Happy Pouch → «Eliminar datos ocultos de la aplicación») y no pierdas el acceso a la cuenta de Google: sin la clave las copias cifradas no se pueden abrir. También se guarda una copia de la clave en el teléfono, pero se pierde al reinstalar o con un teléfono nuevo.</p>
+
+<h2>Protección de acceso</h2>
+<p>«Configuración» → «Protección de acceso». Entonces la app se desbloquea igual que tu teléfono: PIN, patrón, huella o rostro.</p>
+<ul>
+  <li>La app no tiene contraseña propia: usa el bloqueo del teléfono. Si está desactivado, la app te pide activar primero el bloqueo de pantalla en la configuración del teléfono.</li>
+  <li>«Volver a pedirlo si la app estuvo cerrada» indica cuánto tiempo después de salir de la app hace falta repetir la comprobación: inmediatamente, 30 segundos, 1 minuto, 5 minutos.</li>
+  <li>Si cancelas la comprobación, la app sigue bloqueada; el botón «Abrir» vuelve a pedirla.</li>
+</ul>
+<p class="note">La protección de acceso bloquea la pantalla de la app. Los archivos de copia están bloqueados por el cifrado, que funciona si iniciaste sesión en Google.</p>
+
+<h2>Solo iconos</h2>
+<p>«Configuración» → «Solo iconos». En «Inicio» y en «Registros», los iconos sustituyen los nombres de las categorías. Quien eche un vistazo a la pantalla ve montos, pero no para qué son.</p>
+
+<h2>A qué puede acceder Google</h2>
+<p>La copia automática en Google Drive es opcional. Si la activas:</p>
+<ul>
+  <li>en Drive la app solo ve los archivos que ha creado ella misma; no puede acceder a otros archivos;</li>
+  <li>las copias y la clave están en tu Drive, y el desarrollador no tiene acceso a ellas; las copias están cifradas con esa clave;</li>
+  <li>«Cerrar sesión» detiene las copias automáticas; las copias guardadas se quedan en Drive y puedes borrarlas en el propio Google Drive.</li>
+</ul>
+
+<h2>Recordatorios</h2>
+<p>La notificación de un pago periódico es visible en la pantalla de bloqueo del teléfono. Si no lo quieres, elige «Solo en la app» o el punto en el icono en «Configuración», sección «Recordatorios».</p>
+
+<h2>Eliminación</h2>
+<ul>
+  <li>Los registros y categorías eliminados se quedan 90 días en la papelera: «Configuración» → «Papelera». «Vaciar» los borra para siempre.</li>
+  <li>«Configuración» → «Datos» → «Eliminar todos los datos» borra todo en el teléfono. Las copias en Drive y en la carpeta «Documents/HappyPouch» se quedan; bórralas aparte si hace falta.</li>
+</ul>
+
+<h2>Enviar un archivo a través de otro servicio</h2>
+<p>Un archivo de copia enviado a un mensajero, una nube o un asistente de IA está cifrado si iniciaste sesión en Google: no se puede leer sin tu cuenta. Sin iniciar sesión el archivo está sin cifrar y ese servicio lo ve.</p>
+
+<p><a href="../../privacy-policy.html#es">Política de privacidad</a></p>
+
+<footer><a href="index.html">← Todos los temas</a></footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daten aus einer anderen App in Happy Pouch übernehmen</title>
+<meta name="description" content="So holen Sie Einträge aus einer anderen Budget-App oder von einem Kontoauszug in Happy Pouch: Export, Spaltenzuordnung, unterstützte Formate, häufige Fehler.">
+<link rel="alternate" hreflang="en" href="../en/transfer.html">
+<link rel="alternate" hreflang="ru" href="../ru/transfer.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Happy Pouch Hilfe</a> · Umstieg von einer anderen App</div>
+<h1>Umstieg von einer anderen App</h1>
+<p class="lead">Einträge aus einer anderen Budget-App wandern als eine einzige Datei herüber. Kategorien und Währungen werden für Sie angelegt, Sie müssen also nicht bei null anfangen.</p>
+
+<h2>Was übernommen wird</h2>
+<ul>
+  <li>Ausgaben- und Einnahmeneinträge: Datum, Betrag, Kategorie, Unterkategorie, Währung, Notiz.</li>
+  <li>Kategorien und Währungen, die Sie noch nicht haben. Die App legt sie an und zeigt Ihnen die Liste vor dem Import.</li>
+</ul>
+<p>Überweisungen zwischen Geldbörsen werden nicht importiert: Sie werden übersprungen, und die App sagt Ihnen, wie viele es waren. Einträge, die schon in Happy Pouch sind, werden nicht ein zweites Mal hinzugefügt.</p>
+
+<h2>Schritt 1. Eine Datei aus der alten App exportieren</h2>
+<p>Suchen Sie in der alten App nach „Exportieren“, meist in den Einstellungen oder in einem Datenbereich. Excel (XLSX) und CSV funktionieren am besten. Speichern Sie die Datei auf Ihrem Telefon.</p>
+<p class="note">Sie brauchen einen Export in eine Tabelle (ein Arbeitsblatt), keine „Sicherung“. Happy Pouch kann die Sicherung einer anderen App nicht lesen.</p>
+
+<h2>Schritt 2. Die Datei in Happy Pouch öffnen</h2>
+<p>„Einstellungen“ → „Datenübernahme“ → „Datei auswählen“. In einer leeren App finden Sie dieselbe Schaltfläche auf „Start“: „Daten übernehmen / Kontoauszug importieren“.</p>
+<p class="note"><b>Sie sehen die Datei nicht in der Liste?</b> Die Dateiauswahl öffnet sich dort, wo Sie zuletzt waren, oft in „Fotos“. Tippen Sie oben links auf ☰ und öffnen Sie „Zuletzt verwendet“: Eine frisch erhaltene Datei ist dort. Eine Datei, die über WhatsApp oder Telegram kam, suchen Sie auch in „Downloads“ oder „Dokumente“. Ist sie nicht in „Zuletzt verwendet“, öffnen Sie die Datei im Messenger, speichern Sie sie auf dem Telefon und versuchen Sie es erneut.</p>
+
+<h2>Schritt 3. Die Spalten prüfen</h2>
+<p>Der Bildschirm „Buchungen importieren“ öffnet sich. Oben steht, wie die Datei aussieht und wie viele Zeilen sie hat. Darunter folgt die Liste der Felder der App: „Datum“, „Betrag“, „Kategorie“, „Unterkategorie“, „Währung“, „Notiz“. Die App hat jedem Feld anhand der Überschrift bereits eine Spalte Ihrer Datei zugeordnet.</p>
+<p><b>So sehen Sie, welche Spalte gewählt ist.</b> Rechts neben jedem Feld steht eine abgerundete Schaltfläche mit Umrandung. Sie zeigt den Namen der Spalte aus Ihrer Datei, zum Beispiel „Datum“ oder „Buchungsdatum“. Zeigt sie einen Strich „—“, ist für dieses Feld keine Spalte gewählt.</p>
+<p><b>So wählen Sie eine andere Spalte.</b> Tippen Sie auf diese Schaltfläche rechts neben dem Feld. Eine Liste öffnet sich: Die erste Zeile ist „— nicht verwenden“, danach alle Spalten Ihrer Datei. Tippen Sie auf die gewünschte. Zeigt das Feld „Datum“ zum Beispiel „Erstellungsdatum“ und Sie brauchen „Buchungsdatum“: Tippen Sie auf die Schaltfläche und wählen Sie „Buchungsdatum“.</p>
+<p><b>So prüfen Sie das Ergebnis.</b> Unter der Liste der Felder steht: „Erste Zeile der Datei: Datum …, Betrag …“. Das hat die App mit den gewählten Spalten aus der ersten Zeile Ihrer Datei gelesen. Sieht das Datum oder der Betrag dort falsch aus, ändern Sie die Spalte des entsprechenden Feldes.</p>
+<ul>
+  <li>Stehen Ausgaben und Einnahmen in der Datei in zwei verschiedenen Spalten, stellen Sie „Eine Betragsspalte“ auf „Einnahmen und Ausgaben getrennt“. Dann erscheinen anstelle des einen „Betrag“ zwei Felder: „Ausgabenspalte“ und „Einnahmenspalte“.</li>
+  <li>Hat die Datei keine Spalte mit der Art, zählen negative Beträge als Ausgaben und positive als Einnahmen.</li>
+  <li>Wird ein Feld nicht gebraucht (zum Beispiel „Unterkategorie“), wählen Sie in seiner Liste „— nicht verwenden“.</li>
+</ul>
+<p>Stellen Sie bei Datumsangaben wie 05/10/2026 unter der Liste die Reihenfolge ein: „Automatisch“, „Tag/Monat“ oder „Monat/Tag“. „Automatisch“ genügt meist.</p>
+<p>Hat die Datei keine Währungsspalte, wählen Sie unten eine Währung für alle Einträge, indem Sie auf die Schaltfläche mit ihrem Code tippen.</p>
+
+<h2>Schritt 4. Zusammenfassung prüfen und importieren</h2>
+<p>Vor dem Import zeigt die App, was passieren wird: wie viele Einträge für welchen Zeitraum hinzugefügt werden, wie viele aus welchem Grund übersprungen werden und welche Kategorien und Währungen angelegt werden. Darunter stehen drei Beispieleinträge. Sieht alles richtig aus, tippen Sie auf „Importieren“.</p>
+
+<h2>Welche Dateien funktionieren</h2>
+<table>
+  <tr><th>Format</th><th>Woher es meist kommt</th></tr>
+  <tr><td>Excel XLSX und XLS</td><td>Export aus den meisten Budget-Apps; die zuverlässigste Variante</td></tr>
+  <tr><td>CSV</td><td>App-Exporte, Kontoauszüge; Trennzeichen und Kodierung werden automatisch erkannt</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>Kontoauszüge von Banken</td></tr>
+  <tr><td>QIF</td><td>ältere Finanzprogramme</td></tr>
+  <tr><td>SQLite</td><td>Datenbanken von GnuCash und Money Manager</td></tr>
+</table>
+<p>Die Datei darf bis zu 30 MB groß sein.</p>
+
+<h2>Wenn es nicht funktioniert</h2>
+<ul>
+  <li><b>„Das ist keine Tabelle, sondern eine proprietäre Datei“.</b> Sie haben die Sicherung einer anderen App gewählt. Gehen Sie zurück in diese App und suchen Sie einen Export als CSV oder Excel.</li>
+  <li><b>„Das ist eine JSON-Datei“.</b> Es ist eine Sicherung von Happy Pouch selbst. Stellen Sie sie stattdessen unter „Einstellungen“ wieder her: „Sicherungen auf diesem Telefon“ → „Wiederherstellen“.</li>
+  <li><b>Datum oder Beträge werden nicht erkannt.</b> Die App zeigt Beispiele solcher Zeilen. Prüfen Sie, ob für Datum und Betrag die richtigen Spalten gewählt sind und ob die Reihenfolge Tag/Monat stimmt.</li>
+  <li><b>Spalten sind durcheinander oder es sind zu viele.</b> Öffnen Sie die Datei in Excel oder Google Tabellen und behalten Sie nur die Spalten „Datum“, „Betrag“, „Kategorie“ und „Notiz“.</li>
+</ul>
+<p>Ist das Format der Datei ungewohnt oder unübersichtlich, können Sie sie einem KI-Assistenten geben und ihn bitten, daraus eine CSV-Tabelle mit den Spalten „Datum“, „Betrag“, „Kategorie“ und „Notiz“ zu machen. Bedenken Sie, dass der Dienst, an den Sie sie senden, Ihre Ausgaben sieht.</p>
+
+<footer><a href="index.html">← Alle Themen</a></footer>
+</body>
+</html>

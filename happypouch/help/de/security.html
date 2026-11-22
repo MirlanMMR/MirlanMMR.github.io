@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sicherheit und Datenschutz in Happy Pouch</title>
+<meta name="description" content="Wo Happy Pouch Ihre Daten speichert, wie Sie die App sperren, Kategorienamen verbergen und was Google Drive sehen kann.">
+<link rel="alternate" hreflang="en" href="../en/security.html">
+<link rel="alternate" hreflang="ru" href="../ru/security.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Happy Pouch Hilfe</a> · Sicherheit</div>
+<h1>Sicherheit und Datenschutz</h1>
+<p class="lead">Einträge liegen nur auf Ihrem Telefon. Die App hat kein Konto, keinen Server und keine Registrierung, und die Erfassung funktioniert ohne Internet.</p>
+
+<h2>Wo die Daten liegen</h2>
+<ul>
+  <li><b>In der App auf dem Telefon.</b> Sie werden nirgendwohin gesendet.</li>
+  <li><b>In den Sicherungen auf dem Telefon</b>: dem Ordner „Documents/HappyPouch“. Haben Sie sich bei Google angemeldet, sind sie verschlüsselt (siehe unten); ohne Anmeldung sind sie unverschlüsselt.</li>
+  <li><b>Auf Ihrem Google Drive</b>, nur wenn Sie die automatische Sicherung selbst eingeschaltet haben.</li>
+</ul>
+<p>Mehr zu Sicherungen unter <a href="backups.html">„Sicherungen und ein neues Telefon“</a>.</p>
+
+<h2>Verschlüsselung der Sicherungen</h2>
+<p>Melden Sie sich bei Google an (optional, „Einstellungen“ → „Automatische Sicherung auf Google Drive“), erzeugt die App einen zufälligen Schlüssel und legt ihn in einem versteckten Ordner der App auf Ihrem Google Drive ab. Die Oberfläche von Drive zeigt ihn nicht, und andere Apps können ihn nicht lesen. Dafür fragt Google bei der Anmeldung nach der Berechtigung „Eigene Konfigurationsdaten in Ihrem Google Drive ansehen, erstellen und löschen“. Jede Sicherung wird mit diesem Schlüssel verschlüsselt (AES-256): auf dem Telefon, auf Drive und mit „Anderswo speichern…“.</p>
+<ul>
+  <li>Eine Sicherungsdatei, die in falsche Hände gerät, über einen Messenger, eine Cloud oder eine andere App, lässt sich ohne Ihr Google-Konto nicht öffnen.</li>
+  <li>Melden Sie sich auf einem neuen Telefon beim selben Google-Konto an: Die App holt den Schlüssel selbst und öffnet die Sicherungen. Es gibt kein separates Passwort, und ein vergessenes Google-Passwort lässt sich über Google wiederherstellen.</li>
+  <li>Beim ersten Mal auf einem neuen Telefon brauchen Sie eine Internetverbindung, um den Schlüssel zu holen.</li>
+  <li>Ohne Anmeldung bei Google gibt es keine Verschlüsselung: Sicherungen sind unverschlüsselt, wie bisher.</li>
+  <li>Sicherungen, die vor dem Einschalten der Verschlüsselung entstanden sind, bleiben unverschlüsselt, bis neuere sie verdrängen.</li>
+</ul>
+<p class="note">Löschen Sie die Daten der App nicht in den Einstellungen von Google Drive („Apps verwalten“ → Happy Pouch → „Versteckte App-Daten löschen“), und verlieren Sie den Zugang zum Google-Konto nicht: Ohne den Schlüssel lassen sich verschlüsselte Sicherungen nicht öffnen. Eine Kopie des Schlüssels liegt auch auf dem Telefon, geht aber bei einer Neuinstallation oder einem neuen Telefon verloren.</p>
+
+<h2>Anmeldeschutz</h2>
+<p>„Einstellungen“ → „Anmeldeschutz“. Die App entsperrt sich dann wie Ihr Telefon: PIN, Muster, Fingerabdruck oder Gesicht.</p>
+<ul>
+  <li>Die App hat kein eigenes Passwort: Sie nutzt die Sperre des Telefons. Ist diese aus, bittet die App Sie, zuerst die Bildschirmsperre in den Einstellungen des Telefons zu aktivieren.</li>
+  <li>„Erneut fragen, wenn die App geschlossen war“ legt fest, wie lange nach dem Verlassen der App die Prüfung wieder nötig ist: sofort, 30 Sekunden, 1 Minute, 5 Minuten.</li>
+  <li>Brechen Sie die Prüfung ab, bleibt die App gesperrt; die Schaltfläche „Öffnen“ fragt erneut.</li>
+</ul>
+<p class="note">Der Anmeldeschutz sperrt den Bildschirm der App. Die Sicherungsdateien sind durch die Verschlüsselung gesperrt, die greift, wenn Sie sich bei Google angemeldet haben.</p>
+
+<h2>Nur Symbole</h2>
+<p>„Einstellungen“ → „Nur Symbole“. Auf „Start“ und in „Einträge“ ersetzen Symbole die Kategorienamen. Wer kurz auf den Bildschirm schaut, sieht Beträge, aber nicht, wofür sie sind.</p>
+
+<h2>Worauf Google zugreifen kann</h2>
+<p>Die automatische Sicherung auf Google Drive ist optional. Wenn Sie sie einschalten:</p>
+<ul>
+  <li>sieht die App auf Drive nur die Dateien, die sie selbst erstellt hat; auf andere Dateien kann sie nicht zugreifen;</li>
+  <li>liegen Sicherungen und Schlüssel auf Ihrem Drive, und der Entwickler hat keinen Zugriff darauf; Sicherungen sind mit diesem Schlüssel verschlüsselt;</li>
+  <li>beendet „Abmelden“ automatische Sicherungen; gespeicherte Sicherungen bleiben auf Drive, und Sie können sie in Google Drive selbst löschen.</li>
+</ul>
+
+<h2>Erinnerungen</h2>
+<p>Die Benachrichtigung über eine regelmäßige Zahlung ist auf dem Sperrbildschirm des Telefons sichtbar. Ist das unerwünscht, wählen Sie in den „Einstellungen“ im Bereich „Erinnerungen“ „Nur in der App“ oder den Punkt am Symbol.</p>
+
+<h2>Löschen</h2>
+<ul>
+  <li>Gelöschte Einträge und Kategorien bleiben 90 Tage im Papierkorb: „Einstellungen“ → „Papierkorb“. „Leeren“ löscht sie endgültig.</li>
+  <li>„Einstellungen“ → „Daten“ → „Alle Daten löschen“ löscht alles auf dem Telefon. Sicherungen auf Drive und im Ordner „Documents/HappyPouch“ bleiben; löschen Sie sie bei Bedarf gesondert.</li>
+</ul>
+
+<h2>Eine Datei über einen anderen Dienst senden</h2>
+<p>Eine Sicherungsdatei, die an einen Messenger, eine Cloud oder einen KI-Assistenten gesendet wird, ist verschlüsselt, wenn Sie sich bei Google angemeldet haben: Ohne Ihr Konto lässt sie sich nicht lesen. Ohne Anmeldung ist die Datei unverschlüsselt, und dieser Dienst sieht sie.</p>
+
+<p><a href="../../privacy-policy.html#de">Datenschutzerklärung</a></p>
+
+<footer><a href="index.html">← Alle Themen</a></footer>
+</body>
+</html>

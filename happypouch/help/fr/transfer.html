@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transférer vos données dans Happy Pouch depuis une autre application</title>
+<meta name="description" content="Comment apporter des enregistrements d'une autre application de budget ou d'un relevé bancaire dans Happy Pouch : export, association des colonnes, formats pris en charge, erreurs courantes.">
+<link rel="alternate" hreflang="en" href="../en/transfer.html">
+<link rel="alternate" hreflang="ru" href="../ru/transfer.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Aide de Happy Pouch</a> · Passer d'une autre application</div>
+<h1>Passer d'une autre application</h1>
+<p class="lead">Les enregistrements d'une autre application de budget passent en un seul fichier. Les catégories et les devises sont créées pour vous : inutile de repartir de zéro.</p>
+
+<h2>Ce qui est transféré</h2>
+<ul>
+  <li>Les enregistrements de dépenses et de revenus : date, montant, catégorie, sous-catégorie, devise, note.</li>
+  <li>Les catégories et les devises que vous n'avez pas encore. L'application les crée et vous montre la liste avant l'import.</li>
+</ul>
+<p>Les virements entre portefeuilles ne sont pas importés : ils sont ignorés, et l'application vous dit combien il y en avait. Les enregistrements déjà présents dans Happy Pouch ne sont pas ajoutés une seconde fois.</p>
+
+<h2>Étape 1. Exporter un fichier depuis votre ancienne application</h2>
+<p>Cherchez « Exporter » dans l'ancienne application, en général dans les réglages ou dans une section de données. Excel (XLSX) et CSV fonctionnent le mieux. Enregistrez le fichier sur votre téléphone.</p>
+<p class="note">Il vous faut un export vers un tableau (une feuille de calcul), pas une « sauvegarde ». Happy Pouch ne peut pas lire la sauvegarde d'une autre application.</p>
+
+<h2>Étape 2. Ouvrir le fichier dans Happy Pouch</h2>
+<p>« Réglages » → « Transfert de données » → « Choisir un fichier ». Dans une application vide, le même bouton se trouve sur « Accueil » : « Transférer des données / importer un relevé ».</p>
+<p class="note"><b>Vous ne voyez pas le fichier dans la liste ?</b> Le sélecteur de fichiers s'ouvre là où vous étiez la dernière fois, souvent dans « Photos ». Touchez ☰ en haut à gauche et ouvrez « Récents » : un fichier reçu à l'instant s'y trouve. Pour un fichier envoyé par WhatsApp ou Telegram, cherchez aussi dans « Téléchargements » ou « Documents ». S'il n'est pas dans « Récents », ouvrez le fichier dans la messagerie, enregistrez-le sur le téléphone, puis réessayez.</p>
+
+<h2>Étape 3. Vérifier les colonnes</h2>
+<p>L'écran « Importer des opérations » s'ouvre. En haut, il est dit à quoi ressemble le fichier et combien de lignes il contient. Dessous se trouve la liste des champs de l'application : « Date », « Montant », « Catégorie », « Sous-catégorie », « Devise », « Note ». L'application a déjà associé à chaque champ une colonne de votre fichier d'après son en-tête.</p>
+<p><b>Comment voir quelle colonne est choisie.</b> À droite de chaque champ se trouve un bouton arrondi avec un contour. Il affiche le nom de la colonne de votre fichier, par exemple « Date » ou « Date de l'opération ». S'il affiche un tiret « — », aucune colonne n'est choisie pour ce champ.</p>
+<p><b>Comment choisir une autre colonne.</b> Touchez ce bouton à droite du champ. Une liste s'ouvre : la première ligne est « — ne pas utiliser », puis toutes les colonnes de votre fichier. Touchez celle qu'il vous faut. Par exemple, le champ « Date » affiche « Date de création » et il vous faut « Date de l'opération » : touchez le bouton et choisissez « Date de l'opération ».</p>
+<p><b>Comment vérifier le résultat.</b> Sous la liste des champs, il est écrit : « Première ligne du fichier : date …, montant … ». C'est ce que l'application a lu dans la première ligne de votre fichier avec les colonnes choisies. Si la date ou le montant semblent faux, changez la colonne du champ correspondant.</p>
+<ul>
+  <li>Si dans le fichier les dépenses et les revenus sont dans deux colonnes différentes, passez « Une seule colonne de montant » sur « Revenus et dépenses séparés ». Deux champs apparaissent alors à la place du seul « Montant » : « Colonne des dépenses » et « Colonne des revenus ».</li>
+  <li>Si le fichier n'a pas de colonne pour le type, les montants négatifs comptent comme des dépenses et les positifs comme des revenus.</li>
+  <li>Si un champ n'est pas nécessaire (par exemple « Sous-catégorie »), choisissez « — ne pas utiliser » dans sa liste.</li>
+</ul>
+<p>Pour des dates comme 05/10/2026, indiquez l'ordre de la date sous la liste : « Auto », « Jour/mois » ou « Mois/jour ». « Auto » suffit en général.</p>
+<p>Si le fichier n'a pas de colonne de devise, choisissez en bas une devise pour tous les enregistrements en touchant le bouton avec son code.</p>
+
+<h2>Étape 4. Vérifier le résumé et importer</h2>
+<p>Avant l'import, l'application montre ce qui va se passer : combien d'enregistrements seront ajoutés et pour quelle période, combien seront ignorés et pourquoi, et quelles catégories et devises seront créées. Dessous, trois exemples d'enregistrements. Si tout semble correct, touchez « Importer ».</p>
+
+<h2>Quels fichiers conviennent</h2>
+<table>
+  <tr><th>Format</th><th>D'où il vient en général</th></tr>
+  <tr><td>Excel XLSX et XLS</td><td>export de la plupart des applications de budget ; l'option la plus fiable</td></tr>
+  <tr><td>CSV</td><td>exports d'applications, relevés ; le séparateur et l'encodage sont détectés automatiquement</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>relevés bancaires</td></tr>
+  <tr><td>QIF</td><td>anciens logiciels de finances</td></tr>
+  <tr><td>SQLite</td><td>bases de données de GnuCash et Money Manager</td></tr>
+</table>
+<p>Le fichier peut peser jusqu'à 30 Mo.</p>
+
+<h2>Si ça ne marche pas</h2>
+<ul>
+  <li><b>« Ce n'est pas un tableau mais un fichier propriétaire ».</b> Vous avez choisi la sauvegarde d'une autre application. Retournez dans cette application et cherchez un export en CSV ou Excel.</li>
+  <li><b>« C'est un fichier JSON ».</b> C'est une sauvegarde de Happy Pouch lui-même. Restaurez-la plutôt depuis « Réglages » : « Sauvegardes sur ce téléphone » → « Restaurer ».</li>
+  <li><b>Les dates ou les montants ne sont pas reconnus.</b> L'application montre des exemples de ces lignes. Vérifiez que les bonnes colonnes sont choisies pour la date et le montant, et que l'ordre jour/mois est correct.</li>
+  <li><b>Les colonnes sont mélangées, ou il y en a trop.</b> Ouvrez le fichier dans Excel ou Google Sheets et ne gardez que les colonnes « Date », « Montant », « Catégorie » et « Note ».</li>
+</ul>
+<p>Si le format du fichier est inhabituel ou en désordre, vous pouvez le confier à un assistant IA en lui demandant de le transformer en tableau CSV avec les colonnes « Date », « Montant », « Catégorie » et « Note ». Gardez en tête que le service auquel vous l'envoyez verra vos dépenses.</p>
+
+<footer><a href="index.html">← Tous les sujets</a></footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backups e a mudança do Happy Pouch para um telefone novo</title>
+<meta name="description" content="Como o Happy Pouch guarda cópias dos seus registros: backups no telefone, backup automático no Google Drive, restaurar, mudar para um telefone novo.">
+<link rel="alternate" hreflang="en" href="../en/backups.html">
+<link rel="alternate" hreflang="ru" href="../ru/backups.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Ajuda do Happy Pouch</a> · Backups e um telefone novo</div>
+<h1>Backups e um telefone novo</h1>
+<p class="lead">Todos os registros ficam só no seu telefone. Para que um telefone quebrado, uma reinstalação ou um telefone novo não os percam, o app faz backups em dois lugares, independentes entre si.</p>
+
+<h2>Backups neste telefone</h2>
+<p>Sempre ligados; não há nada a configurar. O app salva sozinho um backup na pasta “Documents/HappyPouch”.</p>
+<ul>
+  <li>Não dependem do Google nem da internet.</li>
+  <li>Você pode vê-los no app “Arquivos”.</li>
+  <li>Ficam no telefone mesmo que o Happy Pouch seja desinstalado.</li>
+</ul>
+<p>Em “Configurações”, seção “Backups neste telefone”, há três botões:</p>
+<table>
+  <tr><th>Botão</th><th>O que faz</th></tr>
+  <tr><td>Fazer backup agora</td><td>Salva um backup na hora, sem esperar o próximo.</td></tr>
+  <tr><td>Restaurar</td><td>Mostra a lista de backups; o que você escolher substitui todos os dados atuais. “Escolher arquivo…” também está lá, para um backup guardado em outro lugar.</td></tr>
+  <tr><td>Salvar em outro lugar…</td><td>Salva um backup onde você escolher: um pen drive, um mensageiro, outra nuvem.</td></tr>
+</table>
+
+<h2>Backup automático no Google Drive</h2>
+<p>Opcional. Ligue em “Configurações”, seção “Backup automático no Google Drive”: o interruptor “Fazer backup automaticamente” pede que você entre no Google.</p>
+<ul>
+  <li>Um backup é salvo quando você fecha o app, e uma vez por dia se houver algo novo.</li>
+  <li>Ele fica no <b>seu</b> Google Drive, em uma pasta com nome como “happy-pouch-backup-…”. A chave com que cada backup é criptografado fica separada, na pasta oculta do app no seu Drive; mais em <a href="security.html">“Segurança e privacidade”</a>.</li>
+  <li>No Drive o app vê só os arquivos que ele mesmo criou. Não consegue acessar mais nada.</li>
+  <li>“Fazer backup agora” faz um backup na hora; “Restaurar” mostra a lista de backups no Drive.</li>
+  <li>“Sair” interrompe os backups automáticos. Os backups já salvos ficam no Drive, e os dados do telefone não mudam.</li>
+</ul>
+<p class="note">Se o app disser “O backup está desatualizado”, os seus registros mais recentes não estão nele. Toque em “Fazer backup agora”, principalmente antes de uma restauração de fábrica ou de trocar de telefone.</p>
+
+<h2>Mudar para um telefone novo</h2>
+<p><b>Pelo Google Drive.</b> No telefone antigo toque em “Fazer backup agora”. No novo instale o Happy Pouch, ligue o backup automático com a mesma conta Google e toque em “Restaurar”. O app busca a chave sozinho.</p>
+<p><b>Com um arquivo.</b> No telefone antigo toque em “Salvar em outro lugar…” e envie o arquivo para você do jeito que preferir. No novo abra “Backups neste telefone” → “Restaurar” → “Escolher arquivo…”. Se os backups estavam criptografados, ligue primeiro o backup automático com a mesma conta Google; senão o app diz que o backup está criptografado. Um arquivo de backup também pode ser aberto direto do app “Arquivos” ou de um mensageiro: o Happy Pouch oferece carregá-lo.</p>
+
+<h2>O que há em um backup</h2>
+<p>Registros, categorias e seus tipos, carteiras, transferências, moedas e taxas do conversor, pagamentos recorrentes, limites, a lixeira, os números de “Minha região”.</p>
+<p>Restaurar <b>substitui</b> tudo o que está agora no app; não adiciona. O app pede confirmação.</p>
+
+<h2>Excluir todos os dados</h2>
+<p>“Configurações” → “Dados” → “Excluir todos os dados” apaga os registros, categorias, moedas e pagamentos do telefone. Os backups no Drive e na pasta “Documents/HappyPouch” ficam.</p>
+
+<footer><a href="index.html">← Todos os tópicos</a></footer>
+</body>
+</html>

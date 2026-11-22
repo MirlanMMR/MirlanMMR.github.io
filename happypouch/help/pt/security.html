@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança e privacidade no Happy Pouch</title>
+<meta name="description" content="Onde o Happy Pouch guarda seus dados, como bloquear o app, esconder os nomes das categorias e o que o Google Drive pode ver.">
+<link rel="alternate" hreflang="en" href="../en/security.html">
+<link rel="alternate" hreflang="ru" href="../ru/security.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Ajuda do Happy Pouch</a> · Segurança</div>
+<h1>Segurança e privacidade</h1>
+<p class="lead">Os registros ficam só no seu telefone. O app não tem conta, nem servidor, nem cadastro, e o controle funciona sem internet.</p>
+
+<h2>Onde estão os dados</h2>
+<ul>
+  <li><b>No app, no telefone.</b> Não são enviados a lugar nenhum.</li>
+  <li><b>Nos backups no telefone</b>: a pasta “Documents/HappyPouch”. Se você entrou no Google, eles são criptografados (veja abaixo); sem entrar, são sem criptografia.</li>
+  <li><b>No seu Google Drive</b>, só se você mesmo ligou o backup automático.</li>
+</ul>
+<p>Mais sobre backups em <a href="backups.html">“Backups e um telefone novo”</a>.</p>
+
+<h2>Criptografia dos backups</h2>
+<p>Quando você entra no Google (opcional, “Configurações” → “Backup automático no Google Drive”), o app cria uma chave aleatória e a coloca no seu Google Drive, em uma pasta oculta do app. A interface do Drive não a mostra e outros apps não podem lê-la. Para isso o Google pede a permissão “Ver, criar e excluir seus próprios dados de configuração no seu Google Drive” ao entrar. Cada backup é criptografado com essa chave (AES-256): no telefone, no Drive e com “Salvar em outro lugar…”.</p>
+<ul>
+  <li>Um arquivo de backup que caia em mãos erradas, por um mensageiro, uma nuvem ou outro app, não pode ser aberto sem a sua conta Google.</li>
+  <li>Em um telefone novo, entre na mesma conta Google: o app busca a chave sozinho e abre os backups. Não há senha separada, e uma senha do Google esquecida pode ser recuperada pelo próprio Google.</li>
+  <li>Na primeira vez em um telefone novo é preciso conexão com a internet para buscar a chave.</li>
+  <li>Sem entrar no Google não há criptografia: os backups ficam sem criptografia, como antes.</li>
+  <li>Backups feitos antes de a criptografia ser ligada continuam sem criptografia até que os mais novos os substituam.</li>
+</ul>
+<p class="note">Não apague os dados do app nas configurações do Google Drive (“Gerenciar apps” → Happy Pouch → “Excluir dados ocultos do app”) e não perca o acesso à conta Google: sem a chave os backups criptografados não podem ser abertos. Uma cópia da chave também fica no telefone, mas se perde em uma reinstalação ou em um telefone novo.</p>
+
+<h2>Proteção de acesso</h2>
+<p>“Configurações” → “Proteção de acesso”. O app passa a desbloquear como o seu telefone: PIN, padrão, digital ou rosto.</p>
+<ul>
+  <li>O app não tem senha própria: usa o bloqueio do telefone. Se ele estiver desligado, o app pede que você ative antes o bloqueio de tela nas configurações do telefone.</li>
+  <li>“Pedir de novo se o app foi fechado” define depois de quanto tempo fora do app a verificação é exigida de novo: imediatamente, 30 segundos, 1 minuto, 5 minutos.</li>
+  <li>Se você cancelar a verificação, o app continua bloqueado; o botão “Abrir” pede de novo.</li>
+</ul>
+<p class="note">A proteção de acesso bloqueia a tela do app. Os arquivos de backup são trancados pela criptografia, que funciona se você entrou no Google.</p>
+
+<h2>Somente ícones</h2>
+<p>“Configurações” → “Somente ícones”. Em “Início” e em “Registros”, ícones substituem os nomes das categorias. Quem der uma olhada na tela vê valores, mas não para que servem.</p>
+
+<h2>O que o Google pode acessar</h2>
+<p>O backup automático no Google Drive é opcional. Se você o ligar:</p>
+<ul>
+  <li>no Drive o app vê só os arquivos que ele mesmo criou; não consegue acessar outros arquivos;</li>
+  <li>os backups e a chave ficam no seu Drive, e o desenvolvedor não tem acesso a eles; os backups são criptografados com essa chave;</li>
+  <li>“Sair” interrompe os backups automáticos; os backups salvos ficam no Drive, e você pode excluí-los no próprio Google Drive.</li>
+</ul>
+
+<h2>Lembretes</h2>
+<p>A notificação de um pagamento recorrente fica visível na tela de bloqueio do telefone. Se isso não for desejado, escolha “Somente no app” ou o ponto no ícone em “Configurações”, seção “Lembretes”.</p>
+
+<h2>Exclusão</h2>
+<ul>
+  <li>Registros e categorias excluídos ficam 90 dias na lixeira: “Configurações” → “Lixeira”. “Esvaziar” os apaga para sempre.</li>
+  <li>“Configurações” → “Dados” → “Excluir todos os dados” apaga tudo no telefone. Os backups no Drive e na pasta “Documents/HappyPouch” ficam; exclua-os à parte se precisar.</li>
+</ul>
+
+<h2>Enviar um arquivo por outro serviço</h2>
+<p>Um arquivo de backup enviado a um mensageiro, uma nuvem ou um assistente de IA é criptografado se você entrou no Google: não pode ser lido sem a sua conta. Sem entrar, o arquivo é sem criptografia, e esse serviço o vê.</p>
+
+<p><a href="../../privacy-policy.html#pt">Política de privacidade</a></p>
+
+<footer><a href="index.html">← Todos os tópicos</a></footer>
+</body>
+</html>

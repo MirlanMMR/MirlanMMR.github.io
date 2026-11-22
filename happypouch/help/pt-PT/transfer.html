@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trazer seus dados de outro app para o Happy Pouch</title>
+<meta name="description" content="Como trazer registos de outro app de orçamento ou de um extrato bancário para o Happy Pouch: exportação, associação das colunas, formatos compatíveis, erros comuns.">
+<link rel="alternate" hreflang="en" href="../en/transfer.html">
+<link rel="alternate" hreflang="ru" href="../ru/transfer.html">
+<link rel="stylesheet" href="../help.css">
+</head>
+<body>
+<div class="crumbs"><a href="index.html">Ajuda do Happy Pouch</a> · Vindo de outro app</div>
+<h1>Vindo de outro app</h1>
+<p class="lead">Os registos de outro app de orçamento passam em um único ficheiro. As categorias e as moedas são criadas para você, então não é preciso começar do zero.</p>
+
+<h2>O que é transferido</h2>
+<ul>
+  <li>Registos de despesas e receitas: data, valor, categoria, subcategoria, moeda, nota.</li>
+  <li>As categorias e moedas que você ainda não tem. O app as cria e mostra a lista antes de importar.</li>
+</ul>
+<p>As transferências entre carteiras não são importadas: são ignoradas, e o app diz quantas havia. Registos que já estão no Happy Pouch não são adicionados uma segunda vez.</p>
+
+<h2>Passo 1. Exporte um ficheiro do seu app antigo</h2>
+<p>Procure “Exportar” no app antigo, geralmente em Definições ou em uma seção de dados. Excel (XLSX) e CSV funcionam melhor. Guarde o ficheiro no seu telemóvel.</p>
+<p class="note">Precisa de uma exportação para uma tabela (uma folha de cálculo), não de uma “cópia de segurança”. O Happy Pouch não consegue ler a cópia de segurança de outro app.</p>
+
+<h2>Passo 2. Abra o ficheiro no Happy Pouch</h2>
+<p>“Definições” → “Transferência de dados” → “Escolher ficheiro”. Em um app vazio, o mesmo botão está em “Início”: “Transferir dados / importar extrato”.</p>
+<p class="note"><b>Não vê o ficheiro na lista?</b> O seletor de ficheiros abre onde você esteve da última vez, muitas vezes em “Fotos”. Toque em ☰ no canto superior esquerdo e abra “Recentes”: um ficheiro recém-recebido está lá. Para um ficheiro enviado pelo WhatsApp ou Telegram, procure também em “Downloads” ou “Documentos”. Se não estiver em “Recentes”, abra o ficheiro no aplicação de mensagens, guarde no telemóvel e tente de novo.</p>
+
+<h2>Passo 3. Confira as colunas</h2>
+<p>Abre-se o ecrã “Importar transações”. No topo diz com que tipo de ficheiro ele se parece e quantas linhas tem. Abaixo está a lista dos campos do app: “Data”, “Valor”, “Categoria”, “Subcategoria”, “Moeda”, “Nota”. O app já associou a cada campo uma coluna do seu ficheiro pelo cabeçalho.</p>
+<p><b>Como ver qual coluna está escolhida.</b> À direita de cada campo há um botão arredondado com contorno. Ele mostra o nome da coluna do seu ficheiro, por exemplo “Data” ou “Data da transação”. Se mostrar um traço “—”, nenhuma coluna está escolhida para esse campo.</p>
+<p><b>Como escolher outra coluna.</b> Toque nesse botão à direita do campo. Abre-se uma lista: a primeira linha é “— não usar”, depois todas as colunas do seu ficheiro. Toque na que precisa. Por exemplo, o campo “Data” mostra “Data de criação” e precisa de “Data da transação”: toque no botão e escolha “Data da transação”.</p>
+<p><b>Como conferir o resultado.</b> Abaixo da lista de campos aparece: “Primeira linha do ficheiro: data …, valor …”. Isso é o que o app leu da primeira linha do seu ficheiro com as colunas escolhidas. Se a data ou o valor parecerem errados, mude a coluna do campo correspondente.</p>
+<ul>
+  <li>Se no ficheiro as despesas e as receitas estão em duas colunas diferentes, troque “Uma coluna de valor” por “Receitas e despesas separadas”. Aparecem então dois campos no lugar do único “Valor”: “Coluna de despesas” e “Coluna de receitas”.</li>
+  <li>Se o ficheiro não tem coluna com o tipo, valores negativos contam como despesas e positivos como receitas.</li>
+  <li>Se um campo não for necessário (por exemplo “Subcategoria”), escolha “— não usar” na lista dele.</li>
+</ul>
+<p>Para datas como 05/10/2026, defina a ordem da data abaixo da lista: “Automática”, “Dia/mês” ou “Mês/dia”. “Automática” costuma bastar.</p>
+<p>Se o ficheiro não tem coluna de moeda, escolha abaixo uma moeda para todos os registos tocando no botão com o código dela.</p>
+
+<h2>Passo 4. Confira o resumo e importe</h2>
+<p>Antes de importar, o app mostra o que vai acontecer: quantos registos serão adicionados e de que período, quantos serão ignorados e por quê, e quais categorias e moedas serão criadas. Abaixo há três registos de exemplo. Se tudo parecer certo, toque em “Importar”.</p>
+
+<h2>Quais ficheiros funcionam</h2>
+<table>
+  <tr><th>Formato</th><th>De onde costuma vir</th></tr>
+  <tr><td>Excel XLSX e XLS</td><td>exportação da maioria dos apps de orçamento; a opção mais confiável</td></tr>
+  <tr><td>CSV</td><td>exportações de apps, extratos; o separador e a codificação são detectados automaticamente</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>extratos bancários</td></tr>
+  <tr><td>QIF</td><td>programas de finanças mais antigos</td></tr>
+  <tr><td>SQLite</td><td>bancos de dados do GnuCash e do Money Manager</td></tr>
+</table>
+<p>O ficheiro pode ter até 30 MB.</p>
+
+<h2>Se não funcionar</h2>
+<ul>
+  <li><b>“Isto não é uma tabela, e sim um ficheiro proprietário”.</b> Escolheu a cópia de segurança de outro app. Volte a esse app e procure uma exportação para CSV ou Excel.</li>
+  <li><b>“Este é um ficheiro JSON”.</b> É uma cópia de segurança do próprio Happy Pouch. Restaure-o em “Definições”: “Cópias de segurança neste telemóvel” → “Restaurar”.</li>
+  <li><b>Datas ou valores não são reconhecidos.</b> O app mostra exemplos dessas linhas. Confira se as colunas certas estão escolhidas para a data e o valor e se a ordem dia/mês está correta.</li>
+  <li><b>As colunas estão misturadas ou há colunas demais.</b> Abra o ficheiro no Excel ou no Folhas de cálculo Google e deixe só as colunas “Data”, “Valor”, “Categoria” e “Nota”.</li>
+</ul>
+<p>Se o formato do ficheiro for desconhecido ou bagunçado, pode entregá-lo a um assistente de IA e pedir que o transforme em uma tabela CSV com as colunas “Data”, “Valor”, “Categoria” e “Nota”. Lembre-se de que o serviço para o qual você o enviar verá os seus gastos.</p>
+
+<footer><a href="index.html">← Todos os tópicos</a></footer>
+</body>
+</html>
