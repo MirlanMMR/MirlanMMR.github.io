@@ -13,6 +13,8 @@ Commands:
   check [lang ...]             validate translations (tags/links preserved)
   bootstrap <lang> <page>      import units from an existing hand-written page
   build [lang ...]             generate pages (only pages with 100% coverage)
+  review <lang> [site|legal]   write review/<lang>-<part>.txt (EN + translation) for an outside check
+  set <lang> <id> <text>       replace one translation by unit id
 """
 import sys, os, re, json, hashlib, html, datetime
 from html.parser import HTMLParser
@@ -622,8 +624,58 @@ def load_source_raw_home():
     return open(os.path.join(ROOT, "tools", "home-bilingual.html"), encoding="utf-8").read()
 
 
+REVIEW_HEAD = """Please review these translations of website text into {name} ({code}). The source language is English.
+The site belongs to a small Android app studio (MMR Lab). The text is {what}.
+Check: natural wording for a native reader, grammar, correct terminology, and consistent app names. {legal}
+Rules: keep HTML tags and attributes (<b>, <a href>, <code>, <strong>) exactly as they are. App names (Slowread, Ticker 24/7, Happy Pouch, MMR Lab, Calculator: Themes & Widget) stay in Latin script. The app "Math for Kids: 2+2" is called "{appname}" in {name}.
+Reply ONLY with the lines that need a change, in this form, one per line:
+[id] corrected full text // short reason
+Do not repeat lines that are fine. Each entry below has an [id], the English text (EN) and the translation (TR).
+"""
+
+
+def cmd_review(args):
+    lang = args[0]
+    parts = args[1:] or ["site", "legal"]
+    tr = load_tr(lang)
+    for part in parts:
+        keys = [k for k in PAGES if (k in LEGAL) == (part == "legal")]
+        seen, rows = set(), []
+        for k in keys:
+            for i, t in need_ids(k):
+                if i not in seen and i in tr:
+                    seen.add(i)
+                    rows.append((i, t, tr[i]))
+        what = ("marketing pages for five Android apps (a calculator, an ebook reader, a news app, an expense tracker and a children's math app for ages 4-7)"
+                if part == "site" else "privacy policies and terms of use for two apps (a calculator and a children's math app for ages 4-7)")
+        legal = "This is legal text: it must keep the exact meaning of the English; flag any shift in meaning." if part == "legal" else ""
+        out = REVIEW_HEAD.format(name=LANG[lang]["name"], code=lang, what=what, legal=legal,
+                                 appname=LANG[lang].get("app_name", "Math for Kids: 2+2"))
+        body = "\n".join("[%s]\nEN: %s\nTR: %s\n" % (i, html.unescape(e), html.unescape(t)) for i, e, t in rows)
+        d = os.path.join(ROOT, "review")
+        os.makedirs(d, exist_ok=True)
+        path = os.path.join(d, "%s-%s.txt" % (lang, part))
+        open(path, "w", encoding="utf-8").write(out + "\n" + body)
+        print("%s: %d units, %d KB" % (path, len(rows), os.path.getsize(path) // 1024))
+
+
+def cmd_set(args):
+    lang, uid_, text = args[0], args[1], " ".join(args[2:])
+    base = os.path.join(I18N, lang)
+    for f in sorted(os.listdir(base)):
+        if f.endswith(".json"):
+            p = os.path.join(base, f)
+            d = json.load(open(p, encoding="utf-8"))
+            if uid_ in d:
+                d[uid_] = text
+                json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+                print("updated %s in %s" % (uid_, f))
+                return
+    print("id not found")
+
+
 if __name__ == "__main__":
-    cmds = {"extract": cmd_extract, "todo": cmd_todo, "status": cmd_status, "check": cmd_check,
+    cmds = {"review": cmd_review, "set": cmd_set, "extract": cmd_extract, "todo": cmd_todo, "status": cmd_status, "check": cmd_check,
             "bootstrap": cmd_bootstrap, "build": cmd_build}
     if len(sys.argv) < 2 or sys.argv[1] not in cmds:
         print(__doc__)
