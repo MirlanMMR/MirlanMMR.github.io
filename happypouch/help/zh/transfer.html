@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>把其他应用的数据迁移到 Happy Pouch</title>
+<meta name="description" content="如何把其他记账应用或银行对账单中的记录导入 Happy Pouch：导出、列匹配、支持的格式、常见错误。">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/transfer.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/transfer.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/transfer.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/transfer.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/transfer.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/transfer.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/transfer.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/transfer.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/transfer.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/transfer.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/transfer.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/transfer.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/transfer.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="zh-Hans">简体中文</summary><ul><li><a href="/happypouch/help/en/transfer.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/transfer.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/happypouch/help/es/transfer.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/transfer.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/transfer.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/transfer.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/transfer.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/transfer.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/transfer.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/transfer.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/transfer.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/ko/transfer.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/zh/">Happy Pouch 帮助</a> · 从其他应用迁移</div>
+<h1>从其他应用迁移</h1>
+<p class="lead">其他记账应用中的记录可以作为一个文件迁移过来。分类和币种会自动为您创建，因此无需从零开始。</p>
+
+<h2>会迁移什么</h2>
+<ul>
+  <li>支出和收入记录：日期、金额、分类、子分类、币种、备注。</li>
+  <li>您还没有的分类和币种。应用会创建它们，并在导入前向您展示列表。</li>
+</ul>
+<p>钱包之间的转账不会导入：会被跳过，应用会告诉您有多少笔。已经在 Happy Pouch 中的记录不会被重复添加。</p>
+
+<h2>第 1 步。从旧应用导出文件</h2>
+<p>在旧应用中找“导出”，通常在设置或数据部分。Excel（XLSX）和 CSV 效果最好。把文件保存到手机上。</p>
+<p class="note">您需要导出为表格（电子表格），而不是“备份”。Happy Pouch 无法读取其他应用的备份。</p>
+
+<h2>第 2 步。在 Happy Pouch 中打开文件</h2>
+<p>“设置”→“数据迁移”→“选择文件”。在空的应用中，同一个按钮位于“首页”：“迁移数据/导入对账单”。</p>
+<p class="note"><b>在列表中看不到文件？</b>文件选择器会打开到您上次所在的位置，通常是“照片”。点按左上角的 ☰ 并打开“最近”：刚收到的文件就在那里。对于通过 WhatsApp 或 Telegram 发来的文件，也请查看“下载”或“文档”。如果“最近”里没有，请在通讯软件中打开该文件并保存到手机，然后再试一次。</p>
+
+<h2>第 3 步。检查各列</h2>
+<p>会打开“导入交易”屏幕。顶部说明文件看起来是什么类型以及有多少行。下方是应用的字段列表：“日期”“金额”“分类”“子分类”“币种”“备注”。应用已根据表头为每个字段匹配了您文件中的一列。</p>
+<p><b>如何看出选了哪一列。</b>每个字段的右侧有一个带轮廓的圆角按钮。它显示您文件中该列的名称，例如“日期”或“交易日期”。如果显示短横线“—”，说明该字段没有选择任何列。</p>
+<p><b>如何选择另一列。</b>点按字段右侧的那个按钮。会打开一个列表：第一行是“— 不使用”，然后是您文件的所有列。点按您需要的那一列。例如，“日期”字段显示的是“创建日期”，而您需要“交易日期”：点按按钮并选择“交易日期”。</p>
+<p><b>如何检查结果。</b>字段列表下方写着：“文件第一行：日期…，金额…”。这是应用用所选列从您文件第一行读到的内容。如果那里的日期或金额看起来不对，请更改对应字段的列。</p>
+<ul>
+  <li>如果文件中的支出和收入位于两个不同的列，请把“单个金额列”切换为“收入和支出分开”。这样，原来的单个“金额”会变成两个字段：“支出列”和“收入列”。</li>
+  <li>如果文件中没有类型列，负数金额按支出计，正数按收入计。</li>
+  <li>如果某个字段用不上（例如“子分类”），请在它的列表中选择“— 不使用”。</li>
+</ul>
+<p>对于 05/10/2026 这样的日期，请在列表下方设置日期顺序：“自动”“日/月”或“月/日”。通常“自动”就够了。</p>
+<p>如果文件没有币种列，请点按带有币种代码的按钮，在下方为所有记录选择一种币种。</p>
+
+<h2>第 4 步。查看汇总并导入</h2>
+<p>导入前，应用会显示将要发生的事情：将添加多少条记录及其所属期间，将跳过多少条及原因，以及将创建哪些分类和币种。下方是三条示例记录。如果一切无误，点按“导入”。</p>
+
+<h2>哪些文件可用</h2>
+<table>
+  <tr><th>格式</th><th>通常来自哪里</th></tr>
+  <tr><td>Excel XLSX 和 XLS</td><td>大多数记账应用的导出；最可靠的选择</td></tr>
+  <tr><td>CSV</td><td>应用导出、对账单；分隔符和编码会自动识别</td></tr>
+  <tr><td>OFX、QFX、QBO</td><td>银行对账单</td></tr>
+  <tr><td>QIF</td><td>较老的财务软件</td></tr>
+  <tr><td>SQLite</td><td>GnuCash 和 Money Manager 数据库</td></tr>
+</table>
+<p>文件最大可达 30 MB。</p>
+
+<h2>如果不能用</h2>
+<ul>
+  <li><b>“这不是表格，而是专有文件”。</b>您选的是其他应用的备份。请回到那个应用，找导出为 CSV 或 Excel 的功能。</li>
+  <li><b>“这是一个 JSON 文件”。</b>这是 Happy Pouch 自己的备份。请改为在“设置”中恢复：“这部手机上的备份”→“恢复”。</li>
+  <li><b>日期或金额无法识别。</b>应用会显示这类行的示例。请检查日期和金额选的列是否正确，以及日/月顺序是否正确。</li>
+  <li><b>列混乱，或列太多。</b>在 Excel 或 Google 表格中打开文件，只保留“日期”“金额”“分类”和“备注”这几列。</li>
+</ul>
+<p>如果文件格式陌生或杂乱，您可以把它交给 AI 助手，请它转换成带有“日期”“金额”“分类”和“备注”列的 CSV 表格。请注意，您把文件发给的那个服务会看到您的支出。</p>
+
+<footer><a href="/happypouch/help/zh/">← 所有主题</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="zh" data-map='{"en":["/happypouch/help/en/transfer.html","English","View this page in English"],"zh":["/happypouch/help/zh/transfer.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/transfer.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/transfer.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/transfer.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/transfer.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/transfer.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/transfer.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/transfer.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/transfer.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/transfer.html","Français","Voir cette page en français"],"ko":["/happypouch/help/ko/transfer.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>

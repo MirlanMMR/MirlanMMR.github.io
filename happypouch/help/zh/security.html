@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Pouch 中的安全与隐私</title>
+<meta name="description" content="Happy Pouch 把您的数据存放在哪里、如何锁定应用、隐藏分类名称，以及 Google 云端硬盘能看到什么。">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/security.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/security.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/security.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/security.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/security.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/security.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/security.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/security.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/security.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/security.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/security.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/security.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/security.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="zh-Hans">简体中文</summary><ul><li><a href="/happypouch/help/en/security.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/security.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/happypouch/help/es/security.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/security.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/security.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/security.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/security.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/security.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/security.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/security.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/security.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/ko/security.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/zh/">Happy Pouch 帮助</a> · 安全</div>
+<h1>安全与隐私</h1>
+<p class="lead">记录只存储在您的手机上。应用没有账号、没有服务器、无需注册，并且记账无需联网。</p>
+
+<h2>数据在哪里</h2>
+<ul>
+  <li><b>在手机上的应用中。</b>它不会被发送到任何地方。</li>
+  <li><b>在手机上的备份中</b>：“Documents/HappyPouch”文件夹。如果您登录了 Google，它们是加密的（见下文）；不登录则是明文。</li>
+  <li><b>在您的 Google 云端硬盘上</b>，仅当您自己开启了自动备份。</li>
+</ul>
+<p>有关备份的更多信息，见<a href="/happypouch/help/zh/backups.html">“备份与新手机”</a>。</p>
+
+<h2>备份加密</h2>
+<p>当您登录 Google（可选，“设置”→“自动备份到 Google 云端硬盘”）时，应用会创建一个随机密钥，并把它放在您的 Google 云端硬盘中应用的隐藏文件夹里。云端硬盘的界面不会显示它，其他应用也无法读取。为此，登录时 Google 会询问权限：“在您的 Google 云端硬盘中查看、创建和删除其自己的配置数据”。每份备份都用该密钥加密（AES-256）：包括手机上的、云端硬盘上的，以及用“保存到其他位置…”保存的。</p>
+<ul>
+  <li>如果备份文件通过通讯软件、云盘或其他应用落入他人之手，没有您的 Google 账号就无法打开。</li>
+  <li>在新手机上，登录同一个 Google 账号：应用会自己获取密钥并打开备份。没有单独的密码，忘记的 Google 密码可以通过 Google 找回。</li>
+  <li>在新手机上第一次使用时，需要联网来获取密钥。</li>
+  <li>不登录 Google 就没有加密：备份和以前一样是明文。</li>
+  <li>在加密开启之前做的备份会一直是明文，直到更新的备份把它们顶替掉。</li>
+</ul>
+<p class="note">请不要在 Google 云端硬盘的设置中删除应用的数据（“管理应用”→Happy Pouch→“删除隐藏的应用数据”），也不要失去对 Google 账号的访问：没有密钥，加密的备份就无法打开。手机上也保存着密钥的一份副本，但重新安装或换新手机后就会丢失。</p>
+
+<h2>登录保护</h2>
+<p>“设置”→“登录保护”。之后应用会用与您手机相同的方式解锁：PIN 码、图案、指纹或面部。</p>
+<ul>
+  <li>应用没有自己的密码：它使用手机的锁屏。如果锁屏未开启，应用会要求您先在手机设置中启用屏幕锁定。</li>
+  <li>“应用关闭后再次询问”设置离开应用多久之后需要再次验证：立即、30 秒、1 分钟、5 分钟。</li>
+  <li>如果您取消验证，应用会保持锁定；“打开”按钮会再次询问。</li>
+</ul>
+<p class="note">登录保护锁定的是应用的屏幕。备份文件则由加密保护，前提是您登录了 Google。</p>
+
+<h2>仅显示图标</h2>
+<p>“设置”→“仅显示图标”。在“首页”和“记录”中，图标取代分类名称。瞥见屏幕的人能看到金额，但看不出用途。</p>
+
+<h2>Google 能访问什么</h2>
+<p>自动备份到 Google 云端硬盘是可选的。如果您开启它：</p>
+<ul>
+  <li>在云端硬盘上，应用只能看到它自己创建的文件；无法访问其他文件；</li>
+  <li>备份和密钥存放在您的云端硬盘上，开发者无法访问；备份用该密钥加密；</li>
+  <li>“退出登录”会停止自动备份；已保存的备份保留在云端硬盘上，您可以在 Google 云端硬盘中自行删除。</li>
+</ul>
+
+<h2>提醒</h2>
+<p>定期付款通知会显示在手机的锁屏上。如果您不希望这样，请在“设置”的“提醒”部分选择“仅在应用内”或角标圆点。</p>
+
+<h2>删除</h2>
+<ul>
+  <li>已删除的记录和分类会在回收站中保留 90 天：“设置”→“回收站”。“清空”会永久清除它们。</li>
+  <li>“设置”→“数据”→“删除所有数据”会清除手机上的一切。云端硬盘上以及“Documents/HappyPouch”文件夹中的备份保留；如有需要，请另行删除。</li>
+</ul>
+
+<h2>通过其他服务发送文件</h2>
+<p>如果您登录了 Google，发送到通讯软件、云盘或 AI 助手的备份文件是加密的：没有您的账号就无法读取。不登录的话，文件是明文，对方服务能看到它。</p>
+
+<p><a href="/zh/happypouch/privacy-policy.html">隐私政策</a></p>
+
+<footer><a href="/happypouch/help/zh/">← 所有主题</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="zh" data-map='{"en":["/happypouch/help/en/security.html","English","View this page in English"],"zh":["/happypouch/help/zh/security.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/security.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/security.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/security.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/security.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/security.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/security.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/security.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/security.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/security.html","Français","Voir cette page en français"],"ko":["/happypouch/help/ko/security.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>

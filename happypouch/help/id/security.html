@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keamanan dan privasi di Happy Pouch</title>
+<meta name="description" content="Di mana Happy Pouch menyimpan data Anda, cara mengunci aplikasi, menyembunyikan nama kategori, dan apa yang bisa dilihat Google Drive.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/security.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/security.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/security.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/security.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/security.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/security.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/security.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/security.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/security.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/security.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/security.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/security.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/security.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="id">Bahasa Indonesia</summary><ul><li><a href="/happypouch/help/en/security.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/security.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/security.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/security.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/security.html" hreflang="id" lang="id" data-lang="id" aria-current="true">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/security.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/security.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/security.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/security.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/security.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/security.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/ko/security.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/id/">Bantuan Happy Pouch</a> · Keamanan</div>
+<h1>Keamanan dan privasi</h1>
+<p class="lead">Catatan disimpan hanya di ponsel Anda. Aplikasi tidak punya akun, tidak punya server, dan tidak perlu mendaftar, dan pencatatan bekerja tanpa internet.</p>
+
+<h2>Di mana data berada</h2>
+<ul>
+  <li><b>Di aplikasi di ponsel.</b> Tidak dikirim ke mana pun.</li>
+  <li><b>Di cadangan di ponsel</b>: folder “Documents/HappyPouch”. Jika Anda masuk ke Google, cadangan terenkripsi (lihat di bawah); tanpa masuk, cadangan berupa teks biasa.</li>
+  <li><b>Di Google Drive Anda</b>, hanya jika Anda sendiri mengaktifkan pencadangan otomatis.</li>
+</ul>
+<p>Selengkapnya tentang cadangan di <a href="/happypouch/help/id/backups.html">“Cadangan dan ponsel baru”</a>.</p>
+
+<h2>Enkripsi cadangan</h2>
+<p>Ketika Anda masuk ke Google (opsional, “Pengaturan” → “Pencadangan otomatis ke Google Drive”), aplikasi membuat kunci acak dan menaruhnya di Google Drive Anda, di folder tersembunyi aplikasi. Antarmuka Drive tidak menampilkannya dan aplikasi lain tidak bisa membacanya. Untuk ini Google meminta izin “Melihat, membuat, dan menghapus data konfigurasinya sendiri di Google Drive Anda” saat Anda masuk. Setiap cadangan dienkripsi dengan kunci itu (AES-256): di ponsel, di Drive, dan dengan “Simpan di tempat lain…”.</p>
+<ul>
+  <li>File cadangan yang jatuh ke tangan yang salah, lewat aplikasi pesan, cloud, atau aplikasi lain, tidak bisa dibuka tanpa akun Google Anda.</li>
+  <li>Di ponsel baru, masuk ke akun Google yang sama: aplikasi mengambil kuncinya sendiri dan membuka cadangan. Tidak ada kata sandi terpisah, dan kata sandi Google yang terlupa bisa dipulihkan lewat Google.</li>
+  <li>Pertama kali di ponsel baru Anda butuh koneksi internet untuk mengambil kunci.</li>
+  <li>Tanpa masuk ke Google tidak ada enkripsi: cadangan berupa teks biasa, seperti sebelumnya.</li>
+  <li>Cadangan yang dibuat sebelum enkripsi aktif tetap berupa teks biasa sampai tergantikan oleh yang lebih baru.</li>
+</ul>
+<p class="note">Jangan hapus data aplikasi di pengaturan Google Drive (“Kelola aplikasi” → Happy Pouch → “Hapus data aplikasi tersembunyi”), dan jangan kehilangan akses ke akun Google: tanpa kunci, cadangan terenkripsi tidak bisa dibuka. Salinan kunci juga disimpan di ponsel, tetapi hilang saat instal ulang atau ponsel baru.</p>
+
+<h2>Perlindungan masuk</h2>
+<p>“Pengaturan” → “Perlindungan masuk”. Aplikasi lalu terbuka dengan cara yang sama seperti ponsel Anda: PIN, pola, sidik jari, atau wajah.</p>
+<ul>
+  <li>Aplikasi tidak punya kata sandi sendiri: aplikasi memakai kunci ponsel. Jika itu mati, aplikasi meminta Anda mengaktifkan kunci layar di pengaturan ponsel lebih dulu.</li>
+  <li>“Tanya lagi jika aplikasi ditutup” menentukan berapa lama setelah meninggalkan aplikasi pemeriksaan dibutuhkan lagi: segera, 30 detik, 1 menit, 5 menit.</li>
+  <li>Jika Anda membatalkan pemeriksaan, aplikasi tetap terkunci; tombol “Buka” bertanya lagi.</li>
+</ul>
+<p class="note">Perlindungan masuk mengunci layar aplikasi. File cadangan dikunci oleh enkripsi, yang berfungsi jika Anda masuk ke Google.</p>
+
+<h2>Hanya ikon</h2>
+<p>“Pengaturan” → “Hanya ikon”. Di “Beranda” dan di “Catatan”, ikon menggantikan nama kategori. Orang yang sekilas melihat layar melihat jumlahnya, tetapi tidak untuk apa.</p>
+
+<h2>Apa yang bisa dijangkau Google</h2>
+<p>Pencadangan otomatis ke Google Drive bersifat opsional. Jika Anda mengaktifkannya:</p>
+<ul>
+  <li>di Drive aplikasi hanya melihat file yang dibuatnya sendiri; aplikasi tidak bisa mengakses file lain;</li>
+  <li>cadangan dan kunci berada di Drive Anda, dan pengembang tidak punya akses ke sana; cadangan dienkripsi dengan kunci itu;</li>
+  <li>“Keluar” menghentikan pencadangan otomatis; cadangan yang tersimpan tetap di Drive, dan Anda bisa menghapusnya di Google Drive sendiri.</li>
+</ul>
+
+<h2>Pengingat</h2>
+<p>Notifikasi pembayaran rutin terlihat di layar kunci ponsel. Jika itu tidak diinginkan, pilih “Hanya di aplikasi” atau titik lencana di “Pengaturan”, bagian “Pengingat”.</p>
+
+<h2>Menghapus</h2>
+<ul>
+  <li>Catatan dan kategori yang dihapus tetap di tempat sampah selama 90 hari: “Pengaturan” → “Tempat sampah”. “Kosongkan” menghapusnya selamanya.</li>
+  <li>“Pengaturan” → “Data” → “Hapus semua data” menghapus semuanya di ponsel. Cadangan di Drive dan di folder “Documents/HappyPouch” tetap ada; hapus secara terpisah jika perlu.</li>
+</ul>
+
+<h2>Mengirim file lewat layanan lain</h2>
+<p>File cadangan yang dikirim ke aplikasi pesan, cloud, atau asisten AI terenkripsi jika Anda masuk ke Google: tidak bisa dibaca tanpa akun Anda. Tanpa masuk, file berupa teks biasa, dan layanan itu melihatnya.</p>
+
+<p><a href="/id/happypouch/privacy-policy.html">Kebijakan privasi</a></p>
+
+<footer><a href="/happypouch/help/id/">← Semua topik</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="id" data-map='{"en":["/happypouch/help/en/security.html","English","View this page in English"],"zh":["/happypouch/help/zh/security.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/security.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/security.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/security.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/security.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/security.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/security.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/security.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/security.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/security.html","Français","Voir cette page en français"],"ko":["/happypouch/help/ko/security.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>

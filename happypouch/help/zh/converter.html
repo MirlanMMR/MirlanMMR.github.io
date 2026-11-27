@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Pouch 中的汇率换算器——使用方法</title>
+<meta name="description" content="Happy Pouch 汇率换算器的运作方式：本位币、买入价和卖出价、换算金额、比较两种货币、离线使用。">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/converter.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/converter.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/converter.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/converter.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/converter.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/converter.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/converter.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/converter.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/converter.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/converter.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/converter.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/converter.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/converter.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="zh-Hans">简体中文</summary><ul><li><a href="/happypouch/help/en/converter.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/converter.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/happypouch/help/es/converter.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/converter.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/converter.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/converter.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/converter.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/converter.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/converter.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/converter.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/converter.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/ko/converter.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/zh/">Happy Pouch 帮助</a> · 汇率换算器</div>
+<h1>汇率换算器</h1>
+<p class="lead">换算器像兑换点的牌价板：每种货币都有一个买入价和一个卖出价。汇率由您自己输入；应用不会下载汇率，无需联网即可使用。</p>
+
+<h2>它在哪里</h2>
+<p>打开侧边菜单：在“首页”“记录”或“统计”左上角的三条杠按钮。换算器位于周期选择下方。</p>
+
+<h2>本位币</h2>
+<p>所有汇率都以本位币为基准，也就是您当前用来记账的币种。它显示为金额栏上方带国旗的按钮。要更改它，请前往“设置”的“币种”部分，把您需要的币种标记为“本位”。</p>
+
+<h2>如何添加币种</h2>
+<p>点按牌价板下方的“+ 币种”，输入名称或代码：“USD”“欧元”“日元”。该币种会出现在列表中；本位币不变。</p>
+
+<h2>如何输入汇率</h2>
+<p>牌价板上的每种币种有两个字段：</p>
+<table>
+  <tr><th>字段</th><th>里面写什么</th></tr>
+  <tr><td>买入</td><td>兑换点为这种货币的一个单位<b>付给您</b>多少本位币。</td></tr>
+  <tr><td>卖出</td><td>兑换点为这种货币的一个单位<b>向您收取</b>多少本位币。</td></tr>
+</table>
+<p>示例：本位币是欧元，兑换点的牌价板上美元是 0.91 / 0.93。在“买入”中填 0.91，在“卖出”中填 0.93。</p>
+<p>只填一个字段就够了：这个价格会在两个方向上都使用。空白或零表示没有汇率。汇率会立即保存，没有“保存”按钮。</p>
+
+<h2>如何换算金额</h2>
+<ol>
+  <li>在牌价板上方的输入框中输入金额。可以直接计算：100+50。</li>
+  <li>另一种货币的结果显示在右边。</li>
+  <li>两者之间的箭头可切换方向：结果成为新的金额，计算反向进行。</li>
+</ol>
+<p>结果下方会写明使用了哪个价格，例如“$ – 买入”。</p>
+
+<h2>为什么换回来结果不一样</h2>
+<p>因为兑换点就是这样运作的：它买入价比卖出价低。当您把美元换成欧元时，兑换点从您这里<b>买入</b>，所以使用买入价。当您把欧元换成美元时，它向您<b>卖出</b>，所以使用卖出价。应用根据箭头方向选择价格。</p>
+<p>要使用另一个价格，请点按牌价板上它的字段。它会亮起，计算就会使用它。</p>
+
+<h2>把两种货币相互比较</h2>
+<p>先点按一种货币的价格，再点按另一种的价格，例如美元和英镑。计算会保留这两种，不含本位币。要恢复本位币，请点按金额栏上方带国旗的按钮。</p>
+<p>无需输入它们之间的直接汇率：应用会通过本位币换算。如果某种新币种还没有对本位币的汇率，但有对另一种已有汇率的币种的汇率，计算就会通过那一种进行。</p>
+
+<h2>汇率会怎样处理</h2>
+<ul>
+  <li>它们只存储在手机上，并与记录一起进入备份。</li>
+  <li>它们不会自动更新：如果汇率变了，请在牌价板上修改数字。</li>
+  <li>更改本位币时，无需重新输入汇率：应用会按相反方向重新计算。</li>
+  <li>如果您删除一种币种，它的汇率也会一并删除。</li>
+</ul>
+
+<p class="note">换算器不会向支出或收入写入任何内容。它是一个计算器：算出您在兑换中会得到多少，但不会记录兑换本身。</p>
+
+<footer><a href="/happypouch/help/zh/">← 所有主题</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="zh" data-map='{"en":["/happypouch/help/en/converter.html","English","View this page in English"],"zh":["/happypouch/help/zh/converter.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/converter.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/converter.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/converter.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/converter.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/converter.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/converter.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/converter.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/converter.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/converter.html","Français","Voir cette page en français"],"ko":["/happypouch/help/ko/converter.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>

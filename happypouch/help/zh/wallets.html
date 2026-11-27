@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Pouch 中的钱包、币种和转账</title>
+<meta name="description" content="Happy Pouch 中币种和钱包的运作方式：本位币、期初余额、余额下限、记到钱包、钱包之间转账。">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/wallets.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/wallets.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/wallets.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/wallets.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/wallets.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/wallets.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/wallets.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/wallets.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/wallets.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/wallets.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/wallets.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/wallets.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/wallets.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="zh-Hans">简体中文</summary><ul><li><a href="/happypouch/help/en/wallets.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/wallets.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/happypouch/help/es/wallets.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/wallets.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/wallets.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/wallets.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/wallets.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/wallets.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/wallets.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/wallets.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/wallets.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/ko/wallets.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/zh/">Happy Pouch 帮助</a> · 钱包与币种</div>
+<h1>钱包与币种</h1>
+<p class="lead">币种是您用来计数金钱的单位。钱包是钱放的地方：现金、银行卡、存款。钱包是可选的：您也可以只用一种币种记录一切。</p>
+
+<h2>币种</h2>
+<p>“设置”→“币种”。首次启动时，应用会创建您所在国家的币种。</p>
+<ul>
+  <li><b>添加</b>：栏目标题处的“+”按钮。输入名称或代码即可：“USD”“欧元”。</li>
+  <li><b>本位币</b>：您当前查看的币种。在列表中标记它；“首页”“记录”和“统计”会显示以它计的记录。</li>
+  <li><b>期初余额</b>：开始记账时的金额。此后余额由应用为您计算。</li>
+  <li><b>余额下限</b>：一条可选的限额线。当您的钱接近它时，“手头”金额变黄；低于它时变红。</li>
+</ul>
+<p class="note">删除一种币种会同时删除其中所有的记录、付款和钱包。最后一种币种不能删除。</p>
+
+<h2>钱包</h2>
+<p>“设置”→“钱包”→“+”。钱包有名称、币种、当前余额和图标。</p>
+<ul>
+  <li>钱包可以有任意多个：两张银行卡、现金、存款。</li>
+  <li>每个钱包有自己的币种。欧元现金和美元现金是两个钱包。</li>
+  <li>您也可以用同样的方式记录加密货币：添加一种如 USDT 的币种，以及其中的一个钱包。金额保留两位小数，因此无法记录比特币的微小零头。</li>
+</ul>
+
+<h2>如何把记录分配给钱包</h2>
+<p>在记录卡片中，金额下方会出现该币种钱包的按钮。点按您需要的那个。如果一个都不选，这条记录就没有钱包：它计入该币种的总余额，但不计入任何钱包的余额。</p>
+
+<h2>如何只看一个钱包</h2>
+<p>打开侧边菜单，在“钱包”部分选择钱包。“首页”“记录”和“统计”只显示该钱包，“手头”显示它的余额。“所有钱包”可恢复总览。</p>
+
+<h2>转账</h2>
+<p>转账把钱从一个钱包转到另一个钱包，既不算支出也不算收入。</p>
+<ul>
+  <li>要转账，请使用“首页”上“手头”金额旁的双箭头图标，或“记录”中钱包旁的按钮。</li>
+  <li>转账只能在同一币种的钱包之间进行。货币兑换目前还不能记为转账。</li>
+  <li>本期的转账列在“记录”底部。点按一笔转账可修改或删除。</li>
+</ul>
+
+<h2>如果删除钱包</h2>
+<p>记录保留，但不再带钱包。与它之间的转账会被删除。</p>
+
+<footer><a href="/happypouch/help/zh/">← 所有主题</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="zh" data-map='{"en":["/happypouch/help/en/wallets.html","English","View this page in English"],"zh":["/happypouch/help/zh/wallets.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/wallets.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/wallets.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/wallets.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/wallets.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/wallets.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/wallets.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/wallets.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/wallets.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/wallets.html","Français","Voir cette page en français"],"ko":["/happypouch/help/ko/wallets.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>
