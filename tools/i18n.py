@@ -41,8 +41,10 @@ PAGES = {
     "tk-privacy": "ticker247/privacy-policy.html",
     "tk-terms": "ticker247/terms-of-use.html",
     "sr-terms": "slowread/terms-of-use.html",
+    "hp-privacy": "happypouch/privacy-policy.html",
+    "hp-terms": "happypouch/terms-of-use.html",
 }
-LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms", "tk-privacy", "tk-terms", "sr-terms"}
+LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms", "tk-privacy", "tk-terms", "sr-terms", "hp-privacy", "hp-terms"}
 EXTRA_SITEMAP = ["/apps/happypouch/languages/"]
 
 
@@ -642,7 +644,12 @@ def cmd_review(args):
     parts = args[1:] or ["site", "legal"]
     tr = load_tr(lang)
     for part in parts:
-        keys = [k for k in PAGES if (k in LEGAL) == (part == "legal")]
+        if part == "tks":
+            keys = ["tk-privacy", "tk-terms", "sr-terms"]
+        elif part == "hp":
+            keys = ["hp-privacy", "hp-terms"]
+        else:
+            keys = [k for k in PAGES if (k in LEGAL) == (part == "legal")]
         seen, rows = set(), []
         for k in keys:
             for i, t in need_ids(k):
@@ -650,8 +657,8 @@ def cmd_review(args):
                     seen.add(i)
                     rows.append((i, t, tr[i]))
         what = ("marketing pages for five Android apps (a calculator, an ebook reader, a news app, an expense tracker and a children's math app for ages 4-7)"
-                if part == "site" else "privacy policies and terms of use for two apps (a calculator and a children's math app for ages 4-7)")
-        legal = "This is legal text: it must keep the exact meaning of the English; flag any shift in meaning." if part == "legal" else ""
+                if part == "site" else "privacy policy and terms of use for a personal budget tracker app" if part == "hp" else "privacy policy and terms of use for a news aggregator app and terms of use for an ebook reader app" if part == "tks" else "privacy policies and terms of use for two apps (a calculator and a children's math app for ages 4-7)")
+        legal = "This is legal text: it must keep the exact meaning of the English; flag any shift in meaning." if part in ("legal", "tks", "hp") else ""
         out = REVIEW_HEAD.format(name=LANG[lang]["name"], code=lang, what=what, legal=legal,
                                  appname=LANG[lang].get("app_name", "Math for Kids: 2+2"))
         body = "\n".join("[%s]\nEN: %s\nTR: %s\n" % (i, html.unescape(e), html.unescape(t)) for i, e, t in rows)
