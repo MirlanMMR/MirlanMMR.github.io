@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aboneliksiz Android gider takipçisi — Happy Pouch</title>
+<meta name="description" content="Happy Pouch: Android için bir kişisel finans uygulaması. İstatistikler, kategori bütçeleri, döviz çevirici, verilerinizi başka bir uygulamadan taşıma. Tüm özellikler ücretsiz, abonelik yok, çevrimdışı çalışır.">
+<link rel="canonical" href="https://mirlanmmr.github.io/tr/apps/happypouch/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/happypouch/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/happypouch/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/happypouch/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/happypouch/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/happypouch/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/happypouch/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/happypouch/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/happypouch/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/happypouch/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/happypouch/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/happypouch/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/happypouch/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/happypouch/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/happypouch/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/happypouch/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/happypouch/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Expense Tracker: Happy Pouch",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "Android için bir kişisel finans uygulaması: gelir ve giderler, kategori bütçeleri, istatistikler, döviz çevirici, verileri başka bir uygulamadan taşıma. Tüm özellikler ücretsiz.",
+  "url": "https://mirlanmmr.github.io/tr/apps/happypouch/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "image": "https://mirlanmmr.github.io/img/happypouch.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/tr/"
+  },
+  "alternateName": [
+    "Happy Pouch"
+  ],
+  "inLanguage": "tr"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/tr/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/apps/happypouch/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/happypouch/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/happypouch/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/happypouch/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/happypouch/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/happypouch/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/happypouch/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/happypouch/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/happypouch/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/happypouch/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/vi/apps/happypouch/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/happypouch/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/happypouch/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/happypouch/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/happypouch/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="/img/happypouch.png" width="64" height="64" alt="Happy Pouch uygulama simgesi">
+    <span>Happy Pouch · Android · ücretsiz</span>
+  </div>
+
+  <h1>Fazladan ödemediğiniz para takibi</h1>
+
+  <h2>Her şey nasıl başladı</h2>
+  <p>Birkaç yıl boyunca kendim bir gider takip uygulaması kullandım. Hangisi olduğunu söylemeyeceğim, kötü de konuşmayacağım. Ama bir eksisi vardı, tek eksisi değil ama en bariz olanı: pahalıydı. Bu tür uygulamaların geliştiricilerinin ne düşündüğünü bilmiyorum, ama paralı insanlar için yapılmış gibi bir his edindim. Yani çok parası olanlar için.</p>
+  <p>Kendim yapabildiğime göre, önce kendim için bir uygulama yapmaya karar verdim. Ve yapmacık bir alçakgönüllülük olmadan söyleyeyim: onu daha da iyi yapmanın birkaç yolunu bulmasaydım ben ben olmazdım. Yalnızca ücretsiz olduğu için değil, daha iyi.</p>
+  <p>Hoş bir arayüzün yanında birçok yararlı şeyi var: yerleşik bir döviz çevirici, istatistikler ve karşılaştırmalı analiz, ödeme hatırlatıcıları ve çok daha fazlası. Benzer uygulamaların çoğunda bu özellikler yalnızca abonelikle ya da tek seferlik satın almayla gelir. Burada herkese açık.</p>
+
+  <div class="short">
+    <p><b>Kısaca.</b> Gelir ve giderlerinizi kaydettiğiniz bir Android uygulaması. Kategoriler ve bütçeler, birkaç para birimi ve cüzdan, bir çevirici, istatistikler ve ödeme hatırlatıcıları var. İnternetsiz ve kayıtsız çalışır. Verileriniz telefonunuzda saklanır. Kendi Google Drive'ınıza yedekleme isteğe bağlıdır ve şifrelidir. Verilerinizi bir dosya ile başka bir uygulamadan taşıyabilirsiniz. Tüm özellikler ücretsizdir, abonelik ya da satın alma yoktur. Altta tek bir küçük banner reklam gösterilir.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Google Play'den indirin</a></p>
+  </div>
+
+  <h2>İçinde neler var</h2>
+  <ul class="feat">
+    <li><b>Birkaç saniyede bir kayıt.</b> Tek dokunuşla kategori seçin. Düzenli giderlerde uygulama olağan tutarınızı hatırlar. Tutar alanında yerleşik bir hesap makinesi var: karttan ayrılmadan 120+45 ya da %15 yazabilirsiniz.</li>
+    <li><b>Kategori çarkı.</b> Bir gün, hafta, ay, çeyrek ya da yıl için her kategorinin payını gösterir. Dönemler arasında geçmek için kaydırın; toplamını ve payını görmek için bir kategori simgesine dokunun.</li>
+    <li><b>Para birimleri ve cüzdanlar.</b> Birkaç para birimi ve cüzdan, aralarında transferlerle. Çevirici, tutarı istediğiniz para biriminde hesaplar: alış ve satış kurlarını kendiniz girersiniz.</li>
+    <li><b>Sizinle ilgili istatistikler.</b> Paranın nereye gittiği: zorunlu harcamalar, hobiler ve spor, küçük keyifler, beklenmedikler. Harcama temposu: bu ay geçen aya karşı. Bu ay önünüzde ne kaldığı, tahminle birlikte. Yaklaştıkça uygulamanın sizi uyardığı bir alt bakiye eşiği.</li>
+    <li><b>Karşılaştırma ve bütçeler.</b> Her kategoride önceki döneme göre neyin arttığını ve neyin azaldığını görürsünüz. Kategori başına aylık bütçe belirleyebilirsiniz ve uygulama limitin %80'inde ve %100'ünde sizi uyarır.</li>
+    <li><b>Ödemeler.</b> Krediler, taksitler, kira, faturalar: neyin ödendiği, neyin kaldığı ve bir sonraki ödemenin ne zaman olduğu. Maaş ya da avans gibi düzenli gelirler de izlenir.</li>
+    <li><b>Kendi kategorileriniz.</b> İstediğiniz renkler, simge olarak istediğiniz emoji, alt kategoriler ve hatırlatıcılar. Silinen bir kayıt ya da alt kategori 90 gün çöp kutusunda bekler ve geri yüklenebilir.</li>
+    <li><b>Gizlilik.</b> “Yalnızca simgeler” modu tek bir anahtardır ve kimse omzunuzun üzerinden harcamalarınızı okuyamaz. PIN, parmak izi veya yüz tanıma ile kilidi açın.</li>
+    <li><b>Başka bir uygulamadan taşınma.</b> Eski uygulamanızda “Dışa aktar”ı bulun, dosyayı kaydedin ve Happy Pouch'ta açın (“Veri aktar / ekstre içe aktar”). CSV, Excel (XLS ve XLSX), QIF, OFX, QFX, QBO ve SQLite dosyaları çalışır. İçe aktarmadan önce hangi sütunun nereye gittiğini görürsünüz, böylece kontrol edebilirsiniz.</li>
+  </ul>
+
+  <h2>Verileriniz nerede duruyor</h2>
+  <p>Kayıtlar ve tutarlar telefonunuzda durur ve yedeklemeyi kendiniz açmadıkça hiçbir yere gitmez. Yedekler telefondaki Documents/HappyPouch klasörüne kaydedilir ve uygulamayı kaldırsanız bile kalır. İsteğe bağlı olarak kendi Google Drive'ınıza otomatik yedeklemeyi açabilirsiniz: uygulama yalnızca kendi oluşturduğu dosyaları görür. Google ile giriş yaparsanız yedekler hesabınızın anahtarıyla şifrelenir ve o anahtar olmadan açılmaz. Verileriniz yeni bir telefona da böyle taşınır: bir yedek dosyası dosya yöneticisinden ya da Google Drive'dan açılır.</p>
+
+  <h2>Neleri yok</h2>
+  <ul class="feat">
+    <li>Bankalara bağlanmaz. İşlemleri kendiniz girersiniz ya da bir ekstre dosyasından yüklersiniz.</li>
+    <li>Tek bir küçük banner reklam var (Google AdMob). Abonelik, ücretli özellik ya da uygulama içi satın alma yoktur.</li>
+    <li>Arayüz İngilizce ve Rusçadır.</li>
+    <li>Android 8.0 veya daha yenisi gerekir.</li>
+  </ul>
+  <p>Bir şey anlaşılmazsa <a href="/happypouch/help/en/">yardıma</a> bakın.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Google Play'den indirin</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/tr/">Tüm uygulamalar</a></li>
+    <li><a href="/tr/apps/slowread/">Slowread</a></li>
+    <li><a href="/tr/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/tr/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/tr/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/apps/happypouch/languages/">Happy Pouch 26 dilde</a></li>
+    <li><a href="/happypouch/privacy-policy.html">Gizlilik</a></li>
+    <li><a href="/happypouch/terms-of-use.html">Koşullar</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/apps/happypouch/","English","View this page in English"],"zh":["/zh/apps/happypouch/","简体中文","查看简体中文版本"],"es":["/es/apps/happypouch/","Español","Ver esta página en español"],"id":["/id/apps/happypouch/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/happypouch/","Português","Ver esta página em português"],"ru":["/ru/apps/happypouch/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/happypouch/","日本語","このページを日本語で見る"],"de":["/de/apps/happypouch/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/happypouch/","Français","Voir cette page en français"],"tr":["/tr/apps/happypouch/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/happypouch/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/happypouch/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/happypouch/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/happypouch/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/happypouch/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMR Lab 的 Android 应用：电子书阅读器、新闻、理财、计算器、儿童数学</title>
+<meta name="description" content="MMR Lab 的五款 Android 应用：Slowread 电子书阅读器、Ticker 24/7 新闻聚合应用、Happy Pouch 记账应用、五屏计算器和 2+2 儿童数学应用。全部免费，无需订阅。">
+<link rel="canonical" href="https://mirlanmmr.github.io/zh/apps/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+  .list{display:grid;gap:16px;margin:28px 0 0}
+  .app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+  .app-top{display:flex;gap:14px;align-items:center;margin-bottom:10px}
+  .app img{width:56px;height:56px;border-radius:14px;flex:none;background:var(--soft)}
+  .app h2{margin:0;font-size:22px;line-height:1.25}
+  .app .tag{color:var(--muted);font-size:14px}
+  .app p{margin:0 0 14px}
+  .links{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .links .btn{font-size:14px;padding:9px 14px;border-radius:10px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "MMR Lab Android apps",
+  "url": "https://mirlanmmr.github.io/zh/apps/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/zh/",
+    "email": "mmr.lab.help@gmail.com"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://mirlanmmr.github.io/zh/apps/slowread/",
+        "name": "Slowread"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://mirlanmmr.github.io/zh/apps/ticker247/",
+        "name": "Ticker 24/7"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://mirlanmmr.github.io/zh/apps/happypouch/",
+        "name": "Happy Pouch"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://mirlanmmr.github.io/zh/apps/calculator/",
+        "name": "Calculator: Themes & Widget"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://mirlanmmr.github.io/zh/apps/easycounting/",
+        "name": "2+2 | Math for Kids"
+      }
+    ]
+  },
+  "inLanguage": "zh-Hans"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/zh/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="zh-Hans">简体中文</summary><ul><li><a href="/apps/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh" aria-current="true">简体中文</a></li><li><a href="/es/apps/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <h1>MMR Lab 的 Android 应用</h1>
+  <p>这些都是我自己做的小应用。全部免费，没有订阅，也没有付费功能。大多数应用带广告，Happy Pouch 只有一个小横幅。每个应用都有自己的故事，点“了解更多”就能看到。</p>
+
+  <div class="list">
+
+    <article class="app">
+      <div class="app-top">
+        <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="56" height="56" alt="Slowread 图标">
+        <div><h2>Slowread</h2><div class="tag">电子书阅读器</div></div>
+      </div>
+      <p>直接在书页上用手势调整的阅读器。支持 EPUB、FB2、MOBI、PDF、DjVu。书架上有免费的经典名著，还有附带讲解的世界名画画廊。</p>
+      <div class="links"><a class="btn" href="/zh/apps/slowread/">了解更多</a><a href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play</a></div>
+    </article>
+
+    <article class="app">
+      <div class="app-top">
+        <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="56" height="56" alt="Ticker 24/7 图标">
+        <div><h2>Ticker 24/7</h2><div class="tag">新闻</div></div>
+      </div>
+      <p>新闻聚合应用。紧急和重要的新闻会出现在通知栏和单行小组件里。本地、同语种和全球新闻，新闻电视、广播直播和媒体综述。</p>
+      <div class="links"><a class="btn" href="/zh/apps/ticker247/">了解更多</a><a href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play</a></div>
+    </article>
+
+    <article class="app">
+      <div class="app-top">
+        <img src="/img/happypouch.png" width="56" height="56" alt="Happy Pouch 图标">
+        <div><h2>Happy Pouch</h2><div class="tag">收支记账</div></div>
+      </div>
+      <p>无需订阅的个人理财。分类与预算、统计、汇率换算、付款提醒，还能从其他应用迁移数据。离线可用。</p>
+      <div class="links"><a class="btn" href="/zh/apps/happypouch/">了解更多</a><a href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Google Play</a></div>
+    </article>
+
+    <article class="app">
+      <div class="app-top">
+        <img src="/img/calculator.png" width="56" height="56" alt="Calculator: Themes &amp; Widget 图标">
+        <div><h2>Calculator: Themes &amp; Widget</h2><div class="tag">计算器</div></div>
+      </div>
+      <p>由你自己打造的计算器：五个屏幕、22 种主题、自定义按键、按真实利率计算的贷款计算器和小组件。</p>
+      <div class="links"><a class="btn" href="/zh/apps/calculator/">了解更多</a><a href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Google Play</a></div>
+    </article>
+
+    <article class="app">
+      <div class="app-top">
+        <img src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" width="56" height="56" alt="2+2 | Math for Kids 图标">
+        <div><h2>2+2 | Math for Kids</h2><div class="tag">4–7 岁儿童数学</div></div>
+      </div>
+      <p>加减法训练应用：小火车沿着数轴一步步前进，答对就能解锁新的交通工具并撒下彩带。</p>
+      <div class="links"><a class="btn" href="/zh/apps/easycounting/">了解更多</a><a href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play</a></div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a> · <a href="/zh/">首页</a></div>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="zh" data-map='{"en":["/apps/","English","View this page in English"],"zh":["/zh/apps/","简体中文","查看简体中文版本"],"es":["/es/apps/","Español","Ver esta página en español"],"id":["/id/apps/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/","Português","Ver esta página em português"],"ru":["/ru/apps/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/","日本語","このページを日本語で見る"],"de":["/de/apps/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/","Français","Voir cette page en français"],"tr":["/tr/apps/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

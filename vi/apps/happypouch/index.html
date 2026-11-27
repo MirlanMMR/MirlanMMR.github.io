@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sổ theo dõi chi tiêu cho Android không cần đăng ký trả phí — Happy Pouch</title>
+<meta name="description" content="Happy Pouch: ứng dụng tài chính cá nhân cho Android. Thống kê, ngân sách theo danh mục, công cụ đổi tiền tệ, chuyển dữ liệu của bạn từ ứng dụng khác. Mọi tính năng đều miễn phí, không đăng ký trả phí, hoạt động ngoại tuyến.">
+<link rel="canonical" href="https://mirlanmmr.github.io/vi/apps/happypouch/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/happypouch/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/happypouch/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/happypouch/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/happypouch/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/happypouch/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/happypouch/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/happypouch/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/happypouch/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/happypouch/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/happypouch/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/happypouch/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/happypouch/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/happypouch/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/happypouch/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/happypouch/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/happypouch/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Expense Tracker: Happy Pouch",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "Một ứng dụng tài chính cá nhân cho Android: thu nhập và chi tiêu, ngân sách theo danh mục, thống kê, công cụ đổi tiền tệ, chuyển dữ liệu từ ứng dụng khác. Mọi tính năng đều miễn phí.",
+  "url": "https://mirlanmmr.github.io/vi/apps/happypouch/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch",
+  "image": "https://mirlanmmr.github.io/img/happypouch.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/vi/"
+  },
+  "alternateName": [
+    "Happy Pouch"
+  ],
+  "inLanguage": "vi"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/vi/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="vi">Tiếng Việt</summary><ul><li><a href="/apps/happypouch/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/happypouch/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/happypouch/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/happypouch/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/happypouch/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/happypouch/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/happypouch/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/happypouch/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/happypouch/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/happypouch/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/happypouch/" hreflang="vi" lang="vi" data-lang="vi" aria-current="true">Tiếng Việt</a></li><li><a href="/ko/apps/happypouch/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/happypouch/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/happypouch/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/happypouch/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="/img/happypouch.png" width="64" height="64" alt="Biểu tượng ứng dụng Happy Pouch">
+    <span>Happy Pouch · Android · miễn phí</span>
+  </div>
+
+  <h1>Theo dõi tiền bạc mà không phải trả thêm</h1>
+
+  <h2>Mọi chuyện bắt đầu thế nào</h2>
+  <p>Trong nhiều năm, chính tôi đã dùng một ứng dụng theo dõi chi tiêu. Tôi sẽ không nói là ứng dụng nào, và cũng không nói xấu nó. Nhưng nó có một nhược điểm, và không phải duy nhất, mà là rõ ràng nhất: nó đắt. Tôi không biết các nhà phát triển ứng dụng kiểu này nghĩ gì, nhưng tôi có cảm giác nó được làm cho những người có tiền. Tức là cho những người có rất nhiều tiền.</p>
+  <p>Vì tự mình làm được, tôi quyết định làm một ứng dụng cho bản thân trước. Và, không khiêm tốn giả tạo, tôi sẽ không còn là tôi nếu không nghĩ ra vài cách để làm nó tốt hơn nữa. Nó tốt hơn không chỉ vì miễn phí.</p>
+  <p>Bên cạnh giao diện dễ chịu, nó có rất nhiều thứ hữu ích: công cụ đổi tiền tệ tích hợp, thống kê và phân tích so sánh, nhắc thanh toán và nhiều thứ nữa. Ở nhiều ứng dụng tương tự, những tính năng như vậy chỉ có khi đăng ký trả phí hoặc mua một lần. Ở đây ai cũng dùng được.</p>
+
+  <div class="short">
+    <p><b>Tóm lại.</b> Một ứng dụng Android để bạn ghi lại thu nhập và chi tiêu. Có danh mục và ngân sách, nhiều loại tiền tệ và ví, công cụ đổi tiền, thống kê và nhắc thanh toán. Hoạt động không cần internet và không cần đăng ký. Dữ liệu của bạn được lưu trên điện thoại. Sao lưu lên Google Drive của chính bạn là tùy chọn và được mã hóa. Bạn có thể chuyển dữ liệu từ ứng dụng khác bằng một tệp. Mọi tính năng đều miễn phí, không có gói đăng ký hay mua hàng. Một biểu ngữ quảng cáo nhỏ hiển thị ở phía dưới.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Tải trên Google Play</a></p>
+  </div>
+
+  <h2>Bên trong có gì</h2>
+  <ul class="feat">
+    <li><b>Một khoản ghi trong vài giây.</b> Chọn danh mục chỉ bằng một cú chạm. Với các khoản chi đều đặn, ứng dụng nhớ số tiền thường lệ của bạn. Ô số tiền có máy tính tích hợp: bạn có thể gõ 120+45 hoặc 15% mà không rời khỏi thẻ.</li>
+    <li><b>Vòng tròn danh mục.</b> Hiển thị tỷ trọng của từng danh mục trong một ngày, tuần, tháng, quý hoặc năm. Vuốt để chuyển giữa các khoảng thời gian; chạm vào biểu tượng danh mục để xem tổng và tỷ trọng của nó.</li>
+    <li><b>Tiền tệ và ví.</b> Nhiều loại tiền tệ và ví, có chuyển khoản giữa chúng. Công cụ đổi tiền tính số tiền theo bất kỳ loại tiền nào: tỷ giá mua và bán do chính bạn nhập.</li>
+    <li><b>Thống kê về bạn.</b> Tiền đi đâu: nhu yếu phẩm, sở thích và thể thao, niềm vui nhỏ, chi phí bất ngờ. Nhịp độ chi tiêu: tháng này so với tháng trước. Những gì còn ở phía trước trong tháng này, kèm dự báo. Ngưỡng số dư thấp nhất mà ứng dụng sẽ cảnh báo khi bạn tiến gần.</li>
+    <li><b>So sánh và ngân sách.</b> Với mỗi danh mục, bạn thấy cái gì tăng và cái gì giảm so với kỳ trước. Bạn có thể đặt ngân sách hằng tháng cho từng danh mục, và ứng dụng cảnh báo khi đạt 80% và 100% hạn mức.</li>
+    <li><b>Thanh toán.</b> Khoản vay, trả góp, tiền thuê nhà, tiền điện nước: cái gì đã trả, còn lại bao nhiêu và khi nào đến hạn khoản tiếp theo. Các khoản thu nhập đều đặn như lương hoặc tiền ứng cũng được theo dõi.</li>
+    <li><b>Danh mục của riêng bạn.</b> Màu sắc tùy ý, emoji bất kỳ làm biểu tượng, danh mục con và nhắc nhở. Một khoản ghi hoặc danh mục con đã xóa nằm trong thùng rác 90 ngày và có thể khôi phục.</li>
+    <li><b>Quyền riêng tư.</b> Chế độ “chỉ hiện biểu tượng” chỉ cần một công tắc, và không ai có thể đọc chi tiêu của bạn qua vai bạn. Mở khóa bằng mã PIN, vân tay hoặc nhận diện khuôn mặt.</li>
+    <li><b>Chuyển từ ứng dụng khác.</b> Tìm “Xuất” trong ứng dụng cũ của bạn, lưu tệp và mở nó trong Happy Pouch (“Chuyển dữ liệu / nhập sao kê”). Các tệp CSV, Excel (XLS và XLSX), QIF, OFX, QFX, QBO và SQLite đều dùng được. Trước khi nhập, bạn thấy cột nào đi đâu, để có thể kiểm tra.</li>
+  </ul>
+
+  <h2>Dữ liệu của bạn nằm ở đâu</h2>
+  <p>Các khoản ghi và số tiền nằm trên điện thoại của bạn và không đi đâu cả trừ khi chính bạn bật sao lưu. Bản sao lưu được lưu vào thư mục Documents/HappyPouch trên điện thoại và vẫn còn ngay cả khi bạn gỡ ứng dụng. Bạn có thể tùy chọn bật tự động sao lưu lên Google Drive của chính mình: ứng dụng chỉ thấy các tệp do nó tạo ra. Nếu bạn đăng nhập bằng Google, bản sao lưu được mã hóa bằng khóa của tài khoản bạn và không mở được nếu không có khóa đó. Dữ liệu của bạn cũng chuyển sang điện thoại mới theo cách đó: tệp sao lưu mở được từ trình quản lý tệp hoặc từ Google Drive.</p>
+
+  <h2>Những gì không có</h2>
+  <ul class="feat">
+    <li>Nó không kết nối với ngân hàng. Bạn tự nhập giao dịch hoặc tải chúng từ một tệp sao kê.</li>
+    <li>Có một biểu ngữ quảng cáo nhỏ (Google AdMob). Không có gói đăng ký, tính năng trả phí hay mua hàng trong ứng dụng.</li>
+    <li>Giao diện có tiếng Anh và tiếng Nga.</li>
+    <li>Cần Android 8.0 trở lên.</li>
+  </ul>
+  <p>Nếu có điều gì chưa rõ, hãy xem <a href="/happypouch/help/en/">phần trợ giúp</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Tải trên Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/vi/">Tất cả ứng dụng</a></li>
+    <li><a href="/vi/apps/slowread/">Slowread</a></li>
+    <li><a href="/vi/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/vi/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/vi/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/apps/happypouch/languages/">Happy Pouch bằng 26 ngôn ngữ</a></li>
+    <li><a href="/happypouch/privacy-policy.html">Quyền riêng tư</a></li>
+    <li><a href="/happypouch/terms-of-use.html">Điều khoản</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="vi" data-map='{"en":["/apps/happypouch/","English","View this page in English"],"zh":["/zh/apps/happypouch/","简体中文","查看简体中文版本"],"es":["/es/apps/happypouch/","Español","Ver esta página en español"],"id":["/id/apps/happypouch/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/happypouch/","Português","Ver esta página em português"],"ru":["/ru/apps/happypouch/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/happypouch/","日本語","このページを日本語で見る"],"de":["/de/apps/happypouch/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/happypouch/","Français","Voir cette page en français"],"tr":["/tr/apps/happypouch/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/happypouch/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/happypouch/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/happypouch/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/happypouch/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/happypouch/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

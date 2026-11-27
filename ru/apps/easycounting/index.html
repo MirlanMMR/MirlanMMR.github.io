@@ -6,12 +6,25 @@
 <title>Математика для детей 4–7 лет: считаем на паровозике — 2+2 | Math for Kids</title>
 <meta name="description" content="Приложение для Android, которое учит детей 4–7 лет складывать и вычитать на числовой прямой: паровозик шагает по числам, за верные ответы открывается новая техника и сыплется конфетти. Без регистрации.">
 <link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/easycounting/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
 <link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/easycounting/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/easycounting/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/easycounting/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/easycounting/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/easycounting/">
 <link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/easycounting/">
-<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/easycounting/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/easycounting/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/easycounting/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/easycounting/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/easycounting/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/easycounting/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/easycounting/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/easycounting/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/easycounting/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/easycounting/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/easycounting/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
@@ -27,11 +40,12 @@
   a{color:var(--accent)}
   .wrap{max-width:720px;margin:0 auto;padding:0 20px}
   header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
-  .langsw{font-size:14px;color:var(--muted)}
   .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
   h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
   h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
   p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
   .head{display:flex;gap:16px;align-items:center;margin-top:8px}
   .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
   .head span{color:var(--muted);font-size:15px}
@@ -46,27 +60,39 @@
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"2+2 | Math for Kids",
-  "alternateName":"2+2 | Математика для детей",
-  "applicationCategory":"EducationalApplication",
-  "operatingSystem":"Android 8.0+",
-  "audience":{"@type":"PeopleAudience","suggestedMinAge":4,"suggestedMaxAge":7},
-  "description":"Приложение для Android, которое учит детей 4–7 лет складывать и вычитать на числовой прямой: паровозик шагает по числам, за верные ответы открывается новая техника.",
-  "url":"https://mirlanmmr.github.io/ru/apps/easycounting/",
-  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mmr.easycounting",
-  "installUrl":"https://play.google.com/store/apps/details?id=com.mmr.easycounting",
-  "image":"https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "2+2 | Math for Kids",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "Приложение для Android, которое учит детей 4–7 лет складывать и вычитать на числовой прямой: паровозик шагает по числам, за верные ответы открывается новая техника.",
+  "url": "https://mirlanmmr.github.io/ru/apps/easycounting/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "image": "https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/ru/"
+  },
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 4,
+    "suggestedMaxAge": 7
+  },
+  "inLanguage": "ru"
 }
 </script>
 </head>
 <body>
 <div class="wrap">
 
-<header><a class="brand" href="/">MMR Lab</a><a class="langsw" href="/apps/easycounting/" hreflang="en" lang="en">English</a></header>
+<header><a class="brand" href="/ru/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="ru">Русский</summary><ul><li><a href="/apps/easycounting/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/easycounting/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/easycounting/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/easycounting/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/easycounting/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/easycounting/" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a></li><li><a href="/ja/apps/easycounting/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/easycounting/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/easycounting/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/easycounting/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/easycounting/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/easycounting/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/easycounting/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/easycounting/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/easycounting/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
 
 <main>
   <div class="head">
@@ -116,7 +142,10 @@
 <footer>
   <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
   <ul>
-    <li><a href="/">Все приложения</a></li>
+    <li><a href="/ru/">Все приложения</a></li>
+    <li><a href="/ru/apps/slowread/">Slowread</a></li>
+    <li><a href="/ru/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/ru/apps/happypouch/">Happy Pouch</a></li>
     <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
     <li><a href="/easycounting/privacy-policy.html">Конфиденциальность</a></li>
     <li><a href="/easycounting/terms-of-use.html">Условия</a></li>
@@ -124,5 +153,6 @@
 </footer>
 
 </div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="ru" data-map='{"en":["/apps/easycounting/","English","View this page in English"],"zh":["/zh/apps/easycounting/","简体中文","查看简体中文版本"],"es":["/es/apps/easycounting/","Español","Ver esta página en español"],"id":["/id/apps/easycounting/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/easycounting/","Português","Ver esta página em português"],"ru":["/ru/apps/easycounting/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/easycounting/","日本語","このページを日本語で見る"],"de":["/de/apps/easycounting/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/easycounting/","Français","Voir cette page en français"],"tr":["/tr/apps/easycounting/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/easycounting/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/easycounting/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/easycounting/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/easycounting/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/easycounting/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
 </body>
 </html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMR Lab — Android-Apps: Slowread, Ticker 24/7, Happy Pouch, Calculator, 2+2</title>
+<link rel="canonical" href="https://mirlanmmr.github.io/de/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/"><!--/i18n:alternates-->
+<meta name="description" content="MMR Lab: kleine, sorgfältig gemachte Android-Apps. Der E-Book-Reader Slowread, die Nachrichten von Ticker 24/7, das Haushaltsbuch Happy Pouch, Calculator und 2+2 Mathe für Kinder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{border:0;background:transparent;color:var(--muted);font:600 13px Inter,sans-serif;padding:6px 12px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+  .hero{padding:40px 0 28px}
+  .hero h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,52px);line-height:1.1;letter-spacing:-.02em;margin:0 0 14px;max-width:20ch}
+  .hero h1{max-width:24ch}
+  .why{list-style:none;margin:22px 0 0;padding:0;max-width:60ch}
+  .why li{padding:16px 0;border-top:1px solid var(--line)}
+  .why li:last-child{border-bottom:1px solid var(--line)}
+  .why .q{display:block;font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.3;letter-spacing:-.01em}
+  .why b{display:block;color:var(--accent);font-weight:600;margin-top:4px}
+  .why .final{margin-top:16px}
+  .why .gem{display:block;font-size:17px;line-height:1.45;margin-top:8px}
+  .why .more{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+  .hero p{color:var(--muted);font-size:18px;max-width:52ch;margin:0}
+
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:28px;letter-spacing:-.01em;margin:48px 0 18px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+  .app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+  .app-top{display:flex;gap:14px;align-items:center}
+  .app img.icon{width:56px;height:56px;border-radius:14px;flex:none;background:var(--soft)}
+  .app h3{margin:0;font-size:17px;font-weight:600;line-height:1.3}
+  .app .tag{color:var(--muted);font-size:13px}
+  .app p{margin:0;color:var(--muted);font-size:15px;flex:1}
+  .app-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:14px;padding:9px 14px;border-radius:10px}
+  .small{font-size:13px;color:var(--muted)}
+  .small a{color:var(--muted)}
+
+  /* reserved slots */
+  .soon{position:relative;overflow:hidden}
+  .soon .inner{filter:blur(6px);opacity:.45;pointer-events:none;user-select:none;display:flex;flex-direction:column;gap:12px}
+  .soon .badge{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .soon .badge span{background:var(--ink);color:var(--bg);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+
+  .support{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:center}
+  .support p{margin:0 0 12px;color:var(--muted)}
+  .support p.lead{color:var(--ink);font-size:17px}
+  .support.single{grid-template-columns:1fr;gap:22px;padding:14px 14px 28px}
+  .support.single>div{padding:0 14px}
+  .support-photo{display:block;width:100%;height:auto;border-radius:14px}
+  .card-meta{font-size:13px;color:var(--muted);margin:10px 0 0}
+  .copy-btn{border:0;font-family:inherit;cursor:pointer;padding:11px 18px;font-size:15px}
+  .qr{background:#fff;border-radius:16px;padding:12px}
+  .qr img{width:100%;height:auto;display:block}
+  .qr-cap{text-align:center;font-size:13px;color:var(--muted);margin-top:8px}
+  @media (max-width:640px){ .support{grid-template-columns:1fr} .qr-box{max-width:240px;margin:0 auto} }
+
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="/de/">MMR Lab</a>
+  <!--i18n:switcher--><details class="langs"><summary lang="de">Deutsch</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher-->
+</header>
+
+<section class="hero">
+  <h1>Auf der Suche nach etwas Besonderem? Hier sind Sie genau richtig!</h1>
+  <p>Auf den ersten Blick ganz normale Apps. Aber sie können, was andere sich nicht einmal vorstellen.</p>
+  <ul class="why">
+    <li>
+      <span class="q">Wie wäre es mit einem Taschenrechner mit fünf Bildschirmen?</span>
+      <b>Warum nicht?</b>
+      <span class="more">Und das ist noch nicht alles! Layout, Hintergrund, Farbe, Schrift, Effekte – für jeden Geschmack!</span>
+    </li>
+    <li>
+      <span class="q">Wie wäre es mit einem Reader, der PDF wie ein gewöhnliches Buch öffnet: Der Text passt sich Ihrem Bildschirm an, statt eine feste A4-Seite zu bleiben?</span>
+      <b>Warum nicht?</b>
+      <span class="more">Gesten direkt auf dem Bildschirm, statt in den Einstellungen zu wühlen! Die Weltklassiker stehen schon im Regal. Und das ist noch nicht alles!</span>
+      <span class="gem">Das wahre Schmuckstück ist eine Galerie der Meisterwerke der Welt, die ständig um neue Gemälde erweitert wird!</span>
+    </li>
+    <li>
+      <span class="q">Und wie wäre es mit persönlichen Finanzen samt Datenimport aus anderen Apps?</span>
+      <b>Warum nicht?</b>
+      <span class="more">Eine schöne Oberfläche, funktioniert offline, mit Statistiken und Vergleichsanalyse.</span>
+      <div class="final">
+        <span class="q">Und das alles kostenlos?</span>
+        <b>Warum nicht?</b>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<h2>Apps</h2>
+<div class="grid">
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" alt="">
+      <div><h3>2+2 | Math for Kids</h3><div class="tag">Bildung · 4–7 Jahre</div></div>
+    </div>
+    <p>Ein fröhlicher Zug auf dem Zahlenstrahl zeigt, wie Addition und Subtraktion wirklich funktionieren. Eine gute Schulvorbereitung.</p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play</a>
+      
+      <a class="small" href="/de/apps/easycounting/">Mehr erfahren</a>
+      <a class="small" href="/easycounting/privacy-policy.html">Datenschutz</a>
+      <a class="small" href="/easycounting/terms-of-use.html">Nutzungsbedingungen</a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" alt="">
+      <div><h3>Ticker 24/7</h3><div class="tag">Nachrichten &amp; Magazine</div></div>
+    </div>
+    <p>Lokale, regionale und weltweite Nachrichten in fünf Sprachen, dazu Nachrichten-TV und -Radio live und eine Wetterkarte.</p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play</a>
+      
+      <a class="small" href="/de/apps/ticker247/">Mehr erfahren</a>
+      <a class="small" href="/ticker247/privacy-policy.html">Datenschutz</a>
+      <a class="small" href="/ticker247/terms-of-use.html">Nutzungsbedingungen</a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" alt="">
+      <div><h3>Slowread</h3><div class="tag">Bücher &amp; Nachschlagewerke</div></div>
+    </div>
+    <p>Ein Reader ohne Eile: Weltklassiker schon im Regal, EPUB, FB2, MOBI, PDF und DjVu, Gesten statt Menüs.</p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play</a>
+      
+      <a class="small" href="/de/apps/slowread/">Mehr erfahren</a>
+      <a class="small" href="/slowread-legal/">Datenschutz</a>
+      <a class="small" href="/slowread/terms-of-use.html">Nutzungsbedingungen</a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="https://play-lh.googleusercontent.com/CdaqEK2I632r1zOPmSmjW4f7lwKDQ1aLOBpe-H4RoH-k16wWRCJpOjNF9W8vlWR_ltbxz6vkt0CZiO_oe7Hnc78=w240-h480" alt="">
+      <div><h3>Happy Pouch</h3><div class="tag">Finanzen</div></div>
+    </div>
+    <p>Ein privates Offline-Haushaltsbuch mit übersichtlichen Statistiken.</p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Google Play</a>
+      
+      <a class="small" href="/de/apps/happypouch/">Mehr erfahren</a>
+      <a class="small" href="/happypouch/privacy-policy.html">Datenschutz</a>
+      <a class="small" href="/happypouch/terms-of-use.html">Nutzungsbedingungen</a>
+      <a class="small" href="/happypouch/help/en/">Hilfe</a>
+    </div>
+  </article>
+
+  <article class="app">
+    <div class="app-top">
+      <img class="icon" src="/img/calculator.png" alt="">
+      <div><h3>Calculator: Themes &amp; Widget</h3><div class="tag">Werkzeuge</div></div>
+    </div>
+    <p>Ein Taschenrechner, den Sie selbst zusammenstellen: Designs, Widget, Werkzeuge und Verlauf.</p>
+    <div class="app-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Google Play</a>
+      
+      <a class="small" href="/de/apps/calculator/">Mehr erfahren</a>
+      <a class="small" href="/calculator/privacy-policy.html">Datenschutz</a>
+      <a class="small" href="/calculator/terms.html">Nutzungsbedingungen</a>
+    </div>
+  </article>
+
+</div>
+
+<h2>Den Entwickler unterstützen</h2>
+<section class="support single">
+  <img class="support-photo" src="/img/support.jpg" width="1024" height="572" loading="lazy" alt="Ein lächelndes Mädchen formt mit den Händen ein Herz">
+  <div>
+    <p class="lead">Gefallen Ihnen die Apps? Sie können den Entwickler unterstützen und ihn motivieren, weitere nützliche und vor allem kostenlose Apps zu bauen.</p>
+    <button type="button" class="btn copy-btn" id="copy-card" data-copied="Kopiert ✓">Visa-Kartennummer kopieren</button>
+    <p class="card-meta">Visa (USD)</p>
+  </div>
+</section>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a> · <a href="/de/apps/">Mehr über die Apps</a></div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var cp=document.getElementById('copy-card');
+  if(cp){cp.addEventListener('click',function(){
+    var t=['4714','7000','3895','9700'].join('');
+    var done=function(){
+      var o=cp.innerHTML;
+      cp.textContent=cp.dataset.copied;
+      setTimeout(function(){cp.innerHTML=o},1800);
+    };
+    var fallback=function(){
+      var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+      document.body.appendChild(a);a.select();
+      try{document.execCommand('copy');done()}catch(e){}
+      document.body.removeChild(a);
+    };
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+  })}
+})();
+</script>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="de" data-map='{"en":["/","English","View this page in English"],"zh":["/zh/","简体中文","查看简体中文版本"],"es":["/es/","Español","Ver esta página en español"],"id":["/id/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/","Português","Ver esta página em português"],"ru":["/ru/","Русский","Открыть эту страницу на русском"],"ja":["/ja/","日本語","このページを日本語で見る"],"de":["/de/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/","Français","Voir cette page en français"],"tr":["/tr/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/","한국어","이 페이지를 한국어로 보기"],"it":["/it/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

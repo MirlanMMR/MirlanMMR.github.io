@@ -3,8 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MMR Lab — Android apps</title>
-<meta name="description" content="MMR Lab: small, careful Android apps. Slowread, Ticker 24/7, 2+2 Math for Kids.">
+<title>MMR Lab — Android apps: Slowread, Ticker 24/7, Happy Pouch, Calculator, 2+2</title>
+<link rel="canonical" href="https://mirlanmmr.github.io/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/"><!--/i18n:alternates-->
+<meta name="description" content="MMR Lab: small, careful Android apps. Slowread ebook reader, Ticker 24/7 news, Happy Pouch expense tracker, Calculator, 2+2 Math for Kids.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,9 +97,6 @@
   footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
   footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
 
-  [data-ru]{display:none}
-  html[lang="ru"] [data-en]{display:none}
-  html[lang="ru"] [data-ru]{display:revert}
 </style>
 </head>
 <body>
@@ -89,118 +104,115 @@
 
 <header>
   <a class="brand" href="./">MMR Lab</a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-set="en">EN</button>
-    <button type="button" data-set="ru">RU</button>
-  </div>
+  <!--i18n:switcher--><details class="langs"><summary lang="en">English</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher-->
 </header>
 
 <section class="hero">
   <h1>
-    <span data-en>Looking for something special? You're in the right place!</span>
-    <span data-ru>Ищете что-то особенное? Вы в нужном месте!</span>
+    Looking for something special? You're in the right place!
+    
   </h1>
   <p>
-    <span data-en>At first glance, ordinary apps. But they do what others couldn't even imagine.</span>
-    <span data-ru>На первый взгляд — самые обычные приложения. Но они умеют то, о чём другие и представить не могли.</span>
+    At first glance, ordinary apps. But they do what others couldn't even imagine.
+    
   </p>
   <ul class="why">
     <li>
-      <span class="q"><span data-en>How about a calculator with five screens?</span><span data-ru>Как вам калькулятор с пятью экранами?</span></span>
-      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
-      <span class="more"><span data-en>And that's not all! Layout, background, color, font, effects — for every taste!</span><span data-ru>И это ещё не всё! Раскладка, фон, цвет, шрифт, эффекты — на любой вкус!</span></span>
+      <span class="q">How about a calculator with five screens?</span>
+      <b>Why not?</b>
+      <span class="more">And that's not all! Layout, background, color, font, effects — for every taste!</span>
     </li>
     <li>
-      <span class="q"><span data-en>How about a reader that opens PDF like a regular book: the text fits your screen instead of staying a fixed A4 page?</span><span data-ru>А ридер, который читает PDF как обычную книгу: текст подстраивается под экран, а не остаётся листом А4?</span></span>
-      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
-      <span class="more"><span data-en>Gestures right on the screen, instead of digging through settings! The world classics already on the shelf. And that's not all!</span><span data-ru>Жесты прямо на экране, вместо копания в настройках! Классика мировой литературы уже на полке. И это ещё не всё!</span></span>
-      <span class="gem"><span data-en>The real gem is a gallery of the world's masterpieces, constantly updated with new paintings!</span><span data-ru>Настоящая изюминка — галерея с мировыми шедеврами, которая постоянно пополняется новыми картинами!</span></span>
+      <span class="q">How about a reader that opens PDF like a regular book: the text fits your screen instead of staying a fixed A4 page?</span>
+      <b>Why not?</b>
+      <span class="more">Gestures right on the screen, instead of digging through settings! The world classics already on the shelf. And that's not all!</span>
+      <span class="gem">The real gem is a gallery of the world's masterpieces, constantly updated with new paintings!</span>
     </li>
     <li>
-      <span class="q"><span data-en>And how about personal finance with data import from other apps?</span><span data-ru>А как вам личные финансы с переносом данных из других приложений?</span></span>
-      <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
-      <span class="more"><span data-en>A beautiful interface, works offline, statistics and comparative analysis.</span><span data-ru>Красивый интерфейс, работает без интернета, статистика и сравнительный анализ.</span></span>
+      <span class="q">And how about personal finance with data import from other apps?</span>
+      <b>Why not?</b>
+      <span class="more">A beautiful interface, works offline, statistics and comparative analysis.</span>
       <div class="final">
-        <span class="q"><span data-en>And all of it free?</span><span data-ru>И всё бесплатно?</span></span>
-        <b><span data-en>Why not?</span><span data-ru>Почему нет?</span></b>
+        <span class="q">And all of it free?</span>
+        <b>Why not?</b>
       </div>
     </li>
   </ul>
 </section>
 
-<h2><span data-en>Apps</span><span data-ru>Приложения</span></h2>
+<h2>Apps</h2>
 <div class="grid">
 
   <article class="app">
     <div class="app-top">
       <img class="icon" src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" alt="">
-      <div><h3>2+2 | Math for Kids</h3><div class="tag"><span data-en>Education · ages 4–7</span><span data-ru>Обучение · 4–7 лет</span></div></div>
+      <div><h3>2+2 | Math for Kids</h3><div class="tag">Education · ages 4–7</div></div>
     </div>
     <p>
-      <span data-en>A cheerful train on a number line shows how addition and subtraction really work. Good school preparation.</span>
-      <span data-ru>Весёлый паровозик на числовой прямой показывает, как работают сложение и вычитание. Подготовка к школе.</span>
+      A cheerful train on a number line shows how addition and subtraction really work. Good school preparation.
+      
     </p>
     <div class="app-links">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play</a>
-      <a class="small" href="ru/apps/easycounting/" data-ru>Подробнее</a>
-      <a class="small" href="apps/easycounting/" data-en>Read more</a>
-      <a class="small" href="easycounting/privacy-policy.html"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
-      <a class="small" href="easycounting/terms-of-use.html"><span data-en>Terms</span><span data-ru>Условия</span></a>
+      
+      <a class="small" href="apps/easycounting/">Read more</a>
+      <a class="small" href="easycounting/privacy-policy.html">Privacy</a>
+      <a class="small" href="easycounting/terms-of-use.html">Terms</a>
     </div>
   </article>
 
   <article class="app">
     <div class="app-top">
       <img class="icon" src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" alt="">
-      <div><h3>Ticker 24/7</h3><div class="tag"><span data-en>News &amp; Magazines</span><span data-ru>Новости и журналы</span></div></div>
+      <div><h3>Ticker 24/7</h3><div class="tag">News &amp; Magazines</div></div>
     </div>
     <p>
-      <span data-en>Local, regional and world news in five languages, plus live news TV and radio and a weather card.</span>
-      <span data-ru>Местные, региональные и мировые новости на пяти языках, новостные ТВ и радио в прямом эфире, погода.</span>
+      Local, regional and world news in five languages, plus live news TV and radio and a weather card.
+      
     </p>
     <div class="app-links">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play</a>
-      <a class="small" href="ru/apps/ticker247/" data-ru>Подробнее</a>
-      <a class="small" href="apps/ticker247/" data-en>Read more</a>
-      <a class="small" href="ticker247/privacy-policy.html"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
-      <a class="small" href="ticker247/terms-of-use.html"><span data-en>Terms</span><span data-ru>Условия</span></a>
+      
+      <a class="small" href="apps/ticker247/">Read more</a>
+      <a class="small" href="ticker247/privacy-policy.html">Privacy</a>
+      <a class="small" href="ticker247/terms-of-use.html">Terms</a>
     </div>
   </article>
 
   <article class="app">
     <div class="app-top">
       <img class="icon" src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" alt="">
-      <div><h3>Slowread</h3><div class="tag"><span data-en>Books &amp; Reference</span><span data-ru>Книги и справочники</span></div></div>
+      <div><h3>Slowread</h3><div class="tag">Books &amp; Reference</div></div>
     </div>
     <p>
-      <span data-en>An unhurried reader: world classics already on the shelf, EPUB, FB2, MOBI, PDF and DjVu, gestures instead of menus.</span>
-      <span data-ru>Читалка без спешки: классика мировой литературы уже на полке, EPUB, FB2, MOBI, PDF и DjVu, жесты вместо меню.</span>
+      An unhurried reader: world classics already on the shelf, EPUB, FB2, MOBI, PDF and DjVu, gestures instead of menus.
+      
     </p>
     <div class="app-links">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play</a>
-      <a class="small" href="ru/apps/slowread/" data-ru>Подробнее</a>
-      <a class="small" href="apps/slowread/" data-en>Read more</a>
-      <a class="small" href="slowread-legal/"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
-      <a class="small" href="slowread/terms-of-use.html"><span data-en>Terms</span><span data-ru>Условия</span></a>
+      
+      <a class="small" href="apps/slowread/">Read more</a>
+      <a class="small" href="slowread-legal/">Privacy</a>
+      <a class="small" href="slowread/terms-of-use.html">Terms</a>
     </div>
   </article>
 
   <article class="app">
     <div class="app-top">
       <img class="icon" src="https://play-lh.googleusercontent.com/CdaqEK2I632r1zOPmSmjW4f7lwKDQ1aLOBpe-H4RoH-k16wWRCJpOjNF9W8vlWR_ltbxz6vkt0CZiO_oe7Hnc78=w240-h480" alt="">
-      <div><h3>Happy Pouch</h3><div class="tag"><span data-en>Finance</span><span data-ru>Финансы</span></div></div>
+      <div><h3>Happy Pouch</h3><div class="tag">Finance</div></div>
     </div>
     <p>
-      <span data-en>A private offline budget tracker with clear statistics.</span>
-      <span data-ru>Приватный офлайн-учёт бюджета с понятной статистикой.</span>
+      A private offline budget tracker with clear statistics.
+      
     </p>
     <div class="app-links">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.happypouch">Google Play</a>
-      <a class="small" href="ru/apps/happypouch/" data-ru>Подробнее</a>
-      <a class="small" href="apps/happypouch/" data-en>Read more</a>
-      <a class="small" href="happypouch/privacy-policy.html"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
-      <a class="small" href="happypouch/terms-of-use.html"><span data-en>Terms</span><span data-ru>Условия</span></a>
-      <a class="small" href="happypouch/help/en/" data-en>Help</a><a class="small" href="happypouch/help/ru/" data-ru>Справка</a>
+      
+      <a class="small" href="apps/happypouch/">Read more</a>
+      <a class="small" href="happypouch/privacy-policy.html">Privacy</a>
+      <a class="small" href="happypouch/terms-of-use.html">Terms</a>
+      <a class="small" href="happypouch/help/en/">Help</a>
     </div>
   </article>
 
@@ -210,58 +222,48 @@
       <div><h3>Calculator: Themes &amp; Widget</h3><div class="tag">Tools</div></div>
     </div>
     <p>
-      <span data-en>A calculator you build yourself: themes, widget, tools and history.</span>
-      <span data-ru>Калькулятор, который собираешь сам: темы, виджет, инструменты и история.</span>
+      A calculator you build yourself: themes, widget, tools and history.
+      
     </p>
     <div class="app-links">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Google Play</a>
-      <a class="small" href="ru/apps/calculator/" data-ru>Подробнее</a>
-      <a class="small" href="apps/calculator/" data-en>Read more</a>
-      <a class="small" href="calculator/privacy-policy.html"><span data-en>Privacy</span><span data-ru>Конфиденциальность</span></a>
-      <a class="small" href="calculator/terms.html"><span data-en>Terms</span><span data-ru>Условия</span></a>
+      
+      <a class="small" href="apps/calculator/">Read more</a>
+      <a class="small" href="calculator/privacy-policy.html">Privacy</a>
+      <a class="small" href="calculator/terms.html">Terms</a>
     </div>
   </article>
 
 </div>
 
-<h2><span data-en>Support the developer</span><span data-ru>Поддержать разработчика</span></h2>
+<h2>Support the developer</h2>
 <section class="support single">
-  <img class="support-photo" src="img/support.jpg" width="1024" height="572" loading="lazy" alt="Улыбающаяся девушка показывает сердечко руками">
+  <img class="support-photo" src="img/support.jpg" width="1024" height="572" loading="lazy" alt="A smiling girl making a heart shape with her hands">
   <div>
     <p class="lead">
-      <span data-en>Like the apps? You can support the developer and motivate him to build more useful and, above all, free apps.</span>
-      <span data-ru>Понравились приложения? Вы можете поддержать разработчика и мотивировать его на разработку новых полезных, а главное бесплатных приложений.</span>
+      Like the apps? You can support the developer and motivate him to build more useful and, above all, free apps.
+      
     </p>
-    <button type="button" class="btn copy-btn" id="copy-card">
-      <span data-en>Copy Visa card number</span><span data-ru>Скопировать номер карты Visa</span>
+    <button type="button" class="btn copy-btn" id="copy-card" data-copied="Copied ✓">
+      Copy Visa card number
     </button>
     <p class="card-meta">Visa (USD)</p>
   </div>
 </section>
 
 <footer>
-  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a><span data-en> · <a href="apps/">More about the apps</a></span><span data-ru> · <a href="ru/apps/">О приложениях подробнее</a></span></div>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a> · <a href="apps/">More about the apps</a></div>
 </footer>
 
 </div>
 <script>
 (function(){
-  var root=document.documentElement, KEY='mmr-lang';
-  function set(l){
-    root.lang=l;
-    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.set===l)});
-    try{localStorage.setItem(KEY,l)}catch(e){}
-  }
-  var saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
-  var nav=(navigator.language||'en').toLowerCase();
-  set(saved || (/^(ru|ky|kk|be|uk|uz|tg)/.test(nav) ? 'ru' : 'en'));
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
   var cp=document.getElementById('copy-card');
   if(cp){cp.addEventListener('click',function(){
     var t=['4714','7000','3895','9700'].join('');
     var done=function(){
-      var o=cp.innerHTML, ru=root.lang==='ru';
-      cp.textContent=ru?'Скопировано ✓':'Copied ✓';
+      var o=cp.innerHTML;
+      cp.textContent=cp.dataset.copied;
       setTimeout(function(){cp.innerHTML=o},1800);
     };
     var fallback=function(){
@@ -274,5 +276,6 @@
   })}
 })();
 </script>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="en" data-map='{"en":["/","English","View this page in English"],"zh":["/zh/","简体中文","查看简体中文版本"],"es":["/es/","Español","Ver esta página en español"],"id":["/id/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/","Português","Ver esta página em português"],"ru":["/ru/","Русский","Открыть эту страницу на русском"],"ja":["/ja/","日本語","このページを日本語で見る"],"de":["/de/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/","Français","Voir cette page en français"],"tr":["/tr/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/","한국어","이 페이지를 한국어로 보기"],"it":["/it/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
 </body>
 </html>

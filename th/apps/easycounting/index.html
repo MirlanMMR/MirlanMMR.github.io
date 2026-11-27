@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คณิตศาสตร์สำหรับเด็กอายุ 4–7 ปี: นับกับรถไฟน้อย — 2+2 | Math for Kids</title>
+<meta name="description" content="แอป Android ที่สอนเด็กอายุ 4–7 ปีให้บวกและลบบนเส้นจำนวน: รถไฟน้อยก้าวไปตามตัวเลข และคำตอบที่ถูกต้องจะปลดล็อกยานพาหนะใหม่และกระดาษสี ไม่ต้องสมัครสมาชิก">
+<link rel="canonical" href="https://mirlanmmr.github.io/th/apps/easycounting/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/easycounting/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/easycounting/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/easycounting/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/easycounting/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/easycounting/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/easycounting/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/easycounting/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/easycounting/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/easycounting/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/easycounting/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/easycounting/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/easycounting/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/easycounting/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/easycounting/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/easycounting/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/easycounting/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "2+2 | Math for Kids",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "แอป Android ที่สอนเด็กอายุ 4–7 ปีให้บวกและลบบนเส้นจำนวน: รถไฟน้อยก้าวไปตามตัวเลข และคำตอบที่ถูกต้องจะปลดล็อกยานพาหนะใหม่",
+  "url": "https://mirlanmmr.github.io/th/apps/easycounting/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "image": "https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/th/"
+  },
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 4,
+    "suggestedMaxAge": 7
+  },
+  "inLanguage": "th"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/th/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="th">ไทย</summary><ul><li><a href="/apps/easycounting/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/easycounting/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/easycounting/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/easycounting/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/easycounting/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/easycounting/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/easycounting/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/easycounting/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/easycounting/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/easycounting/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/easycounting/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/easycounting/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/easycounting/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/easycounting/" hreflang="th" lang="th" data-lang="th" aria-current="true">ไทย</a></li><li><a href="/pl/apps/easycounting/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" width="64" height="64" alt="ไอคอนแอป 2+2 | Math for Kids">
+    <span>2+2 | Math for Kids · Android · สำหรับอายุ 4–7 ปี · ฟรี</span>
+  </div>
+
+  <h1>คณิตศาสตร์สำหรับเด็ก: นับกับรถไฟน้อย</h1>
+
+  <h2>ทุกอย่างเริ่มต้นอย่างไร</h2>
+  <p>ทุกอย่างเริ่มจากการสังเกตง่าย ๆ เด็กเรียนรู้จากศูนย์ และตอนแรกทุกคนนับด้วยนิ้ว ผมอยากให้พวกเขามีอะไรที่มองเห็นได้ เช่น เส้นจำนวน: ตัวเลขเรียงเป็นแถว และการคำนวณทุกอย่างคือก้าวไปตามเส้นนั้น</p>
+  <p>มันทำงานอย่างไร? มีไม้บรรทัดตั้งแต่ 0 ถึง 10 เราวางตัวเลื่อนไว้ที่ 2 เมื่อจะบวกอีก 2 เราก้าวไปสองก้าวพร้อมกับเด็ก และตัวเลื่อนก็ลงที่ 4 แทบไม่ต้องอธิบายอะไร เพราะทุกอย่างมองเห็นได้ชัดเจน</p>
+  <p>ผมคิดว่านี่เป็นการก้าวกระโดดสำหรับเด็ก: จากนิ้วไปสู่ตรรกะของการคำนวณโดยตรง ผมเชื่อมั่นในเรื่องนี้ แม้ว่าจะเป็นความเห็นของผม ไม่ใช่งานวิจัยทางวิทยาศาสตร์</p>
+  <p>การคิดตัวช่วยฝึกแบบนี้ขึ้นมาเป็นเรื่องง่าย แต่การสร้างมันยากกว่ามาก นี่คือแอปแรกของผม และก้าวแรกของผมในการทำ vibe coding ก็เริ่มต้นจากมัน: ผมทำมันร่วมกับ AI</p>
+  <p>เมื่อเวลาผ่านไป เราเพิ่มเข้าไปมากมาย นอกจากตัวเลขถึง 10 ตอนนี้ยังมีหลักสิบและหลักร้อย (ถึง 1000) จำนวนลบ และเศษส่วนทศนิยม และเราเปลี่ยนไม้บรรทัดให้เป็นทางรถไฟ นั่นคือเหตุผลที่มีรถไฟน้อยอยู่บนหน้าปก และตอนนี้รถไฟ ไม่ใช่ตัวเลื่อน ที่ก้าวไปตามตัวเลข เราเพิ่มพื้นหลังและเพลงหลายแบบเพื่อให้เด็กสนใจต่อเนื่อง และสำหรับโจทย์ที่แก้ถูกต้องมีรางวัล: ยานพาหนะใหม่ถูกปลดล็อกและกระดาษสีโปรยลงมา</p>
+  <p>ผมยังอยากให้แอปให้ความรู้สึกเหมือนไดอารี่ ไม่ใช่ตำราเรียน จึงมีหน้าจอต้อนรับที่เด็กเลือกชื่อเล่นและอาชีพในอนาคต จากนั้นมันก็เป็นแอปส่วนตัวของเด็กเอง ภายใต้ชื่อของเด็กเอง</p>
+  <p>เราจะดีใจมากหากแม้แต่เด็กคนเดียวเรียนรู้การนับด้วยความช่วยเหลือของแอปของเรา!</p>
+
+  <div class="short">
+    <p><b>สรุปสั้น ๆ</b> แอป Android ที่สอนเด็กอายุ 4–7 ปีให้บวกและลบ รถไฟน้อยก้าวไปตามเส้นจำนวนขณะที่เด็กนับก้าว คุณเริ่มจากตัวเลขถึง 10 แล้วไปต่อที่หลักสิบและหลักร้อย (ถึง 1000) จากนั้นลองจำนวนลบและเศษส่วนทศนิยม โจทย์ที่แก้แล้วจะปลดล็อกยานพาหนะใหม่ ไม่ต้องสมัครและไม่มีการซื้อในแอป แอปฟรีแต่มีโฆษณาที่ขอให้เป็นโฆษณาสำหรับเด็ก อินเทอร์เฟซมี 42 ภาษาและตามภาษาของโทรศัพท์ของคุณ</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">ดาวน์โหลดจาก Google Play</a></p>
+  </div>
+
+  <h2>ข้างในมีอะไรบ้าง</h2>
+  <ul class="feat">
+    <li><b>แอปส่วนตัว</b> ในหน้าจอต้อนรับ เด็กเลือกชื่อเล่นและอาชีพในอนาคต ทั้งหมดนี้เก็บไว้ในอุปกรณ์เท่านั้น</li>
+    <li><b>การเรียนรู้ที่มองเห็นได้</b> เคลื่อนรถไฟและนับก้าว เมื่อคุณเห็นว่ามันเกิดขึ้นอย่างไร ตรรกะของเลขคณิตก็เข้าใจได้เร็วขึ้นมาก</li>
+    <li><b>จากง่ายไปยาก</b> ตัวเลขถึง 10 จากนั้นหลักสิบ (ถึง 100) และหลักร้อย (ถึง 1000) สำหรับผู้ที่ไปไกลกว่านั้น: จำนวนลบและเศษส่วนทศนิยม แนะนำผ่านเกมง่าย ๆ</li>
+    <li><b>รางวัล</b> แก้โจทย์สองสามข้อแล้วยานพาหนะใหม่จะเปิดขึ้น: รถยนต์ แทรกเตอร์ เรือ เครื่องบิน จานบิน เรือดำน้ำสีเหลือง บอลลูนลมร้อน แต่ละอย่างมีเสียงของตัวเองและทิ้งควันหรือฟองอากาศไว้ข้างหลัง คำตอบที่ถูกต้องทำให้กระดาษสีโปรยลงมา</li>
+    <li><b>ยานพาหนะปลดล็อกทีละคัน</b> คันแรกหลังจากแก้โจทย์ 5 ข้อ จากนั้น 3 ข้อ แล้ว 1 ข้อ หลังจากนั้นยานพาหนะทุกคันจะเปิดอยู่ 18 ชั่วโมง</li>
+    <li><b>พื้นหลัง</b> วาดเหมือนภาพดินสอของเด็ก: ท้องฟ้า บ้าน สมุด อวกาศ ทะเล ฤดูหนาว และทุ่งหญ้าที่เต็มไปด้วยดอกไม้ ปัดเพื่อเปลี่ยน</li>
+    <li><b>เสียง</b> เพลงพื้นหลังเบา ๆ ที่แตะครั้งเดียวก็ปิดได้ และเสียงก้าวเดินห้าแบบให้เลือก</li>
+    <li><b>สบาย</b> ธีมมืดสำหรับการเรียนในทุกช่วงเวลาของวัน ใช้งานได้บนโทรศัพท์และแท็บเล็ต ทั้งแนวตั้งและแนวนอน</li>
+  </ul>
+
+  <h2>สิ่งที่ไม่มี</h2>
+  <ul class="feat">
+    <li>แอปสอนการบวกและการลบ ไม่มีการคูณและการหาร</li>
+    <li>มีโฆษณาจาก Google AdMob ขอให้เป็นโฆษณาสำหรับเด็ก ด้วยการจัดเรทติ้ง “G” และไม่ใช้โฆษณาแบบเฉพาะบุคคล ไม่มีฟีเจอร์แบบเสียเงินหรือการซื้อในแอป</li>
+    <li>แอปเก็บสถิติทางเทคนิคแบบไม่ระบุตัวตน (Firebase Analytics): การเปิดแอป เวอร์ชันของแอป รุ่นอุปกรณ์ ไม่เก็บชื่อ อีเมล หรือข้อมูลส่วนบุคคลอื่น รายละเอียดอยู่ใน<a href="/easycounting/privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+    <li>ต้องใช้ Android 8.0 ขึ้นไป</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">ดาวน์โหลดจาก Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/th/">แอปทั้งหมด</a></li>
+    <li><a href="/th/apps/slowread/">Slowread</a></li>
+    <li><a href="/th/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/th/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/th/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/easycounting/privacy-policy.html">ความเป็นส่วนตัว</a></li>
+    <li><a href="/easycounting/terms-of-use.html">ข้อกำหนด</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="th" data-map='{"en":["/apps/easycounting/","English","View this page in English"],"zh":["/zh/apps/easycounting/","简体中文","查看简体中文版本"],"es":["/es/apps/easycounting/","Español","Ver esta página en español"],"id":["/id/apps/easycounting/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/easycounting/","Português","Ver esta página em português"],"ru":["/ru/apps/easycounting/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/easycounting/","日本語","このページを日本語で見る"],"de":["/de/apps/easycounting/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/easycounting/","Français","Voir cette page en français"],"tr":["/tr/apps/easycounting/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/easycounting/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/easycounting/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/easycounting/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/easycounting/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/easycounting/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

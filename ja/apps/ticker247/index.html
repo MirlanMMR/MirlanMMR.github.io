@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android の通知シェードとウィジェットに届く速報ニュース — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7：Android 向けニュースアグリゲーター。緊急で重要なニュースが通知シェードと 1 行ウィジェットに届きます。ローカル、同じ言語圏、世界のニュース、ライブ TV、ラジオ、報道レビュー。登録は不要です。">
+<link rel="canonical" href="https://mirlanmmr.github.io/ja/apps/ticker247/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/ticker247/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/ticker247/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/ticker247/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/ticker247/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/ticker247/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/ticker247/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/ticker247/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/ticker247/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/ticker247/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/ticker247/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ticker 24/7",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Android 向けニュースアグリゲーター：通知シェードと 1 行ウィジェットに届く緊急で重要なニュース、ローカル、同じ言語圏、世界のニュース、ライブ TV、ラジオ、報道レビュー。",
+  "url": "https://mirlanmmr.github.io/ja/apps/ticker247/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image": "https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/ja/"
+  },
+  "inLanguage": "ja"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/ja/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="ja">日本語</summary><ul><li><a href="/apps/ticker247/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/ticker247/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/ticker247/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/ticker247/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/ticker247/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/ticker247/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/ticker247/" hreflang="ja" lang="ja" data-lang="ja" aria-current="true">日本語</a></li><li><a href="/de/apps/ticker247/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/ticker247/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/ticker247/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/ticker247/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/ticker247/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/ticker247/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/ticker247/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/ticker247/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Ticker 24/7 アプリのアイコン">
+    <span>Ticker 24/7 · Android · 無料</span>
+  </div>
+
+  <h1>外出先でも速報を：通知シェードで、ウィジェットで、フィードで</h1>
+
+  <p class="lead">運転中にポップアップ通知をひと目見るだけで、もう最新の情報がわかります。</p>
+
+  <h2>すべての始まり</h2>
+  <p>私は以前、テレビ局の報道部門で働いていました。でも、話はそれだけではありません。外出先でも緊急で重要なニュースを届けてくれるアプリがほしかったのです。スマートフォンの画面を端から端まで流れるニュースティッカーを思い描いていました。</p>
+  <p>ところが、それはできないことがわかりました。Android と Google Play のルールは、アプリがほかのアプリの上に描画することを非常に嫌い、それには理由があります。そのようなティッカーは気が散り、ほかのあらゆる操作の邪魔になり、バッテリーも消耗するからです。</p>
+  <p>ところが、通知シェードの通知に取りかかると、止められなくなりました。このアプリには半年近くかけました。子ども向けの計算アプリに続く 2 つ目のアプリで、ブルームバーグや Google ニュースと同じ形式の、本格的なニュースアグリゲーターになりました。</p>
+  <p>通知シェードの通知、「1 行ニュース」ウィジェット、そしてアプリ本体があります。緊急で重要なニュースはカルーセルに並び、続いてライブ放送とラジオ局、時事テーマの報道レビュー、生活に欠かせないニュース（停電、事故など）、おもしろい話題、天気。そして何より、私たちは世界中を網羅しています。</p>
+
+  <div class="short">
+    <p><b>ひとことで言うと。</b>Ticker 24/7 は Android 向けのニュースアグリゲーターです。緊急で重要なニュースが通知シェードと「1 行ニュース」ウィジェットに届きます。アプリ内では、ニュースはローカル、あなたの言語、世界の 3 つのレベルに分かれています。ライブのニュース TV チャンネル、ラジオ、報道レビュー、天気、為替レートもあります。登録は不要です。アプリは無料で、広告があります。対応言語：ロシア語、英語、スペイン語、ポルトガル語、フランス語。</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play で入手</a></p>
+  </div>
+
+  <h2>中身は何があるか</h2>
+  <ul class="feat">
+    <li><b>通知シェードのニュースティッカー。</b>緊急で重要なニュースが通知として届くので、アプリを開く必要はありません。</li>
+    <li><b>「1 行ニュース」ウィジェット。</b>ホーム画面に 1 つのニュースを 1 文で表示し、記事が次々に入れ替わります。タップすると、詳しいカードが開きます。</li>
+    <li><b>3 つのレベルのニュース。</b>ローカル：あなたの国で起きていること。あなたの言語：同じ言語を話す国々のニュース。世界：どこでも重要なこと。セクションは分かれているので、今読みたいものを選べます。</li>
+    <li><b>緊急で重要なニュースをカルーセルで。</b>最も大きなニュースが上部にまとまり、残りはその下に。フィードは 1 時間ごと、24 時間体制で更新されます。</li>
+    <li><b>生活に欠かせないニュース。</b>停電、事故など、日々の暮らしに関わるすべて。</li>
+    <li><b>ライブ TV とラジオ。</b>ニュースチャンネルはアプリ内でそのまま再生され、YouTube に移動する必要はありません。再生を始めたまま、閉じずにニュースをスクロールできます。言語ごとに専用のチャンネルがあります。あなたの国と言語のニュースラジオ局もあります。</li>
+    <li><b>報道レビュー。</b>ひとつの出来事を複数の報道機関から。誰が最初に報じたか、誰が詳細を加えたか、報道がどこで食い違うか。すべての段落に媒体名がつき、私たちは独自の言葉を一語も加えません。</li>
+    <li><b>おもしろい話題と天気。</b>おもしろい話題は緊急ニュースとは別にまとめられ、選んだ都市の天気も確認できます。</li>
+    <li><b>記事全文をアプリ内で。</b>配信元のサイトに移動せず、記事を最後まで読めます。</li>
+    <li><b>しおり、為替・暗号資産レート、ダークテーマ。</b>記事を保存して、あとでまた読めます。</li>
+  </ul>
+
+  <h2>ノイズなし</h2>
+  <p>ニュースは 1 つのルールで選ばれます：その裏に実際の出来事があるか。他人の意見の焼き直し、記事の体裁をした広告、星占いはフィードに入りません。私たちはすべての記事を読んでいます。おかしな点を見つけたら、お知らせください。修正します。</p>
+
+  <h2>ないもの</h2>
+  <ul class="feat">
+    <li>アプリにはインターネット接続が必要です。接続がないとニュースは更新されません。</li>
+    <li>Google AdMob の広告があります。有料機能やサブスクリプションはありません。</li>
+    <li>私たちが届けるのはニュースであり、緊急対応機関の公式メッセージではありません。身に危険が迫っているときは、私たちの通知ではなく、公式の指示に従ってください。</li>
+    <li>インターフェースは 5 つの言語に対応しています：ロシア語、英語、スペイン語、ポルトガル語、フランス語。</li>
+    <li>Android 7.0 以降が必要です。</li>
+  </ul>
+  <p>アプリが何を保存し、どこへデータを送信するかは、<a href="/ticker247/privacy-policy.html">プライバシーポリシー</a>に記載しています。</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play で入手</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/ja/">すべてのアプリ</a></li>
+    <li><a href="/ja/apps/slowread/">Slowread</a></li>
+    <li><a href="/ja/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/ja/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/ja/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ticker247/privacy-policy.html">プライバシー</a></li>
+    <li><a href="/ticker247/terms-of-use.html">利用規約</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="ja" data-map='{"en":["/apps/ticker247/","English","View this page in English"],"zh":["/zh/apps/ticker247/","简体中文","查看简体中文版本"],"es":["/es/apps/ticker247/","Español","Ver esta página en español"],"id":["/id/apps/ticker247/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/ticker247/","Português","Ver esta página em português"],"ru":["/ru/apps/ticker247/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/ticker247/","日本語","このページを日本語で見る"],"de":["/de/apps/ticker247/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/ticker247/","Français","Voir cette page en français"],"tr":["/tr/apps/ticker247/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/ticker247/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/ticker247/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/ticker247/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/ticker247/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/ticker247/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

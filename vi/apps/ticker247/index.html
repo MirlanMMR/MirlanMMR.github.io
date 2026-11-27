@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tin nóng trên thanh thông báo và tiện ích cho Android — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7: ứng dụng tổng hợp tin tức cho Android. Tin khẩn cấp và quan trọng đến thanh thông báo và tiện ích một dòng của bạn. Tin địa phương, cùng ngôn ngữ và thế giới, truyền hình trực tiếp, radio, điểm báo. Không cần đăng ký.">
+<link rel="canonical" href="https://mirlanmmr.github.io/vi/apps/ticker247/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/ticker247/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/ticker247/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/ticker247/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/ticker247/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/ticker247/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/ticker247/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/ticker247/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/ticker247/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/ticker247/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/ticker247/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ticker 24/7",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Một ứng dụng tổng hợp tin tức cho Android: tin khẩn cấp và quan trọng trên thanh thông báo và trong tiện ích một dòng, tin địa phương, cùng ngôn ngữ và thế giới, truyền hình trực tiếp, radio, điểm báo.",
+  "url": "https://mirlanmmr.github.io/vi/apps/ticker247/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image": "https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/vi/"
+  },
+  "inLanguage": "vi"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/vi/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="vi">Tiếng Việt</summary><ul><li><a href="/apps/ticker247/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/ticker247/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/ticker247/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/ticker247/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/ticker247/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/ticker247/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/ticker247/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/ticker247/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/ticker247/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/ticker247/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/ticker247/" hreflang="vi" lang="vi" data-lang="vi" aria-current="true">Tiếng Việt</a></li><li><a href="/ko/apps/ticker247/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/ticker247/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/ticker247/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/ticker247/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Biểu tượng ứng dụng Ticker 24/7">
+    <span>Ticker 24/7 · Android · miễn phí</span>
+  </div>
+
+  <h1>Tin nóng khi đang di chuyển: trên thanh thông báo, trong tiện ích và trong luồng tin</h1>
+
+  <p class="lead">Chỉ cần liếc qua thông báo hiện lên khi bạn đang lái xe, và bạn đã nắm được tin tức.</p>
+
+  <h2>Mọi chuyện bắt đầu thế nào</h2>
+  <p>Trước đây tôi làm việc trong ngành truyền hình, ở một phòng tin tức. Nhưng đó chưa phải toàn bộ vấn đề. Tôi muốn có một ứng dụng đưa cho bạn tin khẩn cấp và quan trọng khi đang di chuyển. Tôi hình dung một dải tin chạy ngang màn hình điện thoại thông minh.</p>
+  <p>Hóa ra không làm được như vậy. Quy tắc của Android và Google Play rất ngại cho một ứng dụng vẽ lên trên các ứng dụng khác, và có lý do cả: một dải tin như thế sẽ làm bạn xao nhãng, cản trở mọi thứ khác và ngốn pin.</p>
+  <p>Nhưng khi đã bắt tay vào các thông báo trên thanh thông báo, tôi không dừng lại được. Tôi làm ứng dụng này gần nửa năm. Đây là ứng dụng thứ hai của tôi sau ứng dụng đếm số cho trẻ em, và nó trở thành một ứng dụng tổng hợp tin tức đầy đủ, theo cùng định dạng như Bloomberg hay Google News.</p>
+  <p>Có thông báo trên thanh thông báo, tiện ích “Tin trong một dòng” và chính ứng dụng: tin khẩn cấp và quan trọng trong một băng chuyền, rồi đến các chương trình phát trực tiếp và đài radio, điểm báo về các chủ đề thời sự, tin thiết yếu (mất điện, tai nạn và những chuyện tương tự), những câu chuyện thú vị và thời tiết. Và quan trọng nhất: chúng tôi đưa tin trên toàn thế giới.</p>
+
+  <div class="short">
+    <p><b>Tóm lại.</b> Ticker 24/7 là một ứng dụng tổng hợp tin tức cho Android. Tin khẩn cấp và quan trọng đến thanh thông báo và tiện ích “Tin trong một dòng” của bạn. Trong ứng dụng, tin tức được chia thành ba cấp: địa phương, ngôn ngữ của bạn và thế giới. Ứng dụng còn có các kênh truyền hình tin tức trực tiếp, radio, điểm báo, thời tiết và tỷ giá hối đoái. Không cần đăng ký. Ứng dụng miễn phí, có quảng cáo. Ngôn ngữ: tiếng Nga, tiếng Anh, tiếng Tây Ban Nha, tiếng Bồ Đào Nha và tiếng Pháp.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Tải trên Google Play</a></p>
+  </div>
+
+  <h2>Bên trong có gì</h2>
+  <ul class="feat">
+    <li><b>Dải tin trên thanh thông báo.</b> Tin khẩn cấp và quan trọng đến dưới dạng thông báo, và bạn không cần mở ứng dụng.</li>
+    <li><b>Tiện ích “Tin trong một dòng”.</b> Một tin, một câu trên màn hình chính của bạn, các tin lần lượt thay nhau. Chạm vào, thẻ tin đầy đủ sẽ mở ra.</li>
+    <li><b>Ba cấp tin tức.</b> Địa phương: điều đang diễn ra ở quốc gia của bạn. Ngôn ngữ của bạn: tin từ các nước cũng nói ngôn ngữ đó. Thế giới: những gì quan trọng ở mọi nơi. Các mục được tách riêng, nên bạn chọn thứ muốn đọc ngay lúc này.</li>
+    <li><b>Tin khẩn cấp và quan trọng trong băng chuyền.</b> Những tin lớn nhất được gom ở trên cùng, phần còn lại ở bên dưới. Luồng tin cập nhật mỗi giờ, suốt ngày đêm.</li>
+    <li><b>Tin thiết yếu.</b> Mất điện, tai nạn và mọi thứ ảnh hưởng đến cuộc sống hằng ngày của bạn.</li>
+    <li><b>Truyền hình và radio trực tiếp.</b> Các kênh tin tức phát ngay trong ứng dụng, không cần sang YouTube: bật một kênh và tiếp tục cuộn tin mà không phải đóng nó. Mỗi ngôn ngữ có các kênh riêng. Cũng có các đài radio tin tức từ đất nước và ngôn ngữ của bạn.</li>
+    <li><b>Điểm báo.</b> Một sự kiện qua nhiều tòa soạn: ai đưa tin trước, ai bổ sung chi tiết, các bản tường thuật khác nhau ở chỗ nào. Mỗi đoạn đều ghi tên cơ quan báo chí của nó, và chúng tôi không thêm một chữ nào của riêng mình.</li>
+    <li><b>Những câu chuyện thú vị và thời tiết.</b> Những câu chuyện thú vị được tách riêng khỏi tin khẩn cấp, và có thời tiết cho thành phố bạn chọn.</li>
+    <li><b>Toàn bộ câu chuyện ngay trong ứng dụng.</b> Đọc trọn bài viết mà không phải nhảy sang trang web của nhà xuất bản.</li>
+    <li><b>Dấu trang, tỷ giá tiền tệ và tiền mã hóa, giao diện tối.</b> Lưu một tin và quay lại đọc sau.</li>
+  </ul>
+
+  <h2>Không nhiễu</h2>
+  <p>Tin tức được chọn theo một quy tắc duy nhất: phía sau có một sự kiện thật không? Những bản thuật lại ý kiến của người khác, quảng cáo đội lốt bài viết và tử vi đều không vào luồng tin. Chúng tôi đọc từng bản tin. Thấy điều gì sai? Hãy báo cho chúng tôi và chúng tôi sẽ sửa.</p>
+
+  <h2>Những gì không có</h2>
+  <ul class="feat">
+    <li>Ứng dụng cần kết nối internet: không có thì tin tức sẽ không cập nhật.</li>
+    <li>Có quảng cáo từ Google AdMob. Không có tính năng trả phí hay gói đăng ký.</li>
+    <li>Chúng tôi hiển thị tin tức, không phải thông báo chính thức của các dịch vụ khẩn cấp. Nếu bạn đang gặp nguy hiểm, hãy làm theo họ, chứ không phải thông báo của chúng tôi.</li>
+    <li>Giao diện có năm ngôn ngữ: tiếng Nga, tiếng Anh, tiếng Tây Ban Nha, tiếng Bồ Đào Nha và tiếng Pháp.</li>
+    <li>Cần Android 7.0 trở lên.</li>
+  </ul>
+  <p>Những gì ứng dụng lưu trữ và nơi nó gửi dữ liệu được mô tả trong <a href="/ticker247/privacy-policy.html">chính sách quyền riêng tư</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Tải trên Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/vi/">Tất cả ứng dụng</a></li>
+    <li><a href="/vi/apps/slowread/">Slowread</a></li>
+    <li><a href="/vi/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/vi/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/vi/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ticker247/privacy-policy.html">Quyền riêng tư</a></li>
+    <li><a href="/ticker247/terms-of-use.html">Điều khoản</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="vi" data-map='{"en":["/apps/ticker247/","English","View this page in English"],"zh":["/zh/apps/ticker247/","简体中文","查看简体中文版本"],"es":["/es/apps/ticker247/","Español","Ver esta página en español"],"id":["/id/apps/ticker247/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/ticker247/","Português","Ver esta página em português"],"ru":["/ru/apps/ticker247/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/ticker247/","日本語","このページを日本語で見る"],"de":["/de/apps/ticker247/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/ticker247/","Français","Voir cette page en français"],"tr":["/tr/apps/ticker247/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/ticker247/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/ticker247/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/ticker247/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/ticker247/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/ticker247/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

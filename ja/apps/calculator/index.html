@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 つの画面と自分だけのレイアウトを持つ Android 電卓 — Calculator: Themes &amp; Widget</title>
+<meta name="description" content="自分で組み立てる Android 電卓：5 つの画面、22 のテーマ、カスタムボタン、ウィジェット、実質年率で計算するローン電卓。無料で、オフラインで動作します。">
+<link rel="canonical" href="https://mirlanmmr.github.io/ja/apps/calculator/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/calculator/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/calculator/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/calculator/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/calculator/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/calculator/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/calculator/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/calculator/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/calculator/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/calculator/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/calculator/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/calculator/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/calculator/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/calculator/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/calculator/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calculator: Themes & Widget",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "自分で組み立てる Android 電卓：5 つの画面、22 のテーマ、カスタムボタン、ウィジェット、実質年率で計算するローン電卓。",
+  "url": "https://mirlanmmr.github.io/ja/apps/calculator/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "image": "https://mirlanmmr.github.io/img/calculator.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/ja/"
+  },
+  "inLanguage": "ja"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/ja/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="ja">日本語</summary><ul><li><a href="/apps/calculator/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/calculator/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/calculator/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/calculator/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/calculator/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/calculator/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/calculator/" hreflang="ja" lang="ja" data-lang="ja" aria-current="true">日本語</a></li><li><a href="/de/apps/calculator/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/calculator/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/calculator/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/calculator/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/calculator/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/calculator/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/calculator/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/calculator/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="/img/calculator.png" width="64" height="64" alt="Calculator: Themes &amp; Widget アプリのアイコン">
+    <span>Calculator: Themes &amp; Widget · Android · 無料</span>
+  </div>
+
+  <h1>自分で組み立てる、5 つの画面を持つ電卓</h1>
+
+  <h2>すべての始まり</h2>
+  <p>私はただ、使いやすいレイアウトの電卓をダウンロードしたかっただけです。それだけです。長いあいだ探し、2 ダースほどダウンロードしましたが、どれも私には合いませんでした。最初は驚き、次に疲れ、そして本物の失望がやってきました。あるとき手を振って諦め、最初から入っているものを使いました。</p>
+  <p>でも、月の下に永遠に続くものはありません。AI の時代がやってきました。私はすぐには飛びつきませんでした。皆さんの多くと同じように、ニューラルネットワークや生成動画のリール動画を 2 年ほど眺めていました。そしてある日、AI でアプリを作ってみたのです。</p>
+  <p>最初に作ったのは電卓ではなく、<a href="/ja/apps/easycounting/">子ども向けの数え方アプリ</a>でした。スライダーのついた定規です。スライダーを 2 に置き、さらに 2 を足すには、子どもと一緒に 2 歩進むと、スライダーは 4 に着地します。これは子どもにとって本当の飛躍だと思います。指で数えるのをやめて、結果がどうやって出るのかがすぐにわかるのです。私はそう確信していますが、これは科学的な研究ではなく、私の意見です。その話は別の機会にします。ここから、私のバイブコーディングの第一歩が始まりました。</p>
+  <p>さて、電卓に戻ります。私はほかのものとそっくりなもうひとつを作りたくありませんでした。できる限りカスタマイズできる電卓が必要でした。でも、それが一番の特徴ではありません。一番の特徴は、画面が 1 つや 2 つではなく 5 つあることです。なぜかって？ パソコンだってモニターを 3 枚つなげられます。もっと増やすこともできましたが、5 つで十分だと決めました。</p>
+  <p>なぜこんなに多くの画面があるのか。結果を頭の中に覚えておかなくてすむようにするためです。画面を横にスワイプして新しい画面で計算し、何か確認したくなったら最初の画面にスワイプで戻ります。つまり、履歴とメモリを、便利な形で捉え直したものです。</p>
+
+  <div class="short">
+    <p><b>ひとことで言うと。</b>Android 向けの電卓です。ボタンを移動、削除、追加でき、テーマ、色、フォント、音を選べます。最大の違いは 5 つの画面があることです。ひとつの画面で計算し、横にスワイプして、別の画面で続けられます。ローン電卓、パーセント、図形、コンバーター、ホーム画面のウィジェットがあります。オフラインで動作します。無料で、下部にバナー広告が表示されます。インターフェースはロシア語と英語です。</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Google Play で入手</a></p>
+  </div>
+
+  <h2>中身は何があるか</h2>
+  <p><b>自分流に組み立てる。</b></p>
+  <ul class="feat">
+    <li>22 のテーマ：ライト、ダーク、そして昔の電卓のように光る 7 セグメントの数字を持つ「電子」テーマ（赤と緑の LED、赤と緑の LCD）。</li>
+    <li>自分だけのアクセントカラー、5 種類のボタンの形、7 種類のフォント。</li>
+    <li>自分だけのレイアウト：ボタンを移動、削除、追加できます。+ − × ÷ を右にも左にも置けるので、左利きの方にも便利です。</li>
+    <li>タップのエフェクト（波紋、リング、輝き、火花）、キー音、バイブレーション。すべて任意です。</li>
+  </ul>
+  <p><b>計算する。</b></p>
+  <ul class="feat">
+    <li>5 つの画面：ひとつの画面で計算し、横にスワイプして、別の画面で続けられます。お気に入りの電卓を最大 10 個まで登録でき、すばやく切り替えられます。</li>
+    <li>fx ボタンにエンジニアリングメニュー：平方根、べき乗、三角関数、対数、π、e。</li>
+    <li>計算履歴、カーソル編集、コピーと貼り付け。</li>
+  </ul>
+  <p><b>公式がすぐそばに。</b></p>
+  <ul class="feat">
+    <li>パーセント：ある数が何パーセントか、パーセントの加算と減算、変化率、税金、複利成長。</li>
+    <li>図形：円、長方形、三角形、直方体、円柱、球、円錐。数値を入力すると答えが出ます。</li>
+    <li>コンバーター：長さ、質量、温度、面積、体積、速度、データ。</li>
+  </ul>
+  <p><b>ローン。</b>元利均等返済と元金均等返済、返済スケジュール、手数料、実質年率。定額金利のオファーを確認して、実際にいくらかかるかを調べられます。</p>
+  <p><b>ウィジェット。</b>ホーム画面のミニ電卓で、全画面に広げられます。不透明度とテーマは調整可能です。ウィジェットで解いた計算は履歴に入ります。</p>
+
+  <h2>ないもの</h2>
+  <ul class="feat">
+    <li>今のところ、インターフェースはロシア語と英語のみです。スマートフォンの言語に従い、Android 13 以降では、アプリの言語を個別に設定できます。</li>
+    <li>下部に Google AdMob のバナー広告が表示されます。有料機能やサブスクリプションはありません。</li>
+    <li>ローンとパーセントのツールが出すのは目安であり、金融アドバイスではありません。正確な条件は契約書でご確認ください。</li>
+    <li>Android 8.0 以降が必要です。</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Google Play で入手</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/ja/">すべてのアプリ</a></li>
+    <li><a href="/ja/apps/slowread/">Slowread</a></li>
+    <li><a href="/ja/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/ja/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/ja/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/calculator/privacy-policy.html">プライバシー</a></li>
+    <li><a href="/calculator/terms.html">利用規約</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="ja" data-map='{"en":["/apps/calculator/","English","View this page in English"],"zh":["/zh/apps/calculator/","简体中文","查看简体中文版本"],"es":["/es/apps/calculator/","Español","Ver esta página en español"],"id":["/id/apps/calculator/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/calculator/","Português","Ver esta página em português"],"ru":["/ru/apps/calculator/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/calculator/","日本語","このページを日本語で見る"],"de":["/de/apps/calculator/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/calculator/","Français","Voir cette page en français"],"tr":["/tr/apps/calculator/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/calculator/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/calculator/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/calculator/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/calculator/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/calculator/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

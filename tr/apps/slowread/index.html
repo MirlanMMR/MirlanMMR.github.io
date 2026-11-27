@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android için e-kitap okuyucu: ayarlar yerine hareketler — Slowread</title>
+<meta name="description" content="Slowread: kitabın sayfası üzerinde doğrudan ayarladığınız, menüsüz bir Android okuyucu. EPUB, FB2, MOBI, PDF, DjVu. Raflarda ücretsiz klasikler ve hikâyeleriyle bir resim şaheserleri galerisi.">
+<link rel="canonical" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/slowread/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/slowread/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/slowread/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/slowread/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/slowread/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/slowread/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/slowread/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Yazı tipi, boyut ve rengin doğrudan sayfa üzerinde hareketlerle değiştiği bir Android e-kitap okuyucu. EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT açar. Ücretsiz kamu malı kitaplar ve hikâyeleriyle bir resim şaheserleri galerisi.",
+  "url": "https://mirlanmmr.github.io/tr/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/tr/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ],
+  "inLanguage": "tr"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/tr/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/apps/slowread/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/slowread/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/slowread/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/slowread/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/slowread/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/slowread/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/slowread/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/slowread/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/slowread/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/slowread/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/vi/apps/slowread/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/slowread/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/slowread/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/slowread/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/slowread/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Slowread uygulama simgesi">
+    <span>Slowread · e-kitap okuyucu · Android · ücretsiz</span>
+  </div>
+
+  <h1>Kitabın sayfası üzerinde doğrudan ayarladığınız bir okuyucu</h1>
+
+  <h2>Her şey nasıl başladı</h2>
+  <p>Okumayı severim, ama her zaman vakit bulamam. Okuma cihazlarına da hiçbir zaman karşı olmadım. Eskiden bilgisayarımda e-kitaplar hazırlar, bir okuyucuya yükler ve tuşlu bir Nokia'da okurdum. Modern akıllı telefonlar gelince, bir anda birkaç okuma uygulaması indirdim ve abonelik aldım.</p>
+  <p>Onlarda hoşuma gitmeyen neydi? Çok fazla ayar vardı ve çoğunu anlamıyordum. Ayarlara girip bir şeyi değiştiriyor, sonuç nasıl olmuş diye çıkıp bakıyor, sonra yine giriyordum. Artık istediğim her uygulamayı yapabildiğim için sonunda buna sıra geldi.</p>
+  <p>İlk odaklandığım şey, okuyucuyu mümkün olduğunca kolay ayarlanır hale getirmekti. Bir şeyi değiştirmek için ayarlara girmeniz gerekmemeli. Açık kitabın ekranında doğrudan değiştirirsiniz ve sonucu hemen görürsünüz. Başka bir yazı tipi mi lazım? Ekranı yana kaydırın, yazı tipi gözünüzün önünde değişsin. Daha büyük metin mi lazım? İki parmağınızı açın, büyüsün; ters yönde sıkıştırın, küçülsün. Üst bölgeye dokunmak sevdiğiniz temaları, yani arka plan rengini ve metin rengini değiştirir.</p>
+  <p>Ama bu yalnızca başlangıçtı. İşin içine girdim ve okuyucuyu ilk açtığınızda rafınızda zaten kitaplar olmasını sağladım, üstelik ücretsiz; boş bir okuyucu ya da kitap mağazalı bir okuyucu değil. Sizi büyük yazarlardan alıntılarla ve dünya edebiyatının şaheserleriyle, kamu malı düzyazı ve şiirle bir karşılama ekranı karşılar.</p>
+  <p>Tuşlu telefondan ve bilgisayardan okuduğumu söylemiştim. İstediğim kitabı internette her zaman bulamıyordum. Bazı nadir kitaplar yalnızca PDF olarak var ve çoğu zaman taranmış. PDF'yi hep sıradan bir e-kitap gibi okumak istedim; küçük ekranda A4 kâğıtla boğuşmak değil. Başardım, pek çok şeyi başardığım gibi. Her şeyi yazmayacağım.</p>
+  <p>Bir şey daha ekleyeceğim. Çocukken pul ve Sovyet kartpostalları biriktirirdik ve onlara bakmayı çok severdik. Ben her pulu, kartpostalı ya da fotoğrafı en ince ayrıntısına kadar incelerdim. Duvardaki halının desenlerini bile. Bu bizim içimize işlemiş bir şey ve akıllı telefonlarımızı hiç elimizden bırakmamamızın nedeni de bu. Bunun için genç nesli suçlamıyorum: bu bir teknoloji harikası. Neyse, ünlü tabloların minyatürlerinin sıkça yer aldığı bir pul albümü gibi bir şeyi yeniden yapma fikri aklıma geldi. Slowread'in bir kütüphanesi ve bir galerisi olmasının nedeni bu; sanat okullarına göre toplanmış kamu malı şaheserler.</p>
+  <p><b>Neden Slowread ve neden “Acelesiz oku”?</b> Çünkü edebiyat tadını çıkarmak içindir, koşarken yutmak için değil. Kullanıcıyı sürekli acele ettiren insanlardan değiliz: uygulamada okuma hızı sayacı ve baskı yok. Kendi hızınızda okuyun.</p>
+
+  <div class="short">
+    <p><b>Kısaca.</b> Slowread, Android için bir e-kitap okuyucudur. Yazı tipi, boyut ve renk, ayarlara girmeye gerek kalmadan doğrudan kitabın sayfasında hareketlerle değişir. EPUB, FB2, MOBI, DOCX, PDF, DjVu ve TXT açar. Raflarda zaten ücretsiz kamu malı kitaplar var; ayrıca Project Gutenberg'de arama, günün alıntısı ve resimlerin hikâyelerini anlatan bir resim şaheserleri galerisi bulunur. Uygulama ücretsizdir, altta reklamlar vardır. Kayıt gerekmez.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play'den indirin</a></p>
+  </div>
+
+  <h2>İçinde neler var</h2>
+  <p><b>Rahat okuma.</b></p>
+  <ul class="feat">
+    <li>Yazı tipini değiştirmek için yana kaydırın. Metin boyutunu değiştirmek için parmaklarınızı sıkıştırın veya açın. Üst bölgeye dokunmak sevdiğiniz temaları, yani arka plan ve metin rengini değiştirir. Hazır ayarlarla yetinmeyip kendi renginizi elde etmek için ortaya dokunup sürükleyin.</li>
+    <li>Üstteki asma kilit görünümü kilitler, böylece yanlışlıkla dokunmak hiçbir şeyi değiştiremez.</li>
+    <li>Yer imi eklemek için paragrafın kenarına dokunun. Yer imleri ve paragraf notları tek bir panelde toplanır.</li>
+    <li>Kendi yazı tipinizi kullanabilirsiniz: Google Fonts'tan birini seçin, indirin, dosyayı Slowread'de açın, kitabınız o yazı tipiyle dizilir.</li>
+    <li>Kitapta yazım hatası mı var? Paragrafın yanında uzun basıp metni düzeltin. Düzenlemeniz kitabın üstünde durur ve özgün dosyaya dokunulmaz. Düzeltilmiş bir kopyayı EPUB veya FB2 olarak kaydedebilirsiniz.</li>
+  </ul>
+  <p><b>Kitaplar.</b></p>
+  <ul class="feat">
+    <li>Raflarda zaten kamu malı, kabul görmüş dünya edebiyatı şaheserleri, düzyazı ve şiir var. İngilizce rafta Odysseia, Define Adası, Zaman Makinesi, Dünyalar Savaşı, Shakespeare'in Soneleri ve Çimen Yaprakları bulunur. Bir kitaba dokunun, kütüphanenizde olsun.</li>
+    <li>Rafların altında İngilizce Project Gutenberg'in tamamında, 33.000'den fazla eserde arama yapabilirsiniz. Bir kart, siz indirmeden önce kitap hakkında bilgi verir.</li>
+    <li>Kendi kitaplarınızı kendiniz eklersiniz: uygulama EPUB, FB2, MOBI, DOCX, PDF, DjVu (metin katmanlı taramalar), TXT, MD ve bunların ZIP arşivlerini açar. İndirilenlerinizden, bir mesajlaşma uygulamasından ya da tarayıcıdan gelen kitap doğrudan kütüphanenize düşer.</li>
+    <li>Kütüphane, dosya adlarının listesini değil, dosyadan alınan gerçek başlıkları, yazarları ve kapakları gösterir. İçindekiler, kitabın kendi yapısından gelir.</li>
+    <li>Hangi biçimi indirmeli: EPUB (önerilir) veya FB2. Bunlar yazı tipinize, boyutunuza ve renginize uyum sağlayan canlı metin içerir; içindekiler, kapak, görseller ve dipnotlar amaçlandığı gibi çalışır.</li>
+    <li>Günün alıntısı: her gün büyük bir yazardan yeni bir düşünce, baskıdan kelimesi kelimesine, yazarın ve çevirmenin adıyla.</li>
+  </ul>
+  <p><b>Şaheserler galerisi.</b> Eski Mısır resminden ve Song manzaralarından, Rönesans ve Hollanda Altın Çağı üzerinden Rembrandt, Hokusai, Van Gogh ve Roerich'e kadar. Eserler döneme ve sanat okuluna göre toplanmıştır. Her birinin bir hikâyesi var: nereye bakmalı, hangi dünyadan geldiği ve neden önemli olduğu. Bir resmi tam ekran açabilir; bir fırça darbesine, bir jeste ya da zar zor görünen bir işarete yakınlaşabilirsiniz. Galeri görselleri internetten yüklenir.</p>
+
+  <h2>Neleri yok</h2>
+  <ul class="feat">
+    <li>Bir okuyucudur, mağaza değil. Yeni çıkanları ve çok satanları kendiniz eklersiniz, uygulama kitap satmaz. Ücretsiz raflar kamu malı kitaplardan oluşur.</li>
+    <li>Okunan kitapları izleyen bir takipçi ve okuma hızı sayacı da değildir. Aynı adı taşıyan başka bir uygulama var; bu yüzden Google Play'de “Slowread” aratın ve simgeyi ve açıklamayı kontrol edin.</li>
+    <li>PDF'ler ve taramalar EPUB ve FB2 kadar akıcı okunmaz. Taranmış kitaplarda çok şey metin tanıma kalitesine bağlıdır ve hatalar içerebilir.</li>
+    <li>Google AdMob reklamları vardır. Ücretli özellik ya da uygulama içi satın alma yoktur.</li>
+    <li>Android 7.0 veya daha yenisi gerekir.</li>
+  </ul>
+
+  <h2>Peki verileriniz</h2>
+  <p>Kitaplarınız telefonunuzda kalır ve hiçbir yere gönderilmez. Okuma konumunuz ve yer imleriniz, yalnızca siz açarsanız, kendi Google Drive'ınızdaki gizli bir uygulama klasörüne kaydedilebilir. Ayrıntılar <a href="/slowread-legal/">gizlilik politikasında</a>. Kitaplarınızı ekledikten sonra okuma çevrimdışı çalışır.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Google Play'den indirin</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/tr/">Tüm uygulamalar</a></li>
+    <li><a href="/tr/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/tr/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/tr/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/tr/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/slowread-legal/">Gizlilik</a></li>
+    <li><a href="/slowread/terms-of-use.html">Koşullar</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/apps/slowread/","English","View this page in English"],"zh":["/zh/apps/slowread/","简体中文","查看简体中文版本"],"es":["/es/apps/slowread/","Español","Ver esta página en español"],"id":["/id/apps/slowread/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/slowread/","Português","Ver esta página em português"],"ru":["/ru/apps/slowread/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/slowread/","日本語","このページを日本語で見る"],"de":["/de/apps/slowread/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/slowread/","Français","Voir cette page en français"],"tr":["/tr/apps/slowread/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/slowread/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/slowread/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/slowread/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/slowread/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/slowread/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

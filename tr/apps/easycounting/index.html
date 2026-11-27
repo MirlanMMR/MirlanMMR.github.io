@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4–7 yaş çocuklar için matematik: küçük bir trenle sayma — 2+2 | Math for Kids</title>
+<meta name="description" content="4–7 yaş çocuklara sayı doğrusunda toplama ve çıkarma öğreten bir Android uygulaması: küçük bir tren sayılar boyunca ilerler, doğru cevaplar yeni araçların ve konfetilerin kilidini açar. Kayıt yok.">
+<link rel="canonical" href="https://mirlanmmr.github.io/tr/apps/easycounting/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/easycounting/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/easycounting/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/easycounting/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/easycounting/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/easycounting/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/easycounting/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/easycounting/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/easycounting/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/easycounting/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/easycounting/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/easycounting/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/easycounting/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/easycounting/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/easycounting/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/easycounting/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/easycounting/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "2+2 | Math for Kids",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "4–7 yaş çocuklara sayı doğrusunda toplama ve çıkarma öğreten bir Android uygulaması: küçük bir tren sayılar boyunca ilerler, doğru cevaplar yeni araçların kilidini açar.",
+  "url": "https://mirlanmmr.github.io/tr/apps/easycounting/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mmr.easycounting",
+  "image": "https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/tr/"
+  },
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 4,
+    "suggestedMaxAge": 7
+  },
+  "inLanguage": "tr"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/tr/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/apps/easycounting/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/easycounting/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/easycounting/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/easycounting/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/easycounting/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/easycounting/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/easycounting/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/easycounting/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/easycounting/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/easycounting/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/vi/apps/easycounting/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/easycounting/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/easycounting/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/easycounting/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/easycounting/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/HDvUi-BO7wGXb1dRadhL9Gh2dWXrCzG3LpbcoKoHYELccJp7s-rs52dwgsFl3TqJkt9EJ9szUyj9e4Hkb_fL4g=w240-h480" width="64" height="64" alt="2+2 | Math for Kids uygulama simgesi">
+    <span>2+2 | Math for Kids · Android · 4–7 yaş için · ücretsiz</span>
+  </div>
+
+  <h1>Çocuklar için matematik: küçük bir trenle sayma</h1>
+
+  <h2>Her şey nasıl başladı</h2>
+  <p>Basit bir gözlemle başladı. Çocuklar sıfırdan öğrenir ve başta hepsi parmakla sayar. Onlara görebilecekleri bir şey vermek istedim. Örneğin bir sayı doğrusu: sayılar bir sırada durur ve her işlem onun üzerinde atılan adımlardır.</p>
+  <p>Nasıl çalışır? 0'dan 10'a bir cetvel var. Kaydırıcıyı 2'ye koyarız. 2 daha eklemek için çocukla birlikte iki adım atarız ve kaydırıcı 4'e iner. Açıklanacak neredeyse hiçbir şey yok, çünkü her şey gözle görülüyor.</p>
+  <p>Bence bu bir çocuk için bir sıçrama: parmaklardan doğrudan hesaplama mantığına. Buna inanıyorum, ama bu benim görüşüm, bilimsel bir araştırma değil.</p>
+  <p>Böyle bir çalıştırıcıyı akla getirmek kolay, ama yapmak çok daha zor. Bu benim ilk uygulamamdı ve vibe coding'deki ilk adımlarım onunla başladı: onu yapay zekâ ile birlikte yaptım.</p>
+  <p>Zamanla çok şey ekledik. 10'a kadar sayıların yanı sıra artık onlar ve yüzler (1000'e kadar), negatif sayılar ve ondalık kesirler var. Cetveli bir demiryoluna çevirdik. Kapakta küçük bir trenin olmasının nedeni bu, artık sayılar boyunca ilerleyen bir kaydırıcı değil, tren. Çocukların ilgisini canlı tutmak için farklı arka planlar ve müzik ekledik. Doğru çözülen örnekler için de bir ödül var: yeni bir araç açılır ve konfeti yağar.</p>
+  <p>Uygulamanın bir ders kitabı değil, bir günlük gibi hissettirmesini de istedim. Bu yüzden çocuğun bir takma ad ve gelecekteki mesleğini seçtiği bir karşılama ekranı var. Bundan sonra kendi adıyla, kendine ait kişisel uygulaması olur.</p>
+  <p>Uygulamamızın yardımıyla tek bir çocuk bile saymayı öğrenirse çok mutlu olacağız!</p>
+
+  <div class="short">
+    <p><b>Kısaca.</b> 4–7 yaş çocuklara toplama ve çıkarma öğreten bir Android uygulaması. Çocuk adımları sayarken küçük bir tren sayı doğrusu boyunca ilerler. 10'a kadar sayılarla başlayıp onlara ve yüzlere (1000'e kadar) geçebilir, sonra negatif sayıları ve ondalık kesirleri deneyebilirsiniz. Çözülen örnekler yeni araçların kilidini açar. Kayıt ve uygulama içi satın alma yoktur. Uygulama ücretsizdir ama çocuklara yönelik olarak talep edilen reklamlar içerir. Arayüz 42 dildedir ve telefonunuzun dilini izler.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play'den indirin</a></p>
+  </div>
+
+  <h2>İçinde neler var</h2>
+  <ul class="feat">
+    <li><b>Kişisel bir uygulama.</b> Karşılama ekranında çocuk bir takma ad ve gelecekteki mesleğini seçer. Bunların hepsi yalnızca cihazda saklanır.</li>
+    <li><b>Görülebilen öğrenme.</b> Treni hareket ettirin ve adımları sayın. Nasıl olduğunu gördüğünüzde aritmetiğin mantığı çok daha hızlı oturur.</li>
+    <li><b>Basitten zora.</b> 10'a kadar sayılar, sonra onlar (100'e kadar) ve yüzler (1000'e kadar). Daha ileri gidenler için: negatif sayılar ve ondalık kesirler, basit bir oyunla tanıtılır.</li>
+    <li><b>Ödüller.</b> Birkaç örnek çözün ve yeni bir araç açılır: araba, traktör, gemi, uçak, uçan daire, sarı denizaltı, sıcak hava balonu. Her birinin kendi sesi vardır ve arkasında duman ya da baloncuk bırakır. Doğru cevap konfeti patlatır.</li>
+    <li><b>Araçlar tek tek açılır.</b> Önce 5 çözülmüş örnekten sonra, sonra 3, sonra 1. Ondan sonra her araç 18 saat açık kalır.</li>
+    <li><b>Arka planlar.</b> Bir çocuğun kurşun kalem resmi gibi çizilmiş: gökyüzü, ev, defter, uzay, deniz, kış ve çiçekli bir çayır. Değiştirmek için kaydırın.</li>
+    <li><b>Ses.</b> Tek dokunuşla kapanan hafif fon müziği ve seçebileceğiniz beş adım sesi.</li>
+    <li><b>Rahat.</b> Günün her saatinde çalışmak için koyu tema. Telefonlarda ve tabletlerde, dikey ve yatay çalışır.</li>
+  </ul>
+
+  <h2>Neleri yok</h2>
+  <ul class="feat">
+    <li>Uygulama toplama ve çıkarma öğretir. Çarpma ve bölme yoktur.</li>
+    <li>Google AdMob reklamları vardır. Çocuklara yönelik olarak talep edilirler, “G” derecelendirmesiyle ve kişiselleştirilmiş reklamlar kullanılmaz. Ücretli özellik ya da uygulama içi satın alma yoktur.</li>
+    <li>Uygulama anonim teknik istatistikler toplar (Firebase Analytics): uygulama açılışları, uygulama sürümü, cihaz modeli. İsim, e-posta ya da başka kişisel veri toplamaz. Ayrıntılar <a href="/easycounting/privacy-policy.html">gizlilik politikasında</a>.</li>
+    <li>Android 8.0 veya daha yenisi gerekir.</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mmr.easycounting">Google Play'den indirin</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/tr/">Tüm uygulamalar</a></li>
+    <li><a href="/tr/apps/slowread/">Slowread</a></li>
+    <li><a href="/tr/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/tr/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/tr/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/easycounting/privacy-policy.html">Gizlilik</a></li>
+    <li><a href="/easycounting/terms-of-use.html">Koşullar</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/apps/easycounting/","English","View this page in English"],"zh":["/zh/apps/easycounting/","简体中文","查看简体中文版本"],"es":["/es/apps/easycounting/","Español","Ver esta página en español"],"id":["/id/apps/easycounting/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/easycounting/","Português","Ver esta página em português"],"ru":["/ru/apps/easycounting/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/easycounting/","日本語","このページを日本語で見る"],"de":["/de/apps/easycounting/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/easycounting/","Français","Voir cette page en français"],"tr":["/tr/apps/easycounting/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/easycounting/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/easycounting/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/easycounting/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/easycounting/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/easycounting/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

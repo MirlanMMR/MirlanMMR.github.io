@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แอปอ่านอีบุ๊กสำหรับ Android: ใช้ท่าทางสัมผัสแทนการตั้งค่า — Slowread</title>
+<meta name="description" content="Slowread: แอปอ่านสำหรับ Android ที่คุณปรับได้บนหน้าหนังสือเลย ไม่ต้องใช้เมนู รองรับ EPUB, FB2, MOBI, PDF, DjVu มีวรรณกรรมคลาสสิกฟรีบนชั้น และแกลเลอรีผลงานชิ้นเอกของงานจิตรกรรมพร้อมเรื่องราว">
+<link rel="canonical" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/slowread/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/slowread/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/slowread/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/slowread/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/slowread/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/slowread/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/slowread/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "แอปอ่านอีบุ๊กสำหรับ Android ที่ฟอนต์ ขนาด และสีเปลี่ยนได้ด้วยท่าทางสัมผัสบนหน้าหนังสือเลย เปิด EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT ได้ มีหนังสือฟรีที่เป็นสาธารณสมบัติ และแกลเลอรีผลงานชิ้นเอกของงานจิตรกรรมพร้อมเรื่องราว",
+  "url": "https://mirlanmmr.github.io/th/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/th/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ],
+  "inLanguage": "th"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/th/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="th">ไทย</summary><ul><li><a href="/apps/slowread/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/slowread/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/slowread/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/slowread/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/slowread/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/slowread/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/slowread/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/slowread/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/slowread/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/slowread/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/slowread/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/slowread/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/slowread/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/slowread/" hreflang="th" lang="th" data-lang="th" aria-current="true">ไทย</a></li><li><a href="/pl/apps/slowread/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="ไอคอนแอป Slowread">
+    <span>Slowread · แอปอ่านอีบุ๊ก · Android · ฟรี</span>
+  </div>
+
+  <h1>แอปอ่านที่คุณปรับได้บนหน้าหนังสือเลย</h1>
+
+  <h2>ทุกอย่างเริ่มต้นอย่างไร</h2>
+  <p>ผมชอบอ่านหนังสือ แม้จะไม่ได้มีเวลาเสมอไป และผมไม่เคยต่อต้านอุปกรณ์อ่านหนังสือ ในอดีตผมทำอีบุ๊กเองบนคอมพิวเตอร์ โหลดเข้าแอปอ่าน แล้วอ่านบน Nokia รุ่นปุ่มกด เมื่อสมาร์ตโฟนรุ่นใหม่ออกมา ผมก็ดาวน์โหลดแอปอ่านหนังสือสองสามตัวพร้อมกันและสมัครสมาชิก</p>
+  <p>สิ่งที่ผมไม่ชอบในแอปเหล่านั้นคืออะไร? มีการตั้งค่ามากเกินไป และผมไม่เข้าใจหลายอย่าง ผมเข้าไปในการตั้งค่า เปลี่ยนบางอย่าง ออกมาดูว่าผลเป็นอย่างไร แล้วก็เข้าไปอีก ตอนนี้ผมทำแอปอะไรก็ได้ตามต้องการ ในที่สุดผมก็ได้ลงมือทำเรื่องนี้เสียที</p>
+  <p>สิ่งแรกที่ผมให้ความสำคัญคือทำให้แอปอ่านปรับได้ง่ายที่สุดเท่าที่จะทำได้ การจะเปลี่ยนอะไรไม่ควรต้องเข้าไปในการตั้งค่า คุณเปลี่ยนบนหน้าจอของหนังสือที่เปิดอยู่ได้เลย และเห็นผลทันที ต้องการฟอนต์อื่นหรือ? ปัดหน้าจอไปด้านข้าง ฟอนต์จะเปลี่ยนต่อหน้าต่อตา ต้องการตัวอักษรใหญ่ขึ้นหรือ? ถ่างสองนิ้วออกเพื่อขยาย และหนีบเข้าหากันเพื่อย่อ การแตะที่โซนด้านบนจะสลับธีมที่คุณชอบ คือสีพื้นหลังและสีตัวอักษร</p>
+  <p>แต่นั่นเป็นเพียงจุดเริ่มต้น ผมจดจ่ออยู่กับมัน และทำให้แน่ใจว่าตอนที่คุณเปิดแอปอ่านครั้งแรก จะมีหนังสืออยู่บนชั้นของคุณแล้ว และเป็นหนังสือฟรีด้วย ไม่ใช่แอปอ่านที่ว่างเปล่าหรือแอปอ่านที่มีร้านหนังสือ จะมีข้อความต้อนรับพร้อมคำคมจากนักเขียนผู้ยิ่งใหญ่ และผลงานชิ้นเอกของวรรณกรรมโลก ทั้งร้อยแก้วและกวีนิพนธ์ที่เป็นสาธารณสมบัติ</p>
+  <p>ผมบอกแล้วว่าผมอ่านจากโทรศัพท์ปุ่มกดและจากคอมพิวเตอร์ ผมไม่ได้หาหนังสือที่อยากอ่านเจอบนอินเทอร์เน็ตเสมอไป หนังสือหายากบางเล่มมีอยู่แค่เป็น PDF และมักเป็นไฟล์สแกน ผมอยากอ่าน PDF เหมือนอีบุ๊กธรรมดามาตลอด ไม่ใช่ต้องมาต่อสู้กับกระดาษ A4 บนหน้าจอเล็ก ๆ ผมทำสำเร็จ เหมือนกับอีกหลายอย่าง ผมจะไม่เขียนถึงทุกอย่าง</p>
+  <p>ผมขอเพิ่มอีกเรื่องเดียว ตอนเด็ก ๆ เราสะสมแสตมป์และโปสการ์ดโซเวียต และชอบดูมันมาก ส่วนผมเองจะศึกษาแสตมป์ โปสการ์ด หรือภาพถ่ายทุกใบอย่างละเอียด แม้แต่ลวดลายของพรมบนผนัง นั่นเป็นสิ่งที่ฝังอยู่ในตัวเรา และนั่นคือเหตุผลที่เราไม่เคยวางสมาร์ตโฟนลงเลย ผมไม่ได้โทษคนรุ่นใหม่ในเรื่องนี้ เพราะมันคือความมหัศจรรย์ของเทคโนโลยี อย่างไรก็ตาม ผมเกิดความคิดที่จะทำอะไรสักอย่างที่คล้ายอัลบั้มแสตมป์ ซึ่งมักมีภาพจำลองขนาดเล็กของภาพวาดชื่อดัง นั่นคือเหตุผลที่ Slowread มีห้องสมุดและแกลเลอรี พร้อมผลงานชิ้นเอกที่เป็นสาธารณสมบัติซึ่งรวบรวมตามสำนักศิลปะ</p>
+  <p><b>ทำไมต้อง Slowread และทำไมต้อง “อ่านอย่างไม่เร่งรีบ”?</b> เพราะวรรณกรรมมีไว้ให้เพลิดเพลิน ไม่ใช่กลืนลงไประหว่างวิ่ง เราไม่ใช่คนประเภทที่คอยเร่งผู้ใช้ แอปไม่มีตัวนับความเร็วในการอ่านและไม่มีแรงกดดัน อ่านตามจังหวะของคุณเอง</p>
+
+  <div class="short">
+    <p><b>สรุปสั้น ๆ</b> Slowread คือแอปอ่านอีบุ๊กสำหรับ Android ฟอนต์ ขนาด และสีเปลี่ยนได้ด้วยท่าทางสัมผัสบนหน้าหนังสือเลย โดยไม่ต้องเข้าไปในการตั้งค่า เปิด EPUB, FB2, MOBI, DOCX, PDF, DjVu และ TXT ได้ บนชั้นมีหนังสือฟรีที่เป็นสาธารณสมบัติอยู่แล้ว และมีการค้นหาใน Project Gutenberg คำคมประจำวัน และแกลเลอรีผลงานชิ้นเอกของงานจิตรกรรมพร้อมเรื่องราวเกี่ยวกับภาพวาด แอปฟรี มีโฆษณาที่ด้านล่าง ไม่ต้องสมัครสมาชิก</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">ดาวน์โหลดจาก Google Play</a></p>
+  </div>
+
+  <h2>ข้างในมีอะไรบ้าง</h2>
+  <p><b>อ่านสบาย</b></p>
+  <ul class="feat">
+    <li>ปัดไปด้านข้างเพื่อเปลี่ยนฟอนต์ หนีบหรือถ่างนิ้วเพื่อเปลี่ยนขนาดข้อความ การแตะที่โซนด้านบนจะสลับธีมที่คุณชอบ คือสีพื้นหลังและสีข้อความ แตะตรงกลางแล้วลากเพื่อได้สีของคุณเอง ไม่ใช่แค่ค่าที่ตั้งไว้ล่วงหน้า</li>
+    <li>แม่กุญแจด้านบนจะล็อกรูปลักษณ์ เพื่อไม่ให้การแตะโดยไม่ตั้งใจเปลี่ยนอะไรได้</li>
+    <li>แตะที่ขอบของย่อหน้าเพื่อเพิ่มที่คั่นหนังสือ ที่คั่นหนังสือและบันทึกย่อของย่อหน้าจะรวมอยู่ในแผงเดียว</li>
+    <li>คุณใช้ฟอนต์ของคุณเองได้: เลือกจาก Google Fonts ดาวน์โหลด เปิดไฟล์ใน Slowread แล้วหนังสือของคุณจะถูกจัดพิมพ์ด้วยฟอนต์นั้น</li>
+    <li>เจอคำพิมพ์ผิดในหนังสือ? กดค้างข้างย่อหน้าแล้วแก้ข้อความ การแก้ไขของคุณจะอยู่เหนือหนังสือ และไฟล์ต้นฉบับจะไม่ถูกแตะต้อง คุณบันทึกสำเนาที่แก้แล้วเป็น EPUB หรือ FB2 ได้</li>
+  </ul>
+  <p><b>หนังสือ</b></p>
+  <ul class="feat">
+    <li>บนชั้นมีผลงานชิ้นเอกของวรรณกรรมโลกที่ได้รับการยอมรับซึ่งเป็นสาธารณสมบัติอยู่แล้ว ทั้งร้อยแก้วและกวีนิพนธ์ ชั้นภาษาอังกฤษมี The Odyssey, Treasure Island, The Time Machine, The War of the Worlds, Sonnets ของเชกสเปียร์ และ Leaves of Grass แตะหนังสือแล้วมันจะอยู่ในห้องสมุดของคุณ</li>
+    <li>ใต้ชั้นหนังสือ คุณค้นหาทั้ง Project Gutenberg ภาษาอังกฤษได้ มากกว่า 33,000 ผลงาน การ์ดจะบอกเล่าเกี่ยวกับหนังสือก่อนที่คุณจะดาวน์โหลด</li>
+    <li>คุณเพิ่มหนังสือของคุณเอง: แอปเปิด EPUB, FB2, MOBI, DOCX, PDF, DjVu (ไฟล์สแกนที่มีชั้นข้อความ), TXT, MD และไฟล์ ZIP ของไฟล์เหล่านั้น หนังสือจากโฟลเดอร์ดาวน์โหลด แอปส่งข้อความ หรือเบราว์เซอร์จะเข้าห้องสมุดของคุณทันที</li>
+    <li>ห้องสมุดแสดงชื่อเรื่อง ผู้เขียน และปกจริงที่ดึงมาจากไฟล์ ไม่ใช่รายการชื่อไฟล์ สารบัญมาจากโครงสร้างของหนังสือเอง</li>
+    <li>ควรดาวน์โหลดรูปแบบไหน: EPUB (แนะนำ) หรือ FB2 ทั้งสองมีข้อความที่ปรับตามฟอนต์ ขนาด และสีของคุณได้ และสารบัญ ปก รูปภาพ และเชิงอรรถทำงานตามที่ตั้งใจไว้</li>
+    <li>คำคมประจำวัน: ความคิดใหม่จากนักเขียนผู้ยิ่งใหญ่ทุกวัน ตรงตามคำต่อคำจากฉบับพิมพ์ พร้อมระบุชื่อผู้เขียนและผู้แปล</li>
+  </ul>
+  <p><b>แกลเลอรีผลงานชิ้นเอก</b> ตั้งแต่จิตรกรรมอียิปต์โบราณและภาพทิวทัศน์สมัยซ่ง ผ่านยุคเรเนซองส์และยุคทองของเนเธอร์แลนด์ ไปจนถึงแรมบรานต์ โฮกุไซ แวนโกะห์ และโรริค ผลงานถูกรวบรวมตามยุคสมัยและสำนักศิลปะ แต่ละชิ้นมีเรื่องราว: ควรมองตรงไหน โลกที่มันกำเนิดมา และเหตุใดจึงสำคัญ คุณเปิดภาพวาดเต็มจอและซูมเข้าไปดูฝีแปรง ท่าทาง หรือสัญลักษณ์ที่แทบมองไม่เห็นได้ ภาพในแกลเลอรีโหลดจากอินเทอร์เน็ต</p>
+
+  <h2>สิ่งที่ไม่มี</h2>
+  <ul class="feat">
+    <li>นี่คือแอปอ่าน ไม่ใช่ร้านค้า คุณเพิ่มหนังสือออกใหม่และหนังสือขายดีเอง และแอปไม่ขายหนังสือ ชั้นฟรีประกอบด้วยหนังสือที่เป็นสาธารณสมบัติ</li>
+    <li>ไม่ใช่แอปติดตามหนังสือที่อ่านแล้ว และไม่ใช่ตัวนับความเร็วในการอ่าน มีแอปอื่นที่ใช้ชื่อเดียวกัน ดังนั้นให้ค้นหา “Slowread” ใน Google Play และตรวจดูไอคอนกับคำอธิบาย</li>
+    <li>PDF และไฟล์สแกนอ่านลื่นไหลไม่เท่า EPUB และ FB2 กับหนังสือสแกน หลายอย่างขึ้นอยู่กับคุณภาพของการรู้จำข้อความ และอาจมีข้อผิดพลาดได้</li>
+    <li>มีโฆษณาจาก Google AdMob ไม่มีฟีเจอร์แบบเสียเงินหรือการซื้อในแอป</li>
+    <li>ต้องใช้ Android 7.0 ขึ้นไป</li>
+  </ul>
+
+  <h2>แล้วข้อมูลของคุณล่ะ</h2>
+  <p>หนังสือของคุณอยู่ในโทรศัพท์ของคุณและจะไม่ถูกส่งไปที่ไหนเลย ตำแหน่งที่อ่านและที่คั่นหนังสือของคุณสามารถบันทึกไว้ในโฟลเดอร์แอปที่ซ่อนอยู่ใน Google Drive ของคุณเองได้ แต่ต่อเมื่อคุณเปิดใช้เองเท่านั้น รายละเอียดอยู่ใน<a href="/slowread-legal/">นโยบายความเป็นส่วนตัว</a> หลังจากเพิ่มหนังสือแล้ว การอ่านใช้งานได้แบบออฟไลน์</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">ดาวน์โหลดจาก Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/th/">แอปทั้งหมด</a></li>
+    <li><a href="/th/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/th/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/th/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/th/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/slowread-legal/">ความเป็นส่วนตัว</a></li>
+    <li><a href="/slowread/terms-of-use.html">ข้อกำหนด</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="th" data-map='{"en":["/apps/slowread/","English","View this page in English"],"zh":["/zh/apps/slowread/","简体中文","查看简体中文版本"],"es":["/es/apps/slowread/","Español","Ver esta página en español"],"id":["/id/apps/slowread/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/slowread/","Português","Ver esta página em português"],"ru":["/ru/apps/slowread/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/slowread/","日本語","このページを日本語で見る"],"de":["/de/apps/slowread/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/slowread/","Français","Voir cette page en français"],"tr":["/tr/apps/slowread/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/slowread/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/slowread/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/slowread/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/slowread/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/slowread/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

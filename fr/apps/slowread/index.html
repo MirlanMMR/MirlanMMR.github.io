@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liseuse pour Android : des gestes au lieu de réglages — Slowread</title>
+<meta name="description" content="Slowread : une liseuse Android que l'on règle directement sur la page du livre, sans menus. EPUB, FB2, MOBI, PDF, DjVu. Des classiques gratuits sur les étagères et une galerie de chefs-d'œuvre de la peinture avec leurs histoires.">
+<link rel="canonical" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/slowread/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/slowread/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/slowread/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/slowread/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/slowread/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/slowread/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/slowread/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Une liseuse Android où la police, la taille et la couleur se changent avec des gestes directement sur la page. Ouvre EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Des livres gratuits du domaine public et une galerie de chefs-d'œuvre de la peinture avec leurs histoires.",
+  "url": "https://mirlanmmr.github.io/fr/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/fr/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ],
+  "inLanguage": "fr"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/fr/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="fr">Français</summary><ul><li><a href="/apps/slowread/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/slowread/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/slowread/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/slowread/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/slowread/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/slowread/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/slowread/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/slowread/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/slowread/" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a></li><li><a href="/tr/apps/slowread/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/slowread/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/slowread/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/slowread/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/slowread/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/slowread/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Icône de l'appli Slowread">
+    <span>Slowread · liseuse · Android · gratuit</span>
+  </div>
+
+  <h1>Une liseuse que l'on règle directement sur la page du livre</h1>
+
+  <h2>Comment tout a commencé</h2>
+  <p>J'aime lire, même si je n'en trouve pas toujours le temps. Et je n'ai jamais été contre les appareils de lecture. Autrefois, je préparais des livres numériques sur mon ordinateur, je les chargeais dans une liseuse et je les lisais sur un Nokia à touches. Quand les smartphones modernes sont arrivés, j'ai téléchargé plusieurs applis de lecture d'un coup et pris des abonnements.</p>
+  <p>Ce qui ne me plaisait pas ? Il y avait beaucoup de réglages, et je n'en comprenais pas beaucoup. Je plongeais dans les réglages, je changeais quelque chose, je ressortais pour voir le résultat, et je retournais dedans. Maintenant que je peux faire n'importe quelle appli, j'ai enfin pu m'y mettre.</p>
+  <p>La première chose sur laquelle je me suis concentré, c'était de rendre la liseuse la plus simple possible à régler. Pour changer quelque chose, on ne devrait pas avoir à aller dans les réglages. On le change directement sur l'écran du livre ouvert et on voit le résultat tout de suite. Besoin d'une autre police ? Balayez l'écran sur le côté et la police change sous vos yeux. Besoin d'un texte plus grand ? Écartez deux doigts pour l'agrandir, et pincez dans l'autre sens pour le réduire. Un toucher sur la zone du haut change vos thèmes préférés, c'est-à-dire la couleur de fond et la couleur du texte.</p>
+  <p>Mais ce n'était que le début. Je me suis pris au jeu, et j'ai fait en sorte que, dès la première ouverture de la liseuse, il y ait déjà des livres sur votre étagère, et gratuits, plutôt qu'une liseuse vide ou une liseuse avec une librairie. Un mot de bienvenue vous accueille, avec des citations de grands écrivains et des chefs-d'œuvre de la littérature mondiale, prose et poésie du domaine public.</p>
+  <p>J'ai bien dit que je lisais sur un téléphone à touches et sur un ordinateur. Je ne trouvais pas toujours le livre que je voulais sur internet. Certains livres rares n'existent qu'en PDF, et ce sont souvent des scans. J'ai toujours voulu lire un PDF comme un livre numérique ordinaire, sans me battre avec une feuille A4 sur un petit écran. J'y suis arrivé, comme à beaucoup d'autres choses. Je ne vais pas tout raconter.</p>
+  <p>J'ajouterai juste une chose. Enfants, nous collectionnions les timbres-poste et les cartes postales soviétiques, et nous adorions les regarder. Moi, j'étudiais chaque timbre, chaque carte postale ou photographie dans le détail. Même les motifs du tapis au mur. C'est quelque chose qui est inscrit en nous, et c'est pourquoi nous ne lâchons jamais nos smartphones. Je n'en veux pas à la jeune génération : c'est une merveille de technologie. Bref, j'ai eu l'idée de refaire quelque chose comme un album de timbres, où il y avait souvent des miniatures de tableaux célèbres. C'est pourquoi Slowread a une bibliothèque et une galerie, avec des chefs-d'œuvre du domaine public rassemblés par écoles artistiques.</p>
+  <p><b>Pourquoi Slowread, et pourquoi « Lire sans se presser » ?</b> Parce que la fiction est faite pour être savourée, pas avalée en courant. Nous ne sommes pas de ceux qui pressent sans cesse l'utilisateur : l'appli n'a ni compteur de vitesse de lecture ni pression. Lisez à votre rythme.</p>
+
+  <div class="short">
+    <p><b>En bref.</b> Slowread est une liseuse pour Android. La police, la taille et la couleur se changent avec des gestes directement sur la page du livre, sans passer par les réglages. Elle ouvre EPUB, FB2, MOBI, DOCX, PDF, DjVu et TXT. Les étagères contiennent déjà des livres gratuits du domaine public, et il y a une recherche dans le Projet Gutenberg, une citation du jour et une galerie de chefs-d'œuvre de la peinture avec des histoires sur les tableaux. L'appli est gratuite, avec de la publicité en bas. Aucune inscription n'est nécessaire.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Télécharger sur Google Play</a></p>
+  </div>
+
+  <h2>Ce qu'il y a dedans</h2>
+  <p><b>Confortable à lire.</b></p>
+  <ul class="feat">
+    <li>Balayez sur le côté pour changer de police. Pincez ou écartez les doigts pour changer la taille du texte. Un toucher sur la zone du haut change vos thèmes préférés, c'est-à-dire la couleur de fond et celle du texte. Touchez le milieu et faites glisser pour obtenir votre propre couleur, et pas seulement des préréglages.</li>
+    <li>Le cadenas en haut verrouille l'apparence, pour qu'un toucher accidentel ne puisse rien changer.</li>
+    <li>Touchez au bord d'un paragraphe pour ajouter un signet. Les signets et les notes sur un paragraphe sont réunis dans un seul panneau.</li>
+    <li>Vous pouvez utiliser votre propre police : choisissez-en une sur Google Fonts, téléchargez-la, ouvrez le fichier dans Slowread, et votre livre est composé avec elle.</li>
+    <li>Une coquille dans le livre ? Faites un appui long à côté d'un paragraphe et corrigez le texte. Votre modification se place par-dessus le livre et le fichier d'origine reste intact. Vous pouvez enregistrer une copie corrigée en EPUB ou en FB2.</li>
+  </ul>
+  <p><b>Livres.</b></p>
+  <ul class="feat">
+    <li>Les étagères contiennent déjà des chefs-d'œuvre reconnus de la littérature mondiale du domaine public, prose et poésie. L'étagère anglaise comprend L'Odyssée, L'Île au trésor, La Machine à explorer le temps, La Guerre des mondes, les Sonnets de Shakespeare et Feuilles d'herbe. Touchez un livre et il est dans votre bibliothèque.</li>
+    <li>Sous les étagères, vous pouvez chercher dans tout le Projet Gutenberg en anglais, plus de 33 000 œuvres. Une fiche vous présente le livre avant que vous ne le téléchargiez.</li>
+    <li>Vous ajoutez vous-même vos propres livres : l'appli ouvre EPUB, FB2, MOBI, DOCX, PDF, DjVu (scans avec couche de texte), TXT, MD et leurs archives ZIP. Un livre venant de vos téléchargements, d'une messagerie ou d'un navigateur arrive directement dans votre bibliothèque.</li>
+    <li>La bibliothèque affiche les vrais titres, auteurs et couvertures tirés du fichier, et non une liste de noms de fichiers. La table des matières provient de la structure du livre lui-même.</li>
+    <li>Quel format télécharger : EPUB (recommandé) ou FB2. Ils contiennent du texte vivant qui s'adapte à votre police, à votre taille et à votre couleur, et la table des matières, la couverture, les images et les notes de bas de page fonctionnent comme prévu.</li>
+    <li>Une citation du jour : chaque jour une nouvelle pensée d'un grand écrivain, mot pour mot d'après l'édition, avec le nom de l'auteur et du traducteur.</li>
+  </ul>
+  <p><b>Une galerie de chefs-d'œuvre.</b> De la peinture de l'Égypte antique et des paysages Song, en passant par la Renaissance et l'âge d'or néerlandais, jusqu'à Rembrandt, Hokusai, Van Gogh et Roerich. Les œuvres sont rassemblées par époque et par école artistique. Chacune a son histoire : où regarder, le monde dont elle vient et pourquoi elle compte. Vous pouvez ouvrir un tableau en plein écran et zoomer sur un coup de pinceau, un geste ou un signe à peine visible. Les images de la galerie se chargent depuis internet.</p>
+
+  <h2>Ce qu'il n'y a pas</h2>
+  <ul class="feat">
+    <li>C'est une liseuse, pas une boutique. Vous ajoutez vous-même les nouveautés et les best-sellers, et l'appli ne vend pas de livres. Les étagères gratuites se composent de livres du domaine public.</li>
+    <li>Ce n'est pas un suivi des livres lus ni un compteur de vitesse de lecture. Une autre appli porte le même nom : cherchez donc « Slowread » sur Google Play et vérifiez l'icône et la description.</li>
+    <li>Les PDF et les scans ne se lisent pas aussi bien que les EPUB et les FB2. Avec les livres scannés, beaucoup dépend de la qualité de la reconnaissance de texte, qui peut contenir des erreurs.</li>
+    <li>Il y a de la publicité de Google AdMob. Il n'y a ni fonctions payantes ni achats intégrés.</li>
+    <li>Il faut Android 7.0 ou plus récent.</li>
+  </ul>
+
+  <h2>Et vos données ?</h2>
+  <p>Vos livres restent sur votre téléphone et ne sont jamais envoyés nulle part. Votre position de lecture et vos signets peuvent être enregistrés dans un dossier d'appli masqué de votre propre Google Drive, mais seulement si vous l'activez vous-même. Les détails sont dans la <a href="/slowread-legal/">politique de confidentialité</a>. Une fois vos livres ajoutés, la lecture fonctionne hors ligne.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Télécharger sur Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/fr/">Toutes les applis</a></li>
+    <li><a href="/fr/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/fr/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/fr/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/fr/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/slowread-legal/">Confidentialité</a></li>
+    <li><a href="/slowread/terms-of-use.html">Conditions</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="fr" data-map='{"en":["/apps/slowread/","English","View this page in English"],"zh":["/zh/apps/slowread/","简体中文","查看简体中文版本"],"es":["/es/apps/slowread/","Español","Ver esta página en español"],"id":["/id/apps/slowread/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/slowread/","Português","Ver esta página em português"],"ru":["/ru/apps/slowread/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/slowread/","日本語","このページを日本語で見る"],"de":["/de/apps/slowread/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/slowread/","Français","Voir cette page en français"],"tr":["/tr/apps/slowread/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/slowread/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/slowread/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/slowread/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/slowread/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/slowread/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

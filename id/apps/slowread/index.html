@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pembaca e-book untuk Android: gestur, bukan pengaturan — Slowread</title>
+<meta name="description" content="Slowread: pembaca Android yang Anda atur langsung di halaman buku, tanpa menu. EPUB, FB2, MOBI, PDF, DjVu. Karya klasik gratis di rak dan galeri mahakarya lukisan beserta kisahnya.">
+<link rel="canonical" href="https://mirlanmmr.github.io/id/apps/slowread/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/slowread/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/slowread/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/slowread/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/slowread/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/slowread/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/slowread/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/slowread/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Pembaca e-book Android yang font, ukuran, dan warnanya bisa diubah dengan gestur langsung di halaman. Membuka EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Buku domain publik gratis dan galeri mahakarya lukisan beserta kisahnya.",
+  "url": "https://mirlanmmr.github.io/id/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/id/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ],
+  "inLanguage": "id"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/id/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="id">Bahasa Indonesia</summary><ul><li><a href="/apps/slowread/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/slowread/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/slowread/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/slowread/" hreflang="id" lang="id" data-lang="id" aria-current="true">Bahasa Indonesia</a></li><li><a href="/pt/apps/slowread/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/slowread/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/slowread/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/slowread/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/slowread/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/slowread/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/slowread/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/slowread/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/slowread/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/slowread/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/slowread/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480" width="64" height="64" alt="Ikon aplikasi Slowread">
+    <span>Slowread · pembaca e-book · Android · gratis</span>
+  </div>
+
+  <h1>Pembaca yang Anda atur langsung di halaman buku</h1>
+
+  <h2>Bagaimana semuanya bermula</h2>
+  <p>Saya suka membaca, meski tidak selalu punya waktu. Dan saya tidak pernah menentang perangkat baca. Dulu saya menyusun e-book di komputer, memasukkannya ke aplikasi pembaca, lalu membacanya di Nokia berkeypad tombol. Ketika ponsel pintar modern muncul, saya mengunduh dan berlangganan beberapa aplikasi baca sekaligus.</p>
+  <p>Apa yang tidak saya suka dari aplikasi-aplikasi itu? Pengaturannya terlalu banyak, dan banyak yang tidak saya mengerti. Saya masuk ke pengaturan, mengubah sesuatu, keluar untuk melihat hasilnya, lalu masuk lagi. Sekarang saya bisa membuat aplikasi apa pun yang saya mau, dan akhirnya saya sempat mengerjakan ini.</p>
+  <p>Hal pertama yang saya fokuskan adalah membuat pembaca ini semudah mungkin diatur. Untuk mengubah sesuatu, Anda tidak perlu masuk ke pengaturan. Anda mengubahnya langsung di layar buku yang terbuka dan hasilnya langsung terlihat. Butuh font lain? Geser ke samping di layar dan font berubah di depan mata Anda. Butuh teks lebih besar? Rentangkan dua jari untuk memperbesar, dan cubit ke arah sebaliknya untuk memperkecil. Ketuk area atas untuk berganti tema favorit, yaitu warna latar dan warna teks.</p>
+  <p>Tetapi itu baru permulaan. Saya terus menggarapnya, dan memastikan bahwa saat pertama kali Anda membuka pembaca ini, sudah ada buku di rak Anda, dan gratis, bukan pembaca kosong atau pembaca yang berisi toko buku. Ucapan selamat datang menyambut Anda, dengan kutipan dari penulis besar dan mahakarya sastra dunia, prosa dan puisi domain publik.</p>
+  <p>Saya sudah bilang saya membaca dari ponsel berkeypad tombol dan dari komputer. Saya tidak selalu menemukan buku yang saya inginkan di internet. Beberapa buku langka hanya ada dalam bentuk PDF, dan sering kali berupa hasil pindaian. Saya selalu ingin membaca PDF seperti e-book biasa, bukan bergulat dengan lembar A4 di layar kecil. Saya berhasil melakukannya, seperti banyak hal lainnya. Saya tidak akan menulis semuanya.</p>
+  <p>Saya tambahkan satu hal lagi. Waktu kecil kami mengoleksi perangko dan kartu pos Soviet, dan kami senang melihatnya. Saya sendiri mempelajari setiap perangko, kartu pos, atau foto dengan saksama. Bahkan motif karpet di dinding. Itu sesuatu yang tertanam dalam diri kita, dan itulah sebabnya kita tidak pernah melepaskan ponsel pintar. Saya tidak menyalahkan generasi muda untuk itu: itu keajaiban teknologi. Pokoknya, saya terpikir untuk mengulang sesuatu seperti album perangko, yang sering memuat miniatur lukisan terkenal. Itulah sebabnya Slowread punya perpustakaan dan galeri, dengan mahakarya domain publik yang dikumpulkan menurut aliran seni.</p>
+  <p><b>Mengapa Slowread, dan mengapa “Baca tanpa terburu-buru”?</b> Karena karya sastra itu untuk dinikmati, bukan ditelan sambil lalu. Kami bukan orang yang terus mendesak pengguna: aplikasi ini tidak punya penghitung kecepatan membaca dan tidak ada tekanan. Bacalah dengan kecepatan Anda sendiri.</p>
+
+  <div class="short">
+    <p><b>Singkatnya.</b> Slowread adalah pembaca e-book untuk Android. Font, ukuran, dan warna berubah dengan gestur langsung di halaman buku, tanpa perlu masuk ke pengaturan. Aplikasi ini membuka EPUB, FB2, MOBI, DOCX, PDF, DjVu, dan TXT. Rak sudah berisi buku domain publik gratis, ada pencarian di Project Gutenberg, kutipan hari ini, dan galeri mahakarya lukisan beserta kisah tentang lukisannya. Aplikasi ini gratis, dengan iklan di bagian bawah. Tidak perlu mendaftar.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Dapatkan di Google Play</a></p>
+  </div>
+
+  <h2>Isinya apa saja</h2>
+  <p><b>Nyaman dibaca.</b></p>
+  <ul class="feat">
+    <li>Geser ke samping untuk mengganti font. Cubit atau rentangkan jari untuk mengubah ukuran teks. Ketuk area atas untuk berganti tema favorit, yaitu warna latar dan warna teks. Sentuh bagian tengah lalu seret untuk mendapatkan warna Anda sendiri, bukan hanya preset siap pakai.</li>
+    <li>Gembok di bagian atas mengunci tampilan, sehingga sentuhan tak sengaja tidak dapat mengubah apa pun.</li>
+    <li>Ketuk di tepi paragraf untuk menambahkan penanda. Penanda dan catatan pada paragraf dikumpulkan dalam satu panel.</li>
+    <li>Anda bisa memakai font Anda sendiri: pilih satu di Google Fonts, unduh, buka file-nya di Slowread, dan buku Anda akan ditata dengan font itu.</li>
+    <li>Ada salah ketik di buku? Tekan lama di samping paragraf lalu perbaiki teksnya. Hasil edit Anda berada di atas buku dan file aslinya tidak diubah. Anda bisa menyimpan salinan yang sudah diperbaiki sebagai EPUB atau FB2.</li>
+  </ul>
+  <p><b>Buku.</b></p>
+  <ul class="feat">
+    <li>Rak sudah berisi mahakarya sastra dunia yang diakui dari domain publik, prosa dan puisi. Rak bahasa Inggris mencakup The Odyssey, Treasure Island, The Time Machine, The War of the Worlds, Soneta Shakespeare, dan Leaves of Grass. Ketuk sebuah buku dan buku itu masuk ke perpustakaan Anda.</li>
+    <li>Di bawah rak, Anda bisa mencari seluruh Project Gutenberg dalam bahasa Inggris, lebih dari 33.000 karya. Sebuah kartu menceritakan tentang buku itu sebelum Anda mengunduhnya.</li>
+    <li>Anda menambahkan buku Anda sendiri: aplikasi ini membuka EPUB, FB2, MOBI, DOCX, PDF, DjVu (hasil pindaian dengan lapisan teks), TXT, MD, dan arsip ZIP dari semuanya. Buku dari unduhan, aplikasi pesan, atau peramban langsung masuk ke perpustakaan Anda.</li>
+    <li>Perpustakaan menampilkan judul, penulis, dan sampul sebenarnya yang diambil dari file, bukan daftar nama file. Daftar isi berasal dari struktur buku itu sendiri.</li>
+    <li>Format mana yang diunduh: EPUB (disarankan) atau FB2. Keduanya berisi teks hidup yang menyesuaikan font, ukuran, dan warna Anda, serta daftar isi, sampul, gambar, dan catatan kaki berfungsi sebagaimana mestinya.</li>
+    <li>Kutipan hari ini: pemikiran baru dari seorang penulis besar setiap hari, kata demi kata dari edisinya, dengan nama penulis dan penerjemah.</li>
+  </ul>
+  <p><b>Galeri mahakarya.</b> Dari lukisan Mesir kuno dan lanskap dinasti Song, melalui Renaisans dan Zaman Keemasan Belanda, hingga Rembrandt, Hokusai, Van Gogh, dan Roerich. Karya-karya dikumpulkan menurut zaman dan aliran seni. Setiap lukisan punya kisahnya: ke mana harus melihat, dunia tempat lukisan itu berasal, dan mengapa penting. Anda bisa membuka lukisan layar penuh dan memperbesar sapuan kuas, sebuah gestur, atau tanda yang nyaris tak terlihat. Gambar galeri dimuat dari internet.</p>
+
+  <h2>Yang tidak ada di dalamnya</h2>
+  <ul class="feat">
+    <li>Ini pembaca, bukan toko. Rilis baru dan buku terlaris Anda tambahkan sendiri, dan aplikasi ini tidak menjual buku. Rak gratis berisi buku domain publik.</li>
+    <li>Ini bukan pelacak buku yang sudah dibaca dan bukan penghitung kecepatan membaca. Ada aplikasi lain dengan nama yang sama, jadi cari “Slowread” di Google Play dan periksa ikon serta deskripsinya.</li>
+    <li>PDF dan hasil pindaian tidak senyaman EPUB dan FB2 untuk dibaca. Pada buku hasil pindaian, banyak hal bergantung pada kualitas pengenalan teks, dan bisa saja ada kesalahan.</li>
+    <li>Ada iklan dari Google AdMob. Tidak ada fitur berbayar atau pembelian dalam aplikasi.</li>
+    <li>Memerlukan Android 7.0 atau yang lebih baru.</li>
+  </ul>
+
+  <h2>Bagaimana dengan data Anda</h2>
+  <p>Buku Anda tetap berada di ponsel Anda dan tidak pernah dikirim ke mana pun. Posisi baca dan penanda Anda dapat disimpan ke folder aplikasi tersembunyi di Google Drive milik Anda sendiri, tetapi hanya jika Anda mengaktifkannya sendiri. Detailnya ada di <a href="/slowread-legal/">kebijakan privasi</a>. Setelah Anda menambahkan buku, membaca bisa dilakukan secara offline.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Dapatkan di Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/id/">Semua aplikasi</a></li>
+    <li><a href="/id/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/id/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/id/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/id/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/slowread-legal/">Privasi</a></li>
+    <li><a href="/slowread/terms-of-use.html">Ketentuan</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="id" data-map='{"en":["/apps/slowread/","English","View this page in English"],"zh":["/zh/apps/slowread/","简体中文","查看简体中文版本"],"es":["/es/apps/slowread/","Español","Ver esta página en español"],"id":["/id/apps/slowread/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/slowread/","Português","Ver esta página em português"],"ru":["/ru/apps/slowread/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/slowread/","日本語","このページを日本語で見る"],"de":["/de/apps/slowread/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/slowread/","Français","Voir cette page en français"],"tr":["/tr/apps/slowread/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/slowread/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/slowread/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/slowread/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/slowread/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/slowread/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

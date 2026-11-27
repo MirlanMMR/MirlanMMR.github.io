@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android'de bildirim çubuğunda ve widget'ta son dakika haberleri — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7: Android için bir haber toplayıcı. Acil ve hayati haberler bildirim çubuğunuza ve tek satırlık bir widget'a gelir. Yerel, aynı dilde ve dünya haberleri, canlı TV, radyo, basın özeti. Kayıt yok.">
+<link rel="canonical" href="https://mirlanmmr.github.io/tr/apps/ticker247/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/ticker247/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/ticker247/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/ticker247/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/ticker247/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/ticker247/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/ticker247/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/ticker247/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/ticker247/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/ticker247/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/ticker247/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ticker 24/7",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Android için bir haber toplayıcı: bildirim çubuğunda ve tek satırlık bir widget'ta acil ve hayati haberler, yerel, aynı dilde ve dünya haberleri, canlı TV, radyo, basın özeti.",
+  "url": "https://mirlanmmr.github.io/tr/apps/ticker247/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image": "https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/tr/"
+  },
+  "inLanguage": "tr"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/tr/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/apps/ticker247/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/ticker247/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/ticker247/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/ticker247/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/ticker247/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/ticker247/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/ticker247/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/ticker247/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/ticker247/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/ticker247/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/vi/apps/ticker247/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/ticker247/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/ticker247/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/ticker247/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/ticker247/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Ticker 24/7 uygulama simgesi">
+    <span>Ticker 24/7 · Android · ücretsiz</span>
+  </div>
+
+  <h1>Yolda son dakika haberleri: bildirim çubuğunda, widget'ta ve akışta</h1>
+
+  <p class="lead">Araba kullanırken açılan bildirime tek bir bakış, ve haberdarsınız.</p>
+
+  <h2>Her şey nasıl başladı</h2>
+  <p>Eskiden televizyonda, bir haber merkezinde çalışırdım. Ama mesele bundan ibaret değil. Yolda size acil ve hayati haberleri verecek bir uygulama istedim. Akıllı telefonun ekranında tam karşıdan karşıya akan bir haber bandı hayal ediyordum.</p>
+  <p>Meğer bunu yapamıyormuşsunuz. Android ve Google Play kuralları bir uygulamanın diğer uygulamaların üstüne çizim yapmasına çok isteksiz yaklaşıyor ve nedenleri var: böyle bir bant dikkatinizi dağıtır, her şeye engel olur ve pili tüketir.</p>
+  <p>Ama bildirim çubuğundaki bildirimlere başlayınca duramadım. Uygulama üzerinde neredeyse altı ay çalıştım. Çocuklar için sayma uygulamasından sonra ikinci uygulamam ve Bloomberg ya da Google Haberler ile aynı biçimde tam bir haber toplayıcıya dönüştü.</p>
+  <p>Bildirim çubuğunda bildirimler, “Tek satırda haber” widget'ı ve uygulamanın kendisi var: bir karuselde acil ve önemli haberler, ardından canlı yayınlar ve radyo istasyonları, güncel konularda basın özetleri, hayati haberler (elektrik kesintisi, kaza ve benzerleri), ilginç hikâyeler ve hava durumu. Ve en önemlisi: tüm dünyayı kapsıyoruz.</p>
+
+  <div class="short">
+    <p><b>Kısaca.</b> Ticker 24/7, Android için bir haber toplayıcıdır. Acil ve hayati haberler bildirim çubuğunuza ve “Tek satırda haber” widget'ına gelir. Uygulamanın içinde haberler üç düzeye ayrılır: yerel, kendi diliniz ve dünya. Ayrıca canlı haber TV kanalları, radyo, basın özeti, hava durumu ve döviz kurları da var. Kayıt gerekmez. Uygulama ücretsizdir, reklamlıdır. Diller: Rusça, İngilizce, İspanyolca, Portekizce ve Fransızca.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play'den indirin</a></p>
+  </div>
+
+  <h2>İçinde neler var</h2>
+  <ul class="feat">
+    <li><b>Bildirim çubuğunda bir haber bandı.</b> Acil ve hayati haberler bildirim olarak gelir ve uygulamayı açmanız gerekmez.</li>
+    <li><b>“Tek satırda haber” widget'ı.</b> Ana ekranınızda bir haber, tek cümle; haberler birbirinin yerini alır. Dokunun, haberin tam kartı açılsın.</li>
+    <li><b>Üç düzeyde haber.</b> Yerel: ülkenizde olup bitenler. Diliniz: aynı dili konuşan ülkelerden haberler. Dünya: her yerde önemli olanlar. Bölümler ayrı kalır, böylece şu anda ne okuyacağınızı siz seçersiniz.</li>
+    <li><b>Acil ve önemli olanlar bir karuselde.</b> En büyük haberler üstte toplanır, geri kalanı altta. Akış her saat, günün yirmi dört saati güncellenir.</li>
+    <li><b>Hayati haberler.</b> Elektrik kesintileri, kazalar ve gündelik hayatınıza dokunan her şey.</li>
+    <li><b>Canlı TV ve radyo.</b> Haber kanalları doğrudan uygulamanın içinde oynar, YouTube'a gitmeye gerek yok: birini başlatın ve kapatmadan haberleri kaydırmaya devam edin. Her dilin kendi kanalları var. Ülkenizden ve dilinizden haber radyo istasyonları da var.</li>
+    <li><b>Basın özeti.</b> Tek bir olay birkaç haber merkezinin gözünden: ilk kimin haber verdiği, kimin bir ayrıntı eklediği, anlatımların nerede ayrıldığı. Her paragraf kaynağının adını taşır ve biz kendimizden tek bir kelime eklemeyiz.</li>
+    <li><b>İlginç hikâyeler ve hava durumu.</b> İlginç hikâyeler acil olanlardan ayrı tutulur ve seçtiğiniz şehir için hava durumu vardır.</li>
+    <li><b>Haberin tamamı uygulamanın içinde.</b> Yayıncının sitesine geçmeden yazının tamamını okuyun.</li>
+    <li><b>Yer imleri, döviz ve kripto kurları, koyu tema.</b> Bir haberi kaydedin ve sonra geri dönün.</li>
+  </ul>
+
+  <h2>Gürültü yok</h2>
+  <p>Haberler tek bir kurala göre seçilir: arkasında gerçek bir olay var mı? Başkalarının görüşlerinin yeniden anlatımları, makale kılığındaki reklamlar ve burç yorumları akışın dışında kalır. Her haberi okuruz. Yanlış bir şey mi fark ettiniz? Bize söyleyin, düzeltelim.</p>
+
+  <h2>Neleri yok</h2>
+  <ul class="feat">
+    <li>Uygulama internet bağlantısı gerektirir: bağlantı olmadan haberler güncellenmez.</li>
+    <li>Google AdMob reklamları vardır. Ücretli özellik ya da abonelik yoktur.</li>
+    <li>Biz haber gösteriyoruz, acil durum hizmetlerinin resmî mesajlarını değil. Tehlikedeyseniz bizim bildirimimizi değil, onları izleyin.</li>
+    <li>Arayüz beş dildedir: Rusça, İngilizce, İspanyolca, Portekizce ve Fransızca.</li>
+    <li>Android 7.0 veya daha yenisi gerekir.</li>
+  </ul>
+  <p>Uygulamanın neyi sakladığı ve verileri nereye gönderdiği <a href="/ticker247/privacy-policy.html">gizlilik politikasında</a> anlatılır.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Google Play'den indirin</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/tr/">Tüm uygulamalar</a></li>
+    <li><a href="/tr/apps/slowread/">Slowread</a></li>
+    <li><a href="/tr/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/tr/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/tr/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ticker247/privacy-policy.html">Gizlilik</a></li>
+    <li><a href="/ticker247/terms-of-use.html">Koşullar</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/apps/ticker247/","English","View this page in English"],"zh":["/zh/apps/ticker247/","简体中文","查看简体中文版本"],"es":["/es/apps/ticker247/","Español","Ver esta página en español"],"id":["/id/apps/ticker247/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/ticker247/","Português","Ver esta página em português"],"ru":["/ru/apps/ticker247/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/ticker247/","日本語","このページを日本語で見る"],"de":["/de/apps/ticker247/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/ticker247/","Français","Voir cette page en français"],"tr":["/tr/apps/ticker247/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/ticker247/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/ticker247/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/ticker247/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/ticker247/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/ticker247/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

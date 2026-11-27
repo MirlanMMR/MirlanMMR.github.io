@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora para Android com cinco telas e o seu próprio layout — Calculator: Themes &amp; Widget</title>
+<meta name="description" content="Uma calculadora para Android que você mesmo monta: 5 telas, 22 temas, botões personalizados, um widget e uma calculadora de empréstimos com a taxa real. Gratuita e funciona offline.">
+<link rel="canonical" href="https://mirlanmmr.github.io/pt/apps/calculator/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/calculator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/calculator/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/calculator/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/calculator/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/calculator/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/calculator/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/calculator/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/calculator/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/calculator/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/calculator/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/calculator/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/calculator/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/calculator/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/calculator/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/calculator/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calculator: Themes & Widget",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "Uma calculadora para Android que você mesmo monta: 5 telas, 22 temas, botões personalizados, um widget e uma calculadora de empréstimos com a taxa real.",
+  "url": "https://mirlanmmr.github.io/pt/apps/calculator/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator",
+  "image": "https://mirlanmmr.github.io/img/calculator.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/pt/"
+  },
+  "inLanguage": "pt"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/pt/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="pt">Português</summary><ul><li><a href="/apps/calculator/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/calculator/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/calculator/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/calculator/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/calculator/" hreflang="pt" lang="pt" data-lang="pt" aria-current="true">Português</a></li><li><a href="/ru/apps/calculator/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/calculator/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/calculator/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/calculator/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/calculator/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/calculator/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/calculator/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/calculator/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/calculator/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/calculator/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="/img/calculator.png" width="64" height="64" alt="Ícone do Calculator: Themes &amp; Widget">
+    <span>Calculator: Themes &amp; Widget · Android · grátis</span>
+  </div>
+
+  <h1>Uma calculadora de cinco telas que você mesmo monta</h1>
+
+  <h2>Como tudo começou</h2>
+  <p>Eu só queria baixar uma calculadora com um layout confortável. Só isso. Procurei por muito tempo, baixei duas dezenas e nenhuma servia para mim. Primeiro veio a surpresa, depois o cansaço, depois uma decepção de verdade. Em algum momento desisti e passei a usar a que vinha instalada.</p>
+  <p>Mas nada dura para sempre debaixo da lua. A era da IA chegou. Não entrei de cabeça logo de cara: como muitos de vocês, passei uns dois anos assistindo a reels sobre redes neurais e vídeos gerados. Até que um dia tentei fazer um app com IA.</p>
+  <p>A primeira coisa que fiz não foi uma calculadora, mas <a href="/pt/apps/easycounting/">um app de contagem para crianças</a>: uma régua com um controle deslizante. Você coloca o controle no 2 e, para somar mais 2, dá dois passos junto com a criança, e ele cai no 4. Acho que é um verdadeiro salto para a criança: ela deixa de contar nos dedos e vê na hora como o resultado aparece. Estou convencido disso, embora seja a minha opinião, não um estudo científico. Vou contar essa história separadamente. Foi ali que começaram os meus primeiros passos no vibe coding.</p>
+  <p>Então, voltando à calculadora. Eu não queria fazer mais uma igual às outras. Eu precisava de uma calculadora personalizável ao máximo. Mas isso não é o principal. O principal é que ela não tem uma ou duas telas, e sim cinco. Por que não? Um PC pode ter três monitores. Eu poderia ter ido mais longe, mas decidi que cinco bastavam.</p>
+  <p>Por que tantas telas? Para você não ter que guardar o resultado na cabeça. Deslize a tela para o lado, calcule numa nova e, se precisar consultar algo, volte para a primeira. Em outras palavras, é uma nova forma de pensar o histórico e a memória, num formato conveniente.</p>
+
+  <div class="short">
+    <p><b>Em resumo.</b> Uma calculadora para Android. Você pode mover, remover e adicionar botões, e escolher o tema, a cor, a fonte e os sons. A principal diferença é que ela tem cinco telas: calcule numa, deslize para o lado e continue em outra. Tem calculadora de empréstimos, porcentagens, geometria, um conversor e um widget para a tela inicial. Funciona offline. É gratuita, com um banner de anúncio na parte de baixo. A interface está em russo e inglês.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Baixar no Google Play</a></p>
+  </div>
+
+  <h2>O que tem</h2>
+  <p><b>Monte do seu jeito.</b></p>
+  <ul class="feat">
+    <li>22 temas: claros, escuros e “eletrônicos”, com dígitos de sete segmentos luminosos como nas calculadoras antigas (LED vermelho e verde, LCD vermelho e verde).</li>
+    <li>Sua cor de destaque, 5 formatos de botão, 7 fontes.</li>
+    <li>Seu próprio layout: mova, remova e adicione botões. Coloque + − × ÷ à direita ou à esquerda, o que é prático para canhotos.</li>
+    <li>Efeitos ao tocar (ondas, anéis, brilho, faíscas), sons de teclas e vibração. Tudo opcional.</li>
+  </ul>
+  <p><b>Calcule.</b></p>
+  <ul class="feat">
+    <li>5 telas: calcule numa, deslize para o lado e continue em outra. Até 10 calculadoras favoritas, com troca instantânea entre elas.</li>
+    <li>Um menu de engenharia no botão fx: raízes, potências, trigonometria, logaritmos, π e e.</li>
+    <li>Histórico de cálculos, edição com cursor, copiar e colar.</li>
+  </ul>
+  <p><b>Fórmulas à mão.</b></p>
+  <ul class="feat">
+    <li>Porcentagem: que porcentagem um número representa, somar ou subtrair uma porcentagem, variação percentual, imposto, crescimento composto.</li>
+    <li>Geometria: círculo, retângulo, triângulo, caixa, cilindro, esfera, cone. Informe os valores e obtenha a resposta.</li>
+    <li>Conversor: comprimento, massa, temperatura, área, volume, velocidade, dados.</li>
+  </ul>
+  <p><b>Empréstimos.</b> Pagamentos em anuidade e diferenciados, cronograma de pagamentos, tarifas e a taxa anual real. Você pode conferir uma oferta de taxa fixa e ver quanto ela realmente custa.</p>
+  <p><b>Widget.</b> Uma minicalculadora na tela inicial que se expande para tela cheia. A opacidade e o tema são ajustáveis. As contas resolvidas no widget vão para o histórico.</p>
+
+  <h2>O que não tem</h2>
+  <ul class="feat">
+    <li>Por enquanto, a interface está apenas em russo e inglês. Ela segue o idioma do seu celular e, no Android 13 e superior, você pode definir o idioma do app separadamente.</li>
+    <li>Um banner de anúncio do Google AdMob aparece na parte de baixo. Não há recursos pagos nem assinaturas.</li>
+    <li>As ferramentas de empréstimo e de porcentagem dão estimativas, não aconselhamento financeiro. Consulte o seu contrato para saber as condições exatas.</li>
+    <li>Requer Android 8.0 ou mais recente.</li>
+  </ul>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.calculator">Baixar no Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/pt/">Todos os apps</a></li>
+    <li><a href="/pt/apps/slowread/">Slowread</a></li>
+    <li><a href="/pt/apps/ticker247/">Ticker 24/7</a></li>
+    <li><a href="/pt/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/pt/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/calculator/privacy-policy.html">Privacidade</a></li>
+    <li><a href="/calculator/terms.html">Termos</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="pt" data-map='{"en":["/apps/calculator/","English","View this page in English"],"zh":["/zh/apps/calculator/","简体中文","查看简体中文版本"],"es":["/es/apps/calculator/","Español","Ver esta página en español"],"id":["/id/apps/calculator/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/calculator/","Português","Ver esta página em português"],"ru":["/ru/apps/calculator/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/calculator/","日本語","このページを日本語で見る"],"de":["/de/apps/calculator/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/calculator/","Français","Voir cette page en français"],"tr":["/tr/apps/calculator/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/calculator/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/calculator/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/calculator/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/calculator/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/calculator/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

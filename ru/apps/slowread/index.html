@@ -6,14 +6,25 @@
 <title>Читалка книг для Android: жесты вместо настроек — Slowread</title>
 <meta name="description" content="Slowread: читалка для Android, которую настраиваешь прямо на экране книги, без меню. EPUB, FB2, MOBI, PDF, DjVu. Бесплатная классика на полках и галерея шедевров живописи с историями.">
 <link rel="canonical" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
 <link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/slowread/">
-<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/slowread/">
 <link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/slowread/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/slowread/">
 <link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/slowread/">
-<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/slowread/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/slowread/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/slowread/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/slowread/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/slowread/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/slowread/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/slowread/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/slowread/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/slowread/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/slowread/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/slowread/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
@@ -29,11 +40,12 @@
   a{color:var(--accent)}
   .wrap{max-width:720px;margin:0 auto;padding:0 20px}
   header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
-  .langsw{font-size:14px;color:var(--muted)}
   .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
   h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
   h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
   p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
   .head{display:flex;gap:16px;align-items:center;margin-top:8px}
   .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
   .head span{color:var(--muted);font-size:15px}
@@ -48,26 +60,37 @@
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"Slowread",
-  "alternateName":"Slowread: читалка книг",
-  "applicationCategory":"ReferenceApplication",
-  "operatingSystem":"Android 7.0+",
-  "description":"Читалка для Android: шрифт, размер и цвет меняются жестами прямо на экране книги. Открывает EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Бесплатные книги из общественного достояния и галерея шедевров живописи с историями.",
-  "url":"https://mirlanmmr.github.io/ru/apps/slowread/",
-  "downloadUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
-  "installUrl":"https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
-  "image":"https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-  "author":{"@type":"Organization","name":"MMR Lab","url":"https://mirlanmmr.github.io/"}
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Slowread",
+  "applicationCategory": "ReferenceApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Читалка для Android: шрифт, размер и цвет меняются жестами прямо на экране книги. Открывает EPUB, FB2, MOBI, DOCX, PDF, DjVu, TXT. Бесплатные книги из общественного достояния и галерея шедевров живописи с историями.",
+  "url": "https://mirlanmmr.github.io/ru/apps/slowread/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread",
+  "image": "https://play-lh.googleusercontent.com/eyPDwKjBsGSadjM6Cpbt5Qj_rztY-irhr-yseGFvfg11vLCEUdLU8HRd5YBQ6YAWjS59lfGHRra3CHqbzBek1JQ=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/ru/"
+  },
+  "alternateName": [
+    "Slowread: Ebook Reader"
+  ],
+  "inLanguage": "ru"
 }
 </script>
 </head>
 <body>
 <div class="wrap">
 
-<header><a class="brand" href="/">MMR Lab</a><span class="langsw"><a href="/apps/slowread/" hreflang="en" lang="en">English</a> · <a href="/es/apps/slowread/" hreflang="es" lang="es">Español</a> · <a href="/pt/apps/slowread/" hreflang="pt" lang="pt">Português</a></span></header>
+<header><a class="brand" href="/ru/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="ru">Русский</summary><ul><li><a href="/apps/slowread/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/slowread/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/slowread/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/slowread/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/pt/apps/slowread/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/slowread/" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a></li><li><a href="/ja/apps/slowread/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/slowread/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/slowread/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/slowread/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/slowread/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/slowread/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/slowread/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/slowread/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/slowread/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
 
 <main>
   <div class="head">
@@ -91,7 +114,7 @@
     <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.slowread">Скачать в Google Play</a></p>
   </div>
 
-  <h2>Что в ней есть</h2>
+  <h2>Что в нём есть</h2>
   <p><b>Читать удобно.</b></p>
   <ul class="feat">
     <li>Свайп в стороны меняет шрифт. Щипок и раздвигание пальцев меняют размер текста. Тап по верхней зоне переключает избранные темы, то есть цвет фона и текста. Тап по центру и перетаскивание дают свой цвет, а не только готовые варианты.</li>
@@ -111,7 +134,7 @@
   </ul>
   <p><b>Галерея шедевров.</b> От древнеегипетских росписей и китайских пейзажей Сун через Возрождение и голландский золотой век к Рембрандту, Хокусаю, Ван Гогу и Рериху. Работы собраны по эпохам и школам изобразительного искусства. К каждой написана история: куда посмотреть, в каком мире она возникла и почему важна. Картину можно открыть на весь экран и приблизить мазок, жест или едва заметный знак. Изображения загружаются из интернета.</p>
 
-  <h2>Чего в ней нет</h2>
+  <h2>Чего в нём нет</h2>
   <ul class="feat">
     <li>Это читалка, а не магазин. Новинки и бестселлеры вы добавляете сами, приложение книг не продаёт. Бесплатные полки состоят из книг общественного достояния.</li>
     <li>Это не трекер прочитанных книг и не счётчик скорости чтения. Есть другое приложение с таким же названием, поэтому ищите в Google Play «Slowread» и смотрите на значок и описание.</li>
@@ -129,16 +152,17 @@
 <footer>
   <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
   <ul>
-    <li><a href="/">Все приложения</a></li>
-    <li><a href="/ru/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ru/">Все приложения</a></li>
     <li><a href="/ru/apps/ticker247/">Ticker 24/7</a></li>
-    <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
     <li><a href="/ru/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/ru/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/ru/apps/easycounting/">2+2 | Math for Kids</a></li>
     <li><a href="/slowread-legal/">Конфиденциальность</a></li>
     <li><a href="/slowread/terms-of-use.html">Условия</a></li>
   </ul>
 </footer>
 
 </div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="ru" data-map='{"en":["/apps/slowread/","English","View this page in English"],"zh":["/zh/apps/slowread/","简体中文","查看简体中文版本"],"es":["/es/apps/slowread/","Español","Ver esta página en español"],"id":["/id/apps/slowread/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/slowread/","Português","Ver esta página em português"],"ru":["/ru/apps/slowread/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/slowread/","日本語","このページを日本語で見る"],"de":["/de/apps/slowread/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/slowread/","Français","Voir cette page en français"],"tr":["/tr/apps/slowread/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/slowread/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/slowread/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/slowread/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/slowread/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/slowread/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
 </body>
 </html>

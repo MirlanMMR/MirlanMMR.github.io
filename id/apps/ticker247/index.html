@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berita terkini di bilah notifikasi dan widget untuk Android — Ticker 24/7</title>
+<meta name="description" content="Ticker 24/7: agregator berita untuk Android. Berita mendesak dan penting masuk ke bilah notifikasi dan widget satu baris Anda. Berita lokal, berbahasa sama, dan dunia, TV langsung, radio, ulasan pers. Tanpa pendaftaran.">
+<link rel="canonical" href="https://mirlanmmr.github.io/id/apps/ticker247/">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/apps/ticker247/">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/zh/apps/ticker247/">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/es/apps/ticker247/">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/id/apps/ticker247/">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/pt/apps/ticker247/">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/ru/apps/ticker247/">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/ja/apps/ticker247/">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/de/apps/ticker247/">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/fr/apps/ticker247/">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/tr/apps/ticker247/">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/vi/apps/ticker247/">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/ko/apps/ticker247/">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/it/apps/ticker247/">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/th/apps/ticker247/">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/pl/apps/ticker247/">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/apps/ticker247/"><!--/i18n:alternates--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf8; --ink:#1f1d1a; --muted:#6b655b; --line:#e4ddcf;
+    --accent:#1f6f54; --accent-ink:#ffffff; --soft:#ebe4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --card:#201f19; --ink:#ede7da; --muted:#a39b8c; --line:#34322a;
+      --accent:#5cbf96; --accent-ink:#0f1a14; --soft:#2a2821; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:22px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .langsw{font-size:14px;color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(32px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:24px 0 18px}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin:46px 0 14px}
+  p{margin:0 0 16px}
+  .lead{font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;margin:0 0 8px}
+  .head{display:flex;gap:16px;align-items:center;margin-top:8px}
+  .head img{width:64px;height:64px;border-radius:16px;background:var(--soft)}
+  .head span{color:var(--muted);font-size:15px}
+  .short{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:22px 0}
+  .short p:last-child{margin:0}
+  .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:12px}
+  ul.feat{padding-left:20px;margin:0 0 16px}
+  ul.feat li{margin:6px 0}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 40px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ticker 24/7",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Android 7.0+",
+  "description": "Agregator berita untuk Android: berita mendesak dan penting di bilah notifikasi dan widget satu baris, berita lokal, berbahasa sama, dan dunia, TV langsung, radio, ulasan pers.",
+  "url": "https://mirlanmmr.github.io/id/apps/ticker247/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247",
+  "image": "https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MMR Lab",
+    "url": "https://mirlanmmr.github.io/id/"
+  },
+  "inLanguage": "id"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header><a class="brand" href="/id/">MMR Lab</a><!--i18n:switcher--><details class="langs"><summary lang="id">Bahasa Indonesia</summary><ul><li><a href="/apps/ticker247/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/zh/apps/ticker247/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/es/apps/ticker247/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/id/apps/ticker247/" hreflang="id" lang="id" data-lang="id" aria-current="true">Bahasa Indonesia</a></li><li><a href="/pt/apps/ticker247/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/ru/apps/ticker247/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/ja/apps/ticker247/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/de/apps/ticker247/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/fr/apps/ticker247/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/tr/apps/ticker247/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/vi/apps/ticker247/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/ko/apps/ticker247/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/it/apps/ticker247/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/th/apps/ticker247/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/pl/apps/ticker247/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></header>
+
+<main>
+  <div class="head">
+    <img src="https://play-lh.googleusercontent.com/32gSEhWs8u2iEO8PIDt_ZHXdVLfuTE2Pfgx7yqo2H8rFSDAAzRy6R7lQo-FFXIgo6DVZJ8fKpAP1XyjTO8vxA08=w240-h480" width="64" height="64" alt="Ikon aplikasi Ticker 24/7">
+    <span>Ticker 24/7 · Android · gratis</span>
+  </div>
+
+  <h1>Berita terkini di mana pun Anda berada: di bilah notifikasi, di widget, dan di umpan</h1>
+
+  <p class="lead">Sekali lirik notifikasi yang muncul saat Anda berkendara, dan Anda sudah tahu kabarnya.</p>
+
+  <h2>Bagaimana semuanya bermula</h2>
+  <p>Dulu saya bekerja di televisi, di ruang redaksi berita. Tapi bukan itu intinya. Saya ingin aplikasi yang memberi Anda berita mendesak dan penting saat bepergian. Saya membayangkan running text berita yang melintas tepat di layar ponsel pintar.</p>
+  <p>Ternyata itu tidak bisa dilakukan. Aturan Android dan Google Play sangat enggan mengizinkan aplikasi menggambar di atas aplikasi lain, dan ada alasannya: running text seperti itu akan mengganggu, menghalangi semua hal lain, dan menguras baterai.</p>
+  <p>Tetapi begitu saya mulai menggarap notifikasi di bilah notifikasi, saya tidak bisa berhenti. Saya mengerjakan aplikasi ini hampir setengah tahun. Ini aplikasi kedua saya setelah aplikasi berhitung untuk anak, dan berkembang menjadi agregator berita lengkap, dengan format seperti Bloomberg atau Google News.</p>
+  <p>Ada notifikasi di bilah notifikasi, widget “Berita dalam satu baris”, dan aplikasinya sendiri: berita mendesak dan penting dalam karusel, lalu siaran langsung dan stasiun radio, ulasan pers tentang topik terkini, berita vital (pemadaman listrik, kecelakaan, dan sejenisnya), kisah menarik, dan cuaca. Dan yang terpenting: kami meliput seluruh dunia.</p>
+
+  <div class="short">
+    <p><b>Singkatnya.</b> Ticker 24/7 adalah agregator berita untuk Android. Berita mendesak dan penting masuk ke bilah notifikasi Anda dan widget “Berita dalam satu baris”. Di dalam aplikasi, berita dibagi menjadi tiga tingkat: lokal, dalam bahasa Anda, dan dunia. Aplikasi ini juga punya saluran TV berita langsung, radio, ulasan pers, cuaca, dan kurs mata uang. Tidak perlu mendaftar. Aplikasi ini gratis, dengan iklan. Bahasa: Rusia, Inggris, Spanyol, Portugis, dan Prancis.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Dapatkan di Google Play</a></p>
+  </div>
+
+  <h2>Isinya apa saja</h2>
+  <ul class="feat">
+    <li><b>Running text berita di bilah notifikasi.</b> Berita mendesak dan penting datang sebagai notifikasi, dan Anda tidak perlu membuka aplikasi.</li>
+    <li><b>Widget “Berita dalam satu baris”.</b> Satu berita, satu kalimat di layar utama Anda, dengan berita yang saling bergantian. Ketuk, dan kartu lengkapnya terbuka.</li>
+    <li><b>Tiga tingkat berita.</b> Lokal: apa yang terjadi di negara Anda. Bahasa Anda: berita dari negara-negara yang juga berbicara dalam bahasa itu. Dunia: apa yang penting di mana-mana. Bagian-bagiannya tetap terpisah, jadi Anda memilih apa yang ingin dibaca sekarang.</li>
+    <li><b>Mendesak dan penting dalam karusel.</b> Berita terbesar dikumpulkan di atas, sisanya di bawah. Umpan diperbarui setiap jam, sepanjang waktu.</li>
+    <li><b>Berita vital.</b> Pemadaman listrik, kecelakaan, dan semua yang menyangkut kehidupan sehari-hari Anda.</li>
+    <li><b>TV dan radio langsung.</b> Saluran berita diputar langsung di dalam aplikasi, tanpa perlu ke YouTube: mulai satu saluran dan terus gulir berita tanpa menutupnya. Setiap bahasa punya salurannya sendiri. Ada juga stasiun radio berita dari negara dan bahasa Anda.</li>
+    <li><b>Ulasan pers.</b> Satu peristiwa melalui beberapa ruang redaksi: siapa yang melaporkan lebih dulu, siapa yang menambahkan detail, di mana laporan-laporan itu berbeda. Setiap paragraf mencantumkan nama medianya, dan kami tidak menambahkan sepatah kata pun dari kami sendiri.</li>
+    <li><b>Kisah menarik dan cuaca.</b> Kisah menarik dipisahkan dari berita mendesak, dan ada cuaca untuk kota yang Anda pilih.</li>
+    <li><b>Berita lengkap di dalam aplikasi.</b> Baca seluruh artikel tanpa berpindah ke situs web penerbit.</li>
+    <li><b>Penanda, kurs mata uang dan kripto, tema gelap.</b> Simpan sebuah berita dan kembali ke sana nanti.</li>
+  </ul>
+
+  <h2>Tanpa kebisingan</h2>
+  <p>Berita dipilih berdasarkan satu aturan: apakah ada peristiwa nyata di baliknya? Penceritaan ulang opini orang lain, iklan yang menyamar sebagai artikel, dan horoskop tidak masuk ke umpan. Kami membaca setiap laporan. Melihat sesuatu yang salah? Beri tahu kami dan kami akan memperbaikinya.</p>
+
+  <h2>Yang tidak ada di dalamnya</h2>
+  <ul class="feat">
+    <li>Aplikasi memerlukan koneksi internet: tanpa itu, berita tidak akan diperbarui.</li>
+    <li>Ada iklan dari Google AdMob. Tidak ada fitur berbayar atau langganan.</li>
+    <li>Kami menampilkan berita, bukan pesan resmi dari layanan darurat. Jika Anda dalam bahaya, ikuti mereka, bukan notifikasi kami.</li>
+    <li>Antarmuka tersedia dalam lima bahasa: Rusia, Inggris, Spanyol, Portugis, dan Prancis.</li>
+    <li>Memerlukan Android 7.0 atau yang lebih baru.</li>
+  </ul>
+  <p>Apa yang disimpan aplikasi dan ke mana data dikirim dijelaskan dalam <a href="/ticker247/privacy-policy.html">kebijakan privasi</a>.</p>
+
+  <p style="margin-top:28px"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mirlanmamytov.ticker247">Dapatkan di Google Play</a></p>
+</main>
+
+<footer>
+  <div>MMR Lab · <a href="mailto:mmr.lab.help@gmail.com">mmr.lab.help@gmail.com</a></div>
+  <ul>
+    <li><a href="/id/">Semua aplikasi</a></li>
+    <li><a href="/id/apps/slowread/">Slowread</a></li>
+    <li><a href="/id/apps/happypouch/">Happy Pouch</a></li>
+    <li><a href="/id/apps/calculator/">Calculator: Themes &amp; Widget</a></li>
+    <li><a href="/id/apps/easycounting/">2+2 | Math for Kids</a></li>
+    <li><a href="/ticker247/privacy-policy.html">Privasi</a></li>
+    <li><a href="/ticker247/terms-of-use.html">Ketentuan</a></li>
+  </ul>
+</footer>
+
+</div>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="id" data-map='{"en":["/apps/ticker247/","English","View this page in English"],"zh":["/zh/apps/ticker247/","简体中文","查看简体中文版本"],"es":["/es/apps/ticker247/","Español","Ver esta página en español"],"id":["/id/apps/ticker247/","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/pt/apps/ticker247/","Português","Ver esta página em português"],"ru":["/ru/apps/ticker247/","Русский","Открыть эту страницу на русском"],"ja":["/ja/apps/ticker247/","日本語","このページを日本語で見る"],"de":["/de/apps/ticker247/","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/fr/apps/ticker247/","Français","Voir cette page en français"],"tr":["/tr/apps/ticker247/","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/vi/apps/ticker247/","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/ko/apps/ticker247/","한국어","이 페이지를 한국어로 보기"],"it":["/it/apps/ticker247/","Italiano","Visualizza questa pagina in italiano"],"th":["/th/apps/ticker247/","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/pl/apps/ticker247/","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>
