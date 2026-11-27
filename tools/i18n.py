@@ -38,8 +38,11 @@ PAGES = {
     "ec-terms": "easycounting/terms-of-use.html",
     "calc-privacy": "calculator/privacy-policy.html",
     "calc-terms": "calculator/terms.html",
+    "tk-privacy": "ticker247/privacy-policy.html",
+    "tk-terms": "ticker247/terms-of-use.html",
+    "sr-terms": "slowread/terms-of-use.html",
 }
-LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms"}
+LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms", "tk-privacy", "tk-terms", "sr-terms"}
 EXTRA_SITEMAP = ["/apps/happypouch/languages/"]
 
 
