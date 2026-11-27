@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Pouch'ta güvenlik ve gizlilik</title>
+<meta name="description" content="Happy Pouch verilerinizi nerede tutar, uygulamayı nasıl kilitlersiniz, kategori adlarını nasıl gizlersiniz ve Google Drive neyi görebilir.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/security.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/security.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/security.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/security.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/security.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/security.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/security.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/security.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/security.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/security.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/security.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/security.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/security.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/security.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/happypouch/help/en/security.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/security.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/security.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/security.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/security.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/security.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/security.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/security.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/security.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/security.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/security.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/security.html" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/happypouch/help/ko/security.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/tr/">Happy Pouch Yardım</a> · Güvenlik</div>
+<h1>Güvenlik ve gizlilik</h1>
+<p class="lead">Kayıtlar yalnızca telefonunuzda saklanır. Uygulamanın hesabı, sunucusu ve kaydı yoktur ve takip internetsiz çalışır.</p>
+
+<h2>Veriler nerede</h2>
+<ul>
+  <li><b>Telefondaki uygulamada.</b> Hiçbir yere gönderilmez.</li>
+  <li><b>Telefondaki yedeklerde</b>: “Documents/HappyPouch” klasörü. Google'da oturum açtıysanız şifrelidirler (aşağıya bakın); oturum açmadıysanız düz metindirler.</li>
+  <li><b>Google Drive'ınızda</b>, yalnızca otomatik yedeklemeyi kendiniz açtıysanız.</li>
+</ul>
+<p>Yedekler hakkında daha fazlası <a href="/happypouch/help/tr/backups.html">“Yedekler ve yeni telefon”</a> içinde.</p>
+
+<h2>Yedek şifreleme</h2>
+<p>Google'da oturum açtığınızda (isteğe bağlı, “Ayarlar” → “Google Drive'a otomatik yedekleme”) uygulama rastgele bir anahtar oluşturur ve onu Google Drive'ınıza, uygulamanın gizli klasörüne koyar. Drive arayüzü onu göstermez ve başka uygulamalar okuyamaz. Bunun için oturum açarken Google “Google Drive'ınızdaki kendi yapılandırma verilerini görme, oluşturma ve silme” iznini ister. Her yedek bu anahtarla şifrelenir (AES-256): telefonda, Drive'da ve “Başka bir yere kaydet…” ile.</p>
+<ul>
+  <li>Bir mesajlaşma uygulaması, bulut veya başka bir uygulama aracılığıyla yanlış ellere geçen bir yedek dosyası, Google hesabınız olmadan açılamaz.</li>
+  <li>Yeni telefonda aynı Google hesabında oturum açın: uygulama anahtarı kendisi getirir ve yedekleri açar. Ayrı bir parola yoktur ve unutulan bir Google parolası Google üzerinden kurtarılabilir.</li>
+  <li>Yeni telefonda ilk seferde anahtarı getirmek için internet bağlantısı gerekir.</li>
+  <li>Google'da oturum açmadan şifreleme yoktur: yedekler eskisi gibi düz metindir.</li>
+  <li>Şifreleme açılmadan önce alınan yedekler, daha yenileri onları ortadan kaldırana kadar düz metin olarak kalır.</li>
+</ul>
+<p class="note">Uygulamanın verilerini Google Drive ayarlarından silmeyin (“Uygulamaları yönet” → Happy Pouch → “Gizli uygulama verilerini sil”) ve Google hesabına erişimi kaybetmeyin: anahtar olmadan şifreli yedekler açılamaz. Anahtarın bir kopyası telefonda da tutulur ama yeniden yüklemede veya yeni telefonda kaybolur.</p>
+
+<h2>Giriş koruması</h2>
+<p>“Ayarlar” → “Giriş koruması”. Uygulama bundan sonra telefonunuzla aynı şekilde açılır: PIN, desen, parmak izi veya yüz.</p>
+<ul>
+  <li>Uygulamanın kendi parolası yoktur: telefonun kilidini kullanır. O kapalıysa uygulama önce telefon ayarlarında ekran kilidini etkinleştirmenizi ister.</li>
+  <li>“Uygulama kapatıldıysa tekrar sor”, uygulamadan çıktıktan ne kadar sonra kontrolün yeniden gerekeceğini belirler: hemen, 30 saniye, 1 dakika, 5 dakika.</li>
+  <li>Kontrolü iptal ederseniz uygulama kilitli kalır; “Aç” düğmesi yeniden sorar.</li>
+</ul>
+<p class="note">Giriş koruması uygulamanın ekranını kilitler. Yedek dosyaları, Google'da oturum açtıysanız çalışan şifrelemeyle kilitlenir.</p>
+
+<h2>Yalnızca simgeler</h2>
+<p>“Ayarlar” → “Yalnızca simgeler”. “Ana sayfa”da ve “Kayıtlar”da simgeler kategori adlarının yerini alır. Ekrana göz atan biri tutarları görür ama ne için olduklarını görmez.</p>
+
+<h2>Google neye erişebilir</h2>
+<p>Google Drive'a otomatik yedekleme isteğe bağlıdır. Açarsanız:</p>
+<ul>
+  <li>Drive'da uygulama yalnızca kendi oluşturduğu dosyaları görür; başka dosyalara erişemez;</li>
+  <li>yedekler ve anahtar sizin Drive'ınızdadır ve geliştiricinin bunlara erişimi yoktur; yedekler bu anahtarla şifrelenir;</li>
+  <li>“Oturumu kapat” otomatik yedeklemeyi durdurur; kaydedilmiş yedekler Drive'da kalır ve bunları Google Drive'ın kendisinde silebilirsiniz.</li>
+</ul>
+
+<h2>Hatırlatıcılar</h2>
+<p>Düzenli ödeme bildirimi telefonun kilit ekranında görünür. İstenmiyorsa “Ayarlar”da “Hatırlatıcılar” bölümünde “Yalnızca uygulamada”yı veya rozet noktasını seçin.</p>
+
+<h2>Silme</h2>
+<ul>
+  <li>Silinen kayıtlar ve kategoriler çöp kutusunda 90 gün kalır: “Ayarlar” → “Çöp kutusu”. “Temizle” onları sonsuza dek siler.</li>
+  <li>“Ayarlar” → “Veriler” → “Tüm verileri sil” telefondaki her şeyi siler. Drive'daki ve “Documents/HappyPouch” klasöründeki yedekler kalır; gerekirse ayrıca silin.</li>
+</ul>
+
+<h2>Dosyayı başka bir hizmet aracılığıyla gönderme</h2>
+<p>Bir mesajlaşma uygulamasına, buluta veya yapay zekâ asistanına gönderilen yedek dosyası, Google'da oturum açtıysanız şifrelidir: hesabınız olmadan okunamaz. Oturum açmadıysanız dosya düz metindir ve o hizmet onu görür.</p>
+
+<p><a href="/tr/happypouch/privacy-policy.html">Gizlilik politikası</a></p>
+
+<footer><a href="/happypouch/help/tr/">← Tüm konular</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/happypouch/help/en/security.html","English","View this page in English"],"zh":["/happypouch/help/zh/security.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/security.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/security.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/security.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/security.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/security.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/security.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/security.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/security.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/security.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/security.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"ko":["/happypouch/help/ko/security.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>

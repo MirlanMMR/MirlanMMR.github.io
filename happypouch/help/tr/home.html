@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Pouch ana ekranı: grafik, bakiye, yeni kayıt</title>
+<meta name="description" content="Happy Pouch'ta Ana sayfa ekranının gösterdikleri: eldeki para, dönem toplamları, kategori grafiği, Dikkat satırı ve gider veya gelir nasıl eklenir.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/home.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/home.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/home.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/home.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/home.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/home.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/home.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/home.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/home.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/home.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/home.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/home.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/home.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/home.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="tr">Türkçe</summary><ul><li><a href="/happypouch/help/en/home.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/home.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/home.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/home.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/home.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/home.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/home.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/home.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/home.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/home.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/home.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/home.html" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li><li><a href="/happypouch/help/ko/home.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/tr/">Happy Pouch Yardım</a> · Ana sayfa</div>
+<h1>Ana sayfa</h1>
+<p class="lead">“Ana sayfa”, elinizde ne kadar para olduğunu, dönem boyunca ne kadarının çıktığını ve girdiğini ve nelere gittiğini gösterir. Yeni kayıtlar da buradan eklenir.</p>
+
+<h2>Ekranda ne var, yukarıdan aşağıya</h2>
+<ul>
+  <li><b>Tarih veya dönem</b>: gün, hafta, ay, çeyrek veya yıl. Dönemin uzunluğu yan menüden seçilir.</li>
+  <li><b>“Elde”</b>: dönem sonundaki bakiye, yani açılış bakiyesi artı tüm gelirler eksi tüm giderler.</li>
+  <li><b>Dönemin toplamları</b>: tek çerçevede iki rakam, giderler “−” ile, gelirler “+” ile.</li>
+  <li><b>Grafik</b>: kategorilere bölünmüş bir daire.</li>
+  <li>Grafiğin altındaki <b>kategori simgeleri sırası</b>.</li>
+  <li><b>“Gider” ve “Gelir” düğmeleri.</b></li>
+</ul>
+
+<h2>Dönem nasıl değiştirilir</h2>
+<p>Ekranın üstünde veya grafiğin ortasında sola ya da sağa kaydırın. Sol sonraki dönem, sağ önceki dönemdir. Geleceğe geçemezsiniz.</p>
+
+<h2>Grafik nasıl okunur</h2>
+<ul>
+  <li>Her dilim bir kategoridir; boyutu, kategorinin dönem harcamasındaki payıdır.</li>
+  <li>Toplamlar kutusundaki gelir rakamına dokunun, grafik geliri gösterir. Giderlere dokunun, geri döner.</li>
+  <li>Grafiğin altındaki sıra yalnızca bu dönemde kaydı olan kategorileri içerir, en büyük başta.</li>
+  <li>Sırayı kaydırın veya parmağınızı halka boyunca hareket ettirin, grafik döner. Sıranın ortasına gelen kategorinin dilimi dışarı kayar ve tutarı ile payı dairenin ortasında görünür.</li>
+  <li>Bir dilime veya simgeye dokunun, o kategori ortaya gelir.</li>
+  <li>Bir dilime basılı tutun, orta kısım payını gösterir.</li>
+  <li>Gri dilim, kategorisi olmayan kayıtlardır.</li>
+</ul>
+<p>Sıradaki ilk yuva boştur: ortadayken dairenin merkezi dönemin toplamını gösterir.</p>
+
+<h2>Bir kategorinin kayıtları nasıl açılır</h2>
+<p>Kategoriyi ortaya getirin ve dairenin merkezine dokunun. Tek kayıt varsa düzenlemek için açılır. Birkaç tane varsa bir liste çıkar: ihtiyacınız olana dokunun.</p>
+
+<h2>Kayıt nasıl eklenir</h2>
+<ol>
+  <li>“Gider” veya “Gelir”e dokunun.</li>
+  <li>Tutarı girin. Alanda hesaplama yapabilirsiniz: 990+180. “=” tuşu sonucu yazar ve hesaplamayı “Hesaplama geçmişi”ne kaydeder.</li>
+  <li>Bir kategori seçin ya da orada yenisini oluşturun: “Yeni”.</li>
+  <li>İsterseniz bir alt kategori, not, cüzdan ekleyin veya tarihi değiştirin.</li>
+  <li>“Kaydet”e dokunun.</li>
+</ol>
+<p>Kartı kaydetmeden kapatırsanız yazdıklarınız saklanır: bir sonraki sefer uygulama kaldığınız yerden devam etmeyi önerir. “Baştan başla” kartı temizler.</p>
+<p>Bir kayıt kategorisiz kaydedilebilir; gri “Kategorisiz” yerine gider.</p>
+<p class="note">Hızlı yol: telefonun ana ekranında uygulama simgesine basılı tutun ve “Gider ekle” veya “Gelir ekle”yi seçin.</p>
+
+<h2>“Elde” tutarının rengi</h2>
+<table>
+  <tr><th>Renk</th><th>Ne anlama gelir</th></tr>
+  <tr><td>Normal</td><td>para alt eşiğin üzerinde ya da eşik belirlenmemiş</td></tr>
+  <tr><td>Sarı, “!” ile</td><td>bakiye eşiğe yakın</td></tr>
+  <tr><td>Kırmızı</td><td>bakiye eşiğin altında veya sıfırın altında</td></tr>
+</table>
+<p>Eşik para birimi kartında belirlenir: “Ayarlar” → “Para birimleri” → “Alt bakiye eşiği”. Daha fazlası <a href="/happypouch/help/tr/wallets.html">“Cüzdanlar ve para birimleri”</a> içinde.</p>
+
+<h2>“Dikkat” satırı</h2>
+<p>Bir şey için işlem gerektiğinde görünür: bir ödeme vadesi geldi, bir tahsilat bekleniyor, bir kategorinin limiti doldu, bakiye eşiğin altında. Örnek: “Dikkat: ödemeler: 2, limitler: 1”. Satır “Ayarlar”da “Hatırlatıcılar” bölümünden kapatılabilir.</p>
+
+<h2>Arama ve yan menü</h2>
+<p>Sol üstteki üç çizgili düğme yan menüyü açar: dönem, döviz çevirici, para birimi, cüzdan. Büyüteç not, kategori, tutar ve tarihe göre aramayı açar.</p>
+
+<footer><a href="/happypouch/help/tr/">← Tüm konular</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="tr" data-map='{"en":["/happypouch/help/en/home.html","English","View this page in English"],"zh":["/happypouch/help/zh/home.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/home.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/home.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/home.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/home.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/home.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/home.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/home.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/home.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/home.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/home.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"ko":["/happypouch/help/ko/home.html","한국어","이 페이지를 한국어로 보기"]}'></script><!--/i18n:script-->
+</body>
+</html>
