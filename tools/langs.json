@@ -23,6 +23,12 @@
   "app_name": "Matemáticas para niños: 2+2"
  },
  {
+  "code": "es-419",
+  "hreflang": "es-419",
+  "name": "Español (Latinoamérica)",
+  "banner": "Ver esta página en español (Latinoamérica)"
+ },
+ {
   "code": "id",
   "hreflang": "id",
   "name": "Bahasa Indonesia",
@@ -37,6 +43,12 @@
   "banner": "Ver esta página em português",
   "legal_note": "Esta é uma tradução do original em inglês. Em caso de divergência, prevalece a versão em inglês.",
   "app_name": "Matemática para crianças: 2+2"
+ },
+ {
+  "code": "pt-PT",
+  "hreflang": "pt-PT",
+  "name": "Português (Portugal)",
+  "banner": "Ver esta página em português (Portugal)"
  },
  {
   "code": "ru",

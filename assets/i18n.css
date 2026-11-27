@@ -11,3 +11,4 @@
 .langbar button{border:0;background:transparent;color:var(--muted,#6b655b);font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
 .lang .langs{display:inline-block}
 .lang .langs ul{left:0;right:auto}
+.lang{margin-bottom:16px}

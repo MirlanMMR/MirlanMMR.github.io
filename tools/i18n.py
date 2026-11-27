@@ -43,7 +43,22 @@ PAGES = {
     "sr-terms": "slowread/terms-of-use.html",
     "hp-privacy": "happypouch/privacy-policy.html",
     "hp-terms": "happypouch/terms-of-use.html",
+    "help-index": "happypouch/help/en/index.html",
+    "help-home": "happypouch/help/en/home.html",
+    "help-records": "happypouch/help/en/records.html",
+    "help-categories": "happypouch/help/en/categories.html",
+    "help-payments": "happypouch/help/en/payments.html",
+    "help-limits": "happypouch/help/en/limits.html",
+    "help-wallets": "happypouch/help/en/wallets.html",
+    "help-converter": "happypouch/help/en/converter.html",
+    "help-statistics": "happypouch/help/en/statistics.html",
+    "help-backups": "happypouch/help/en/backups.html",
+    "help-transfer": "happypouch/help/en/transfer.html",
+    "help-security": "happypouch/help/en/security.html",
 }
+HELP = {k for k in PAGES if k.startswith("help-")}
+# hand-written pages (with Russian-interface screenshots) that the build must not overwrite
+MANUAL = {("help-converter", "ru"), ("help-statistics", "ru")}
 LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms", "tk-privacy", "tk-terms", "sr-terms", "hp-privacy", "hp-terms"}
 EXTRA_SITEMAP = ["/apps/happypouch/languages/"]
 
@@ -53,6 +68,20 @@ def page_url(key):
     if f.endswith("index.html"):
         return "/" + f[: -len("index.html")]
     return "/" + f
+
+
+def lang_url(key, lang):
+    if lang == "en":
+        return page_url(key)
+    if key in HELP:
+        return page_url(key).replace("/help/en/", "/help/%s/" % lang)
+    return "/%s%s" % (lang, page_url(key))
+
+
+def lang_file(key, lang):
+    if key in HELP:
+        return PAGES[key].replace("/help/en/", "/help/%s/" % lang)
+    return os.path.join(lang, PAGES[key])
 
 
 URL_TO_KEY = {page_url(k): k for k in PAGES}
@@ -297,7 +326,7 @@ def localize_path(path, lang, built):
         return path
     k = URL_TO_KEY.get(path)
     if k and (k, lang) in built:
-        return "/%s%s" % (lang, path)
+        return lang_url(k, lang)
     return path
 
 
@@ -345,6 +374,7 @@ def built_set(langs=None):
         for k in PAGES:
             if not missing(l, k):
                 res.add((k, l))
+    res |= MANUAL
     return res
 
 
@@ -353,7 +383,7 @@ def switcher(key, lang, built):
     for l in ORDER:
         if (key, l) not in built:
             continue
-        href = page_url(key) if l == "en" else "/%s%s" % (l, page_url(key))
+        href = lang_url(key, l)
         cur = ' aria-current="true"' if l == lang else ""
         items.append('<li><a href="%s" hreflang="%s" lang="%s" data-lang="%s"%s>%s</a></li>'
                      % (href, LANG[l]["hreflang"], LANG[l]["hreflang"], l, cur, LANG[l]["name"]))
@@ -365,7 +395,7 @@ def alternates(key, lang, built):
     out = ['<link rel="stylesheet" href="/assets/i18n.css">']
     for l in ORDER:
         if (key, l) in built:
-            href = SITE + (page_url(key) if l == "en" else "/%s%s" % (l, page_url(key)))
+            href = SITE + lang_url(key, l)
             out.append('<link rel="alternate" hreflang="%s" href="%s">' % (LANG[l]["hreflang"], href))
     out.append('<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, page_url(key)))
     return "\n".join(out)
@@ -375,7 +405,7 @@ def script_tag(key, lang, built):
     m = {}
     for l in ORDER:
         if (key, l) in built:
-            href = page_url(key) if l == "en" else "/%s%s" % (l, page_url(key))
+            href = lang_url(key, l)
             m[l] = [href, LANG[l]["name"], LANG[l]["banner"]]
     return ('<script src="/assets/i18n.js" defer data-cur="%s" data-map=\'%s\'></script>'
             % (lang, json.dumps(m, ensure_ascii=False, separators=(",", ":")).replace("'", "&#39;")))
@@ -472,8 +502,10 @@ def cmd_build(args):
         for l in ORDER:
             if l == "en" or (key, l) not in built:
                 continue
+            if (key, l) in MANUAL:
+                continue
             out = translate_page(key, l, built)
-            changed += write(os.path.join(ROOT, l, PAGES[key]), out)
+            changed += write(os.path.join(ROOT, lang_file(key, l)), out)
     # sitemaps
     urls = []
     for key in PAGES:
@@ -483,7 +515,7 @@ def cmd_build(args):
                 urls.append((key, l))
 
     def loc(key, l):
-        return SITE + (page_url(key) if l == "en" else "/%s%s" % (l, page_url(key)))
+        return SITE + lang_url(key, l)
 
     rich = ['<?xml version="1.0" encoding="UTF-8"?>',
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
@@ -579,13 +611,15 @@ def cmd_bootstrap(args):
     elif key in LEGAL:
         src = legal_view(open(os.path.join(ROOT, PAGES[key]), encoding="utf-8").read(), lang)
     else:
-        p = os.path.join(ROOT, lang, PAGES[key])
+        p = os.path.join(ROOT, lang_file(key, lang))
         src = open(p, encoding="utf-8").read()
     if lang == "ru" and key == "home":
         src = src.replace('id="copy-card"', 'id="copy-card" data-copied="Скопировано ✓"')
     src = re.sub(r'<(a|span) class="langsw".*?</\1>', "", src, flags=re.S)
     src = re.sub(r'<link rel="alternate"[^>]*>', "", src)
     src = re.sub(r'<div class="lang" role="group".*?</div>', "", src, flags=re.S)
+    if key in HELP:  # footer language list of the old hand-written help pages
+        src = re.sub(r'<br>(?:<a href="\.\./[^"]+/index\.html"[^>]*>[^<]*</a>(?: · )?)+', "", src)
     root_x = parse(mask_regions(src))
     ux = []
     collect(root_x, ux)
