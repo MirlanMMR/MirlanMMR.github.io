@@ -32,13 +32,20 @@ PAGES = {
     "happypouch": "apps/happypouch/index.html",
     "calculator": "apps/calculator/index.html",
     "easycounting": "apps/easycounting/index.html",
+    "ec-privacy": "easycounting/privacy-policy.html",
+    "ec-terms": "easycounting/terms-of-use.html",
+    "calc-privacy": "calculator/privacy-policy.html",
+    "calc-terms": "calculator/terms.html",
 }
+LEGAL = {"ec-privacy", "ec-terms", "calc-privacy", "calc-terms"}
 EXTRA_SITEMAP = ["/apps/happypouch/languages/"]
 
 
 def page_url(key):
     f = PAGES[key]
-    return "/" + f[: -len("index.html")]
+    if f.endswith("index.html"):
+        return "/" + f[: -len("index.html")]
+    return "/" + f
 
 
 URL_TO_KEY = {page_url(k): k for k in PAGES}
@@ -223,9 +230,20 @@ def collect(n, out):
         collect(k, out)
 
 
+def legal_view(text, section="en"):
+    """legal pages hold several language sections; keep one of them"""
+    m = re.search(r'<section id="%s"' % section, text)
+    end = text.index("</section>", m.start()) + len("</section>")
+    head = text[: text.index('<section id=')]
+    tail = text[text.rindex("</section>") + len("</section>"):]
+    return head + text[m.start():end] + "\n" + tail
+
+
 def load_source(key):
     path = os.path.join(ROOT, PAGES[key])
     text = open(path, encoding="utf-8").read()
+    if key in LEGAL:
+        text = legal_view(text)
     return text
 
 
@@ -415,6 +433,11 @@ def translate_page(key, lang, built):
         if isinstance(k, Node) and k.tag == "html":
             k.set("lang", LANG[lang]["hreflang"])
     out = ser(root)
+    if key in LEGAL:
+        out = out.replace('<section id="en" lang="en">', '<section id="%s" lang="%s">' % (lang, LANG[lang]["hreflang"]))
+        note = LANG[lang].get("legal_note")
+        if note:
+            out = out.replace("</h1>", '</h1>\n<div class="updated">%s</div>' % note, 1)
     out = fix_urls(out, lang, page_url(key), built)
     out = re.sub(r"<!--@@(\w+)@@-->", lambda m: "<!--i18n:%s--><!--/i18n:%s-->" % (m.group(1), m.group(1)), out)
     out, _ = fill_regions(out, key, lang, built)
@@ -546,6 +569,8 @@ def cmd_bootstrap(args):
     root_en, ue = en_units(key)
     if lang == "ru" and key == "home":
         src = home_variant(load_source_raw_home(), "ru")
+    elif key in LEGAL:
+        src = legal_view(open(os.path.join(ROOT, PAGES[key]), encoding="utf-8").read(), lang)
     else:
         p = os.path.join(ROOT, lang, PAGES[key])
         src = open(p, encoding="utf-8").read()
