@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghi chép trong Happy Pouch: danh sách, sửa, xóa, tìm kiếm</title>
+<meta name="description" content="Màn hình Ghi chép trong Happy Pouch: các ghi chép của kỳ theo danh mục, bộ lọc chi và thu, sửa và xóa ghi chép, thùng rác, tìm kiếm.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/records.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/records.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/records.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/records.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/records.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/records.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/records.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/records.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/records.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/records.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/records.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/records.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/records.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/records.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/records.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/records.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/records.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/records.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="vi">Tiếng Việt</summary><ul><li><a href="/happypouch/help/en/records.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/records.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/records.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/records.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/records.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/records.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/records.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/records.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/records.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/records.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/records.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/records.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/records.html" hreflang="vi" lang="vi" data-lang="vi" aria-current="true">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/records.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/records.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/happypouch/help/th/records.html" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/happypouch/help/pl/records.html" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/vi/">Trợ giúp Happy Pouch</a> · Ghi chép</div>
+<h1>Ghi chép</h1>
+<p class="lead">“Ghi chép” là danh sách mọi thứ đã nhập trong kỳ, nhóm theo danh mục. Đây là nơi tìm, sửa và xóa ghi chép.</p>
+
+<h2>Trên màn hình có gì</h2>
+<ul>
+  <li><b>Kỳ</b> ở trên cùng, giống như ở “Trang chủ” và trong “Thống kê”. Di chuyển bằng mũi tên hoặc bằng cách vuốt sang trái và phải.</li>
+  <li><b>“Đang có”</b>: số dư cuối kỳ.</li>
+  <li><b>Ví</b>, nếu bạn có: số dư của từng ví và nút chuyển khoản.</li>
+  <li><b>Công tắc “Tất cả / Chi / Thu”</b>: danh sách hiển thị gì.</li>
+  <li><b>Danh mục</b> cùng số tiền của kỳ, lớn nhất trước.</li>
+  <li><b>Chuyển khoản</b> giữa các ví, ở cuối danh sách, chỉ trong “Tất cả”.</li>
+</ul>
+
+<h2>Cách tìm đến một ghi chép</h2>
+<p>Chạm vào một danh mục.</p>
+<ul>
+  <li>Nếu nó có một ghi chép, ghi chép mở ra ngay.</li>
+  <li>Nếu kỳ là một ngày, danh sách ghi chép mở ra.</li>
+  <li>Nếu kỳ dài hơn, danh mục mở ra theo từng phần: một năm thành các quý, một quý thành các tháng, một tháng thành các tuần, một tuần thành các ngày. Cứ chạm tiếp cho đến khi tới ghi chép.</li>
+</ul>
+
+<h2>Cách sửa ghi chép</h2>
+<p>Chạm vào nó. Trong thẻ, bạn có thể đổi số tiền, danh mục, danh mục con, ngày, ví và ghi chú, rồi “Lưu”.</p>
+<p class="note">Khoản chi không thể biến thành khoản thu hay ngược lại. Nếu một ghi chép được nhập sai loại, hãy xóa và nhập lại.</p>
+
+<h2>Cách xóa ghi chép</h2>
+<p>Mở ghi chép và chạm vào “Xóa”. Ghi chép vào thùng rác.</p>
+<ul>
+  <li>Ngay sau khi xóa, “Hoàn tác xóa” hiện ở cuối màn hình trong vài giây.</li>
+  <li>Ghi chép nằm trong thùng rác 90 ngày: “Cài đặt” → “Thùng rác”. Ở đó bạn có thể khôi phục hoặc xóa vĩnh viễn.</li>
+  <li>Câu hỏi “Xóa ghi chép này?” được tắt ở cùng chỗ: “Hỏi trước khi xóa”.</li>
+</ul>
+
+<h2>Cách thêm ghi chép từ đây</h2>
+<p>Nút “+” tròn ở dưới cùng bên phải. Trong thẻ chọn “Chi” hoặc “Thu”. Nút ẩn đi khi bạn cuộn danh sách xuống và quay lại khi bạn cuộn lên.</p>
+
+<h2>Tìm kiếm</h2>
+<p>Kính lúp ở phía trên. Bạn có thể tìm theo ghi chú, danh mục, ví, số tiền và ngày. Kết quả thu hẹp theo loại (chi hoặc thu), danh mục và thời gian: tháng, 3 tháng, năm, mọi lúc. Dưới dòng tìm kiếm là số ghi chép tìm được và tổng của chúng.</p>
+
+<h2>Chỉ hiện biểu tượng</h2>
+<p>“Cài đặt” → “Chỉ hiện biểu tượng” thay tên danh mục bằng biểu tượng ở “Trang chủ” và trong “Ghi chép”, để người liếc qua màn hình không biết được tiền đi vào đâu.</p>
+
+<footer><a href="/happypouch/help/vi/">← Tất cả chủ đề</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="vi" data-map='{"en":["/happypouch/help/en/records.html","English","View this page in English"],"zh":["/happypouch/help/zh/records.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/records.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/records.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/records.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/records.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/records.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/records.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/records.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/records.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/records.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/records.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/records.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/records.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/records.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/records.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/records.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

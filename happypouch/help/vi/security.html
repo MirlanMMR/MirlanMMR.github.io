@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảo mật và quyền riêng tư trong Happy Pouch</title>
+<meta name="description" content="Happy Pouch giữ dữ liệu của bạn ở đâu, cách khóa ứng dụng, ẩn tên danh mục, và Google Drive có thể thấy gì.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/security.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/security.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/security.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/security.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/security.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/security.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/security.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/security.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/security.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/security.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/security.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/security.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/security.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/security.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/security.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/security.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/security.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/security.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="vi">Tiếng Việt</summary><ul><li><a href="/happypouch/help/en/security.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/security.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/security.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/security.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/security.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/security.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/security.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/security.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/security.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/security.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/security.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/security.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/security.html" hreflang="vi" lang="vi" data-lang="vi" aria-current="true">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/security.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/security.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/happypouch/help/th/security.html" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/happypouch/help/pl/security.html" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/vi/">Trợ giúp Happy Pouch</a> · Bảo mật</div>
+<h1>Bảo mật và quyền riêng tư</h1>
+<p class="lead">Ghi chép chỉ được lưu trên điện thoại của bạn. Ứng dụng không có tài khoản, không có máy chủ và không cần đăng ký, và việc theo dõi hoạt động không cần internet.</p>
+
+<h2>Dữ liệu ở đâu</h2>
+<ul>
+  <li><b>Trong ứng dụng trên điện thoại.</b> Nó không được gửi đi đâu cả.</li>
+  <li><b>Trong các bản sao lưu trên điện thoại</b>: thư mục “Documents/HappyPouch”. Nếu bạn đã đăng nhập Google chúng được mã hóa (xem bên dưới); nếu không đăng nhập thì chúng là văn bản thuần.</li>
+  <li><b>Trên Google Drive của bạn</b>, chỉ khi chính bạn bật tự động sao lưu.</li>
+</ul>
+<p>Xem thêm về sao lưu trong <a href="/happypouch/help/vi/backups.html">“Sao lưu và điện thoại mới”</a>.</p>
+
+<h2>Mã hóa bản sao lưu</h2>
+<p>Khi bạn đăng nhập Google (tùy chọn, “Cài đặt” → “Tự động sao lưu lên Google Drive”), ứng dụng tạo một khóa ngẫu nhiên và đặt nó trên Google Drive của bạn, trong thư mục ẩn của ứng dụng. Giao diện Drive không hiển thị nó và các ứng dụng khác không đọc được. Vì điều này, Google xin quyền “Xem, tạo và xóa dữ liệu cấu hình riêng của nó trong Google Drive của bạn” khi bạn đăng nhập. Mọi bản sao lưu được mã hóa bằng khóa đó (AES-256): trên điện thoại, trên Drive và với “Lưu ở nơi khác…”.</p>
+<ul>
+  <li>Một tệp sao lưu rơi vào tay người lạ, qua ứng dụng nhắn tin, đám mây hay ứng dụng khác, không thể mở được nếu không có tài khoản Google của bạn.</li>
+  <li>Trên điện thoại mới, đăng nhập cùng tài khoản Google: ứng dụng tự lấy khóa và mở các bản sao lưu. Không có mật khẩu riêng, và mật khẩu Google bị quên có thể được khôi phục qua Google.</li>
+  <li>Lần đầu trên điện thoại mới cần kết nối internet để lấy khóa.</li>
+  <li>Không đăng nhập Google thì không có mã hóa: các bản sao lưu là văn bản thuần, như trước.</li>
+  <li>Các bản sao lưu tạo trước khi bật mã hóa vẫn là văn bản thuần cho đến khi các bản mới hơn đẩy chúng ra.</li>
+</ul>
+<p class="note">Đừng xóa dữ liệu của ứng dụng trong cài đặt Google Drive (“Quản lý ứng dụng” → Happy Pouch → “Xóa dữ liệu ứng dụng ẩn”), và đừng mất quyền truy cập tài khoản Google: không có khóa thì các bản sao lưu được mã hóa không thể mở. Một bản sao của khóa cũng được giữ trên điện thoại, nhưng sẽ mất khi cài đặt lại hoặc đổi điện thoại.</p>
+
+<h2>Bảo vệ đăng nhập</h2>
+<p>“Cài đặt” → “Bảo vệ đăng nhập”. Khi đó ứng dụng mở khóa giống như điện thoại của bạn: PIN, hình vẽ, vân tay hoặc khuôn mặt.</p>
+<ul>
+  <li>Ứng dụng không có mật khẩu riêng: nó dùng khóa của điện thoại. Nếu khóa đó tắt, ứng dụng yêu cầu bạn bật khóa màn hình trong cài đặt điện thoại trước.</li>
+  <li>“Hỏi lại nếu ứng dụng đã đóng” đặt sau bao lâu kể từ khi rời ứng dụng thì cần kiểm tra lại: ngay lập tức, 30 giây, 1 phút, 5 phút.</li>
+  <li>Nếu bạn hủy kiểm tra, ứng dụng vẫn bị khóa; nút “Mở” hỏi lại.</li>
+</ul>
+<p class="note">Bảo vệ đăng nhập khóa màn hình của ứng dụng. Các tệp sao lưu được khóa bằng mã hóa, có hiệu lực nếu bạn đã đăng nhập Google.</p>
+
+<h2>Chỉ hiện biểu tượng</h2>
+<p>“Cài đặt” → “Chỉ hiện biểu tượng”. Ở “Trang chủ” và trong “Ghi chép”, biểu tượng thay cho tên danh mục. Người liếc qua màn hình thấy số tiền, nhưng không biết chúng để làm gì.</p>
+
+<h2>Google có thể truy cập gì</h2>
+<p>Tự động sao lưu lên Google Drive là tùy chọn. Nếu bạn bật nó:</p>
+<ul>
+  <li>trên Drive ứng dụng chỉ thấy các tệp do chính nó tạo; nó không thể truy cập tệp khác;</li>
+  <li>các bản sao lưu và khóa nằm trên Drive của bạn, và nhà phát triển không có quyền truy cập; các bản sao lưu được mã hóa bằng khóa đó;</li>
+  <li>“Đăng xuất” dừng sao lưu tự động; các bản sao lưu đã lưu vẫn ở trên Drive, và bạn có thể xóa chúng trong chính Google Drive.</li>
+</ul>
+
+<h2>Nhắc nhở</h2>
+<p>Thông báo thanh toán định kỳ hiển thị trên màn hình khóa của điện thoại. Nếu không muốn vậy, hãy chọn “Chỉ trong ứng dụng” hoặc chấm huy hiệu trong “Cài đặt”, mục “Nhắc nhở”.</p>
+
+<h2>Xóa</h2>
+<ul>
+  <li>Ghi chép và danh mục đã xóa nằm trong thùng rác 90 ngày: “Cài đặt” → “Thùng rác”. “Dọn sạch” xóa chúng vĩnh viễn.</li>
+  <li>“Cài đặt” → “Dữ liệu” → “Xóa toàn bộ dữ liệu” xóa mọi thứ trên điện thoại. Các bản sao lưu trên Drive và trong thư mục “Documents/HappyPouch” vẫn còn; hãy xóa riêng nếu cần.</li>
+</ul>
+
+<h2>Gửi tệp qua dịch vụ khác</h2>
+<p>Một tệp sao lưu gửi đến ứng dụng nhắn tin, đám mây hoặc trợ lý AI được mã hóa nếu bạn đã đăng nhập Google: không đọc được nếu không có tài khoản của bạn. Nếu không đăng nhập, tệp là văn bản thuần, và dịch vụ đó thấy nó.</p>
+
+<p><a href="/vi/happypouch/privacy-policy.html">Chính sách quyền riêng tư</a></p>
+
+<footer><a href="/happypouch/help/vi/">← Tất cả chủ đề</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="vi" data-map='{"en":["/happypouch/help/en/security.html","English","View this page in English"],"zh":["/happypouch/help/zh/security.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/security.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/security.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/security.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/security.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/security.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/security.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/security.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/security.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/security.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/security.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/security.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/security.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/security.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/security.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/security.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

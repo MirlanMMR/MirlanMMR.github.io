@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ví, tiền tệ và chuyển khoản trong Happy Pouch</title>
+<meta name="description" content="Tiền tệ và ví hoạt động ra sao trong Happy Pouch: tiền tệ chính, số dư đầu kỳ, ngưỡng dưới, ghi vào ví, chuyển khoản giữa các ví.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/wallets.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/wallets.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/wallets.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/wallets.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/wallets.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/wallets.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/wallets.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/wallets.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/wallets.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/wallets.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/wallets.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/wallets.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/wallets.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/wallets.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/wallets.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/wallets.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/wallets.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/wallets.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="vi">Tiếng Việt</summary><ul><li><a href="/happypouch/help/en/wallets.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/wallets.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/wallets.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/wallets.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/wallets.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/wallets.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/wallets.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/wallets.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/wallets.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/wallets.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/wallets.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/wallets.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/wallets.html" hreflang="vi" lang="vi" data-lang="vi" aria-current="true">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/wallets.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/wallets.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/happypouch/help/th/wallets.html" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/happypouch/help/pl/wallets.html" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/vi/">Trợ giúp Happy Pouch</a> · Ví và tiền tệ</div>
+<h1>Ví và tiền tệ</h1>
+<p class="lead">Tiền tệ là đơn vị bạn dùng để đếm tiền. Ví là nơi tiền nằm: tiền mặt, thẻ, tiền gửi. Ví là tùy chọn: bạn có thể chỉ theo dõi mọi thứ bằng một loại tiền tệ.</p>
+
+<h2>Tiền tệ</h2>
+<p>“Cài đặt” → “Tiền tệ”. Khi khởi chạy lần đầu, ứng dụng tạo tiền tệ của quốc gia bạn.</p>
+<ul>
+  <li><b>Thêm</b>: nút “+” ở tiêu đề mục. Một tên hoặc mã là đủ: “USD”, “euro”.</li>
+  <li><b>Chính</b>: loại tiền tệ bạn đang xem. Đánh dấu nó trong danh sách; “Trang chủ”, “Ghi chép” và “Thống kê” hiển thị các ghi chép bằng loại tiền đó.</li>
+  <li><b>Số dư đầu kỳ</b>: số tiền mà việc theo dõi bắt đầu. Sau đó số dư được tính cho bạn.</li>
+  <li><b>Ngưỡng số dư dưới</b>: một đường giới hạn tùy chọn. Khi tiền của bạn gần đến nó, số tiền “Đang có” chuyển sang vàng; dưới nó, màu đỏ.</li>
+</ul>
+<p class="note">Xóa một loại tiền tệ xóa mọi ghi chép, thanh toán và ví trong đó. Không thể xóa loại tiền tệ cuối cùng.</p>
+
+<h2>Ví</h2>
+<p>“Cài đặt” → “Ví” → “+”. Một ví có tên, loại tiền tệ, số dư hiện tại và biểu tượng.</p>
+<ul>
+  <li>Có thể có bao nhiêu ví tùy thích: hai thẻ, tiền mặt, tiền gửi.</li>
+  <li>Mỗi ví có loại tiền tệ riêng. Tiền mặt euro và tiền mặt đô la là hai ví.</li>
+  <li>Bạn có thể theo dõi tiền mã hóa theo cách tương tự: thêm một loại tiền tệ như USDT, và một ví trong đó. Số tiền được lưu với hai chữ số thập phân, nên không thể ghi những phần nhỏ của bitcoin.</li>
+</ul>
+
+<h2>Cách gán một ghi chép vào ví</h2>
+<p>Trong thẻ ghi chép, các nút cho ví của loại tiền tệ đó hiện dưới số tiền. Chạm vào cái bạn cần. Nếu không chọn cái nào, ghi chép không có ví: nó được tính vào tổng số dư của loại tiền tệ, nhưng không vào số dư của ví nào.</p>
+
+<h2>Cách xem một ví</h2>
+<p>Mở menu bên và chọn ví trong mục “Ví”. “Trang chủ”, “Ghi chép” và “Thống kê” chỉ hiển thị ví đó, và “Đang có” hiển thị số dư của nó. “Tất cả ví” đưa về cái nhìn tổng thể.</p>
+
+<h2>Chuyển khoản</h2>
+<p>Chuyển khoản chuyển tiền từ ví này sang ví khác và không được tính là khoản chi hay khoản thu.</p>
+<ul>
+  <li>Để chuyển khoản, dùng biểu tượng hai mũi tên cạnh số tiền “Đang có” ở “Trang chủ”, hoặc nút trong “Ghi chép” cạnh các ví.</li>
+  <li>Chuyển khoản chỉ hoạt động giữa các ví cùng loại tiền tệ. Việc đổi tiền chưa thể ghi như một chuyển khoản.</li>
+  <li>Các chuyển khoản của kỳ được liệt kê ở cuối “Ghi chép”. Chạm vào một chuyển khoản để sửa hoặc xóa.</li>
+</ul>
+
+<h2>Nếu bạn xóa một ví</h2>
+<p>Các ghi chép vẫn còn, nhưng không có ví. Các chuyển khoản đến và đi từ nó bị xóa.</p>
+
+<footer><a href="/happypouch/help/vi/">← Tất cả chủ đề</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="vi" data-map='{"en":["/happypouch/help/en/wallets.html","English","View this page in English"],"zh":["/happypouch/help/zh/wallets.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/wallets.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/wallets.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/wallets.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/wallets.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/wallets.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/wallets.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/wallets.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/wallets.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/wallets.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/wallets.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/wallets.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/wallets.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/wallets.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/wallets.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/wallets.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portare i tuoi dati in Happy Pouch da un'altra app</title>
+<meta name="description" content="Come portare le voci da un'altra app di budget o da un estratto conto in Happy Pouch: esportazione, abbinamento delle colonne, formati supportati, errori comuni.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/transfer.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/transfer.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/transfer.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/transfer.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/transfer.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/transfer.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/transfer.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/transfer.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/transfer.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/transfer.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/transfer.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/transfer.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/transfer.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/transfer.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/transfer.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/transfer.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/transfer.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/transfer.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="it">Italiano</summary><ul><li><a href="/happypouch/help/en/transfer.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/transfer.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/transfer.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/transfer.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/transfer.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/transfer.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/transfer.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/transfer.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/transfer.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/transfer.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/transfer.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/transfer.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/transfer.html" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/transfer.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/transfer.html" hreflang="it" lang="it" data-lang="it" aria-current="true">Italiano</a></li><li><a href="/happypouch/help/th/transfer.html" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/happypouch/help/pl/transfer.html" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/it/">Guida di Happy Pouch</a> · Passare da un'altra app</div>
+<h1>Passare da un'altra app</h1>
+<p class="lead">Le voci di un'altra app di budget si trasferiscono con un unico file. Categorie e valute vengono create per te, quindi non serve ripartire da zero.</p>
+
+<h2>Cosa viene trasferito</h2>
+<ul>
+  <li>Voci di spesa e di entrata: data, importo, categoria, sottocategoria, valuta, nota.</li>
+  <li>Categorie e valute che non hai ancora. L'app le crea e ti mostra l'elenco prima dell'importazione.</li>
+</ul>
+<p>I trasferimenti tra portafogli non vengono importati: sono saltati, e l'app ti dice quanti erano. Le voci che sono già in Happy Pouch non vengono aggiunte una seconda volta.</p>
+
+<h2>Passo 1. Esporta un file dalla tua vecchia app</h2>
+<p>Cerca «Esporta» nella vecchia app, di solito in Impostazioni o in una sezione dati. Excel (XLSX) e CSV funzionano meglio. Salva il file sul telefono.</p>
+<p class="note">Serve un'esportazione in una tabella (un foglio di calcolo), non un «backup». Happy Pouch non può leggere il backup di un'altra app.</p>
+
+<h2>Passo 2. Apri il file in Happy Pouch</h2>
+<p>«Impostazioni» → «Trasferimento dati» → «Scegli file». In un'app ancora vuota lo stesso pulsante è in «Home»: «Trasferisci dati / importa estratto conto».</p>
+<p class="note"><b>Non vedi il file nell'elenco?</b> Il selettore di file si apre dove eri l'ultima volta, spesso in «Foto». Tocca ☰ in alto a sinistra e apri «Recenti»: un file appena ricevuto è lì. Per un file inviato tramite WhatsApp o Telegram, guarda anche in «Download» o «Documenti». Se non è in «Recenti», apri il file nell'app di messaggistica e salvalo sul telefono, poi riprova.</p>
+
+<h2>Passo 3. Controlla le colonne</h2>
+<p>Si apre la schermata «Importa transazioni». In alto dice che tipo di file sembra e quante righe ha. Sotto c'è l'elenco dei campi dell'app: «Data», «Importo», «Categoria», «Sottocategoria», «Valuta», «Nota». L'app ha già abbinato a ogni campo una colonna del tuo file in base alla sua intestazione.</p>
+<p><b>Come vedere quale colonna è scelta.</b> A destra di ogni campo c'è un pulsante arrotondato con un contorno. Mostra il nome della colonna del tuo file, per esempio «Data» o «Data della transazione». Se mostra un trattino «—», per quel campo non è scelta nessuna colonna.</p>
+<p><b>Come scegliere un'altra colonna.</b> Tocca quel pulsante a destra del campo. Si apre un elenco: la prima riga è «— non usare», poi tutte le colonne del tuo file. Tocca quella che ti serve. Per esempio, il campo «Data» mostra «Data di creazione» e ti serve «Data della transazione»: tocca il pulsante e scegli «Data della transazione».</p>
+<p><b>Come controllare il risultato.</b> Sotto l'elenco dei campi c'è scritto: «Prima riga del file: data …, importo …». È ciò che l'app ha letto dalla prima riga del tuo file con le colonne scelte. Se la data o l'importo lì sembrano sbagliati, cambia la colonna del campo corrispondente.</p>
+<ul>
+  <li>Se nel file spese ed entrate sono in due colonne diverse, passa da «Una colonna per l'importo» a «Entrate e spese separate». Allora compaiono due campi al posto del singolo «Importo»: «Colonna spese» e «Colonna entrate».</li>
+  <li>Se il file non ha una colonna con il tipo, gli importi negativi contano come spese e quelli positivi come entrate.</li>
+  <li>Se un campo non serve (per esempio «Sottocategoria»), scegli «— non usare» nel suo elenco.</li>
+</ul>
+<p>Per date come 05/10/2026, imposta l'ordine della data sotto l'elenco: «Auto», «Giorno/mese» o «Mese/giorno». Di solito basta «Auto».</p>
+<p>Se il file non ha una colonna della valuta, scegli una valuta per tutte le voci qui sotto toccando il pulsante con il suo codice.</p>
+
+<h2>Passo 4. Controlla il riepilogo e importa</h2>
+<p>Prima dell'importazione, l'app mostra cosa succederà: quante voci verranno aggiunte e per quale periodo, quante verranno saltate e perché, e quali categorie e valute verranno create. Sotto ci sono tre voci di esempio. Se tutto sembra giusto, tocca «Importa».</p>
+
+<h2>Quali file funzionano</h2>
+<table>
+  <tr><th>Formato</th><th>Da dove viene di solito</th></tr>
+  <tr><td>Excel XLSX e XLS</td><td>esportazione dalla maggior parte delle app di budget; l'opzione più affidabile</td></tr>
+  <tr><td>CSV</td><td>esportazioni di app, estratti conto; separatore e codifica sono rilevati automaticamente</td></tr>
+  <tr><td>OFX, QFX, QBO</td><td>estratti conto bancari</td></tr>
+  <tr><td>QIF</td><td>programmi di finanza più vecchi</td></tr>
+  <tr><td>SQLite</td><td>database di GnuCash e Money Manager</td></tr>
+</table>
+<p>Il file può pesare fino a 30 MB.</p>
+
+<h2>Se non funziona</h2>
+<ul>
+  <li><b>«Questa non è una tabella ma un file proprietario».</b> Hai scelto il backup di un'altra app. Torna in quell'app e cerca un'esportazione in CSV o Excel.</li>
+  <li><b>«Questo è un file JSON».</b> È un backup di Happy Pouch stessa. Ripristinalo invece da «Impostazioni»: «Backup su questo telefono» → «Ripristina».</li>
+  <li><b>Date o importi non riconosciuti.</b> L'app mostra esempi di queste righe. Controlla che siano scelte le colonne giuste per la data e l'importo, e che l'ordine giorno/mese sia corretto.</li>
+  <li><b>Le colonne sono confuse, o ce ne sono troppe.</b> Apri il file in Excel o Fogli Google e tieni solo le colonne «Data», «Importo», «Categoria» e «Nota».</li>
+</ul>
+<p>Se il formato del file è sconosciuto o disordinato, puoi darlo a un assistente IA e chiedergli di trasformarlo in una tabella CSV con le colonne «Data», «Importo», «Categoria» e «Nota». Tieni presente che il servizio a cui lo invii vedrà le tue spese.</p>
+
+<footer><a href="/happypouch/help/it/">← Tutti gli argomenti</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="it" data-map='{"en":["/happypouch/help/en/transfer.html","English","View this page in English"],"zh":["/happypouch/help/zh/transfer.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/transfer.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/transfer.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/transfer.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/transfer.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/transfer.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/transfer.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/transfer.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/transfer.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/transfer.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/transfer.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/transfer.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/transfer.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/transfer.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/transfer.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/transfer.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การสำรองข้อมูลและการย้าย Happy Pouch ไปโทรศัพท์เครื่องใหม่</title>
+<meta name="description" content="Happy Pouch สำรองรายการของคุณอย่างไร: การสำรองข้อมูลในโทรศัพท์ การสำรองอัตโนมัติไป Google Drive การกู้คืน การย้ายไปโทรศัพท์เครื่องใหม่">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/backups.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/backups.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/backups.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/backups.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/backups.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/backups.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/backups.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/backups.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/backups.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/backups.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/backups.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/backups.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/backups.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/backups.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/backups.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/backups.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/backups.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/backups.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="th">ไทย</summary><ul><li><a href="/happypouch/help/en/backups.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/backups.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/backups.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/backups.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/backups.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/backups.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/backups.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/backups.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/backups.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/backups.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/backups.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/backups.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/backups.html" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/backups.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/backups.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/happypouch/help/th/backups.html" hreflang="th" lang="th" data-lang="th" aria-current="true">ไทย</a></li><li><a href="/happypouch/help/pl/backups.html" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/th/">ความช่วยเหลือ Happy Pouch</a> · การสำรองข้อมูลและโทรศัพท์เครื่องใหม่</div>
+<h1>การสำรองข้อมูลและโทรศัพท์เครื่องใหม่</h1>
+<p class="lead">รายการทั้งหมดเก็บไว้ในโทรศัพท์ของคุณเท่านั้น เพื่อไม่ให้โทรศัพท์เสีย การติดตั้งใหม่ หรือโทรศัพท์เครื่องใหม่ทำให้ข้อมูลหาย แอปสำรองข้อมูลไว้สองที่ ที่เป็นอิสระต่อกัน</p>
+
+<h2>การสำรองข้อมูลในโทรศัพท์เครื่องนี้</h2>
+<p>เปิดอยู่เสมอ ไม่ต้องตั้งค่าอะไร แอปบันทึกไฟล์สำรองเองลงโฟลเดอร์ “Documents/HappyPouch”</p>
+<ul>
+  <li>ไม่ขึ้นกับ Google หรืออินเทอร์เน็ต</li>
+  <li>คุณเห็นได้ในแอป “ไฟล์”</li>
+  <li>ยังอยู่ในโทรศัพท์แม้ถอนการติดตั้ง Happy Pouch</li>
+</ul>
+<p>ใน “การตั้งค่า” ส่วน “การสำรองข้อมูลในโทรศัพท์เครื่องนี้” มีปุ่มสามปุ่ม:</p>
+<table>
+  <tr><th>ปุ่ม</th><th>ทำอะไร</th></tr>
+  <tr><td>สำรองข้อมูลตอนนี้</td><td>บันทึกไฟล์สำรองทันที โดยไม่ต้องรอครั้งถัดไป</td></tr>
+  <tr><td>กู้คืน</td><td>แสดงรายชื่อไฟล์สำรอง อันที่คุณเลือกจะแทนที่ข้อมูลปัจจุบันทั้งหมด มี “เลือกไฟล์…” ด้วย สำหรับไฟล์สำรองที่เก็บไว้ที่อื่น</td></tr>
+  <tr><td>บันทึกไว้ที่อื่น…</td><td>บันทึกไฟล์สำรองไปที่ที่คุณเลือก: แฟลชไดรฟ์ แอปแชต คลาวด์อื่น</td></tr>
+</table>
+
+<h2>การสำรองอัตโนมัติไป Google Drive</h2>
+<p>ไม่บังคับ เปิดใน “การตั้งค่า” ส่วน “การสำรองอัตโนมัติไป Google Drive”: สวิตช์ “สำรองอัตโนมัติ” จะขอให้คุณลงชื่อเข้าใช้ Google</p>
+<ul>
+  <li>ไฟล์สำรองจะถูกบันทึกเมื่อคุณปิดแอป และวันละครั้งถ้ามีสิ่งใหม่</li>
+  <li>อยู่ใน Google Drive <b>ของคุณ</b> ในโฟลเดอร์ที่ชื่อเช่น “happy-pouch-backup-…” กุญแจที่ใช้เข้ารหัสทุกไฟล์สำรองเก็บแยกไว้ในโฟลเดอร์ซ่อนของแอปบน Drive ของคุณ ดูเพิ่มใน <a href="/happypouch/help/th/security.html">“ความปลอดภัยและความเป็นส่วนตัว”</a></li>
+  <li>บน Drive แอปเห็นเฉพาะไฟล์ที่ตัวเองสร้าง ไม่สามารถเข้าถึงอย่างอื่นได้</li>
+  <li>“สำรองข้อมูลตอนนี้” สร้างไฟล์สำรองทันที “กู้คืน” แสดงรายชื่อไฟล์สำรองบน Drive</li>
+  <li>“ออกจากระบบ” หยุดการสำรองอัตโนมัติ ไฟล์สำรองที่บันทึกไว้แล้วยังอยู่บน Drive และข้อมูลในโทรศัพท์ไม่เปลี่ยน</li>
+</ul>
+<p class="note">ถ้าแอปบอกว่า “ไฟล์สำรองล้าสมัย” แปลว่ารายการล่าสุดของคุณไม่อยู่ในนั้น แตะ “สำรองข้อมูลตอนนี้” โดยเฉพาะก่อนรีเซ็ตหรือเปลี่ยนโทรศัพท์</p>
+
+<h2>การย้ายไปโทรศัพท์เครื่องใหม่</h2>
+<p><b>ผ่าน Google Drive</b> บนโทรศัพท์เครื่องเก่าแตะ “สำรองข้อมูลตอนนี้” บนเครื่องใหม่ติดตั้ง Happy Pouch เปิดการสำรองอัตโนมัติด้วยบัญชี Google เดียวกัน แล้วแตะ “กู้คืน” แอปจะดึงกุญแจเอง</p>
+<p><b>ด้วยไฟล์</b> บนโทรศัพท์เครื่องเก่าแตะ “บันทึกไว้ที่อื่น…” แล้วส่งไฟล์ให้ตัวเองด้วยวิธีที่ชอบ บนเครื่องใหม่เปิด “การสำรองข้อมูลในโทรศัพท์เครื่องนี้” → “กู้คืน” → “เลือกไฟล์…” ถ้าไฟล์สำรองถูกเข้ารหัส ให้เปิดการสำรองอัตโนมัติด้วยบัญชี Google เดียวกันก่อน ไม่เช่นนั้นแอปจะแจ้งว่าไฟล์สำรองถูกเข้ารหัส ไฟล์สำรองเปิดได้โดยตรงจากแอป “ไฟล์” หรือจากแอปแชตด้วย: Happy Pouch จะเสนอให้โหลด</p>
+
+<h2>สิ่งที่อยู่ในไฟล์สำรอง</h2>
+<p>รายการ หมวดหมู่และประเภทของมัน กระเป๋าเงิน การโอน สกุลเงินและอัตราของตัวแปลง การชำระเงินประจำ วงเงิน ถังขยะ ตัวเลข “ภูมิภาคของฉัน”</p>
+<p>การกู้คืน<b>แทนที่</b>ทุกอย่างในแอปตอนนี้ ไม่ได้เพิ่มเข้าไป แอปจะขอให้คุณยืนยัน</p>
+
+<h2>ลบข้อมูลทั้งหมด</h2>
+<p>“การตั้งค่า” → “ข้อมูล” → “ลบข้อมูลทั้งหมด” ลบรายการ หมวดหมู่ สกุลเงิน และการชำระเงินในโทรศัพท์ ไฟล์สำรองบน Drive และในโฟลเดอร์ “Documents/HappyPouch” ยังอยู่</p>
+
+<footer><a href="/happypouch/help/th/">← ทุกหัวข้อ</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="th" data-map='{"en":["/happypouch/help/en/backups.html","English","View this page in English"],"zh":["/happypouch/help/zh/backups.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/backups.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/backups.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/backups.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/backups.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/backups.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/backups.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/backups.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/backups.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/backups.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/backups.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/backups.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/backups.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/backups.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/backups.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/backups.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>

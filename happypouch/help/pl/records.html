@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wpisy w Happy Pouch: lista, edycja, usuwanie, wyszukiwanie</title>
+<meta name="description" content="Ekran Wpisy w Happy Pouch: wpisy okresu według kategorii, filtr wydatków i przychodów, edycja i usuwanie wpisu, kosz, wyszukiwanie.">
+<!--i18n:alternates--><link rel="stylesheet" href="/assets/i18n.css">
+<link rel="alternate" hreflang="en" href="https://mirlanmmr.github.io/happypouch/help/en/records.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://mirlanmmr.github.io/happypouch/help/zh/records.html">
+<link rel="alternate" hreflang="es" href="https://mirlanmmr.github.io/happypouch/help/es/records.html">
+<link rel="alternate" hreflang="es-419" href="https://mirlanmmr.github.io/happypouch/help/es-419/records.html">
+<link rel="alternate" hreflang="id" href="https://mirlanmmr.github.io/happypouch/help/id/records.html">
+<link rel="alternate" hreflang="pt" href="https://mirlanmmr.github.io/happypouch/help/pt/records.html">
+<link rel="alternate" hreflang="pt-PT" href="https://mirlanmmr.github.io/happypouch/help/pt-PT/records.html">
+<link rel="alternate" hreflang="ru" href="https://mirlanmmr.github.io/happypouch/help/ru/records.html">
+<link rel="alternate" hreflang="ja" href="https://mirlanmmr.github.io/happypouch/help/ja/records.html">
+<link rel="alternate" hreflang="de" href="https://mirlanmmr.github.io/happypouch/help/de/records.html">
+<link rel="alternate" hreflang="fr" href="https://mirlanmmr.github.io/happypouch/help/fr/records.html">
+<link rel="alternate" hreflang="tr" href="https://mirlanmmr.github.io/happypouch/help/tr/records.html">
+<link rel="alternate" hreflang="vi" href="https://mirlanmmr.github.io/happypouch/help/vi/records.html">
+<link rel="alternate" hreflang="ko" href="https://mirlanmmr.github.io/happypouch/help/ko/records.html">
+<link rel="alternate" hreflang="it" href="https://mirlanmmr.github.io/happypouch/help/it/records.html">
+<link rel="alternate" hreflang="th" href="https://mirlanmmr.github.io/happypouch/help/th/records.html">
+<link rel="alternate" hreflang="pl" href="https://mirlanmmr.github.io/happypouch/help/pl/records.html">
+<link rel="alternate" hreflang="x-default" href="https://mirlanmmr.github.io/happypouch/help/en/records.html"><!--/i18n:alternates-->
+<link rel="stylesheet" href="/happypouch/help/help.css">
+</head>
+<body>
+<div class="lang"><!--i18n:switcher--><details class="langs"><summary lang="pl">Polski</summary><ul><li><a href="/happypouch/help/en/records.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/happypouch/help/zh/records.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li><li><a href="/happypouch/help/es/records.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/happypouch/help/es-419/records.html" hreflang="es-419" lang="es-419" data-lang="es-419">Español (Latinoamérica)</a></li><li><a href="/happypouch/help/id/records.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/happypouch/help/pt/records.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="/happypouch/help/pt-PT/records.html" hreflang="pt-PT" lang="pt-PT" data-lang="pt-PT">Português (Portugal)</a></li><li><a href="/happypouch/help/ru/records.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/happypouch/help/ja/records.html" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/happypouch/help/de/records.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/happypouch/help/fr/records.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/happypouch/help/tr/records.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/happypouch/help/vi/records.html" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/happypouch/help/ko/records.html" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/happypouch/help/it/records.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/happypouch/help/th/records.html" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/happypouch/help/pl/records.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="true">Polski</a></li></ul></details><!--/i18n:switcher--></div>
+<div class="crumbs"><a href="/happypouch/help/pl/">Pomoc Happy Pouch</a> · Wpisy</div>
+<h1>Wpisy</h1>
+<p class="lead">„Wpisy” to lista wszystkiego, co zostało wprowadzone w danym okresie, pogrupowana według kategorii. Tu wpisy się znajduje, poprawia i usuwa.</p>
+
+<h2>Co jest na ekranie</h2>
+<ul>
+  <li><b>Okres</b> u góry, ten sam co na „Głównej” i w „Statystykach”. Zmienia się go strzałkami lub przesunięciem w lewo i w prawo.</li>
+  <li><b>„Do dyspozycji”</b>: saldo na koniec okresu.</li>
+  <li><b>Portfele</b>, jeśli jakieś masz: saldo każdego i przycisk przelewu.</li>
+  <li><b>Przełącznik „Wszystko / Wydatki / Przychody”</b>: co pokazuje lista.</li>
+  <li><b>Kategorie</b> z ich kwotą za okres, od największej.</li>
+  <li><b>Przelewy</b> między portfelami, na dole listy, tylko we „Wszystko”.</li>
+</ul>
+
+<h2>Jak dotrzeć do wpisu</h2>
+<p>Dotknij kategorii.</p>
+<ul>
+  <li>Jeśli ma jeden wpis, wpis otwiera się od razu.</li>
+  <li>Jeśli okres to dzień, otwiera się lista wpisów.</li>
+  <li>Jeśli okres jest dłuższy, kategoria otwiera się częściami: rok na kwartały, kwartał na miesiące, miesiąc na tygodnie, tydzień na dni. Dotykaj dalej, aż dojdziesz do wpisów.</li>
+</ul>
+
+<h2>Jak edytować wpis</h2>
+<p>Dotknij go. W karcie możesz zmienić kwotę, kategorię, podkategorię, datę, portfel i notatkę, potem „Zapisz”.</p>
+<p class="note">Wydatku nie da się zamienić na przychód ani odwrotnie. Jeśli wpis został wprowadzony jako zły rodzaj, usuń go i wprowadź jeszcze raz.</p>
+
+<h2>Jak usunąć wpis</h2>
+<p>Otwórz wpis i dotknij „Usuń”. Wpis trafia do kosza.</p>
+<ul>
+  <li>Zaraz po usunięciu na dole ekranu przez kilka sekund widać „Cofnij usunięcie”.</li>
+  <li>Wpis zostaje w koszu przez 90 dni: „Ustawienia” → „Kosz”. Tam możesz go przywrócić albo usunąć na zawsze.</li>
+  <li>Pytanie „Usunąć ten wpis?” wyłącza się w tym samym miejscu: „Pytaj przed usunięciem”.</li>
+</ul>
+
+<h2>Jak dodać wpis stąd</h2>
+<p>Okrągły przycisk „+” w prawym dolnym rogu. W karcie wybierz „Wydatek” lub „Przychód”. Przycisk chowa się, gdy przewijasz listę w dół, i wraca, gdy przewijasz w górę.</p>
+
+<h2>Wyszukiwanie</h2>
+<p>Lupa u góry. Można szukać według notatki, kategorii, portfela, kwoty i daty. Wynik zawęża się według rodzaju (wydatek lub przychód), kategorii i czasu: miesiąc, 3 miesiące, rok, cały czas. Pod polem wyszukiwania jest liczba znalezionych wpisów i ich suma.</p>
+
+<h2>Same ikony</h2>
+<p>„Ustawienia” → „Same ikony” zastępuje nazwy kategorii ikonami na „Głównej” i we „Wpisach”, żeby ktoś, kto zerknie na ekran, nie widział, na co idą pieniądze.</p>
+
+<footer><a href="/happypouch/help/pl/">← Wszystkie tematy</a></footer>
+<!--i18n:script--><script src="/assets/i18n.js" defer data-cur="pl" data-map='{"en":["/happypouch/help/en/records.html","English","View this page in English"],"zh":["/happypouch/help/zh/records.html","简体中文","查看简体中文版本"],"es":["/happypouch/help/es/records.html","Español","Ver esta página en español"],"es-419":["/happypouch/help/es-419/records.html","Español (Latinoamérica)","Ver esta página en español (Latinoamérica)"],"id":["/happypouch/help/id/records.html","Bahasa Indonesia","Lihat halaman ini dalam Bahasa Indonesia"],"pt":["/happypouch/help/pt/records.html","Português","Ver esta página em português"],"pt-PT":["/happypouch/help/pt-PT/records.html","Português (Portugal)","Ver esta página em português (Portugal)"],"ru":["/happypouch/help/ru/records.html","Русский","Открыть эту страницу на русском"],"ja":["/happypouch/help/ja/records.html","日本語","このページを日本語で見る"],"de":["/happypouch/help/de/records.html","Deutsch","Diese Seite auf Deutsch ansehen"],"fr":["/happypouch/help/fr/records.html","Français","Voir cette page en français"],"tr":["/happypouch/help/tr/records.html","Türkçe","Bu sayfayı Türkçe görüntüle"],"vi":["/happypouch/help/vi/records.html","Tiếng Việt","Xem trang này bằng tiếng Việt"],"ko":["/happypouch/help/ko/records.html","한국어","이 페이지를 한국어로 보기"],"it":["/happypouch/help/it/records.html","Italiano","Visualizza questa pagina in italiano"],"th":["/happypouch/help/th/records.html","ไทย","ดูหน้านี้เป็นภาษาไทย"],"pl":["/happypouch/help/pl/records.html","Polski","Zobacz tę stronę po polsku"]}'></script><!--/i18n:script-->
+</body>
+</html>
